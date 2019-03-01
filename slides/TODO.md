@@ -1,0 +1,1 @@
+- write make file to compile all slides at once

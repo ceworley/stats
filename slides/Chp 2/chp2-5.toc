@@ -1,0 +1,4 @@
+\select@language {english}
+\beamer@sectionintoc {1}{Continuous distributions}{1}{0}{1}
+\beamer@subsectionintoc {1}{1}{From histograms to continuous distributions}{2}{0}{1}
+\beamer@subsectionintoc {1}{2}{Probabilities from continuous distributions}{3}{0}{1}

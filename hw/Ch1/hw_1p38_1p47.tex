@@ -1,0 +1,83 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{multicol}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{multirow,array}
+\usepackage{newtxtext,newtxmath}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textsc{BHCC Mat-181}}
+\chead{\textsc{Answers}}
+\rhead{\textsc{HW Exercises 1.38-1.47}}
+\rfoot{Page \thepage ~of \pageref{LastPage}}
+\setenumerate[1]{label={\bf 1.\theenumi: }}
+\setenumerate[2]{label={\bf (\theenumii): }}
+
+
+\begin{document}
+\begin{enumerate}
+\setcounter{enumi}{37}
+
+\item\begin{enumerate}
+\item There appears to be a positive association between life span and gestation.
+\item The association would still be positive.
+\item Life spand and length of gestation are not independent because they are positively associated.
+\end{enumerate}
+
+\item\begin{enumerate}
+\item Plots 1 and 3 show a positive association.
+\item Plot 4 shows a negative association.
+\item Plot 2 shows no association.
+\end{enumerate}
+
+\item ~ \\
+\includegraphics[scale=0.5]{figures/productivity_vs_stress.pdf}
+
+\item I disagree with the answer in the book. First, you would expect sigmoidal growth: at first exponential and then tapering off as it reaches the maximum. Also, won't the bacteria run out of resources and won't their waste choke them out? We usually break the growth curve into four parts: lag, log, stationary, and death. Of course, I'm just being pedantic and this does not really matter. \\
+\includegraphics[scale=0.5]{figures/bacteria_vs_time.pdf}
+
+\item The sample mean is 6.25 hours per night. The 5.5 hours is the claimed population mean.
+
+\item \begin{enumerate}
+\item Sample mean = \$58. Claimed population mean = \$52.
+\item Sample mean = 3.59. Claimed population mean = 3.37.
+\end{enumerate}
+
+\item \begin{enumerate}
+\item 64 is below the original mean, so the new mean will be lower. The new student's score decreases the average score.
+\item The first 24 students had an average of 74 points, so their total number of points was $24\times 74$, which is 1776. The new score adds 64 points to that total, bringing the new total to 1840. We can find the average by dividing this new total by 25, resulting in $73.6$. 
+$$\frac{24\times 74 + 64}{25} = 73.6 $$
+\item The new score probably increases the standard deviation because it is farther from 74 than $8.9$. Remember standard deviation is similar to average absolute deviation from the mean, and we now are probably adding to that average deviation by having a new point that is 9.6 points away from the (new) mean (and $9.6 > 8.9$).
+\end{enumerate}
+
+\item To accomplish this evil goal, the evil manager should fire employees with below average time off to increase the average time off.
+
+\item \begin{enumerate}
+\item The medians are equal. The IQR of second distribution is larger (based on how we have defined $Q_1$ and $Q_3$).
+\item The second median is larger. The second IQR is larger.
+\item The second median is larger. The IQRs are the same.
+\item The second median is larger. The second IQR is larger.
+\end{enumerate}
+
+\item \begin{enumerate}
+\item The second mean is larger. The second standard deviation is larger.
+\item $\bar{x}_1 > \bar{x}_2$. $s_1 < s_2$.
+\item $\bar{x}_1 < \bar{x}_2$. $s_1 = s_2$.
+\item $\bar{x}_1 = \bar{x}_2$. $s_1 < s_2$.
+\end{enumerate}
+
+
+
+\end{enumerate}
+\end{document}

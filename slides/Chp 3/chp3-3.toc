@@ -1,0 +1,4 @@
+\select@language {english}
+\beamer@sectionintoc {1}{Geometric distribution}{1}{0}{1}
+\beamer@subsectionintoc {1}{1}{Bernoulli distribution}{1}{0}{1}
+\beamer@subsectionintoc {1}{2}{Geometric distribution}{4}{0}{1}

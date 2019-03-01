@@ -1,0 +1,8 @@
+\select@language {english}
+\beamer@subsectionintoc {0}{1}{Definitions}{2}{0}{0}
+\beamer@subsectionintoc {0}{2}{Observations and variables}{12}{0}{0}
+\beamer@subsectionintoc {0}{3}{Types of variables}{13}{0}{0}
+\beamer@subsectionintoc {0}{4}{Quiz}{15}{0}{0}
+\beamer@sectionintoc {1}{Relationships among variables}{29}{0}{1}
+\beamer@subsectionintoc {1}{1}{Relationships among variables}{33}{0}{1}
+\beamer@subsectionintoc {1}{2}{Associated and independent variables}{36}{0}{1}

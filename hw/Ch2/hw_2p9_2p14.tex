@@ -1,0 +1,162 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[left=1cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{multicol}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{multirow,array}
+\usepackage{newtxtext,newtxmath}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textsc{BHCC Mat-181}}
+\chead{\textsc{Answers}}
+\rhead{\textsc{HW Exercises 2.9-2.14}}
+\rfoot{Page \thepage ~of \pageref{LastPage}}
+\setenumerate[1]{label={\bf 2.\theenumi: }}
+\setenumerate[2]{label={\bf (\theenumii): }}
+\setenumerate[3]{label={\bf \theenumiii: }}
+
+\begin{document}
+\newcommand{\AND}{\textsc{~and~}}
+\newcommand{\OR}{\textsc{~or~}}
+
+\begin{enumerate}
+\setcounter{enumi}{8}
+\item \begin{enumerate}
+\item Independent, not disjoint.
+\item Dependent, not disjoint.
+\item No. 
+\end{enumerate}
+
+\item \begin{enumerate}
+\item Let event $X_i$ represent ``Nancy gets the $i$th question right'', where $i$ is an integer such that $1\le i \le 5$. On each question, Nancy has a 25\% chance of success. 
+\begin{align*}
+P(X_1) &= 0.25 & P(X_2) &= 0.25 & P(X_3) &= 0.25 & P(X_4) &= 0.25 & P(X_5) &= 0.25 \\ 
+P(X_1^c) &= 0.75 & P(X_2^c) &= 0.75 & P(X_3^c) &= 0.75 & P(X_4^c) &= 0.75 & P(X_5^c) &= 0.75  
+\end{align*}
+We are asked to consider the possibility of Nancy missing the first four questions and getting the fifth question.
+$$P\left(\begin{matrix}\text{``The first question she}\\ \text{gets right is the 5th question''} \end{matrix}\right) = P\big(X_1^c \AND X_2^c \AND X_3^c \AND X_4^c \AND X_5\big)$$
+The five elementary events are independent, so we can find the joint probability by multiplying the marginal probabilities. (Refer to the Multiplication Rule for independent processes on page 86.)
+\begin{align*}
+P\big(X_1^c \AND X_2^c \AND X_3^c \AND X_4^c \AND X_5\big) &= P(X_1^c) \cdot P(X_2^c)\cdot P(X_3^c)\cdot P(X_4^c)\cdot P(X_5) \\
+&= 0.75\cdot 0.75\cdot 0.75\cdot 0.75\cdot 0.25\\
+&= 0.75^4\cdot 0.25 \\
+&\approx \fbox{0.0791}
+\end{align*}
+Thus, the probability is about 7.9\%.
+
+\item We hope to determine the probability that Nancy gets all five correct. Again, the elementary events are independent, so we can use the Multiplication Rule.
+\begin{align*}
+P\big(X_1 \AND X_2 \AND X_3 \AND X_4 \AND X_5\big) &= P(X_1) \cdot P(X_2)\cdot P(X_3)\cdot P(X_4)\cdot P(X_5) \\
+&= 0.25\cdot 0.25\cdot 0.25\cdot 0.25\cdot 0.25\\
+&= 0.25^5 \\
+&\approx \fbox{0.000977}
+\end{align*}
+Thus, the probability is about 0.098\%.
+
+\item The event ``at least one right'' is the complement of ``all wrong''. It is easy to calculate the probability of ``all wrong''.
+\begin{align*} 
+P(\text{``all wrong''}) &= P\big(X_1^c \AND X_2^c \AND X_3^c \AND X_4^c \AND X_5^c\big) \\
+&= P(X_1^c) \cdot P(X_2^c)\cdot P(X_3^c)\cdot P(X_4^c)\cdot P(X_5^c) \\
+&= 0.75^5 \\
+&\approx 0.237
+\end{align*}
+Then we can use the Complement Rule (see page 84), which states, ``For any event $A$ and its complement $A^c$, the probabilities add to 1.''
+\begin{align*}
+P(A) &= 1 - P(A^c) \\
+P(\text{``at least one right''}) &= 1 - P(\text{``all wrong''})\\
+&\approx 1 - 0.237\\
+&= \fbox{0.763}
+\end{align*}
+\end{enumerate}
+
+\item \begin{enumerate}
+\item $0.16+0.09 = \fbox{0.25}$
+\item $0.17+0.09 = \fbox{0.26}$
+\item Let event $A$ represent ``random man has at least Bachelor's degree''. Let event $B$ represent ``random woman has at least Bachelor's degree''. Let's assume that the man and woman are each selected randomly, such that the simple events are {\bf independent}. This independence allows us to use the Multiplication Rule for independent processes on page 86. 
+\begin{align*}
+P(A\AND B) &= P(A)\cdot P(B) \\
+&= 0.25 \cdot 0.26 \\
+&= \fbox{0.065}
+\end{align*}
+\item The assumption of independence is not reasonable. Marriage tends to occur between people of similar academic achievement levels.
+\end{enumerate}
+
+\item \begin{enumerate}
+\item ``Missing 0 days'' is the only other possible outcome. The probabilities of all four outcomes should add to 1.
+\begin{align*}
+P(\text{``a student misses 0 days''}) &= 1-0.25-0.15-0.28\\
+&= \fbox{0.32}
+\end{align*}
+\item These outcomes are disjoint (mutually exclusive), so we can use the Addition Rule of disjoint outcomes (page 79).
+\begin{align*}
+P(\text{``student misses no more than 1 day''}) &= P\big(\text{``misses zero days'' \OR ``misses one day''}\big)\\
+&= P(\text{``misses zero days''}) + P(\text{``misses one day''})\\
+&= 0.32+0.25\\
+&= \fbox{0.57}
+\end{align*}
+\item We can use the Addition Rule of disjoint outcomes.
+\begin{align*}
+P(\text{``at least 1 day''}) &= P(\text{``1 day''} \OR \text{``2 days''}\OR \text{``at least 3 days''})\\
+&= P(\text{``1 day''}) + P(\text{``2 days''})+P(\text{``at least 3 days''})\\
+&= 0.25+0.15+0.28\\
+&= \fbox{0.68}
+\end{align*}
+We could have also used the Complement Rule.
+\begin{align*}
+P(\text{``at least 1 day''}) &= 1 - P(\text{``zero days''})\\
+&= 1-0.32\\
+&= \fbox{0.68}
+\end{align*}
+
+\item Let's assume the absences of each child are independent so we can use the Multiplication Rule for independent processes.
+\begin{align*}
+P(\text{``2 kids have 0 absences''}) &= P(\text{``1st kid misses 0''}\AND \text{``2nd kid misses 0''})\\
+&= P(\text{``1st kid misses 0''}) \cdot P(\text{``2nd kid misses 0''})\\
+&= 0.32 \cdot 0.32\\
+&= 0.32^2\\
+&= \fbox{0.1024}
+\end{align*}
+
+\item We continue the assumption that each child's attendance is independent of the other, such that the probability above is correct. Each child has a 0.68 chance of missing some school.
+\begin{align*}
+P(\text{``both miss some''}) &= P(\text{``1st misses some''} \AND \text{``2nd misses some''})\\
+&= P(\text{``1st misses some''}) \cdot P(\text{``2nd misses some''})\\
+&= 0.68 \cdot 0.68\\
+&= 0.68^2\\
+&= \fbox{0.4624}
+\end{align*}
+
+\item The assumption of independence is not very reasonable. Siblings often get each other sick. Some parents are more lenient about missing school.
+\end{enumerate}
+
+\item \begin{enumerate}
+\item Invalid. The probabilities sum to 1.2, which is more than 1.
+\item Valid. The outcomes are disjoint. Each probability is between 0 and 1. They sum to 1. 
+\item Invalid. The probabilities sum to 0.9, which is less than 1.
+\item Invalid. There are negative probabilities.
+\item Valid. The outcomes are disjoint. Each probability is between 0 and 1. They sum to 1.
+\item Invalid. There are negative probabilities.
+\end{enumerate}
+
+\item \begin{enumerate}
+\item This is a joint probability. $\frac{459}{20000} = \fbox{0.2295}$
+\item This is a disjoint probability. $\frac{4657+2524-459}{20000} = \fbox{0.3361}$
+
+Or, you can add up all the relevant numbers.
+
+$\frac{4198+459+727+854+385+99}{20000} = \frac{6722}{20000} = \fbox{0.3361}$
+\end{enumerate}
+
+
+\end{enumerate}
+\end{document}

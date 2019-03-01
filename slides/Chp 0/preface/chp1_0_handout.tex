@@ -1,0 +1,69 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Slide options
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Option 1: Slides with solutions
+
+%\documentclass[slidestop,compress,mathserif]{beamer}
+%\newcommand{\soln}[1]{\textit{#1}}
+%\newcommand{\solnGr}[1]{#1}
+
+% Option 2: Handouts without solutions
+
+\documentclass[11pt,containsverbatim,handout]{beamer}
+\usepackage{pgfpages}
+\pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+\newcommand{\soln}[1]{ }
+\newcommand{\solnGr}{ }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Style
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{../../lec_style_handouts.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Preamble
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title[Welcome to Mat-181]{Welcome to Mat-181}
+\author{Chad Worley}
+\institute{Bunker Hill Community College}
+\date{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Begin document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{
+{
+\begin{frame}
+
+\hfill \includegraphics[width=40mm]{../../BHCClogoBW}
+
+\titlepage
+
+\end{frame}
+}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Sections
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{chp1_0_content}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% End document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

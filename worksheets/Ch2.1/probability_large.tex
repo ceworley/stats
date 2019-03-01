@@ -1,0 +1,276 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{multirow,array}
+\usepackage{newtxtext,newtxmath}
+\usepackage{relsize}
+\usepackage{lastpage}
+\usepackage{cancel}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+	\setenumerate[1]{label={\bf Q\theenumi: ~}}
+	\setenumerate[2]{label={\bf \theenumii: ~}}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textsc{BHCC Mat-181}}
+\rhead{\textsc{Probability}}
+\rfoot{Page \thepage ~of \pageref{LastPage}}
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+\begin{document}
+\Large
+\rhead{\textsc{Definitions and Formulas}}
+{\bf Sample statistics:}\vspace{-10pt}
+\begin{multicols}{2}\noindent 
+$n=\text{sample size} $\\
+$x_i=\text{the $i$th value in a sample} $\\
+$\bar x = \text{sample mean}$\\
+$s = \text{sample standard deviation}$\\\\
+$\bar x = \cfrac{\sum_{i=1}^n x_i}{n}$\\\\
+$s = \sqrt{\cfrac{\sum_{i=1}^n (x_i-\bar x)^2}{n-1}}$ \\
+
+\columnbreak \noindent
+Q1 = first quartile\\
+$m$ = median\\
+Q3 = third quartile\\
+IQR = inter-quartile range\\
+\end{multicols}
+
+{\bf Population parameters:}\\
+$\mu = \text{population mean}$\\
+$\sigma = \text{population standard deviation}$\\
+
+{\bf Probability:}\\
+$\Omega = \text{set of all possible equally likely outcomes}$\\
+$A = \text{event A, a set of outcomes}$\\
+$B = \text{event B, another set of outcomes}$\\
+$|A| = \text{size of set, number of outcomes in } A$\\
+$P(A) = \text{probability of }A$\\
+$P(A \cap B) = \text{probability of both $A$ and $B$}$\\
+$P(A \cup B) = \text{probability of either $A$ or $B$ (or both)}$\\
+$P(A | B) = \text{probability of $A$ given $B$}$\\\\
+$P(A) = \cfrac{|A|}{|\Omega|}$\\\\
+$P(A \cap B) = P(A) \cdot P(B|A)$\\
+$P(A \cup B) = P(A) + P(B) - P(A\cap B)$\\
+\\
+$0 \le P(A) \le 1$\\
+$A$, $B$ are disjoint (mutually exclusive) ~~$\iff~~P(A\cap B) = 0$\\
+$A$, $B$ are non-disjoint ~~$\iff~~P(A\cap B) > 0$\\
+$A$, $B$ are exhaustive ~~$\iff~~P(A\cup B) = 1$\\
+$A$, $B$ are complements ~~$\iff$~~ $A$, $B$ are disjoint and exhaustive ~~$\iff$~~ $B=A^c$\\
+$A$, $B$ are independent ~~$\iff~~P(A\cap B) = P(A)\times P(B) ~~\iff~~ P(A)=P(A|B) \iff~~ P(B)=P(B|A) $\\
+
+{\bf Random variables and distributions:}\\
+$X=$ random variable \\
+$x_i=$ the $i$th possible value of $X$. (Notice different meaning here vs. sample statistics.)\\
+$k=$ number of possible values of $X$.\\
+$E(X)=\mu=$ expected value of $X$\\
+$\sigma=$ standard deviation of $X$\\
+$\mu = \sum_{i=1}^k  x_i \cdot P(X=x_i) $\\
+$\sigma = \sqrt{\sum_{i=1}^k (x_i-\mu)^2 \cdot P(X=x_i)}$
+
+
+\newpage
+
+
+\rhead{\textsc{Probability}}
+\begin{enumerate}
+\item An urn contains 100 marbles with the following frequencies.
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{0.9\textwidth}{|Y|Y Y Y|Y|} \hline
+             & red  & green  & blue  & total \\\hline
+striped      & 11   & 12     & 2     & 25    \\ 
+checkered    & 13   & 14     & 3     & 30    \\
+dotted       &  7   &  9     & 29    & 45   \\\hline
+total        & 31   & 35     & 34    & 100   \\\hline
+\end{tabularx}
+\end{center}
+\begin{enumerate}
+\item What is the probability that a randomly selected marble is red?
+\vfill
+\item What is the probability that a randomly selected marble is green {\bf and} dotted?
+\vfill
+\item What is the probability that a randomly selected marble is blue {\bf or} striped?
+\vfill
+\item {\bf Given} that a randomly selected marble is checkered, what is the probability it is green?
+\vfill
+\item {\bf Given} that a randomly selected marble is green, what is the probability it is checkered?
+\vfill
+\end{enumerate}
+
+\newpage
+
+\item American roulette involves spinning a wheel with 38 pockets. Jason is repeatedly betting on a number, such that he has a 1 in 38 chance to win each round. Each round he either loses \$1 or gains \$35. Jason figures if he plays 34 rounds, he only needs to win one round to end with more money (this is true).
+\begin{enumerate}
+\item What is the chance that Jason loses 34 rounds in a row?
+\vfill
+\item What is the chance that Jason wins at least 1 round out of 34 rounds?
+\vfill
+\item Is Jason more likely to be ahead or behind after 34 rounds?
+\vfill
+\end{enumerate}
+
+
+\newpage
+
+\item Make Venn diagrams for the following events.
+\begin{enumerate}
+\item Two disjoint events.
+\vfill
+\item Two exhaustive events that are non-disjoint.
+\vfill
+\item Two events that are complements.
+\vfill
+\item Two independent events.
+\vfill
+\item Two dependent events that are non-disjoint.
+\vfill
+\item $A$, $B$ such that $A$ implies $B$ but $B$ does not imply $A$.
+\vfill
+\item $A$, $B$ such that $A$ implies $B$ and $B$ implies $A$.
+\vfill
+\end{enumerate}
+
+
+
+\newpage
+
+
+\item Complete the following relative-frequency contingency table.
+\begin{center}
+    \setlength{\extrarowheight}{2pt}
+    \begin{tabularx}{0.7\textwidth}{{c c|Y Y|c }}
+      \multicolumn{2}{c}{} & \multicolumn{2}{c}{$Y$}& \multicolumn{1}{c}{}\\%\cline{3-5}
+      \multicolumn{1}{c}{} &  & true  & false & total \\\cline{2-5}
+      \multirow{2}*{$X$ }   & true    & 0.05  &       &       \\%\cline{2-5}
+      						& false   &       &       & 0.4    \\\cline{2-5}
+       						& total   & 0.2   &       & 1      \\%\cline{2-5}
+    \end{tabularx}
+\end{center}
+
+\vfill
+
+\item Complete the following relative-frequency contingency table such that $X$ and $Y$ are mutually exclusive and exhaustive.
+\begin{center}
+    \setlength{\extrarowheight}{2pt}
+    \begin{tabularx}{0.7\textwidth}{{c c|Y Y|c }}
+      \multicolumn{2}{c}{} & \multicolumn{2}{c}{$Y$}& \multicolumn{1}{c}{}\\%\cline{3-5}
+      \multicolumn{1}{c}{} &  & true  & false & total \\\cline{2-5}
+      \multirow{2}*{$X$ }   & true    &   &       &       \\%\cline{2-5}
+      						& false   & 0.3     &       &     \\\cline{2-5}
+       						& total   &    &       & 1      \\%\cline{2-5}
+    \end{tabularx}
+\end{center}
+
+\vfill
+\newpage
+
+\item Complete the following relative-frequency contingency table such that $X$ and $Y$ are independent.
+\begin{center}
+    \setlength{\extrarowheight}{2pt}
+    \begin{tabularx}{0.7\textwidth}{{c c|Y Y|c }}
+      \multicolumn{2}{c}{} & \multicolumn{2}{c}{$Y$}& \multicolumn{1}{c}{}\\%\cline{3-5}
+      \multicolumn{1}{c}{} &  & true  & false & total \\\cline{2-5}
+      \multirow{2}*{$X$ }   & true    &  0.28  &        &         \\%\cline{2-5}
+      						& false   &        &        &       \\\cline{2-5}
+       						& total   &  0.7   &        & 1      \\%\cline{2-5}
+    \end{tabularx}
+\end{center}
+
+\vfill
+
+\item Complete the following relative-frequency contingency table such that $P(Y) = 0.2$ and $P(X|Y) = 0.8$ and $P(X|Y^c) = 0.5$.
+\begin{center}
+    \setlength{\extrarowheight}{2pt}
+    \begin{tabularx}{0.7\textwidth}{{c c|Y Y|c }}
+      \multicolumn{2}{c}{} & \multicolumn{2}{c}{$Y$}& \multicolumn{1}{c}{}\\%\cline{3-5}
+      \multicolumn{1}{c}{} &  & true  & false & total \\\cline{2-5}
+      \multirow{2}*{$X$ }   & true    &       &        &         \\%\cline{2-5}
+      						& false   &        &        &       \\\cline{2-5}
+       						& total   &     &        & 1      \\%\cline{2-5}
+    \end{tabularx}
+\end{center}
+\vfill
+
+
+\newpage
+
+
+
+
+
+\item Liam's friend, Owen, tells Liam that he has a biased coin that will land heads with probability 0.70. Liam is not sure he trusts Owen, because Owen sometimes lies and Liam can't imagine how a biased coin would work. Thus, Liam feels the likelihood that Owen is telling the truth is 0.10. Liam asks to see a flip of the coin, and feels the following contingency table explains his expectations.
+\begin{center}
+    \setlength{\extrarowheight}{2pt}
+    \begin{tabularx}{0.7\textwidth}{{c c|Y Y|c }}
+      \multicolumn{2}{c}{} & \multicolumn{2}{c}{Coin is biased $(B)$}& \multicolumn{1}{c}{}\\%\cline{3-5}
+      \multicolumn{1}{c}{} &  & true  & false & total \\\cline{2-5}
+      \multirow{2}*{Heads ($H$) }  & true  & 0.07  & 0.45  & 0.52 \\%\cline{2-5}
+      						 					& false & 0.03  & 0.45  & 0.48 \\\cline{2-5}
+       						 					& total & 0.1   & 0.9   & 1 \\%\cline{2-5}
+    \end{tabularx}
+\end{center}
+\begin{enumerate}
+\item If the coin is biased, what is the likelihood it lands heads?
+$$P(H|B) = $$
+\item If the coin is not biased, what is the likelihood it lands heads?
+$$P(H|B^c) = $$
+\item If the coin lands heads, how likely is the coin biased (based on Liam's prior beliefs)?
+$$P(B|H) =  $$
+\newpage
+\item After one flip lands heads, Liam adjusts his expectations for the next flip.
+\begin{center}
+    \setlength{\extrarowheight}{2pt}
+    \begin{tabularx}{0.7\textwidth}{{c c|Y Y|c }}
+      \multicolumn{2}{c}{} & \multicolumn{2}{c}{Coin is biased $(B)$}& \multicolumn{1}{c}{}\\%\cline{3-5}
+      \multicolumn{1}{c}{} &  & true  & false & total \\\cline{2-5}
+      \multirow{2}*{Heads ($H$) }   	& true  & 0.091  & 0.435  & 0.526 \\%\cline{2-5}
+      						 			& false & 0.039  & 0.435  & 0.474 \\\cline{2-5}
+       						 			& total & 0.13  & 0.87   & 1 \\%\cline{2-5}
+    \end{tabularx}
+\end{center}
+Now, if this next flip is also heads, what is the likelihood the coin is biased?
+$$P(B|H) =  $$
+\end{enumerate}
+
+
+%\newpage
+
+%\item Alana wondered what fraction of cars fully stopped at various stop signs. She found a database of all 4-way-stop intersections in her community and randomly selected 20 intersections to watch from noon to 1PM on weekdays. Alana noticed that at stop signs in residential areas cars stopped 245 out of 520 times.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\end{enumerate}
+%\newpage
+%	\setenumerate[1]{label={\bf A\theenumi: ~}}
+%	\setenumerate[2]{label={\bf \theenumii: ~}}
+%\begin{multicols}{2}
+%\begin{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\item \begin{enumerate}
+%\item $P(\text{red})=\frac{31}{100}=0.31$
+%\item $P(\text{green and dotted})=\frac{9}{100}=0.09$
+%\item $P(\text{blue or striped})=\frac{34+25-2}{100}=0.57$
+%\item $P(\text{green | checkered})=\frac{14}{30}\approx 0.467$
+%\item $P(\text{checkered | green})=\frac{14}{35} = 0.4$
+%\end{enumerate}
+
+
+
+\end{enumerate}
+%\end{multicols}
+\end{document}

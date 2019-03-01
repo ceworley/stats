@@ -1,0 +1,8 @@
+\select@language {english}
+\beamer@sectionintoc {1}{Test results}{1}{0}{1}
+\beamer@sectionintoc {2}{Normal distribution}{10}{0}{2}
+\beamer@subsectionintoc {2}{1}{Normal distribution model}{13}{0}{2}
+\beamer@subsectionintoc {2}{2}{Standardizing with Z scores}{14}{0}{2}
+\beamer@subsectionintoc {2}{3}{Normal probability table}{18}{0}{2}
+\beamer@subsectionintoc {2}{4}{Normal probability examples}{20}{0}{2}
+\beamer@subsectionintoc {2}{5}{68-95-99.7 rule}{26}{0}{2}

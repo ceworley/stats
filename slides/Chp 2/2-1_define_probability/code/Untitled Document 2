@@ -1,0 +1,49 @@
+Probability:
+    P(A)
+    0 <= P(A) <= 1
+
+Events are mutually exclusive IFF:
+    P(A and B) = 0
+Events are independent IFF:
+    P(A)*P(B) = P(A and B)
+Events are exhausive IFF:
+    P(A or B) = 1
+
+A and B are complementary 
+    IFF 
+A and B are both mutually exclusive and exhaustive
+    which implies
+B = A^c
+
+
+
+
+P(A or B) = P(A) + P(B) - P(A and B)
+P(A and B) = P(A)*P(B|A)
+
+
+sample space
+
+
+
+
+gambler's fallacy
+hothand fallacy
+mutual exclusivity
+
+law of large numbers:
+    more variance with average of small samples
+    less variance with average of large samples
+
+pair of dice, coin, roullette, cards
+
+repeated trials (ten flips of coin)
+
+two coins
+
+platonic solids
+
+
+
+
+

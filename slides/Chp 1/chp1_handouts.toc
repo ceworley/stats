@@ -1,0 +1,5 @@
+\select@language {english}
+\beamer@subsectionintoc {0}{1}{Definitions}{2}{0}{0}
+\beamer@sectionintoc {1}{Relationships among variables}{5}{0}{1}
+\beamer@subsectionintoc {1}{1}{Relationships among variables}{8}{0}{1}
+\beamer@subsectionintoc {1}{2}{Associated and independent variables}{9}{0}{1}

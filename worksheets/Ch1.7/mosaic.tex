@@ -1,0 +1,68 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{multirow,array}
+\usepackage{newtxtext,newtxmath}
+\usepackage{relsize}
+\usepackage{lastpage}
+\usepackage{cancel}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+	\setenumerate[1]{label={\bf Q\theenumi: ~}}
+	\setenumerate[2]{label={\bf \theenumii: ~}}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textsc{BHCC Mat-181: Mosaic Plots}}
+\chead{ {\bf NAME: }}
+\rfoot{Page \thepage ~of \pageref{LastPage}}
+
+
+
+\begin{document}
+\Large
+\begin{center}
+\begin{tabular}{c|c c c | c}
+       & checkered & dotted & striped & total \\ \hline
+green  & 10       &  30     &  10   & 50 \\
+violet & 20       &  50     &  10   & 80 \\
+blue   & 40       &  10     &  20   & 70 \\ \hline
+total  & 70       &  90     &  40   & 200 
+\end{tabular}
+\end{center}
+\begin{enumerate}
+\item Make a mosaic plot using the patterns as the first variable (as the columns).
+\vfill
+\begin{center}
+\includegraphics[scale=1.2]{grid.png}
+\end{center}
+
+\newpage
+\begin{center}
+\begin{tabular}{c|c c c | c}
+       & checkered & dotted & striped & total \\ \hline
+green  & 10       &  30     &  10   & 50 \\
+violet & 20       &  50     &  10   & 80 \\
+blue   & 40       &  10     &  20   & 70 \\ \hline
+total  & 70       &  90     &  40   & 200 
+\end{tabular}
+\end{center}
+\item Make a mosaic plot using the colors as the first variable (as the columns).
+\vfill
+\begin{center}
+\includegraphics[scale=1.2]{grid.png}
+\end{center}
+
+\end{enumerate}
+
+
+\end{document}

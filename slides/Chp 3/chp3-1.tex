@@ -1,0 +1,91 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Slide options
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Option 1: Slides with solutions
+
+%\documentclass[slidestop,compress,mathserif]{beamer}
+%\newcommand{\soln}[1]{\textit{#1}}
+%\newcommand{\solnGr}[1]{#1}
+%\input{../lec_style.tex}
+
+% Option 2: Handouts without solutions
+
+%\documentclass[11pt,containsverbatim,handout]{beamer}
+%\usepackage{pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+%%\pgfpagesuselayout{}[letterpaper,landscape,border shrink=5mm]
+%\newcommand{\soln}[1]{ }
+%\newcommand{\solnGr}{ }
+%%\newcommand{\soln}[1]{\textit{#1}}
+%%\newcommand{\solnGr}[1]{#1 }
+%\input{../lec_style_handouts.tex}
+
+% Option 3: LARGE Handouts without solutions, high contrast 
+
+\documentclass[11pt,containsverbatim,handout]{beamer}
+\usepackage{pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+\pgfpagesuselayout{}[letterpaper,landscape,border shrink=5mm]
+\newcommand{\soln}[1]{ }
+\newcommand{\solnGr}{ }
+%\newcommand{\soln}[1]{\textit{#1}}
+%\newcommand{\solnGr}[1]{#1 }
+\input{../lec_style_LARGE.tex}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Preamble
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title[Chp 3.1: Normal Distribution]{Chp 3.1: Normal Distribution}
+\author{OpenIntro Statistics, 3rd Edition}
+\institute{$\:$ \\ {\footnotesize Slides adapted by Chad Worley from Mine \c{C}etinkaya-Rundel of OpenIntro. \\
+The slides may be copied, edited, and/or shared via the \webLink{http://creativecommons.org/licenses/by-sa/3.0/us/}{CC BY-SA license.} \\
+Some images may be included under fair use guidelines (educational purposes).}}
+\date{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Begin document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%{
+%\addtocounter{framenumber}{-1} 
+%{\removepagenumbers 
+%\usebackgroundtemplate{\includegraphics[width=\paperwidth]{../OpenIntro_Grid_4_3-01.jpg}}
+%\begin{frame}
+
+%\hfill \includegraphics[width=20mm]{../oiLogo_highres}
+
+%\titlepage
+
+%\end{frame}
+%}
+%}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Sections
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\input{3-1_normal_distribution/3-1_normal_distribution}
+%\input{3-2_evaluating_normal_approx/3-2_evaluating_normal_approx}
+%\input{3-3_geometric_distribution/3-3_geometric_distribution}
+%\input{3-4_binomial_distribution/3-4_binomial_distribution}
+%\input{3-5_more_discrete_distributions/3-5_more_discrete_distributions}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% End document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

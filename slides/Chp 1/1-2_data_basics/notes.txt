@@ -1,0 +1,12 @@
+
+library(openintro)
+data()
+plot(helmet)
+pairs(mammals)
+pairs(mammals, log='xy')
+
+Weights are obscured by large variation of scale.
+
+table(yawn)
+
+pairs(mtcars)

@@ -1,0 +1,12 @@
+\select@language {english}
+\beamer@sectionintoc {1}{Defining probability}{1}{0}{1}
+\beamer@subsectionintoc {1}{1}{Probability}{1}{0}{1}
+\beamer@subsectionintoc {1}{2}{Some history}{2}{0}{1}
+\beamer@subsectionintoc {1}{3}{Historical example: Problem of points}{3}{0}{1}
+\beamer@subsectionintoc {1}{4}{Defining probability}{4}{0}{1}
+\beamer@subsectionintoc {1}{5}{Disjoint or mutually exclusive outcomes}{9}{0}{1}
+\beamer@subsectionintoc {1}{6}{Probabilities when events are not disjoint}{11}{0}{1}
+\beamer@subsectionintoc {1}{7}{Probability distributions}{13}{0}{1}
+\beamer@subsectionintoc {1}{8}{Complement of an event}{15}{0}{1}
+\beamer@subsectionintoc {1}{9}{Independence}{16}{0}{1}
+\beamer@subsectionintoc {1}{10}{Recap}{22}{0}{1}

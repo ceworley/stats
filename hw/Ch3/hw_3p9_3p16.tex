@@ -1,0 +1,153 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[left=1cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{multicol}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{multirow,array}
+\usepackage{newtxtext,newtxmath}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textsc{BHCC Mat-181}}
+\chead{\textsc{Answers}}
+\rhead{\textsc{HW Exercises 3.9-3.16}}
+\rfoot{Page \thepage ~of \pageref{LastPage}}
+\setenumerate[1]{label={\bf 3.\theenumi: }}
+\setenumerate[2]{label={\bf (\theenumii): }}
+\setenumerate[3]{label={\bf \theenumiii: }}
+
+\begin{document}
+\newcommand{\N}[2]{\mathcal{N}\big(#1,~#2\big)}
+\newcommand{\AND}{\textsc{~and~}}
+\newcommand{\OR}{\textsc{~or~}}
+
+\begin{enumerate}
+\setcounter{enumi}{8}
+\item \begin{enumerate}
+\item $\mu = (77-32)\times \frac{5}{9} = 25$\\
+$\Delta C = \Delta F \times \frac{5}{9} $ \\
+$\sigma = 5 \times \frac{5}{9} = 2.78$\\
+$X \sim \N{25}{2.78}$
+\item $z=(28-25)/2.78 = 1.08$\\
+$\Phi(1.08) = 0.8599$\\
+$P(X>28) = 1-0.8599 = 0.1401$
+\item The answers are very close; they only differ due to rounding. The temperature scale (F vs C) should not change the probability of events.
+\item Determine the z-scores of $Q_1$ and $Q_3$.
+$$z_{\textsc{lower}} = \Phi^{-1}(0.25) = -0.6745$$
+$$z_{\textsc{upper}} = \Phi^{-1}(0.75) = 0.6745 $$
+Determine the temperatures.
+$$x_{\textsc{lower}} = (-0.6745)(2.78)+25 = 23.12$$
+$$x_{\textsc{upper}} = (0.6745)(2.78)+25 = 26.88$$
+Find the IQR.
+$$26.88-23.12 = \fbox{3.76\text{ C}}$$
+\end{enumerate}
+
+\item Just for my notes... $X\sim \N{55}{6}$
+\begin{enumerate}
+\item We want to find a left area. Find $z$.
+$$z = \frac{48-55}{6} = -1.17$$
+Use the $z$ table.
+$$P(X < 48) = \Phi(-1.17) =  0.1210$$
+\item We want to find a sectional area. Find both $z$ scores.
+$$z_{\textsc{lower}} = \frac{60-55}{6} = 0.83$$
+$$z_{\textsc{upper}} = \frac{65-55}{6} = 1.67$$
+We take a difference of the areas.
+$$P(60 < X < 65) = \Phi(1.67)-\Phi(0.83) = 0.1558$$
+\item We are given that right area = 0.10. This corresponds to 90th percentile. To convert percentile to $z$ score, we use the table backwards.
+$$z = \Phi^{-1}(0.9) = 1.28$$
+From this $z$ score we calculate a height.
+$$x = 1.28 \times 6 + 55 = \fbox{62.7\text{ in}}$$
+\item We want to calculate a left area. Determine the $z$ score.
+$$z = \frac{54-55}{6} = -0.17 $$
+We get a percentile from this $z$ score.
+$$P(X < 54) = \Phi(-0.17) = \fbox{0.4325} $$
+\end{enumerate}
+
+\item Just for my notes... $X\sim \N{1650}{\sigma}$
+\begin{enumerate}
+\item $z = \Phi^{-1}(0.75) = 0.67$
+\item $\mu = \$1650$. The cutoff is \$1800.
+\item We use $\sigma = (x-\mu)/z$
+$$\sigma = \frac{1800-1650}{0.67} = \fbox{\$223.88}$$
+\end{enumerate}
+
+\item Just for my notes... $X\sim \N{72.6}{4.78}$
+\begin{enumerate}
+\item We are looking for a left area. Find $z$ of the cutoff.
+$$z = \frac{80-72.6}{4.78} = 1.55$$
+From this $z$ we look up the left area.
+$$P(X<80) = \Phi(1.55) = \fbox{0.9394}$$
+\item We are looking for a sectional area. Find the $z$s of the boundaries.
+$$z_{\textsc{lower}} = \frac{60-72.6}{4.78} = -2.64$$
+$$z_{\textsc{upper}} = \frac{80-72.6}{4.78} = 1.55$$
+We find the area between these $z$ scores by taking a difference of left areas.
+$$P(60<X<80) = \Phi(1.55)-\Phi(-2.64) = \fbox{0.935} $$
+\item We are told the right area is 0.05. This means we are dealing with a 95th percentile, which we convert to a $z$ score by using the table in reverse.
+$$z = \Phi^{-1}(0.95) = 1.64 $$
+We convert this $z$ score into a speed.
+$$x = z\sigma+\mu = (1.64)(4.78)+72.6 = 80.4 \text{ miles/hour}$$
+The fastest 5\% of vehicles travel {\bf faster than 80.4 miles/hour}.
+\item We are given a speed cutoff and asked for the right area.
+$$z = \frac{70-72.6}{4.78} = -0.54$$
+We find the right area.
+$$P(X>70) = 1-\phi(-0.54) = \fbox{0.7054} $$
+\fbox{About 70.5\% of cars travel faster than the speed limit.} Slow down please.
+\end{enumerate}
+
+\item $X\sim \N{45}{3.2}$
+$$P(X > 50) = 1- \Phi\left(\frac{50-45}{3.2}\right) = \fbox{0.059} $$
+About 6\% of passengers incur this fee.
+
+\item \begin{enumerate}\item We are told the mean, a specific value, and that value's right area:
+$$X \sim \N{100}{\sigma} $$
+$$P(X>132) = 0.02 $$
+$$P(X<132) = 0.98 $$
+An IQ of 132 is a 98th percentile IQ. We determine $z$.
+$$z = \Phi^{-1}(0.98) = 2.05$$
+We calculate $\sigma$.
+$$\sigma = \frac{x-\mu}{z} = \frac{132-100}{2.05} = \fbox{15.6 \text{ IQ points}} $$
+\item We are told the population mean, a specific value, and (implicitly) that value's percentile.
+$$X\sim \N{185}{\sigma} $$
+$$P(X > 220) = 0.185$$
+$$P(X < 220) = 1-0.185 = 0.815$$
+We determine the $z$ score from the percentile by using the table in reverse.
+$$z = \Phi^{-1}(0.815) = 0.90 $$
+We calculate $\sigma$.
+$$\sigma = \frac{x-\mu}{z} = \frac{220-185}{0.9} = \fbox{38.9 \text{ mg/dl}} $$
+\end{enumerate}
+
+\item For my notes: $X\sim \N{89}{15}$.
+\begin{enumerate}
+\item $$P(X>100) = 1-\Phi\left(\frac{100-89}{15}\right) = \fbox{0.2317} $$
+\item With a bid price too low, you will never win. With a big price too high, you might pay too much, and if you have multiple textbook bids, you might win more than one.
+\item Let's just make it so we have a 10\% chance on each one, giving an expected value of 1 textbook. The chance of losing all ten bids would be $0.9^{10} = 0.35$. Hmm... I guess that is ``reasonably sure''. (Using a binomial distribution we can find there is a 39\% of exactly one, 19\% chance of getting two textbooks, and a 5\% chance of getting three textbooks...)
+\item We want $x$ such that $P(X<x) = 0.1$.
+$$z = \Phi^{-1}(0.1) =  -1.28$$
+$$x = (-1.28)(15)+89 = \fbox{\$69.65} $$
+\end{enumerate}
+
+\item Okay... this one is a bit harder... $X\sim \N{1500}{300}$. Let's first find the percentile of a student who gets 1900.
+$$P(X<1900) = \Phi\left(\frac{1900-1500}{300}\right) = 0.9088$$
+Thus, only 9.12\% of students get above 1900.\\
+Let's find the percentile of a student who gets a 2100.
+$$P(X<2100) = \Phi\left(\frac{2100-1500}{300}\right) = 0.9772$$
+Thus, only 2.28\% of students get above 2100.\\
+We are asked to determine a conditional probability.
+$$P(\text{over 2100} \textsc{~given~} \text{over 1900}) = \frac{P(\text{over 2100} \textsc{~and~} \text{over 1900})}{P(\text{over 1900})} $$
+``Over 2100'' is a proper subset of ``over 1900'', thus:
+$$P(\text{over 2100} \textsc{~and~} \text{over 1900}) = P(\text{over 2100})$$
+So,
+$$P(\text{over 2100} \textsc{~given~} \text{over 1900}) = \frac{2.28}{9.12}= \fbox{0.25}$$
+A random student over 1900 has a 0.25 chance of also being over 2100.
+
+\end{enumerate}
+\end{document}

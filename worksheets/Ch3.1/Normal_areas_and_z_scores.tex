@@ -1,0 +1,151 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{multirow,array}
+\usepackage{newtxtext,newtxmath}
+\usepackage{relsize}
+\usepackage{lastpage}
+\usepackage{cancel}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+	\setenumerate[1]{label={\bf \theenumi: ~}}
+	\setenumerate[2]{label={\bf \theenumii: ~}}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textsc{BHCC Mat-181}}
+\rhead{\textsc{Normal areas and $z$ scores}}
+\rfoot{Page \thepage ~of \pageref{LastPage}}
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+\newcommand{\N}[2]{\mathcal{N}\big(#1,~#2\big)}
+
+\begin{document}
+\begin{enumerate}
+\item Let $X\sim \N{400}{10}$. You will calculate $P(414 < X < 422)$ after completing the diagram.
+\begin{center}
+\includegraphics[scale=.8]{figures/curve.png}
+\end{center}
+\begin{enumerate}
+\item Determine the $x$ values that correspond to the integer $z$ values.
+\item Find the $z$ scores of the boundaries, and shade the appropriate section.
+\item Estimate $P(414 < X < 422)$ by counting squares.
+\vspace{30pt}
+\item Calculate $P(414 < X < 422)$ by using a $z$ table.
+\end{enumerate}
+ \vfill
+ 
+\item Let $X\sim \N{5.5}{0.1}$. You will calculate $P\Big(\big|X-5.5 \big| > 0.13 \Big)$ after completing the diagram.
+\begin{center}
+\includegraphics[scale=.8]{figures/curve.png}
+\end{center}
+\begin{enumerate}
+\item Determine the $x$ values that correspond to the integer $z$ values.
+\item Find the $z$ scores of the boundaries, and shade the appropriate section.
+\item Estimate $P\Big(\big|X-5.5 \big| > 0.13 \Big)$ by counting squares.
+\vspace{30pt}
+\item Calculate $P\Big(\big|X-5.5 \big| > 0.13 \Big)$ by using a $z$ table.
+\end{enumerate}
+\vfill
+
+\newpage
+
+\item Let $X \sim \N{23.4}{5.6}$. Determine $P(X>21)$.
+\vfill
+\item Let $X \sim \N{100}{5}$. Determine $x_0$ such that $P(X<x_0) = 0.30$.
+\vfill
+\item Let $X \sim \N{100}{5}$. Determine $x_1$ such that $P(X>x_1) = 0.30$.
+\vfill
+\item Let $X \sim \N{100}{5}$. Determine $r$ such that $P\big(|X-100|<r\big) = 0.30$.
+\vfill
+\item Let $X \sim \N{100}{5}$. Determine $r$ such that $P\big(|X-100|>r\big) = 0.30$.
+\vfill
+
+\newpage
+
+\item Determine $\sigma$ such that $X \sim \N{10}{\sigma}$ and $P(X > 12.3) = 0.42$.
+\vfill
+\item Let $X \sim \N{42.5}{0.15}$. Determine $P(|X-42.5| < 0.25)$.
+\vfill
+\item Determine $\mu$ such that $X \sim \N{\mu}{30}$ and $P(X > 150) = 0.8$.
+\vfill
+\item Let $X \sim \N{1000}{30}$. Determine $P(930 < X < 991)$.
+\vfill
+\end{enumerate}
+
+\newpage
+\chead{\bf ANSWERS}
+\begin{multicols}{2}
+\begin{enumerate}
+\item \begin{enumerate} \item 370, 380, 390, 400, 410, 420, 430
+\item $z_1 = \frac{414-400}{10} = 1.4$\\
+$z_2 = \frac{422-400}{10} = 2.2 $\\
+\includegraphics[scale=0.4]{figures/A1.png}
+\item $P(414<X<422) \approx 7\%$
+\item $\Phi(2.2)-\Phi(1.4) = \fbox{0.06685}$
+\end{enumerate}
+
+\item \begin{enumerate} \item 5.2, 5.3, 5.4, 5.5, 5.6, 5.7, 5.8
+\item $z_1 = \frac{5.37-5.5}{0.1} = -1.3$\\
+$z_2 = \frac{5.63-5.5}{0.1} = 1.3 $\\
+\includegraphics[scale=0.4]{figures/A2.png}
+\item $P(|X-5.5|<0.13) \approx 18\%$\\
+$P(X<5.37 \textsc{~~or~~} X>5.63) \approx 18\%$
+
+\item $2\Phi(-1.3) = \fbox{0.1936}$
+\end{enumerate}
+
+\item $z = \frac{21-23.4}{5.6} = -0.43$\\
+$P(X>21) = P(Z>-0.43)=$\\ 
+$= 1-\Phi(-0.43) ~=~ \fbox{0.666}$
+
+\item We recognize $x_0$ is 30th percentile. \\
+$z = \Phi^{-1}(0.3) = -0.52$\\
+$x_0 = z\sigma+\mu = (-0.52)(5)+100 = \fbox{97.4}$
+
+\item We recognize $x_1$ is 70th percentile. \\
+$z = \Phi^{-1}(0.7) = 0.52$\\
+$x_0 = z\sigma+\mu = (0.52)(5)+100 = \fbox{102.6}$
+
+\item This is harder. We recognize $(100+r)$ is the 65th percentile. We get 65 by splitting 30 in half and adding it to 50. A sketch will help here. \\
+$z_{\textsc{upper}} = \Phi^{-1}(0.65) = 0.38$\\
+$x_{\textsc{upper}} = (0.38)(5)+100 = 101.9$\\
+$r = \fbox{1.9}$
+
+\item We recognize $(100+r)$ is the 85th percentile. We get 85 by splitting 30 in half and subtracting it from 100. A sketch will help here. \\
+$z_{\textsc{upper}} = \Phi^{-1}(0.85) = 1.04$\\
+$x_{\textsc{upper}} = (1.04)(5)+100 = 105.2$\\
+$r = \fbox{5.2}$
+
+\item 42\% is a right area corresponding to 58th percentile. We find the $z$ score of 58th percentile.\\
+$z = \Phi^{-1}(0.58) = 0.20 $\\
+$\sigma = \frac{x-\mu}{z} =\frac{12.3-10}{0.2} = \fbox{11.5}$
+
+\item We want a central area with bounds 42.25 and 42.75.\\
+$z_{\textsc{lower}} = \frac{-0.25}{0.15} = -1.67$ \\
+$z_{\textsc{upper}} = \frac{0.25}{0.15} = 1.67$ \\
+$P(|X-42.5|<0.25) = \Phi(1.67)-\Phi(-1.67) = \fbox{0.905}$
+
+\item We want a $z$ score of 20th percentile.\\
+$z = \Phi^{-1}(0.2) = -0.84$ \\
+$\mu = x - z\sigma = 150-(-0.84)(30) = \fbox{175.2}$
+
+\item We find two $z$ scores.\\
+$z_{\textsc{lower}} = \frac{930-1000}{30} = -2.33$\\
+$z_{\textsc{upper}} = \frac{991-1000}{30} = -0.3$ \\
+$P(930<X<991) = \Phi(-0.3)-\Phi(-2.33) = \fbox{0.3722}$
+
+\end{enumerate}
+\end{multicols}
+\end{document}
+

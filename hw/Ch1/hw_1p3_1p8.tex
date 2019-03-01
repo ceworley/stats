@@ -1,0 +1,96 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{multicol}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{multirow,array}
+\usepackage{newtxtext,newtxmath}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textsc{BHCC Mat-181}}
+\chead{\textsc{Answers}}
+\rhead{\textsc{HW Exercises 1.3-1.8}}
+\rfoot{Page \thepage ~of \pageref{LastPage}}
+\setenumerate[1]{label={\bf 1.\theenumi: }}
+\setenumerate[2]{label={\bf (\theenumii): }}
+
+
+\begin{document}
+\begin{enumerate}
+\setcounter{enumi}{2}
+\item
+\begin{enumerate}
+\item The cases are the 143,196 births.
+\item For each birth, various concentrations and the gestation period were recorded --- all continuous variables.
+\item Is there an association between pollution levels and gestation period?
+\end{enumerate}
+
+\item 
+\begin{enumerate}
+\item The 600 asthma patients.
+\item The research group (treatment or control), quality
+of life, activity, asthma symptoms, and medication reduction on a scale from 0 to 10 --- all categorical variables.
+
+You might think the scores from 0 to 10 should be numerical, but those scales are loose. Someone with a score of 8 in quality of life does not have twice the quality of life as someone with a score of 4.
+\item Does the Buteyko method cause health benefits for asthma patients?
+\end{enumerate}
+
+\item
+\begin{enumerate}
+\item The 160 children.
+\item The variables are (1) research group (told to be honest or not told), (2) gender, (3) age, (4) child's claim (white or black), and (5) whether the child is an only child. The types are all categorical except for age, which is a continuous variable.
+\item Which children (by gender, age, and only childness) when told to be honest shift their rate of lying? Is the rate of lying associated with a child's age, sex, only-childness, or being told to be honest? 
+\end{enumerate}
+
+\item
+\begin{enumerate}
+\item The 129 undergraduates.
+\item ~\\
+\begin{tabular}{|c|c|}\hline
+variable & type \\ \hline
+money & categorical \\
+education & categorical \\
+job respectedness & categorical \\
+number candies taken & discrete \\ \hline
+\end{tabular}
+\item Is perseption of status associated with willingness to take (and report) candies from children?
+\end{enumerate}
+
+\item
+\begin{enumerate}
+\item There are 150 cases.
+\item There are 4 continuous numerical variables: sepal length, sepal width, petal length, and petal width.
+\item There is one categorical variable - the species. The levels are setosa, versicolor, and virginica.
+\end{enumerate}
+
+\item
+\begin{enumerate}
+\item Each row represents a UK resident.
+\item There are 1691 participants in the survey.
+\item ~\\
+\begin{tabular}{|c|c|}\hline
+variable & type \\ \hline
+sex & categorical \\
+age & numerical, continuous? \\
+marital & categorical \\
+grossIncome & categorical, ordinal \\
+smoke & categorical \\
+amtWeekends & numerical, discrete \\
+amtWeekdays & numerical, discrete \\ \hline
+\end{tabular}
+\end{enumerate}
+
+
+
+\end{enumerate}
+\end{document}

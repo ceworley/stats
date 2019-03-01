@@ -1,0 +1,9 @@
+These slides were missing essential vocab for homework.
+
+sample statistic
+population parameter
+
+observation = observational unit = case
+
+explanatory variable
+response variable

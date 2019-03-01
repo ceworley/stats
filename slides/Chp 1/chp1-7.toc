@@ -1,0 +1,11 @@
+\select@language {english}
+\beamer@sectionintoc {1}{Considering categorical data}{1}{0}{1}
+\beamer@subsectionintoc {1}{1}{Contingency tables and bar plots}{1}{0}{1}
+\beamer@subsectionintoc {1}{2}{Row and column proportions}{3}{0}{1}
+\beamer@subsectionintoc {1}{3}{Segmented bar and mosaic plots}{4}{0}{1}
+\beamer@subsectionintoc {1}{4}{Example: Marbles}{5}{0}{1}
+\beamer@subsectionintoc {1}{5}{Example: Marbles - Simple (Marginal) Proportions}{6}{0}{1}
+\beamer@subsectionintoc {1}{6}{Example: Marbles - Compound Proportions}{7}{0}{1}
+\beamer@subsectionintoc {1}{7}{Example: Marbles - Conditional Proportions}{8}{0}{1}
+\beamer@subsectionintoc {1}{8}{Example: Marbles - Mosaic Plot}{9}{0}{1}
+\beamer@subsectionintoc {1}{9}{Independence in Mosaic Plots}{14}{0}{1}

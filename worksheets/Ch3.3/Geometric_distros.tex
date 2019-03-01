@@ -1,0 +1,137 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{multirow,array}
+\usepackage{newtxtext,newtxmath}
+\usepackage{relsize}
+\usepackage{lastpage}
+\usepackage{cancel}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\setenumerate[1]{label={\bf \theenumi: ~}}
+\setenumerate[2]{label={\bf \theenumii: ~}}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textsc{BHCC Mat-181}}
+\rhead{\textsc{Geometric Distributions}}
+\rfoot{Page \thepage ~of \pageref{LastPage}}
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+\newcommand{\N}[2]{\mathcal{N}\big(#1,~#2\big)}
+\newcommand{\Geo}[1]{\texttt{Geo}\big(#1\big)}
+
+\begin{document} \large
+A geometric distribution describes the probability of waiting $x$ trials for the first success when each trial has $p$ chance of success.
+\begin{center}
+\textsc{A general geometric distribution}\\ \vspace{5pt}
+\begin{tabular}{|c | c |}\hline
+$x$ & $P(X=x)$ \\ \hline
+1 & $p$ \\
+2 & $(1-p)p$ \\
+3 & $(1-p)^2p$ \\
+4 & $(1-p)^3p$ \\
+5 & $(1-p)^4p$ \\
+6 & $(1-p)^5p$ \\
+\vdots & \vdots \\
+$n$ & $(1-p)^{n-1}p$ \\
+\vdots & \vdots \\ \hline
+\end{tabular}
+\end{center}
+We may use the abbreviation $\Geo{p}$. So, for example, if $Y\sim \Geo{0.4}$, we can show the distribution in a table.
+\begin{center}
+\textsc{Distribution of ~$Y\sim\Geo{0.4}$}\\ \vspace{5pt}
+\begin{tabular}{|c | c |}\hline
+$y$ & $P(Y=y)$ \\ \hline
+1 & $0.4$ \\
+2 & $0.24$ \\
+3 & $0.144$ \\
+4 & $0.0864$ \\
+5 & $0.05184$ \\
+6 & $0.031104$ \\
+\vdots & \vdots \\
+$n$ & $(0.6)^{n-1}(0.4)$ \\
+\vdots & \vdots \\ \hline
+\end{tabular}
+\end{center}
+For geometric distributions, the probabilities are always decreasing. We can't show every possible outcome because there are infinite possibile outcomes. 
+
+Some people who loved math figured out that even though there are infinite possibilities, we can still characterize this distribution with a mean and standard deviation. 
+
+For $\Geo{p}$:
+$$\mu = \frac{1}{p}$$
+
+$$\sigma= \frac{\sqrt{1-p}}{p} = \sqrt{\frac{1-p}{p^2}}$$
+
+\newpage
+
+\begin{enumerate}
+\item Let $X\sim \Geo{p=0.7}$. 
+\begin{enumerate}
+\item Complete the first few rows of the probability distribution table.
+\begin{center}
+\def\arraystretch{1.3}
+\Large
+\begin{tabularx}{0.4\textwidth}{|Y|Y|}\hline
+$x$ & $P(X=x)$ \\ \hline
+1 & \\
+2 & \\
+3 & \\
+4 & \\
+5 & \\
+~\vdots & ~\vdots \\
+$n$ & \\
+~\vdots & ~\vdots \\ \hline
+\end{tabularx}
+\end{center}
+\item Calculate the probability $P(X\le3)$.
+\vfill
+\item Calculate the probability $P(X>3)$.
+\vfill
+\item Estimate the mean by evaluating the following.
+$$\sum_{x=1}^5 x \cdot P(X=x) $$ 
+\vfill
+\item Calculate the mean using the formula for geometric distributions.
+\vfill
+\end{enumerate}
+
+\newpage
+\item Please roll a 6-sided die until you roll a 6. Please count how many trials it takes. For example, if you rolled [3,2,4,4,6], it took 5 trials to hit 6 and you just record the 5.
+\vfill
+\item Repeat the above process 9 more times. Record the number of trials it takes each time. Your instructor will ask for your numbers to make a histogram of all the class's results. Overall, you'll expect a list of 10 numbers, kind of like 
+\begin{center}
+\begin{tabular}{cccccccccc}
+5 & 12 & 7 & 2 & 8 & 1 & 4 & 10 & 1 & 8 
+\end{tabular}
+\end{center}
+
+\vfill
+
+\item Find the sample mean and sample standard deviation from your 10 numbers. Also, tell your instructor your sample mean and sample standard deviation; we will make another histogram of these as a preview of \emph{sampling distributions} and the \emph{central limit theorem}.
+\vfill
+
+\item Let $X\sim \Geo{\frac{1}{6}}$. Calculate $\mu$ and $\sigma$.
+\vfill
+
+\newpage
+\rhead{\textsc{Review}}
+\item Let $X\sim\N{200}{6}$. Calculate $P(X\ge 210)$.
+\vfill
+\item Let $X\sim\Geo{p=0.2}$. Calculate $P(X\le 2)$.
+\vfill
+\item Determine $x_0$ such that $X\sim \N{50}{0.2}$ and $P(X>x_0)=0.75$.
+\vfill
+
+\end{enumerate}
+\end{document}
+

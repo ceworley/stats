@@ -1,0 +1,200 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{multirow,array}
+\usepackage{newtxtext,newtxmath}
+\usepackage{relsize}
+\usepackage{lastpage}
+\usepackage{cancel}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+	\setenumerate[1]{label={\bf Q\theenumi: ~}}
+	\setenumerate[2]{label={\bf \theenumii: ~}}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textsc{BHCC Mat-181}}
+\rhead{\textsc{Mean, Median, Standard Deviation, and IQR}}
+\rfoot{Page \thepage ~of \pageref{LastPage}}
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+\begin{document}
+The {\bf sample mean} and {\bf median} are sample statistics that indicate the \emph{middle} value of a variable. We use $\bar{x}$ (pronounced ``x bar'') to represent the sample mean. We do not have a standard symbol for the median.
+
+The {\bf standard deviation} and {\bf inter-quartile range} are sample statistics that indicate \emph{spread} of a variable. We use $s$ to represent the sample's standard deviation. We abbreviate inter-quartile range as IQR.
+
+\subsection*{Calculating these statistics}
+Let's start with an example. 
+\begin{center}
+\begin{tabular}{|c|c|}\hline
+participant & score \\ \hline
+1 & 61 \\
+2 & 43 \\
+3 & 48 \\
+4 & 40 \\
+5 & 51 \\
+6 & 60 \\
+7 & 47 \\ \hline
+\end{tabular}
+\end{center}
+To calculate the {\bf mean}, we add up the scores and divide by the sample size.
+$$\bar{x} = \frac{61+43+48+40+51+60+47}{7} = 50$$
+The general formula for $n$ scores can be expressed in two different ways.
+$$\bar{x} = \frac{x_1 + x_2 + x_3 + \cdots + x_n}{n} $$
+where $x_1$ is the first score, $x_2$ is the second score, etc... \\We can also use the summation operator.
+$$\bar{x} = \frac{\sum_{i=1}^n x_i}{n} $$
+where $i$ is a incrementing index that starts at 1 and ends at $n$. 
+
+
+To determine the {\bf median}, we order the scores and find the middle number.
+\begin{center}
+\begin{tabular}{c c c c c c c}
+\cancel{40} & \cancel{43} & \cancel{47} & \circled{48} & \cancel{51} & \cancel{60} & \cancel{61}
+\end{tabular}
+\end{center}
+If there were an even number of scores, the median is the average of the two middle scores. For example, the median of \{1, 3, 4, 9\} is 3.5.
+
+\newpage
+To calculate the {\bf standard deviation}, we often use a table.
+\begin{center}
+\begin{tabular}{|c|c|c|c|}\hline
+$i$ & $x_i$ & $x_i-\bar{x}$ & $\left(x_i-\bar{x}\right)^2$ \\ \hline
+1 & 61 & $11$ & 121 \\
+2 & 43 & $-7$ & 49  \\
+3 & 48 & $-2$ & 4   \\
+4 & 40 & $-10$& 100 \\
+5 & 51 & $1$ & 1    \\
+6 & 60 & $10$& 100  \\
+7 & 47 & $-3$& 9    \\ \hline
+\multicolumn{3}{r|}{sum \rightarrow} & $384$ \\ \cline{4-4}
+\end{tabular}
+\end{center}
+We have found the sum of the squared deviations.
+$$\sum_{i=1}^7 (x_i-\bar{x})^2 = 384$$
+We divide this by the sample size minus one, then find the square root of the result.
+$$s = \sqrt{\frac{384}{7-1}} = 8 $$
+The general formula for standard deviation is a little scary.
+$$s = \sqrt{\frac{\sum_{i=1}^n (x_i - \bar{x})^2}{n-1}} $$
+
+The {\bf IQR} is the difference between the third quartile ($Q_3$) and the first quartile ($Q_1$).
+$$\mathrm{IQR} = Q_3 - Q_1 $$
+The first quartile is the median of the low scores. The third quartile is the median of the high scores.
+\begin{center}
+\begin{tabular}{c c c c c c c}
+40 & 43 & 47 & \cancel{48} & 51 & 60 & 61 \\ \cline{1-3} \cline{5-7}
+\multicolumn{3}{c}{low scores} &  & \multicolumn{3}{c}{high scores}  \\
+\cancel{40} & \circled{43} & \cancel{47} &  & \cancel{51} & \circled{60} & \cancel{61}\\
+& $Q_1$ & & & & $Q_3$ & 
+\end{tabular}
+\end{center}
+So,
+$$\mathrm{IQR} = 60-43 = 17 $$
+And in general,
+\begin{description}
+\item[Step 1] Use the median to divide the ordered data set into two halves.
+\begin{itemize} 
+\item If there are an odd number of data points in the original ordered data set, do not include the median (the central value in the ordered list) in either half.
+\item If there are an even number of data points in the original ordered data set, split this data set exactly in half.
+\end{itemize}
+\item[Step 2] The lower quartile value is the median of the lower half of the data. The upper quartile value is the median of the upper half of the data. Find their difference.
+\end{description}
+
+%If we have $n$ cases, then a numerical variable will have $n$ entries. 
+
+%We use the formulas or algorithms to determine these statistics.
+
+%$$\bar{x} = \frac{\sum_{i=1}^n x_i}{n} $$
+
+\newpage
+
+
+\begin{enumerate}
+\item Determine the mean, median, standard deviation, and IQR of the following scores.
+\begin{center}
+\begin{tabular}{c c c c c c c}
+47 & 53 & 53 & 55 & 55 & 52 & 49
+\end{tabular}
+\end{center}
+\vfill
+\item Determine the mean, median, standard deviation, and IQR of the following scores.
+\begin{center}
+\begin{tabular}{c c c c c c c c c}
+50 & 58 & 22 & 53 & 47 & 46 & 52 & 35 & 51
+\end{tabular}
+\end{center}
+\vfill
+
+\newpage
+\item Determine the mean, median, standard deviation, and IQR of the following scores.
+\begin{center}
+\begin{tabular}{c c c c c c}
+4 & 2 & 8 & 6 & 5 & 5
+\end{tabular}
+\end{center}
+\vfill
+\item Determine the mean, median, standard deviation, and IQR of the following scores.
+\begin{center}
+\begin{tabular}{c c c c c c}
+104 & 102 & 108 & 106 & 105 & 105
+\end{tabular}
+\end{center}
+\vfill
+
+\newpage
+
+\item Imagine 19 exams have a mean score of 75. Now, one more student finishes the exam and scores 100. What is the new mean?
+
+\vfill
+
+\item Imagine 10 exams have a mean score of 80. Now, one more student finishes the exam and scores 100. What is the new mean?
+
+\vfill
+
+\item Imagine 4 exams have a mean score of 85. What is the fifth score that can bring the average to 87?
+
+\vfill
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{enumerate}
+\newpage
+	\setenumerate[1]{label={\bf A\theenumi: ~}}
+	\setenumerate[2]{label={\bf \theenumii: ~}}
+\begin{multicols}{2}
+\begin{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item $\bar{x} = 46$\\
+median = 50\\
+$s=11$\\
+IQR = 6
+\item $\bar{x} = 48$\\
+median = 47\\
+$s=10$\\
+IQR = 12~~ (from $52.5-40.5$)
+\item $\bar{x} = 5$\\
+median = 5\\
+$s=2$\\
+IQR = 2
+\columnbreak
+\item $\bar{x} = 105$\\
+median = 105\\
+$s=2$\\
+IQR = 2
+\item 76.25
+\item 81.82
+\item 95
+\end{enumerate}
+\end{multicols}
+\end{document}

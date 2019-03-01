@@ -1,0 +1,68 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{multicol}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{multirow,array}
+\usepackage{newtxtext,newtxmath}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textsc{BHCC Mat-181}}
+\chead{\textsc{Answers}}
+\rhead{\textsc{HW Exercises 1.69-1.70}}
+\rfoot{Page \thepage ~of \pageref{LastPage}}
+\setenumerate[1]{label={\bf 1.\theenumi: }}
+\setenumerate[2]{label={\bf (\theenumii): }}
+\setenumerate[3]{label={\bf \theenumiii: }}
+
+\begin{document}
+\begin{enumerate}
+\setcounter{enumi}{68}
+
+\item
+\begin{enumerate}
+\item
+    \begin{enumerate}
+    \item False. We need to look at proportions, not absolute amounts, because the row totals are different.
+    \item True. However, by no means am I convinced yet, as that is a small difference in proportion. Maybe it is due to chance?
+    \item False. This is an observational study, so we can't determine causal relationships. Also, I would want to compare to placebo to make a claim like that.
+    \item True. 
+    \end{enumerate}
+\item $\frac{7979}{227571} \approx 0.035$
+\item If the variables were independent, then both groups should have a proportion near 0.035. The rosiglitazone group had 67593 patients. 
+$$0.035 \time 67593 \approx 2366 $$
+Thus, we would expect something like 2370 patients with cardiovascular problems in the rosiglitazone group.
+\item 
+\begin{enumerate}
+    \item The null hypothesis ($H_0$) is that neither drug is better or worse in terms of cardiovascular events. The alternative hypothesis ($H_{\mathrm{A}}$) is that one of the drugs is better than the other.
+   \item Eh, this question is inappropriate. The author is thinking more, but really we should almost never use one-tailed tests. We would be interested if we saw strong evidence for either drug being better. So seeing rosiglitazone's proportion be FAR from 0.035 is interesting, in either direction.
+   \item We can feel comfortable saying the difference is probably not due to chance: we can reject the null hypothesis. This means that we feel rosiglitazone really is associated with a higher rate of cardiovascular problems. (No causality because this is an observational study.)
+\end{enumerate}
+\end{enumerate}
+
+
+\item \begin{enumerate}
+\item The mosaic plot suggests that \texttt{transplant} and \texttt{survived} are not independent. If they were, we'd expect the horizontal breaks, that indicate the rectangle heights, to be continuous across the plot. It seems the proportion dead in control group is higher than the proportion dead in treatment group.
+\item The box plots suggest the treatment increased survival times. The median in treatment group is above the whiskers of the control group. 
+ (Note, the box plots are on the previous page, not below. This typo shows why we usually refer to figures by number rather than position.)
+\item In the treatment group 45 out of 69 patients died, resulting in a proportion of about 0.65. In the control group 30 out of 34 died, resulting in a proportion of about 0.88.
+\item \begin{enumerate}
+    \item $H_0$: The treatment is {\bf not} different than control in terms of efficacy.\\$H_\mathrm{A}$: The treatment is different than control in terms of efficacy.
+    \item 24, 75, 69, 34, 0, at least as extreme as the observed difference in proportions (0.65-0.88 = -0.23).
+    \item In the 100 repetitions, we only got a difference as extreme as -0.23 twice (and both cases were exactly -0.23). It seems rather unlikely to get an event at least this extreme just due to chance. We conclude the treatment is beneficial; we accept the alternative hypothesis.
+\end{enumerate}
+\end{enumerate}
+
+
+\end{enumerate}
+\end{document}

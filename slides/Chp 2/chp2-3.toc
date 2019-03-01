@@ -1,0 +1,2 @@
+\select@language {english}
+\beamer@sectionintoc {1}{Sampling from a small population}{1}{0}{1}
