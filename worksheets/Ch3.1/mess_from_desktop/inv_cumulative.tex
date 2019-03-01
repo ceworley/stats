@@ -1,0 +1,46 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+\urlstyle{same}
+
+\usepackage{tabularx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{multirow,array}
+\usepackage{newtxtext,newtxmath}
+\usepackage{relsize}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{pdfpages}
+\usepackage{adjustbox}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+	\setenumerate[1]{label={\bf Q\theenumi: ~}}
+	\setenumerate[2]{label={\bf \theenumii: ~}}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{BHCC Mat-181}
+\rhead{\textsc{Standard Normal Distribution}}
+\rfoot{Page \thepage ~of \pageref*{LastPage}}
+
+\newcommand{\N}[2]{\mathcal{N}\Big(#1,~ #2\Big)}
+
+
+\begin{document}
+The random variable $Z$ is normally distributed such that $\mu=0$ and $\sigma=1$. 
+$$Z\sim \N{0}{1} $$
+We have introduced the cumulative function, $\Phi(z)$.
+$$\Phi(z) ~=~ P(Z < z) ~=~ \text{Left area under density function up to }z $$
+\end{document}

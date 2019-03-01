@@ -1,0 +1,487 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+\urlstyle{same}
+
+\usepackage{tabularx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{multirow,array}
+\usepackage{newtxtext,newtxmath}
+\usepackage{relsize}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+	\setenumerate[1]{label={\bf Q\theenumi: ~}}
+	\setenumerate[2]{label={\bf \theenumii: ~}}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{BHCC Mat-181}
+\rhead{\textsc{Confidence Intervals}}
+\rfoot{Page \thepage ~of \pageref*{LastPage}}
+
+
+
+\begin{document}
+The random variable $Z$ is normally distributed such that $\mu=0$ and $\sigma=1$. It has the following probability density function.
+$$\phi(z) = \cfrac{e^{-z^2/2}}{\sqrt{2\pi}} $$
+This function gives us the bell-shaped curve we are accustomed to.
+\begin{center}
+\includegraphics[scale=.7]{phi.png}
+\end{center}
+To determine the probability that $Z$ is less than $z_0$, we find the area under the curve from $-\infty$ to $z_0$.
+\begin{center}
+\includegraphics[scale=.7]{both.png}
+\end{center}
+
+Notice the notation. We use a lower-case phi, $\phi$, for the density function and an upper-case phi ,$\Phi$, for the cumulative function.
+
+The standard normal table gives precise values of $\Phi$ as a function of $z$. 
+\newpage
+\begin{center}
+\includegraphics[scale=.7]{area2.png}
+\text{ }
+\scriptsize 
+\begin{multicols}{6}
+\include{ztab}
+\end{multicols}
+\end{center}
+
+
+\newpage
+When given an upper bound $z$, we can use the table to find $\Phi$, which is the probability that $Z$ is below $z$. For example, we might be told that $z=0.42$ and be asked for the probability that $Z$ is less than 0.42.  $$P(Z<0.42) = \Phi(0.42) = 0.6628$$
+We can also find the probability that $Z$ is greater than a value, as this is the complementary event.
+$$P(Z>0.42) = 1-\Phi(0.42) = 1-0.6628 =  0.3372$$
+If you are very slick, you might use the symmetry of the normal curve.
+$$P(Z>0.42) = \Phi(-0.42) =  0.3372$$
+Also, we can find central areas.
+$$P(1 < Z < 2) = \Phi(2)-\Phi(1) = 0.9772-0.8413 = 0.1359$$
+
+\begin{enumerate}
+\item Evaluate $\Phi(1.96)$
+\vfill
+\item Evaluate $P(Z < 1.08)$
+\vfill
+\item Evaluate $P(Z > 1.08)$
+\vfill
+\item Evaluate $P(1.08 < Z < 1.96)$
+\vfill
+\item Evaluate $P(|Z| < 1.96)$, which is the same as $P(-1.96 < Z < 1.96)$
+\vfill
+\item Evaluate $P(|Z| > 1.96)$, which is the same as $P(Z < -1.96 ~~\text{OR}~~ 1.96<Z)$
+\vfill
+\end{enumerate}
+
+
+\newpage
+This diagram might be useful. Some of the areas seem to add imperfectly because these numbers are all rounded.\\\\
+\begin{center}
+\includegraphics[scale=1]{toomuch2.png}
+\end{center}
+\url{https://en.wikipedia.org/wiki/68-95-99.7_rule}
+
+
+
+
+\newpage
+By using the standard normal table (or the 68-95-99.7 rule), you should be able to determine the following probabilities. For each question, determine the probability (area) of the shaded region or regions. Write the answer using $P(\texttt{condition}) = \texttt{number}$.
+
+\begin{enumerate}[resume,itemsep=50pt]
+\begin{multicols}{2}
+\item \adjustbox{valign=t}{\includegraphics[scale=.5]{n3_n1.png}}
+\item \adjustbox{valign=t}{\includegraphics[scale=.5]{n3_0.png}}
+\item \adjustbox{valign=t}{\includegraphics[scale=.5]{n3_1.png}}
+\item \adjustbox{valign=t}{\includegraphics[scale=.5]{n1_3.png}}
+\item \adjustbox{valign=t}{\includegraphics[scale=.5]{0_1.png}}
+
+\columnbreak
+
+\item \adjustbox{valign=t}{\includegraphics[scale=.5]{0_2.png}}
+\item \adjustbox{valign=t}{\includegraphics[scale=.5]{n1_1.png}}
+\item \adjustbox{valign=t}{\includegraphics[scale=.5]{n2_2.png}}
+\item \adjustbox{valign=t}{\includegraphics[scale=.5]{n3_n2_and_2_3.png}}
+\item \adjustbox{valign=t}{\includegraphics[scale=.5]{n3_n1_and_1_3.png}}
+
+\end{multicols}
+\end{enumerate}
+
+
+\newpage
+The cumulative function $\Phi(z)$ is one-to-one, so we can also go backwards! For example, if we wanted to find the value of $z_0$ that satisfies $P(Z<z_0) = 0.86$, we scan the right-columns for $\Phi(z)\approx 0.86$. We find $\Phi(1.08) = 0.8599$.
+\begin{center}
+\begin{tabular}{|c|c|}\hline
+$z$ & $\Phi(z)$ \\ \hline
+$\vdots$ & $\vdots$ \\
+1.08 & 0.8599 \\
+$\vdots$ & $\vdots$ \\ \hline
+\end{tabular}
+\end{center}
+Thus, we estimate $z_0\approx 1.08$. We can also write this as $\Phi^{-1}(0.8599)=1.08$
+
+\begin{enumerate}[resume]
+\item Determine $z_0$ such that $\Phi(z_0)=0.0505$. In other words, evaluate $\Phi^{-1}(0.0505)$.
+\vfill
+\item Determine $z_1$ such that $\Phi(z_1)\approx 0.99$. (Evaluate $\Phi^{-1}(0.99)$.)
+\vfill
+\item Determine $z_2$ such that $P(Z < z_2) = 55.57\%$
+\vfill
+\item Determine $z_3$ such that $P(Z > z_3) = 15.87\%$
+\vfill
+\item Determine $z_4$ such that $P(-z_4 < Z < z_4) = 68.2\%$
+\vfill
+\item Determine $z_5$ such that $P(|Z| < z_5) = 95\%$
+\vfill
+\item Determine $z_6$ such that $P(|Z| < z_6) = 90\%$
+\vfill
+\item Determine $z_7$ such that $P(|Z| > z_7) = 10\%$
+\vfill
+\end{enumerate}
+
+\newpage
+
+Sometimes it's easier to have an inverse table.
+{ \footnotesize
+\begin{multicols}{5}
+\include{zinvtab}
+\end{multicols}
+}
+
+
+\newpage
+We need to introduce three new variables: $\alpha$, $\gamma$, and $z^*$. These are pronounced ``alpha'', ``gamma'', and ``z star''.
+
+\begin{center}
+\includegraphics[scale=1]{alphagamma.png}
+\end{center}
+
+In this situation, we have a central area which is symmetric about $z=0$. In other words, it stretches equally far to the left as to the right. In fact, it stretches from $-z^*$ to $z^*$. The area in the middle is $\gamma$. The combined area of the tails is $\alpha$.
+$$\gamma = P(-z^* < Z < z^*)$$
+$$\gamma = P(|Z| < z^*)$$
+$$\gamma = \Phi(z^*)-\Phi(-z^*) $$
+$$\gamma = 2\Phi(z^*)-1 $$
+
+$$\alpha = 1-\gamma $$
+$$\alpha = P(|Z| > z^*) $$
+$$\alpha = 2(1-\Phi(z^*)) $$
+In the context of confidence intervals, $\gamma$ is called the confidence level and $z^*$ is called the critical $z$.
+
+{ \footnotesize
+\begin{multicols}{2}
+\include{zatab}
+\end{multicols}
+}
+
+
+\newpage
+If the random variable $\bar{X}$ is the mean of a sample of size $n$ from {\bf any} distribution with mean $\mu$ and standard deviation $\sigma$, then we know $\bar{X}$ is approximately normal with mean $\mu$ and standard deviation $\frac{\sigma}{\sqrt{n}}$. We say the {\bf sampling distribution} of the {\bf sample mean} has a standard error of $\frac{\sigma}{\sqrt{n}}$.
+
+Now, imagine you sampled 100 random beans from a huge bag, and those 100 beans had a mean mass of 13.71 grams. Also, somehow, you know the population's standard deviation is 0.83 grams. You know the whole bag could have a mean mass that is {\bf not} 13.71 grams; in fact, you guess it is quite unlikely that the sample has the exact same mean mass as the population. However, you also doubt the population's mean is 10 grams or 20 grams. From this idea, we develop the {\bf confidence interval}. We, informally, want an interval with a 95\% chance of including the true population's mean.
+
+\newcommand{\ME}{\mathtt{ME}}
+\newcommand{\SE}{\sigma_{\bar{x}}}
+
+
+\begin{enumerate}[resume]
+\item Calculate $\sigma_{\bar{x}}$, the standard error of the mean, if $\sigma = 0.83$ and $n=100$.
+\vfill
+\item Determine $z^*$ such that $P(|Z| < z^*) = 95\%$. \\This is equivalent to finding $z^*$ that satisfies $\Phi(z^*)=0.975$.\\
+This is equivalent to evaluating $\Phi^{-1}(0.975)$.
+\vfill
+\item Calculate the {\bf margin of error} by multiplying $\SE$ and $z^*$. (I could not find any text using a variable other than $\ME$ to represent margin of error.)
+$$\ME = (z^*)(\SE) =$$
+\vfill
+\item Calculate the lower bound of the interval.\\
+$\texttt{lower bound of 95\% confidency interval} = 13.71-\ME = $
+\vfill
+\item Calculate the upper bound of the interval.\\
+$\texttt{upper bound of 95\% confidency interval} = 13.71+\ME = $
+\vfill
+\end{enumerate}
+
+\newpage
+\subsection*{Calculating a confidence interval of mean with known population standard deviation}
+You are given the following:
+
+\begin{tabular}{|c|c|c|}\hline
+name & variable & value from previous example \\ \hline
+sample mean & $\bar{x}$ & 13.71 \\
+sample size & $n$ & 100 \\
+population standard deviation & $\sigma$ & 0.83 \\
+confidence level & $\gamma$ & 0.95 \\ \hline
+\end{tabular}\\
+
+\vspace{20pt}
+
+\begin{itemize}
+\item Determine the standard error.
+$$\SE = \frac{\sigma}{\sqrt{n}} $$
+\item Calculate $\alpha$, the two-tail complement of $\gamma$.
+$$\alpha = 1-\gamma $$
+
+\item Determine $z^*$ such that $\Phi(z^*) = 1-\cfrac{\alpha}{2}$.
+$$z^* = \Phi^{-1}\left(1-\cfrac{\alpha}{2}\right) $$
+For typical values of $\gamma$, the following table will help.
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}\hline
+$\gamma$ & $\alpha$ & $1-\frac{\alpha}{2}$ & $\Phi(z^*)$ & $\Phi^{-1}(\Phi(z^*))$ & $z^*$ \\ \hline
+0.9 & 0.1 & 0.95 & 0.95 & 1.645 & 1.645 \\
+0.95 & 0.05 & 0.975 & 0.975 & 1.96 & 1.96 \\
+0.98 & 0.02 & 0.99 & 0.99 & 2.326 & 2.326\\
+0.99 & 0.01 & 0.995 & 0.995 & 2.576 & 2.576\\ \hline
+\end{tabular}
+\end{center}
+
+\item Calculate the margin of error.
+$$\ME = (z^*)(\SE) $$
+
+\item Calculate the lower bound.
+$$\texttt{lower bound of confidence interval} = \bar{x}-\ME $$
+\item Calculate the upper bound.
+$$\texttt{upper bound of confidence interval} = \bar{x}+\ME $$
+\item Interpret.\\
+``With a confidence level of \fbox{\phantom{H} $\gamma$ \phantom{H}}, the true mean is between \fbox{\phantom{H} LB \phantom{H}} and \fbox{\phantom{H} UB \phantom{H}}.''
+\end{itemize}
+\url{https://en.wikipedia.org/wiki/Confidence_interval#Basic_steps}
+\newpage
+\begin{enumerate}[resume]
+\item A sample of size 36 is taken from a distribution with a standard deviation of 20. The mean of the sample is 150. Calculate a 95\% confidence interval of the population's mean.
+\vfill
+\item A sample of size 49 is taken from a distribution with a standard deviation of 14. The mean of the sample is 88. Calculate a 80\% confidence interval of the population's mean.
+\vfill
+
+\end{enumerate}
+
+\newpage
+\subsection*{Calculating a confidence interval of mean using sample's standard deviation}
+In science, we are unlikely to know the population's true standard deviation. When we do not know the population's standard deviation, we make a subtle change to the calculations: we use Student's $t$ distribution.
+
+You are given the following:
+
+\begin{tabular}{|c|c|}\hline
+name & variable  \\ \hline
+sample mean & $\bar{x}$  \\
+sample size & $n$ \\
+sample standard deviation & $s$ \\
+confidence level & $\gamma$ \\ \hline
+\end{tabular}\\
+\begin{itemize}
+\item Estimate the standard error.
+$$s_{\bar{x}} = \frac{s}{\sqrt{n}} $$
+\item Calculate $\alpha$, the two-tail complement of $\gamma$.
+$$\alpha = 1-\gamma $$
+\item Calculate the degrees of freedom, $df$.
+$$df = n-1$$
+\item Determine $t^*$ from $\alpha$ and $df$. You look up $t^*$ in the table. These are only presented as an inverse table.
+
+
+\item Calculate the margin of error.
+$$\ME = (t^*)(s_{\bar{x}}) $$
+
+\item Calculate the lower bound.
+$$\texttt{lower bound of confidence interval} = \bar{x}-\ME $$
+\item Calculate the upper bound.
+$$\texttt{upper bound of confidence interval} = \bar{x}+\ME $$
+\item Interpret.\\
+``With a confidence level of \fbox{\phantom{H} $\gamma$ \phantom{H}}, the true mean is between \fbox{\phantom{H} LB \phantom{H}} and \fbox{\phantom{H} UB \phantom{H}}.''
+\end{itemize}
+\url{https://en.wikipedia.org/wiki/Confidence_interval#Basic_steps}
+\newpage
+
+\section{Student's $t$ distribution (two-tailed)}
+
+\begin{center}
+\includegraphics[scale=0.7]{tcurve.png}
+\end{center}
+
+The $t$ distribution depends on the degrees of freedom, $$df=n-1$$ Thus, it is customary to pick a few common values of $\alpha$, and display an inverse table with various degrees of freedom.
+\vspace{20pt}
+
+{ \footnotesize
+\begin{multicols}{5}
+\include{ttab}
+\end{multicols}
+}
+
+
+\newpage
+\begin{enumerate}[resume]
+\item A sample of size 36 is measured. The mean value is 100 and the sample standard deviation is 24. Calculate a 95\% confidence interval.
+\begin{enumerate}
+\item Identify the sample mean. ~~ $\bar{x}=$
+\item Identify the sample size. ~~$n=$
+\item Identify the sample standard deviation. ~~$s=$
+\item Identify the confidence level. ~~$\gamma=$
+\item Estimate $s_{\bar{x}}$, the standard error. Remember, $s_{\bar{x}}=\frac{s}{\sqrt{n}}$.
+\vspace{30pt}
+\\$$s_{\bar{x}} = $$
+\vspace{10pt}
+\item Calculate $\alpha$. Remember, $\alpha = 1-\gamma$.
+\vspace{30pt}
+\\$$\alpha = $$
+\vspace{10pt}
+\item Calculate $df$, the degrees of freedom. Remember, $df = n-1$.
+\vspace{30pt}
+\\$$df = $$
+\vspace{10pt}
+\item Determine $t^*$ from the table. ~~ $t^*=$
+\item Calculate $\ME$, the margin of error. Remember, $\ME = (t^*)(s_{\bar{x}})$.
+\vspace{30pt}
+\\$$\ME = $$
+\vspace{10pt}
+\item Calculate the lower bound. Remember, $\texttt{lower bound of confidence interval} = \bar{x}-\ME $.
+\vspace{30pt}
+\item Calculate the upper bound. Remember, $\texttt{upper bound of confidence interval} = \bar{x}+\ME $.
+\vspace{30pt}
+\end{enumerate}
+\end{enumerate}
+
+\newpage
+\begin{enumerate}[resume]
+\item A sample of size 31 is measured. The mean value is 40 and the sample standard deviation is 5. Calculate a 95\% confidence interval.
+\end{enumerate}
+
+\newpage
+\subsection*{Calculating a confidence interval of proportion using normal approximation}
+Lastly, we also find confidence intervals of a special mean, the proportion. When we measure failures and successes, and label those with 0s and 1s, then the mean of those 0s and 1s is called a proportion. In this case, the population's proportion $p$ is unknown, but we can calculate our best guess, $\hat{p}$. In this case, the standard deviation can be calculated from $p$ or estimated from $\hat{p}$.
+\\
+\\
+You are given the following:
+
+\begin{tabular}{|c|c|}\hline
+name & variable  \\ \hline
+number of trials & $n$  \\
+number of successes & $n_s$ \\
+confidence level & $\gamma$ \\ \hline
+\end{tabular}\\
+\begin{itemize}
+\item Calculate $\hat{p}$, the estimate of the population's proportion.
+$$\hat{p} = \frac{n_s}{n} $$
+\item Estimate the standard error.
+$$s_{\hat{p}} = \frac{\sqrt{\hat{p}(1-\hat{p})}}{\sqrt{n}} $$
+\item Determine $z^*$ from $\gamma$.
+$$z^* = \Phi^{-1}\left( 1 - \frac{1-\gamma}{2}\right) $$
+
+For typical values of $\gamma$, the following table will help.
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}\hline
+$\gamma$ & $\alpha$ & $1-\frac{\alpha}{2}$ & $\Phi(z^*)$ & $\Phi^{-1}(\Phi(z^*))$ & $z^*$ \\ \hline
+0.9 & 0.1 & 0.95 & 0.95 & 1.645 & 1.645 \\
+0.95 & 0.05 & 0.975 & 0.975 & 1.96 & 1.96 \\
+0.98 & 0.02 & 0.99 & 0.99 & 2.326 & 2.326\\
+0.99 & 0.01 & 0.995 & 0.995 & 2.576 & 2.576\\ \hline
+\end{tabular}
+\end{center}
+\item Calculate the margin of error.
+$$\ME = (z^*)(s_{\hat{p}}) $$
+
+\item Calculate the lower bound.
+$$\texttt{lower bound of confidence interval} = \hat{p}-\ME $$
+\item Calculate the upper bound.
+$$\texttt{upper bound of confidence interval} = \hat{p}+\ME $$
+\item Interpret.\\
+``With a confidence level of \fbox{\phantom{H} $\gamma$ \phantom{H}}, the true mean is between \fbox{\phantom{H} LB \phantom{H}} and \fbox{\phantom{H} UB \phantom{H}}.''
+\end{itemize}
+
+\url{https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Normal_approximation_interval}
+
+
+\newpage
+
+\newcommand{\ns}{n_\textsc{s}}
+\begin{enumerate}[resume]
+\item Imagine we spun a coin 100 times and it landed tails 72 times. Let's assume each trial was independent and had the same probability of tails, so we can analyze this as a Bernoulli process, with $n=100$ and $\ns = 72$, where $n$ is the number of trials and $\ns$ is the number of successes.
+
+Calculate the 98\% confidence interval.
+\end{enumerate}
+
+
+%Imagine you sampled 100 random beans from a huge bag, and those 100 beans had an average mass of 13.71 grams with a sample standard deviation of 0.83 grams. You know the whole bag could have an average mass that is not 13.71 grams; in fact, you guess it is quite unlikely that the sample has the exact same average mass as the population. However, you also doubt the population's average is 10 grams or 20 grams.
+%
+%You want to approach this more precisely. You want to find a confidence interval.
+
+
+\newpage
+	\setenumerate[1]{label={\bf A\theenumi: ~}}
+	\setenumerate[2]{label={\bf \theenumii: ~}}
+\begin{multicols}{2}
+\begin{enumerate}
+\item 0.9750
+\item 0.8599
+\item 0.1401
+\item 0.1151
+\item 0.95
+\item 0.05
+
+\item $P(Z<-1)=0.159$
+\item $P(Z<0) = 0.5$
+\item $P(Z<1) = 0.841$
+\item $P(-1<Z) = 0.841$
+\item $P(0<Z<1) = 0.341$
+\item $P(0<Z<2) = 0.477$
+\item $P(|Z|<1) = 0.682$
+\item $P(|Z|<2) = 0.954$
+\item $P(|Z|>2) = 0.046$
+\item $P(|Z|>1) = 0.318$
+
+\item $z_0 = -1.64$
+\item $z_1 = 2.33$
+\item $z_2 = 0.14$
+\item $z_3 = 1$
+\item $z_4 = 1$
+\item $z_5 = 1.96$
+\item $z_6 = 1.64$
+\item $z_7 = 1.64$
+
+\item $\SE = 0.083$
+\item $z^*=1.96$
+\item $\ME = 0.1627$
+\item LB $= 13.55$
+\item UB $= 13.87$
+
+\item $z^*=1.96$, $\SE = 3.33$, $\ME=6.53$\\ LB $= 143.47$\\ UB $= 156.53$
+\item $z^*=1.28$, $\SE = 2$, $\ME=2.56$\\ LB $= 85.44$\\ UB $= 90.56$
+
+\item \begin{enumerate}
+\item $\bar{x} = 100$
+\item $n=36$
+\item $s = 24$
+\item $\gamma = 0.95$
+\item $s_{\bar{x}} = 4$
+\item $\alpha = 0.05$
+\item $df=35$
+\item $t^* = 2.03$
+\item $\ME = 8.12$
+\item LB $= 91.88$
+\item UB $= 108.12$
+\end{enumerate}
+
+\item $\bar{x} = 40$, $n=31$, $s = 5$, $\gamma = 0.95$\\
+$s_{\bar{x}} = 0.898$, $\alpha = 0.05$\\ $df = 30$, $t^*=2.04$
+\\$\ME = 1.83$ \\
+LB $= 38.17$ \\
+UB $= 41.83$
+
+\item $z^*=2.326$\\
+$n=100$\\
+$\hat{p} = 0.72$\\
+LB = $\hat{p}-z^* \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$ = 0.616\\
+UB = $\hat{p}+z^* \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$ = 0.824
+
+\end{enumerate}
+\end{multicols}
+
+\end{document}

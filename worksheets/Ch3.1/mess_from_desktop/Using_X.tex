@@ -1,0 +1,118 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+\urlstyle{same}
+
+\usepackage{tabularx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{multirow,array}
+\usepackage{newtxtext,newtxmath}
+\usepackage{relsize}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+	\setenumerate[1]{label={\bf \theenumi: ~}}
+	\setenumerate[2]{label={\bf \theenumii: ~}}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{BHCC Mat-181}
+\rhead{\textsc{Normal Probabilities}}
+\rfoot{Page \thepage ~of \pageref*{LastPage}}
+
+
+
+\begin{document}
+\newcommand{\N}[2]{\mathcal{N}\Big(#1,~ #2\Big)}
+\begin{enumerate}
+\item Let random variable $X$ be normally distributed with mean 50 and standard deviation 8.
+In other words, let $X \sim \N{50}{8}$. You want to determine $P(46 < X < 62)$.
+\begin{center}
+\includegraphics[scale=0.8]{curve.png}
+\end{center}
+\begin{enumerate}
+\item Determine the $x$ values at the tick marks.
+\item Shade the appropriate region.
+\item Find the probability $P(46 < X < 62)$.
+\end{enumerate}
+
+\vfill
+
+\item Let $X \sim \N{65}{0.2}$. You want to determine $P\Big(\big|X-65\big| < 0.3\Big)$.
+\begin{center}
+\includegraphics[scale=0.8]{curve.png}
+\end{center}
+\begin{enumerate}
+\item Determine the $x$ values at the tick marks.
+\item Shade the appropriate region.
+\item Find the probability $P(|X-65| < 0.3)$.
+\end{enumerate}
+
+\vfill
+
+\newpage
+
+\item Let $X \sim \N{100}{5}$. You want to determine $P\Big(\big|X-100\big| > 6\Big)$.
+\begin{center}
+\includegraphics[scale=0.8]{curve.png}
+\end{center}
+\begin{enumerate}
+\item Determine the $x$ values at the tick marks.
+\item Shade the appropriate region.
+\item Find the probability $P\Big(\big|X-100\big| > 6\Big)$.
+\end{enumerate}
+
+\vfill
+
+\item Let $X \sim \N{0}{2.2}$. You want to determine $P(X>-3.96)$.
+\begin{center}
+\includegraphics[scale=0.8]{curve.png}
+\end{center}
+\begin{enumerate}
+\item Determine the $x$ values at the tick marks.
+\item Shade the appropriate region.
+\item Find the probability $P(X > -3.96)$.
+\end{enumerate}
+
+\vfill
+
+\newpage
+
+\item Let $X \sim \N{14}{3}$. Determine $x_0$ such that $P(X<x_0) = 0.68$.
+\vfill
+\item Let $X \sim \N{2300}{250}$. Determine $x_1$ such that $P(X>x_1) = 0.86$.
+\vfill
+\item Let $X \sim \N{3}{0.1}$. Determine $r_0$ such that $P\Big(\big|X-3\big|<r_0\Big) = 0.89$.
+\vfill
+\item Let $X \sim \N{85}{5}$. Determine $r_1$ such that $P\Big(\big|X-85\big|>r_1\Big) = 0.23$.
+\vfill
+
+\newpage
+
+\item Let $X \sim \N{100}{\sigma}$. If $P(X<108) = 0.9452$, then what is $\sigma$?
+\vfill
+\item Let $X \sim \N{\mu}{20}$. If $P(X<100) = 0.8413$, then what is $\mu$?
+\vfill
+\item Let $X \sim \N{20}{20}$. Determine $P(10<X<20)$.
+\vfill
+\item Let $X \sim \N{20}{20}$. Determine $x_0$ such that $P(X>x_0) = 0.67$.
+\vfill
+
+
+\end{enumerate}
+
+\end{document}

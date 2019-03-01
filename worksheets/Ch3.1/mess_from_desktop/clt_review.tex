@@ -1,0 +1,339 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+\urlstyle{same}
+
+\usepackage{tabularx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{multirow,array}
+\usepackage{newtxtext,newtxmath}
+\usepackage{relsize}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+	\setenumerate[1]{label={\bf Q\theenumi: ~}}
+	\setenumerate[2]{label={\bf \theenumii: ~}}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{BHCC Mat-181}
+\rhead{\textsc{Normal Probabilities and Central Limit Theorem}}
+\rfoot{Page \thepage ~of \pageref*{LastPage}}
+
+
+
+\begin{document}
+The random variable $Z$ is normally distributed such that $\mu=0$ and $\sigma=1$. It has the following probability density function.
+$$\varphi(z) = \cfrac{e^{-z^2/2}}{\sqrt{2\pi}} $$
+This function gives us the bell-shaped curve we are accustomed to. To determine the probability that $Z$ is less than $z_0$, we find the area under the curve from $-\infty$ to $z_0$.
+\begin{center}
+\includegraphics[scale=.7]{snpdarea.png}
+\end{center}
+If we repeat the process of finding the areas from $-\infty$ to any $z$, we get the cumulative distribution.
+\begin{center}
+\includegraphics[scale=.7]{sncd.png}
+\end{center}
+
+Notice the notation. We use a lower-case phi, $\varphi$, for the density function and an upper-case phi ,$\Phi$, for the cumulative function.
+
+The standard normal table gives precise values of $\Phi$ as a function of $z$. (See next page.)
+
+{\tiny 
+\begin{center}
+\begin{multicols}{8}
+\include{ztab2}
+\end{multicols}
+\end{center}
+}
+
+\newpage
+%\newcommand{\emptybox}{\fbox{\phantom{\cfrac{aafkfhhhhha}{s}}}}
+\newcommand{\emptybox}{\fbox{\text{ }\hspace{60pt}\text{ \phantom{$\cfrac{h}{h}$} }}}
+\begin{enumerate}
+\item For each of the following, complete the diagram so it has a shaded region and a probability statement, like the example below.
+\\\includegraphics[scale=0.7]{0p6.png} $P(Z<0.6) = 0.7257$
+\begin{enumerate}
+\vfill
+\item Shade the region and evaluate the probability $P(Z<-1.4)$.
+\\\includegraphics[scale=0.7]{blank.png} $P(Z<-1.4)=\emptybox$
+\vfill
+\item Shade the region and evaluate the probability $P(Z<2)$.
+\\\includegraphics[scale=0.7]{blank.png} $P(Z<2)=\emptybox$
+\vfill
+\item From the shaded region, evaluate the probability.
+\\\includegraphics[scale=0.7]{n0p2.png}  $\emptybox=\emptybox$
+\vfill
+\end{enumerate}
+\end{enumerate}
+
+\newpage
+The area under $\varphi(z)$ from $-\infty$ to $\infty$ is 1. Also, the function $\varphi(z)$ is symmetric. This leads to a useful property:
+$$\Phi(-z) = 1-\Phi(z) $$
+\begin{center}
+\includegraphics[scale=0.7]{prop.png}
+\end{center}
+
+There are five common areas we are asked to find: left, right, sectional, central (symmetric), and two-tailed (symmetric).
+\begin{center}
+\includegraphics[scale=0.7]{types.png}
+\end{center}
+\begin{align*}
+\texttt{Left area} &= P(Z<z)\\
+ &= \Phi(z)\\\\
+\texttt{Right area} &= P(Z>z) \\&= 1-\Phi(z) \\&= \Phi(-z)\\\\
+\texttt{Sectional area} &= P(z_1<Z<z_2) \\&= \Phi(z_2) - \Phi(z_1)\\\\
+\texttt{Central area} &= P(|Z|<z) \\&= \Phi(z)-\Phi(-z) \\&= 1-2\Phi(-z)\\ &= 2\Phi(z)-1\\\\
+\texttt{Two-tailed area} &= P(|Z|>z) \\ &= 1-\Phi(z)+\Phi(-z) \\&=2-2\Phi(z) \\ &= 2\Phi(-z)
+\end{align*}
+\label{hi}
+
+\newpage
+\begin{enumerate}[resume]
+\item For each of the following, complete the diagram so it has a shaded region and a probability statement. Also, notice that you can estimate the probability by counting the number of shaded squares; each unit square is worth 1\%.
+\begin{enumerate}
+\item Shade the region of and evaluate the probability that $Z$ is more than 1.6.
+\\ \includegraphics[scale=0.7]{blank.png}   $~~\emptybox=\emptybox$
+\vfill
+\item Shade the region of and evaluate the probability that $Z$ is between 0.4 and 0.6.
+\\ \includegraphics[scale=0.7]{blank.png}   $~~\emptybox=\emptybox$
+\vfill
+\item Shade the region of and evaluate the probability that $Z$ is between 1 and 2.
+\\ \includegraphics[scale=0.7]{blank.png}   $~~\emptybox=\emptybox$
+\vfill
+\item Shade the region of and evaluate the probability that $Z$ is between -0.4 and 0.4.
+\\ \includegraphics[scale=0.7]{blank.png}   $~~\emptybox=\emptybox$
+\vfill
+\item Shade the region of and evaluate the probability that $Z$ is less than -0.4 or more than 0.4.
+\\ \includegraphics[scale=0.7]{blank.png}   $~~\emptybox=\emptybox$
+\vfill
+\end{enumerate}
+\end{enumerate}
+
+
+
+%\newpage
+%\begin{enumerate}
+%\item Evaluate $\Phi(1.96)$
+%\vfill
+%\item Evaluate $P(Z < 1.08)$
+%\vfill
+%\item Evaluate $P(Z > 1.08)$
+%\vfill
+%\item Evaluate $P(1.08 < Z < 1.96)$
+%\vfill
+%\item Evaluate $P(|Z| < 1.96)$, which is the same as $P(-1.96 < Z < 1.96)$
+%\vfill
+%\item Evaluate $P(|Z| > 1.96)$, which is the same as $P(Z < -1.96 ~~\text{OR}~~ 1.96<Z)$
+%\vfill
+%\end{enumerate}
+
+
+\newpage
+This diagram might be useful. Some of the areas seem to add imperfectly because these numbers are all rounded. Also, it should be noted that $\Phi(-3) = 0.00135 \ne 0$.\\\\
+\begin{center}
+\includegraphics[scale=1]{toomuch.png}
+\end{center}
+\url{https://en.wikipedia.org/wiki/68-95-99.7_rule}
+
+
+
+
+\newpage
+\begin{enumerate}[resume]
+\item By using the standard normal table (or the 68-95-99.7 rule), you should be able to determine the following probabilities. For each question, determine the probability (area) of the shaded region or regions. In cases where the bound could be $-3$ or $3$, use $-\infty$ or $\infty$ instead.  Write the answer using the ``$P(\texttt{condition}) = \texttt{number}$'' format.
+
+\begin{enumerate}[itemsep=50pt]
+\begin{multicols}{2}
+\item \adjustbox{valign=t}{\includegraphics[scale=.5]{n3_n1.png}}
+\item \adjustbox{valign=t}{\includegraphics[scale=.5]{n3_0.png}}
+\item \adjustbox{valign=t}{\includegraphics[scale=.5]{n3_1.png}}
+\item \adjustbox{valign=t}{\includegraphics[scale=.5]{n1_3.png}}
+\item \adjustbox{valign=t}{\includegraphics[scale=.5]{0_1.png}}
+
+\columnbreak
+
+\item \adjustbox{valign=t}{\includegraphics[scale=.5]{0_2.png}}
+\item \adjustbox{valign=t}{\includegraphics[scale=.5]{n1_1.png}}
+\item \adjustbox{valign=t}{\includegraphics[scale=.5]{n2_2.png}}
+\item \adjustbox{valign=t}{\includegraphics[scale=.5]{n3_n2_and_2_3.png}}
+\item \adjustbox{valign=t}{\includegraphics[scale=.5]{n3_n1_and_1_3.png}}
+
+\end{multicols}
+\end{enumerate}
+\end{enumerate}
+
+
+\newpage
+\subsection*{Central Limit Theorem}
+Let the random variable $\bar{X}$ be the mean of a sample of size $n$ taken from a distribution with mean $\mu$ and standard deviation $\sigma$. If $n>30$ then $\bar{X}$ is approximately normally distributed with mean $\mu$ and standard deviation $\frac{\sigma}{\sqrt{n}}$. (If the original distribution is normal, then $n$ can be any number, and the distribution of $\bar{X}$ is exactly normally distributed with mean $\mu$ and standard deviation $\frac{\sigma}{\sqrt{n}}$.)
+
+A typical problem will provide values for $\mu$, $\sigma$, $n$, and boundaries on $\bar{X}$. In these situations, we convert boundaries of $\bar{X}$ into boundaries of $Z$ to calculate the probability.
+$$P\Bigl(\bar{x}_1 < \bar{X} < \bar{x}_2\Bigr) ~=~ \,?$$
+
+$$z_1 = \frac{\bar{x}_1-\mu}{\frac{\sigma}{\sqrt{n}}} $$
+
+$$z_2 = \frac{\bar{x}_2-\mu}{\frac{\sigma}{\sqrt{n}}} $$
+
+$$P\Bigl(\bar{x}_1 < \bar{X} < \bar{x}_2\Bigr)~ = ~P\Bigl(z_1 < Z < z_2\Bigr)$$
+
+\subsection*{Normal approximation of binomial distribution}
+A binomial distribution can often be approximated by a normal distribution. This de Moivre–Laplace theorem was known before the central limit theorem, but can now be understood as a special case of the central limit theorem.
+
+Let the random variable $X$ represent the number of successes from $n$ trials, each with chance $p$. If $np \ge 5$ and $n(1-p) \ge 5$, then we can approximate the binomial distribution of $X$ as a normal distribution of $Y$ with  $\mu= np$ and $\sigma = \sqrt{np(1-p)}$.
+
+Because a normal distribution is continuous while a binomial distribution is discrete, a continuity correction is made. Some examples:
+\begin{align*}
+P\Bigl(X < x\Bigr) ~&=~ P\Bigl(Y < x{-}0.5\Bigr) ~=~ P\left(Z < \frac{x-0.5-\mu}{\sigma}\right)\\
+P\Bigl(X \le x\Bigr) ~&=~ P\Bigl(Y < x{+}0.5\Bigr) ~=~ P\left(Z < \frac{x+0.5-\mu}{\sigma}\right) \\
+P\Bigl(X > x\Bigr) ~&=~ P\Bigl(Y > x{+}0.5\Bigr) ~=~ P\left(Z > \frac{x+0.5-\mu}{\sigma}\right)\\
+P\Bigl(X \ge x\Bigr) ~&=~ P\Bigl(Y > x{-}0.5\Bigr) ~=~ P\left(Z > \frac{x-0.5-\mu}{\sigma}\right) \\
+P\Bigl(x_1 < X < x_2\Bigr) ~&=~ P\Bigl(x_1+0.5<Y < x_2-0.5\Bigr) ~=~ P\left(\frac{x_1+0.5-\mu}{\sigma}< Z < \frac{x_2-0.5-\mu}{\sigma}\right) \\
+P\Bigl(x_1 \le X \le x_2\Bigr) ~&=~ P\Bigl(x_1-0.5 < Y < x_2+0.5\Bigr) ~=~ P\left(\frac{x_1-0.5-\mu}{\sigma}< Z < \frac{x_2+0.5-\mu}{\sigma}\right) \\
+P\Bigl(X = x\Bigr) ~&=~ P\Bigl(x-0.5 < Y < x+0.5\Bigr) ~=~ P\left(\frac{x-0.5-\mu}{\sigma}< Z < \frac{x+0.5-\mu}{\sigma}\right) \\
+\end{align*}
+
+\newpage
+\begin{enumerate}[resume]
+\item An individual is measured from a normal distribution with $\mu = 500$ and $\sigma=100$. What is the probability that the individual has a measurement greater than 530?
+\vfill
+\item If 64 individuals are measured from a continuous distribution with $\mu = 500$ and $\sigma=100$, then what is the probability that their mean is greater than 530?
+\vfill
+\item If 15 trials each have a 45\% chance of success, then what is the probability of getting exactly 7 successes? Use the normal approximation.
+\vfill
+\end{enumerate}
+
+\newpage
+We have thoroughly practiced finding areas from $z$-scores. We might also want to find $z$-scores from areas. For example, if we wanted to find the value of $z_0$ that satisfies $P(Z<z_0) = 0.86$, we scan the right-columns for $\Phi(z)\approx 0.86$. We find $\Phi(1.08) = 0.8599$.
+\begin{center}
+\begin{tabular}{|c|c|}\hline
+$z$ & $\Phi(z)$ \\ \hline
+$\vdots$ & $\vdots$ \\
+1.08 & 0.8599 \\
+$\vdots$ & $\vdots$ \\ \hline
+\end{tabular}
+\end{center}
+Thus, we estimate $z_0\approx 1.08$. We can also write this as $\Phi^{-1}(0.8599)=1.08$. Here are some formulas for determining $z$ from various areas. These are all derived from equations on page \pageref{hi}.
+
+\begin{align*}
+\texttt{Left area} &= A_\text{L}\\
+z &= \Phi^{-1}(A_\text{L})\\\\
+\texttt{Right area} &= A_\text{R} \\
+z &= \Phi^{-1}(1-A_\text{R})\\\\
+\texttt{Central area} &= A_\text{C}\\
+z &= \Phi^{-1}\left(\frac{A_\text{C}+1}{2}\right)\\\\
+\texttt{Two-tailed area} &= A_\text{T} \\
+z &= \Phi^{-1}\left(1-\frac{A_\text{T}}{2}\right)
+\end{align*}
+
+Remember, these areas also correspond to probabilities. Also, you don't need to memorize these formulas, as you can figure them out by drawing a quick sketch.
+
+\newpage
+\begin{enumerate}[resume]
+\item \begin{enumerate}
+\item Determine $z_0$ such that $\Phi(z_0)=0.0505$. In other words, evaluate $\Phi^{-1}(0.0505)$.
+\vfill
+\item Determine $z_1$ such that $\Phi(z_1)\approx 0.99$.
+\vfill
+\item Determine $z_2$ such that $P(Z < z_2) = 55.57\%$
+\vfill
+\item Determine $z_3$ such that $P(Z > z_3) = 15.87\%$
+\vfill
+\item Determine $z_4$ such that $P(-z_4 < Z < z_4) = 68.2\%$
+\vfill
+\item Determine $z_5$ such that $P(|Z| < z_5) = 95\%$
+\vfill
+\item Determine $z_6$ such that $P(|Z| < z_6) = 90\%$
+\vfill
+\item Determine $z_7$ such that $P(|Z| > z_7) = 10\%$
+\vfill
+\end{enumerate}
+
+\newpage
+\item If the scores on a test are normally distributed with a mean of 80 and a standard deviation of 10, what score is the 84.1th percentile? (Hint: check out the 68-95-99.7 rule.)
+\vfill
+\item If the scores on a test are normally distributed with a mean of 80 and a standard deviation of 10, what score is the 97.7th percentile?
+\vfill
+\item If the scores on a test are normally distributed with a mean of 80 and a standard deviation of 10, what score is the 90th percentile?
+\vfill
+\item What is the $z$-score such that 68.2\% of the area lies between $-z$ and $z$? (Hint: check out the 68-95-99.7 rule.)
+\vfill
+\item What is the $z$-score such that 95.4\% of the area lies between $-z$ and $z$?
+\vfill
+\item What is the $z$-score such that 80\% of the area lies between $-z$ and $z$?
+\vfill
+
+
+\end{enumerate}
+\newpage
+	\setenumerate[1]{label={\bf A\theenumi: ~}}
+	\setenumerate[2]{label={\bf \theenumii: ~}}
+\begin{multicols}{2}
+\begin{enumerate}
+\item \begin{enumerate}
+\item $P\bigl(Z < -1.4\bigr) = 0.0808 $\\\includegraphics[scale=0.4]{n1p4.png}
+\item $P\bigl(Z < 2\bigr) = 0.9772 $\\\includegraphics[scale=0.4]{2.png}
+\item $P(Z<-0.2) = 0.4207$
+\end{enumerate}
+
+\item \begin{enumerate}
+\item $P\bigl(Z > 1.6\bigr) = 0.0548 $\\\includegraphics[scale=0.4]{g1p6.png}
+\item $P\bigl(0.4 < Z < 0.6\bigr) = 0.0703 $\\\includegraphics[scale=0.4]{bp4p6.png}
+\item $P\bigl(1 < Z < 2\bigr) = 0.1359 $\\\includegraphics[scale=0.4]{b1a2.png}
+\item $P\bigl(|Z| < 0.4\bigr) = 0.3108 $\\\includegraphics[scale=0.4]{alp4.png}
+\item $P\bigl(|Z| > 0.4\bigr) = 0.6892 $\\\includegraphics[scale=0.4]{agp4.png}
+\end{enumerate}
+\columnbreak
+\item \begin{enumerate}
+\item $P(Z<-1)=0.159$
+\item $P(Z<0) = 0.5$
+\item $P(Z<1) = 0.841$
+\item $P(-1<Z) = 0.841$
+\item $P(0<Z<1) = 0.341$
+\item $P(0<Z<2) = 0.477$
+\item $P(|Z|<1) = 0.682$
+\item $P(|Z|<2) = 0.954$
+\item $P(|Z|>2) = 0.046$
+\item $P(|Z|>1) = 0.318$
+\end{enumerate}
+
+\item $0.3821$
+\item $0.0082$
+\item $0.2031$
+
+\item \begin{enumerate}
+\item $z_0 = -1.64$
+\item $z_1 = 2.33$
+\item $z_2 = 0.14$
+\item $z_3 = 1$
+\item $z_4 = 1$
+\item $z_5 = 1.96$
+\item $z_6 = 1.64$
+\item $z_7 = 1.64$
+\end{enumerate}
+
+\item 90.0
+\item 100.0
+\item $z = \Phi^{-1}(0.9) = 1.2815
+\\(1.2815)(10)+80 \approx \fbox{92.8}$
+\item $z=1$
+\item $z=2$
+\item $z = \Phi^{-1}\Bigl(\frac{0.8+1}{2}\Bigr)=\Phi^{-1}(0.9)=1.282$
+
+\end{enumerate}
+\end{multicols}
+
+\end{document}
