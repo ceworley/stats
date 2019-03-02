@@ -1,0 +1,150 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{multicol}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{multirow,array}
+\usepackage{newtxtext,newtxmath}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textsc{BHCC Mat-181}}
+\chead{\textsc{Answers}}
+\rhead{\textsc{HW Exercises 2.27-2.35}}
+\rfoot{Page \thepage ~of \pageref{LastPage}}
+\setenumerate[1]{label={\bf 2.\theenumi: }}
+\setenumerate[2]{label={\bf (\theenumii): }}
+\setenumerate[3]{label={\bf \theenumiii: }}
+
+\begin{document}
+\newcommand{\AND}{\textsc{~and~}}
+\newcommand{\OR}{\textsc{~or~}}
+\newcommand{\GIVEN}{\textsc{~given~}}
+
+\begin{enumerate}
+\setcounter{enumi}{35}
+\item \begin{enumerate}
+\item I incorporate the \$2 cost into the probability model, so random variable $X$ is profit.
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|c|c|c|c|c|} \hline
+$i$ & $x_i$ & $P(X=x_i)$ & $x_i \cdot P(X=x_i)$ \\ \hline
+1 & \$-2 & 9/13 & -1.38  \\
+2 & \$1 & 3/13 & 0.23  \\
+3 & \$3 & 3/52 & 0.17 \\
+4 & \$23 & 1/52 & 0.44 \\ \hline
+\multicolumn{3}{r|}{Totals:} & $\mu=-0.54$  \\\cline{4-4}
+\end{tabular}
+\end{center}
+The expected profit per game is -0.54 USD.
+\item Nope, I would not recommend this game. The expected profit is negative.
+\end{enumerate}
+
+\item We can make a table where $X$ is the return.
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|c|c|c|c|c|} \hline
+$i$ & $x_i$ & $P(X=x_i)$ & $x_i \cdot P(X=x_i)$ \\ \hline
+1 & 18\% & 1/3 & 6\%  \\
+2 & 9\% & 1/3 & 3\% \\
+3 & -12\% & 1/3 & -4\% \\\hline
+\multicolumn{3}{r|}{Totals:} & $\mu=5\%$  \\\cline{4-4}
+\end{tabular}
+\end{center}
+The expected return is 5\% profit.
+
+\item \begin{enumerate}
+\item  We build a probability model where $X$ is revenue from a passenger checking bags.
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|c|c|c|c|c|} \hline
+$i$ & $x_i$ & $P(X=x_i)$ & $x_i \cdot P(X=x_i)$ & $(x_i-\mu)^2 \cdot P(X=x_i)$\\ \hline
+1 & \$0 & 0.54 & 0 & 133.1 \\
+2 & \$25 & 0.34 & 8.5 & 29.4 \\
+3 & \$60 & 0.12 & 7.2 & 235.5\\ \hline
+\multicolumn{3}{r|}{Totals:} & $\mu=15.7$ & $\sigma^2=398.0$ \\\cline{4-5}
+\end{tabular}
+\end{center}
+We calculate the standard deviation by taking the square root of the variance.
+$$\sigma = \sqrt{398.0} = 19.95 $$
+Thus, for each passenger, the airline expects a revenue of \$15.70 with a standard deviation of \$19.95.
+\item We assume that each passenger is independent and identically distributed. This seems reasonable as long as a large sports team is not flying together or something like that. I guess I also assume these numbers are for a certain arrival-destination pair... because I would expect flights to Alaska to have more checked luggage than flights to New York.
+
+Anyway, the expected revenue is easy. Let random variable $X_i$ represent the revenue from the $i$th passenger. Notice the important distinction between $X_1$ and $x_1$.
+$$E(X_1+X_2+\cdots +X_{120}) = 120 \cdot E(X) = 120\times 15.7 = \$1884 $$
+To calculate standard deviation, we first return to variance.
+$$Var(X_1+X_2+\cdots +X_{120}) = 120 \cdot Var(X) = 120 \times 398 = 47760 $$
+$$\sigma = \sqrt{47760} = 218.54 $$
+From a whole plane, the expected revenue from bags is \$1884.00 with a standard deviation of \$218.54. Notice that the collection of random variables has a smaller standard deviation than the mean, while the revenue from an individual has a higher standard deviation than mean...
+\end{enumerate}
+
+\item We can make a table, where $X$ represents profit.
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|c|c|c|c|c|} \hline
+$i$ & $x_i$ & $P(X=x_i)$ & $x_i \cdot P(X=x_i)$ & $(x_i-\mu)^2 \cdot P(X=x_i)$\\ \hline
+1 & \$-1 & 20/38 & -0.5263158 & 0.4723721 \\
+2 & \$1  & 18/38 & 0.4736842 & 0.5248579 \\\hline
+\multicolumn{3}{r|}{Totals:} & $\mu=-0.05263158$ & $\sigma^2=0.9972299$ \\\cline{4-5}
+\multicolumn{4}{r|}{}& $\sigma = 0.998614$\\\cline{5-5}
+\end{tabular}
+\end{center}
+The expected profit is \$-0.05 with a standard deviation of \$1.00.
+
+\item \begin{enumerate}
+\item We first could use a table, where $X$ is profit on a \$1 bet.
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|c|c|c|c|c|} \hline
+$i$ & $x_i$ & $P(X=x_i)$ & $x_i \cdot P(X=x_i)$ & $(x_i-\mu)^2 \cdot P(X=x_i)$\\ \hline
+1 & \$-1 & 19/37 & -0.5135135 & 0.4861311 \\
+2 & \$1  & 18/37 & 0.4864865 & 0.5131384 \\\hline
+\multicolumn{3}{r|}{Totals:} & $\mu=-0.02702703$ & $\sigma^2=0.9992695$ \\\cline{4-5}
+\multicolumn{4}{r|}{}& $\sigma = 0.9996347$\\\cline{5-5}
+\end{tabular}
+\end{center}
+So, for a \$3 bet...
+$$E(3X) = 3E(X) = -0.081 $$
+$$Var(3X) = 9Var(X) = 9\times 0.9992695 = \$8.99 $$
+$$\sigma = \sqrt{8.99} = 3.00 $$
+the expected profit is \$-0.08 with a standard deviation of \$3.00.
+\item For 3 rounds, each with \$1 bet, the expected value will be the same, but the standard deviation will be less.
+$$E(X_1 + X_2 + X_3) = 3E(X) = -0.081 $$
+$$Var(X_1 + X_2 + X_3) = 3Var(X) = 3\times 0.9992695 = \$2.998 $$
+$$\sigma = \sqrt{2.998} = 1.73 $$
+\item They have the same expected value, but the second game has lower variability. The second game has less average deviation from the mean. We would say the second game is less risky, as in there is less uncertainty.
+\end{enumerate}
+
+\item We are told:
+$$E(C) = 1.40 $$
+$$SD(C) = 0.30 $$
+$$E(M) = 2.50 $$
+$$SD(M) = 0.15 $$
+We can also say:
+$$Var(C) = 0.30^2 = 0.09 $$
+$$Var(M) = 0.15^2 = 0.0225 $$
+\begin{enumerate}
+\item We use the rules about linear combinations.
+$$E(C+M) = E(C)+E(M) = 1.40+2.50 = \fbox{3.90} $$
+$$Var(C+M) = Var(C)+Var(M) = 0.09+0.0225 = 0.1125 $$
+$$\sigma = \sqrt{0.1125} = \fbox{0.3354} $$
+\item Let $D_i$ represent the amount spent on the $i$th day. For any $i$,
+$$E(D_i) = 3.9$$
+$$Var(D_i) = 0.1125$$
+For all 7 days, we do a linear combination.
+$$E(D_1+D_2+\cdots+D_7) ~=~ E(D_1)+E(D_2)+\cdots+E(D_7) ~=~ 7\times3.9 ~=~ \fbox{27.30} $$
+$$Var(D_1+D_2+\cdots+D_7) ~=~ Var(D_1)+Var(D_2)+\cdots+Var(D_7) ~=~ 7\times0.1125 ~=~ 0.7875 $$
+$$\sigma = \sqrt{0.7875} = 0.887 $$
+\end{enumerate}
+
+\end{enumerate}
+\end{document}
