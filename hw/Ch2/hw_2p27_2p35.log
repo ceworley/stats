@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.9.19)  1 MAR 2019 21:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.9.19)  2 MAR 2019 11:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1040,8 +1040,6 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
 (Font)              scaled to size 12.0pt on input line 46.
 
 
-AED: lastpage setting LastPage
-
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
@@ -1049,29 +1047,33 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
-] (./hw_2p27_2p35.aux) ) 
+] [2] [3]
+
+AED: lastpage setting LastPage
+[4] (./hw_2p27_2p35.aux) ) 
 Here is how much of TeX's memory you used:
- 6237 strings out of 494910
- 82215 string characters out of 6179836
- 149372 words of memory out of 5000000
- 9362 multiletter control sequences out of 15000+600000
- 45981 words of font info for 70 fonts, out of 8000000 for 9000
+ 6247 strings out of 494910
+ 82295 string characters out of 6179836
+ 151372 words of memory out of 5000000
+ 9364 multiletter control sequences out of 15000+600000
+ 48631 words of font info for 78 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 38i,12n,43p,855b,372s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/nt
-x-ec-tlf.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.e
-nc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texli
-ve/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-sc.enc}</usr/share/texmf/fonts/t
-ype1/public/tex-gyre/qtmb.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtm
-r.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmri.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
-/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on hw_2p27_2p35.pdf (1 page, 88305 bytes).
+ 38i,12n,43p,855b,464s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/
+ntx-ec-tlf.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf
+.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/tex
+live/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-sc.enc}</usr/share/texmf/fonts
+/type1/public/tex-gyre/qtmb.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/q
+tmr.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmri.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on hw_2p27_2p35.pdf (4 pages, 104805 bytes).
 PDF statistics:
- 48 PDF objects out of 1000 (max. 8388607)
- 36 compressed objects within 1 object stream
+ 61 PDF objects out of 1000 (max. 8388607)
+ 45 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

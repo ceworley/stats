@@ -68,8 +68,126 @@ P(B_1 \AND B_2) &= P(B_1)\cdot P(B_2|B_1) \\
 &= \frac{3}{10} \cdot \frac{2}{9} \\
 &\approx \fbox{0.0666}
 \end{align*}
-\item Nope. The probabilities of the second draw change with different first draws.
+\item Nope. The first events differently change the probabilities of second events.
 \end{enumerate}
+
+\newpage
+
+\item \begin{enumerate}
+\item To calculate this joint probability, we multiply a marginal and a conditional.
+\begin{align*}
+P(H_1 \AND PF_2) &= P(H_1) \cdot P(PF_2 | H_1)  \\\\
+&= \frac{28}{95} \cdot \frac{59}{94} \\\\
+&\approx \fbox{0.185}
+\end{align*}
+
+\item This one is a bit more difficult because some fiction books are hardcovers, and we are sampling without replacement.
+\begin{align*}
+P(F_1 \AND H_2) &= P\Big([HF_1 \AND H_2] \OR [PF_1 \AND H_2] \Big) \\
+&= P\big(HF_1 \AND H_2\big) ~~+~~ P\big(PF_1 \AND H_2\big)\\
+&= P(HF_1)\cdot P(H_2|HF_1) ~~+~~  P(PF_1)\cdot P(H_2|PF_1)\\\\
+&= \frac{13}{95}\cdot \frac{27}{94} ~~+~~ \frac{59}{95} \cdot \frac{28}{94}\\\\
+&=  \fbox{0.2243001}
+\end{align*}
+
+\item This is easier; we are sampling with replacement, so the draws are independent.
+\begin{align*}
+P(F_1 \AND H_2) &= P(F) \cdot P(H) \\\\
+&= \frac{72}{95} \cdot \frac{28}{95} \\\\
+&= \fbox{0.2233795}
+\end{align*}
+
+\item The answers to parts (b) and (c) are similar because we are only sampling 2 items from a relatively large population (population size = 95). A rule of thumb is when sample size is less than 10\% of the population, an independence approximation is warranted.
+\end{enumerate}
+
+\item First, how many people are wearing leggings?
+$$24-7-4-8 =  5$$
+We need to consider that there are multiple ways to end up with \#leggings = 1 and \#jeans = 2.
+\begin{align*}
+P(\text{2 jeans and 1 leggings}) &= P(L_1J_2J_3 \OR J_1L_2J_3 \OR J_1J_2L_3) \\
+&= P(L_1J_2J_3) + P(J_1L_2J_3) + P(J_1J_2L_3) \\\\
+&= \frac{5\cdot 7 \cdot 6}{24\cdot 23\cdot 22} + \frac{7\cdot 5 \cdot 6}{24\cdot 23\cdot 22} + \frac{7\cdot 6 \cdot 5}{24\cdot 23\cdot 22} \\ \\
+&= \fbox{0.05187747}
+\end{align*}
+
+\item There are 365 days in a year.
+\begin{enumerate}
+\item We just need to consider the chance that the second birthday matches the first birthday.
+$$P(\text{first two share a birthday}) = \frac{1}{365} \approx  0.002739726$$
+\item We recognize ``at least two share'' is the complement of ``nobody shares''.
+$$P(\text{nobody shares}) ~=~ 1\times \frac{364}{365} \times \frac{363}{365} ~=~ 0.9917958 $$
+
+$$P(\text{at least 2 share}) ~=~ 1-P(\text{nobody shares}) ~=~ \fbox{0.0082} $$
+\end{enumerate}
+
+\item \begin{enumerate}
+\item $0.13 \times 100 = \fbox{13}$
+\item No. Students at a gym are probably more health conscious than average students.
+\end{enumerate}
+
+\item \begin{enumerate}
+\item The four events each have a different payoff and probability.
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|c|c|c|c|c|} \hline
+$i$ & $x_i$ & $P(X=x_i)$ & $x_i \cdot P(X=x_i)$ & $(x_i-\mu)^2 \cdot P(X=x_i)$\\ \hline
+1 & \$0 & 0.5 & 0 & 8.55 \\
+2 & \$5 & 1/4 & 1.25 & 0.19 \\
+3 & \$10 & 12/52 & 2.308 & 7.94\\
+4 & \$30 & 1/52 & 0.577 & 12.87\\ \hline
+\multicolumn{3}{r|}{Totals:} & $\mu=4.135$ & $\sigma^2=29.54$ \\\cline{4-5}
+\end{tabular}
+\end{center}
+We calculate the standard deviation from the variance.
+$$\sigma = \sqrt{29.54} \approx 5.44 $$
+The expected winnings are \$4.14 with a standard deviation of \$5.44.
+\item I'm rather risk neutral with these small amounts of money. So, I'm willing to pay \$4.14 to play this game. This would give me a \$0 expected payoff (better than a casino!).
+\end{enumerate}
+
+\item \begin{enumerate}
+\item Let's first calculate the probabilities.
+$$P(H_1 \AND H_2 \AND H_3) ~=~ \frac{13\cdot 12 \cdot 11}{52 \cdot 51 \cdot 50} ~=~ 0.01294118 $$
+$$P(B_1 \AND B_2 \AND B_3) ~=~ \frac{26\cdot 25 \cdot 24}{52 \cdot 51 \cdot 50} ~=~ 0.1176471 $$
+
+$$P(\text{other}) = 1-0.0129-0.1176 = 0.8695$$
+
+We make a table. Notice the textbook uses rows where I use columns.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|c|c|c|c|c|} \hline
+$i$ & $x_i$ & $P(X=x_i)$ & $x_i \cdot P(X=x_i)$ & $(x_i-\mu)^2 \cdot P(X=x_i)$\\ \hline
+1 & \$0 & 0.8695 & 0 & 11.18 \\
+2 & \$50 & 0.0129 & 0.645  & 27.79 \\
+3 & \$25 & 0.1176 & 2.940 & 53.93\\ \hline
+\multicolumn{3}{r|}{Totals:} & $\mu=3.585$ & $\sigma^2=92.9$ \\\cline{4-5}
+\end{tabular}
+\end{center}
+We calculate the standard deviation from the variance.
+$$\sigma = \sqrt{92.9} \approx 9.64 $$
+The expected winnings are \$3.59 with a standard deviation of 9.64. 
+\item The expected winnings would be -1.41 USD.
+$$3.59-5 = -1.41 $$ 
+The variability does not change. Every value under $x_i$ is decreased by 5, but so is the mean, so the last column will be unchanged.
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|c|c|c|c|c|} \hline
+$i$ & $x_i$ & $P(X=x_i)$ & $x_i \cdot P(X=x_i)$ & $(x_i-\mu)^2 \cdot P(X=x_i)$\\ \hline
+1 & -5 & 0.8695 & -4.35 & 11.18 \\
+2 & 45 & 0.0129 & 0.58  & 27.79 \\
+3 & 20 & 0.1176 & 2.35 & 53.93\\ \hline
+\multicolumn{3}{r|}{Totals:} & $\mu=-1.41$ & $\sigma^2=92.9$ \\\cline{4-5}
+\end{tabular}
+\end{center}
+We can also use rules in chapter 2.4 (where I've replaced $a$ and $b$ with 1s).
+$$E(X+Y) = E(X) + E(Y) $$
+$$Var(X+Y) = Var(X) + Var(Y) $$
+The expected value of a constant is the constant. The variance of a constant is 0.
+$$E(X-5) = E(X) -5 = 3.59-5 = -1.41$$
+$$Var(X-5) = Var(X) + Var(-5) = 92.9-0 = 92.9 $$
+\item No. It has a negative expected value.
+\end{enumerate}
+
 
 \end{enumerate}
 \end{document}
