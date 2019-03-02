@@ -1,0 +1,151 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{multicol}
+\usepackage{listings}
+\lstset{ 
+basicstyle = \ttfamily,
+showstringspaces=false,
+columns=fullflexible,
+literate={*}{{\char42}}1
+         {-}{{\char45}}1
+         {"}{{\fontencoding{T1}\selectfont\textquotedbl}}1
+         {'}{{\fontencoding{T1}\selectfont\textquotesingle}}1
+}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{multirow,array}
+\usepackage{newtxtext,newtxmath}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textsc{BHCC Mat-181}}
+\chead{\textsc{Answers}}
+\rhead{\textsc{HW Exercises 3.19-3.24}}
+\rfoot{Page \thepage ~of \pageref{LastPage}}
+\setenumerate[1]{label={\bf 3.\theenumi: }}
+\setenumerate[2]{label={\bf (\theenumii): }}
+\setenumerate[3]{label={\bf \theenumiii: }}
+
+\begin{document}
+\newcommand{\N}[2]{\mathcal{N}\big(#1,~#2\big)}
+\newcommand{\Geo}[1]{\texttt{Geo}\big(#1\big)}
+\newcommand{\AND}{\textsc{~and~}}
+\newcommand{\OR}{\textsc{~or~}}
+
+\begin{enumerate}
+\setcounter{enumi}{18}
+\item \begin{enumerate}
+\item Nope. There are way more than 2 possible hands in poker. 
+\item There are more than 2 possible outcomes when rolling a die. Of course, you could define two mutually exclusive and exhaustive events...
+\end{enumerate}
+
+\item \begin{enumerate}
+\item With replacement:
+$$P(\text{1st female and 2nd female w/ replacement})=\frac{5}{10} \times \frac{5}{10} = \frac{1}{4} $$
+Without replacement:
+$$P(\text{1st female and 2nd female w/out replacement})=\frac{5}{10} \times \frac{4}{9} = \frac{20}{90} = \frac{2}{9} \approx 0.222 $$
+\item With replacement:
+$$P(\text{1st female and 2nd female w/ replacement})=\frac{5000}{10000} \times \frac{5000}{10000} = \frac{1}{4} $$
+Without replacement:
+$$P(\text{1st female and 2nd female w/out replacement})=\frac{5000}{10000} \times \frac{4999}{9999} = 0.249975 \approx 0.25 $$
+\item This assumption is reasonable. We see that with a large population (3.20.b) there is a tiny error from the independence approximation.
+\end{enumerate}
+
+\item \begin{enumerate}
+\item If we assume independence, this is a geometric random variable. Let $X\sim \Geo{p=0.471}$.
+$$P\big(X=3\big) ~=~ (1-0.471)^2(0.471) ~=~ 0.1318 $$
+\item We assume independence. This is not geometric. We have not named repeated failures, but it is a special version of binomial distribution.
+\begin{align*}
+P(\text{1st AND 2nd AND 3rd}) &= P(\text{1st}) \cdot P(\text{2nd}) \cdot P(\text{3rd}) \\
+&= 0.471^3 \\
+&= 0.1044871
+\end{align*}
+\item We are back to geometric! Let $X\sim \Geo{p=0.471}$. We learned a formula for $\mu$ and $\sigma$ for geometric distributions.
+\begin{align*}
+\mu &= \frac{1}{p} \\\\
+ &= \frac{1}{0.471} \\\\
+ &= 2.123142
+\end{align*}
+\begin{align*}
+\sigma &= \frac{\sqrt{1-p}}{p} \\\\
+ &= \frac{\sqrt{1-0.471}}{0.471} \\ \\
+ &= 1.544212
+\end{align*}
+On average, we expect sampling 2.12 women before finding a married woman, give or take 1.5 women.
+
+\item We just change $p$.
+\begin{align*}
+\mu &= \frac{1}{p} \\\\
+ &= \frac{1}{0.3} \\\\
+ &= 3.33333
+\end{align*}
+\begin{align*}
+\sigma &= \frac{\sqrt{1-p}}{p} \\\\
+ &= \frac{\sqrt{1-0.3}}{0.3} \\ \\
+ &= 2.788867
+\end{align*}
+On average, we expect sampling 3.33 women before finding a married woman, give or take 2.79 women.
+\item Decreasing $p$ increases both $\mu$ and $\sigma$.
+\end{enumerate}
+
+\item \begin{enumerate}
+\item This is a geometric random variable. Let $X\sim \Geo{p=0.02}$.
+$$P(X=10) ~=~ (1-0.02)^9(0.02) ~\approx~ \fbox{0.0167}$$
+\item This is a special case of a binomial random variable.
+$$P(\text{no defects in 100}) ~=~ 0.98^{100} ~\approx~ \fbox{0.133} $$
+\item This is back to geometric.
+$$\mu ~=~ \frac{1}{p} ~=~ \frac{1}{0.02} ~=~ 50$$
+$$
+\sigma ~=~ \frac{\sqrt{1-p}}{p} ~=~ \frac{\sqrt{1-0.02}}{0.02}~=~ 49.49747$$
+On average, we expect to test 50 before we find a defective transistor, plus or minus 49.5.
+\item We just change $p$.
+$$\mu ~=~ \frac{1}{p} ~=~ \frac{1}{0.05} ~=~ 20$$
+
+$$
+\sigma ~=~ \frac{\sqrt{1-p}}{p} ~=~ \frac{\sqrt{1-0.05}}{0.05}~=~ 19.49359$$
+\item Increasing $p$ decreases both $\mu$ and $\sigma$. Also, we might conjecture that when $p$ is small $\mu \approx \sigma + 0.5$. 
+\end{enumerate}
+
+\item \begin{enumerate}
+\item We are dealing with a geometric distribution, where each trial has a $0.125$ chance of success. We let random variable $X$ represent the number of trials until success. 
+$$X \sim \Geo{0.125} $$
+We are asked to calculate $P(X=3)$.
+$$P(X=3)~=~(1-0.125)^2(0.125) ~\approx~ 0.09570 $$
+\item We are still considering a geometric distribution, so we use the appropriate formulas for (population) mean and (population) standard deviation. (Remember, distributions are infinitely large populations.)
+$$\mu ~=~\frac{1}{p} ~=~ \frac{1}{0.125} ~=~ 8  $$ 
+
+$$\sigma ~=~ \frac{\sqrt{1-p}}{p} ~=~ \frac{\sqrt{1-0.125}}{0.125}~\approx~ 7.483315$$
+\end{enumerate}
+
+\item We first need to remember normal distributions. Let normal random variable $X$ represent the speed of a car.
+$$X\sim \N{72.6}{4.78} $$
+We want to determine the probability that a single car is speeding.
+$$P(X > 70) ~~=~~ 1- \Phi\left(\frac{70-72.6}{4.78}\right) ~~=~~ 0.7068 $$
+I used precise software. If you are using the table, you can first estimate $z$.
+$$z ~=~ \frac{70-72.6}{4.78} ~\approx~ -0.54 $$
+Then, use the table...
+$$P(X > 70) ~~\approx~~ \Phi(-0.54) ~~\approx~~ 0.7054  $$
+We'll just go with that value; each car has a 70.5\% chance of speeding.
+\begin{enumerate}
+\item We will call speeding a ``success'' and not speeding a ``failure'' (even though speeding is bad). Thus, $p=0.705$. Also, this question asks for the probability of 5 failures.
+$$P(\text{0 out of 5 cars speeding}) ~=~ (1-0.705)^5 ~=~ 0.0022  $$
+\item Now we are considering a geometric distribution, so we use the appropriate formulas.
+$$\mu ~=~ \frac{1}{0.705} ~\approx~ 1.42$$
+
+$$\sigma ~=~ \frac{\sqrt{1-p}}{p} ~=~ \frac{\sqrt{1-0.705}}{0.705}~\approx~ 0.77$$
+\end{enumerate}
+
+
+
+
+\end{enumerate}
+\end{document}
