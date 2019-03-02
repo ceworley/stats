@@ -146,5 +146,35 @@ $$Var(D_1+D_2+\cdots+D_7) ~=~ Var(D_1)+Var(D_2)+\cdots+Var(D_7) ~=~ 7\times0.112
 $$\sigma = \sqrt{0.7875} = 0.887 $$
 \end{enumerate}
 
+\item \begin{enumerate}
+\item Again, we are using rules about linear combinations.
+$$E(X+Y_1+Y_2+Y_3) = 48+2+2+2 = 54 $$
+$$Var(X+Y_1+Y_2+Y_3) = 1+0.0625+0.0625+0.0625 = 1.1875 $$
+$$\sigma = \sqrt{1.1875} = 1.09$$
+We expect there to have been 54 ounces with a standard deviation of 1.09 ounces.
+\item Again, we are using rules about linear combinations. Be really careful, we were not given a rule for subtraction, so you need to recognize $X-Y$ is $1X+(-1)Y$.
+$$E(X-Y) = 48-2 = 46 $$
+$$Var(X-Y) = Var(X+(-1)Y) = Var(X)+(-1)^2Var(Y) = 1+0.0625 = 1.0625 $$
+$$\sigma = \sqrt{1.0625} = 1.03$$
+We expect there to be 46 ounces with a standard deviation of 1.03 ounces.
+\item We don't improve accuracy about the amount in the box when we (inaccurately) remove some. Errors of adding or subtracting both increase the error of the tally.
+\end{enumerate}
+
+\item Our total number of cats is 144. The bar heights are approximately 28, 32, 21, 26, 13, 15, 5, and 4.
+\begin{enumerate}
+\item $\frac{28+32}{144} = 0.417$
+\item $\frac{21}{144} = 0.146$
+\item $\frac{26+13+15}{144} = 0.375$
+\end{enumerate}
+
+\item \begin{enumerate}
+\item It seems to be right skewed with a median around \$40,000, a $Q_1 \approx 25000$ and a $Q_3 \approx 65000$, for an IQR of about \$40,000.
+\item $2.2+4.7+15.8+18.3+21.2 = \fbox{62.2\%}$
+\item We assume males and females have equal distributions of income (not very reasonable assumption). In other words, we are assuming gender and income are independent.
+$$P(\text{under 50000} \AND \text{female}) ~=~ 0.622 \times 0.41 ~=~ \fbox{0.255} $$
+\item This shows our assumption was not valid, as females are more likely to make under \$50000 than the population as a whole. A better calculation can be done with the new information.
+$$P(\text{under 50000} \AND \text{female}) ~=~ P(\text{female})\times P(\text{under 50000}| \text{female}) ~=~ 0.41 \times 0.718 ~~=~~\fbox{0.29} $$
+\end{enumerate}
+
 \end{enumerate}
 \end{document}
