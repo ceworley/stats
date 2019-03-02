@@ -1,0 +1,75 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{multicol}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{multirow,array}
+\usepackage{newtxtext,newtxmath}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textsc{BHCC Mat-181}}
+\chead{\textsc{Answers}}
+\rhead{\textsc{HW Exercises 2.27-2.35}}
+\rfoot{Page \thepage ~of \pageref{LastPage}}
+\setenumerate[1]{label={\bf 2.\theenumi: }}
+\setenumerate[2]{label={\bf (\theenumii): }}
+\setenumerate[3]{label={\bf \theenumiii: }}
+
+\begin{document}
+\newcommand{\AND}{\textsc{~and~}}
+\newcommand{\OR}{\textsc{~or~}}
+\newcommand{\GIVEN}{\textsc{~given~}}
+
+\begin{enumerate}
+\setcounter{enumi}{26}
+\item\begin{enumerate}
+\item $P(\text{1st is blue})=\frac{3}{10} = 0.3$
+\item $P(\text{2nd is blue}\GIVEN \text{1st is blue... with replacement} )=\frac{3}{10} = 0.3$
+\item $P(\text{2nd is blue}\GIVEN \text{1st is orange... with replacement} )=\frac{3}{10} = 0.3$
+\item $P(\text{1st is blue} \AND \text{2nd is blue... with replacement} )= 0.3^2 = 0.09$
+\item When drawing with replacement, the draws are independent. The probabilities of the second draw do not change based on the result of the first draw.
+\end{enumerate}
+
+\item \begin{enumerate}
+\item $\frac{4}{12} \times \frac{3}{11} \approx 0.0909 $
+\item $\frac{7}{12} \times \frac{6}{11} = 0.318 $
+\item We first calculate the probability of the \emph{complement}.
+$$P(\text{no black socks}) = \frac{9}{12}\times\frac{8}{11} = 0.545 $$
+Then, we use the complement rule. 
+$$P(\text{at least 1 black sock}) = 1-0.545 = \fbox{0.455} $$
+\item 0
+\item We are interested in the union of three mutually exclusive events.
+\begin{align*}
+P(\text{2 blues} \OR \text{2 grays} \OR \text{2 blacks}) 
+ ~ &=~ P(\text{2 blues}) ~+~ P(\text{2 grays}) ~+~ P(\text{2 blacks}) \\
+  &=~ \frac{4}{12}\cdot\frac{3}{11} ~~+~~ \frac{5}{12}\cdot\frac{4}{11} ~~+~~ \frac{3}{12}\cdot\frac{2}{11} \\
+  &\approx~ \fbox{0.288}
+\end{align*}
+\end{enumerate}
+
+\item \begin{enumerate}
+\item When drawing without replacement, we can calculate conditional probabilities by considering which chips are left. After a blue is drawn, we have 5 reds, 2 blues, and 2 oranges.
+$$P(B_2 | B_1) ~=~ \frac{2}{9} ~=~ 0.22222 $$
+\item After an orange is drawn, we have 5 reds, 3 blues, and 1 oranges.
+$$P(B_2 | O_1) ~=~ \frac{3}{9} ~=~ 0.3333 $$
+\item We use the general rule for joint probabilities.
+\begin{align*}
+P(B_1 \AND B_2) &= P(B_1)\cdot P(B_2|B_1) \\
+&= \frac{3}{10} \cdot \frac{2}{9} \\
+&\approx \fbox{0.0666}
+\end{align*}
+\item Nope. The probabilities of the second draw change with different first draws.
+\end{enumerate}
+
+\end{enumerate}
+\end{document}
