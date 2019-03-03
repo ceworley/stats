@@ -1,0 +1,4 @@
+\babel@toc {english}{}
+\beamer@sectionintoc {1}{Binomial distribution}{1}{0}{1}
+\beamer@subsectionintoc {1}{1}{The binomial distribution}{2}{0}{1}
+\beamer@subsectionintoc {1}{2}{Normal approximation to the binomial}{52}{0}{1}
