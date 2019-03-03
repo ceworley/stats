@@ -306,8 +306,26 @@ P(X\le 2) &= {6\choose 0}(0.75)^0(0.25)^{6} +  {6\choose 1}(0.75)^1(0.25)^{5} + 
 So, having 2 {\bf or fewer} kids with brown eyes only happens about 4\% of the time. This is low enough to be unusual.
 \end{enumerate}
 
+\newpage
 
-
+\item \begin{enumerate}
+\item Let $X_\text{a} \sim \B{3}{0.25}$. We are asked for $P(X_\text{a} = 2)$.
+\begin{align*}
+P(X_\text{a} = 2) ~~&=~~ {3\choose 2}(0.25)^2(0.75)^{1} ~~=~~ \fbox{0.14}
+\end{align*}
+\item Let $X_\text{b} \sim \B{3}{0.25}$. We are asked for $P(X_\text{b} = 0)$.
+\begin{align*}
+P(X_\text{b} = 0) ~~&=~~ {3\choose 0}(0.25)^0(0.75)^{3} ~~=~~ \fbox{0.42}
+\end{align*}
+\item $X_\text{c} \sim \B{3}{0.25}$. 
+\begin{align*}
+P(X_\text{c} \ge 1) ~~&=~~ 1-P(X_\text{c} = 0) \\
+&=~~ 1-{3\choose 0}(0.25)^0(0.75)^{3} \\
+&=~~ \fbox{0.578}
+\end{align*}
+\item Geometric.
+$$(1-0.25)^2(0.25) = \fbox{0.14} $$
+\end{enumerate}
 
 \end{enumerate}
 \end{document}
