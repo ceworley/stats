@@ -4,7 +4,7 @@
 \begin{center}
 \includegraphics[scale=0.3]{3-4_binomial_distribution/figures/ski/ski.pdf}
 \end{center}
-\dq{Laney is at the top of the mountain (point A). She hopes to ski {\bf down} to point S (without going through trees or up hill). How many routes could Laney take?}
+Laney is at the top of the mountain (point A). She hopes to ski {\bf down} to point S (without going through trees or up hill). How many routes are possible?
 \pause
 \soln{\begin{center}
 \fbox{10}
@@ -20,7 +20,7 @@
 
 
 \begin{frame}
-\dq{On her right foot, Laney wants to paint three nails green. How many different ways can Laney do this?}
+Laney has 5 toes on her right foot. She wants to choose three  of these nails to paint green. How many different ways can Laney do this?
 \begin{center}
 \includegraphics[scale=0.3]{3-4_binomial_distribution/figures/toes/toes.pdf}
 \end{center}
@@ -29,8 +29,8 @@
 \soln{
 \begin{center}
 \begin{tabular}{c c c c c}
-GGGNN & GGNGN & GGNNG & GNGGN & GNGNG \\
-GNNGG & NGGGN & NGGNG & NGNGG & NNGGG 
+GGGxx & GGxGx & GGxxG & GxGGx & GxGxG \\
+GxxGG & xGGGx & xGGxG & xGxGG & xxGGG 
 \end{tabular}
 \end{center}
 \begin{center}
@@ -41,577 +41,281 @@ GNNGG & NGGGN & NGGNG & NGNGG & NNGGG
 
 
 \begin{frame}
-\dq{Laney is at the top of the mountain. She expects to hit 5 forks, where she needs to turn left three times (and right twice). How many routes can Laney take?}
+When given 7 dots, how many distinct line segments connect 2 of those dots? In other words, with 7 nodes, how many edges can be drawn?
+
+\begin{figure}
+    \begin{overprint}
+    \onslide<1>\centering\includegraphics[scale=0.3]{3-4_binomial_distribution/figures/stars/dots_7.pdf}
+    \onslide<2| handout:0>\centering\includegraphics[scale=0.3]{3-4_binomial_distribution/figures/stars/dots_7_solution.pdf}
+    \end{overprint}
+\end{figure}
+
+\onslide<2>\soln{\fbox{21}}
+\end{frame} 
+
+
+
+\begin{frame}
+If there are 7 possible pizza toppings, and you will choose 3 of them, how many different pizzas are possible?
 \pause
-\soln{
 \begin{center}
 \begin{tabular}{c c c c c}
-LLLRR & LLRLR & LLRRL & LRLLR & LRLRL \\
-LRRLL & RLLLR & RLLRL & RLRLL & RRLLL 
+CCCxxxx  & CxCxxCx  & CxxxxCC  & xCxCxxC  & xxCxCCx  \\
+CCxCxxx  & CxCxxxC  & xCCCxxx  & xCxxCCx  & xxCxCxC  \\
+CCxxCxx  & CxxCCxx  & xCCxCxx  & xCxxCxC  & xxCxxCC  \\
+CCxxxCx  & CxxCxCx  & xCCxxCx  & xCxxxCC  & xxxCCCx  \\
+CCxxxxC  & CxxCxxC  & xCCxxxC  & xxCCCxx  & xxxCCxC  \\
+CxCCxxx  & CxxxCCx  & xCxCCxx  & xxCCxCx  & xxxCxCC  \\
+CxCxCxx  & CxxxCxC  & xCxCxCx  & xxCCxxC  & xxxxCCC  
 \end{tabular}
 \end{center}
-\begin{center}
-\fbox{10}
-\end{center}}
-\pause 
-
-\dq{Laney is at the top of the mountain. She expects to hit 7 forks, where she needs to turn left 4 times (and right thrice). How many routes can Laney take?}
 \pause
-\soln{
-\begin{center}
-\fbox{35}
-\end{center}
-}
+$${7\choose 3} = \frac{7!}{4! \cdot 3!} = \frac{7 \cdot 6 \cdot 5\cdot 4\cdot 3\cdot 2\cdot 1}{4\cdot 3\cdot 2\cdot 1\cdot 3\cdot 2\cdot 1} = \frac{7\cdot 6\cdot 5}{3\cdot2\cdot 1} = \pause \soln{\fbox{35}}$$
+
+\pause
+Notice, these rearrangements are like anagrams.
+
 \end{frame} 
 
 
 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Binomial distribution}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-
-\subsection{The binomial distribution}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{frame}
+\frametitle{Combinatorics: combinations}
+Combinations: list of all anagrams of a ``word" which contains only 2 letters. Often we use 1 for ``yes" or ``success" and use 0 for ``no'' or ``failure''.
 
-\dq{Suppose we randomly select four individuals to participate in this experiment. What is the probability that exactly 1 of them will refuse to administer the shock?}
 \pause
-Let's call these people Allen (A), Brittany (B), Caroline (C), and Damian (D). Each one of the four scenarios below will satisfy the condition of ``exactly 1 of them refuses to administer the shock": \\
-\vspace{0.25cm}
-\pause
-\begin{changemargin}{+1.5cm}{+0cm}
-{\footnotesize
-\begin{enumerate}
-\item[Scenario 1:] $\slot{0.35}{\text{(A) \orange{refuse}}} \times \slot{0.65}{\text{(B) shock}} \times \slot{0.65}{\text{(C) shock}} \times \slot{0.65}{\text{(D) shock}} = 0.0961$
-\pause
-\item[Scenario 2:] $\slot{0.65}{\text{(A) shock}} \times \slot{0.35}{\text{(B) \orange{refuse}}}\times \slot{0.65}{\text{(C) shock}} \times \slot{0.65}{\text{(D) shock}} = 0.0961$
-\pause
-\item[Scenario 3:] $\slot{0.65}{\text{(A) shock}} \times \slot{0.65}{\text{(B) shock}} \times \slot{0.35}{\text{(C) \orange{refuse}}}\times \slot{0.65}{\text{(D) shock}} = 0.0961$
-\pause
-\item[Scenario 4:] $\slot{0.65}{\text{(A) shock}} \times \slot{0.65}{\text{(B) shock}} \times \slot{0.65}{\text{(C) shock}} \times \slot{0.35}{\text{(D) \orange{refuse}}} = 0.0961$
-\end{enumerate}
-}
-\end{changemargin}
-\pause
-The probability of exactly one 1 of 4 people refusing to administer the shock is the sum of all of these probabilities.
-\[ 0.0961+ 0.0961 + 0.0961 + 0.0961 = 4 \times 0.0961 = 0.3844 \]
+for example: ~~0011 ~~0101 ~~0110 ~~1001 ~~1010 ~~1100
 
+\vspace{10pt}
+\pause
+We define:
+$$n = \text{word length}$$
+$$r = \text{how many 1s}$$
+The typical problem: We have $n$ objects and we will choose $r$ of them as ``yes"  (and the rest as ``no"). How many possibilities exist?
+$$n\text{ choose } r = {}_nC_r = {n \choose r} = \frac{n!}{(n-r)! \cdot r!} $$
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}
-\frametitle{Binomial distribution}
-
-The question from the prior slide asked for the probability of given number of successes, \mathhl{k}, in a given number of trials, \mathhl{n}, ($k = 1$ success in $n = 4$ trials), and we calculated this probability as
-\[ \#~of~scenarios \times P(single~scenario) \]
-
-\pause
-
-\begin{itemize}
-
-\item $\#~of~scenarios$: there is a less tedious way to figure this out, we'll get to that shortly...
-
-\pause
-
-\item $P(single~scenario) = p^k~(1-p)^{(n-k)}$ \\
-{\tiny probability of success to the power of number of successes, probability of failure to the power of number of failures}
-
-\end{itemize}
-
-\pause
-
-The \hl{Binomial distribution} describes the probability of having exactly $k$ successes in $n$ independent Bernouilli trials with probability of success $p$.
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}
-\frametitle{Counting the \# of scenarios}
-
-Earlier we wrote out all possible scenarios that fit the condition of exactly one person refusing to administer the shock. If $n$ was larger and/or $k$ was different than 1, for example, $n = 9$ and $k = 2$:
-
-\pause
-
-\begin{center}
-\begin{tabular}{c}
-\orange{R}\orange{R}SSSSSSS \\ 
-\pause
-S\orange{R}\orange{R}SSSSSS \\
-\pause
-SS\orange{R}\orange{R}SSSSS \\
-$\cdots$ \\
-SS\orange{R}SS\orange{R}SSS \\
-$\cdots$ \\
-SSSSSSS\orange{R}\orange{R} \\
-\end{tabular}
-\end{center}
-
-writing out all possible scenarios would be incredibly tedious and prone to errors.
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}[fragile]
-\frametitle{Calculating the \# of scenarios}
+\frametitle{Evaluating $n$ choose $r$ with technology}
+If we wanted to evaluate $40 \choose 27$...
 
-\formula{Choose function}
-{
-The \hl{choose function} is useful for calculating the number of ways to choose $k$ successes in $n$ trials.
-\[ {n \choose k} = \frac{n!}{k! (n - k)!} \]
-}
-
-\pause
-
-\begin{itemize}
-
-\item $k = 1$, $n = 4$: ${4 \choose 1} = \frac{4!}{1! (4 - 1)!} = \frac{4 \times 3 \times 2 \times 1}{1 \times (3 \times 2 \times 1)} = 4$
-
-\pause
-
-\item $k = 2$, $n = 9$: ${9 \choose 2} = \frac{9!}{2! (9 - 1)!} = \frac{9 \times 8 \times 7!}{2 \times 1 \times 7!} = \frac{72}{2} = 36$
-
-\end{itemize}
-
-\vfill
-
-\Note{You can also use R for these calculations:}
+Geogebra Scientific Calculator:
 \begin{beamerboxesrounded}[shadow = true, lower = code body]{}
-{\small
+{
 \begin{verbatim}
-> choose(9,2)
-[1] 36
+nCr(40, 27)
+\end{verbatim}
+}
+\end{beamerboxesrounded}
+    
+R:
+\begin{beamerboxesrounded}[shadow = true, lower = code body]{}
+{
+\begin{verbatim}
+> choose(40,27)
+[1] 12033222880
+\end{verbatim}
+}
+\end{beamerboxesrounded}
+
+TI Calculator:
+\begin{beamerboxesrounded}[shadow = true, lower = code body]{}
+{
+\begin{verbatim}
+40 nCr 27
 \end{verbatim}
 }
 \end{beamerboxesrounded}
 
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[fragile]
-\frametitle{Properties of the choose function}
 
-\pq{Which of the following is false?}
 
-\begin{enumerate}[(a)]
-\item There are $n$ ways of getting 1 success in $n$ trials, ${n \choose 1} = n$.
-\item There is only 1 way of getting $n$ successes in $n$ trials, ${n \choose n} = 1$.
-\item There is only 1 way of getting $n$ failures in $n$ trials, ${n \choose 0} = 1$.
-\solnMult{There are $n-1$ ways of getting $n-1$ successes in $n$ trials, ${n \choose n-1} = n-1$.}
-\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Binomial distribution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}
-\frametitle{Binomial distribution (cont.)}
+Imagine a dice game where a 6 is ``success" and anything else is ``failure''. 
 
-\formula{Binomial probabilities}
-{
-If $p$ represents probability of success, $(1-p)$ represents probability of failure, $n$ represents number of independent trials, and $k$ represents number of successes 
-\[P(k~successes~in~n~trials) = {n \choose k}~p^k~(1-p)^{(n-k)} \]
-} 
+What is the probability of rolling 5 dice and getting 3 successes?
+\pause
 
-
+\vspace{40pt}
+\solnGr{Well... first let's do something easier...}
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{frame}
+Imagine a dice game where a 6 is ``success" and anything else is ``failure''. 
 
-\pq{Which of the following is not a condition that needs to be met for the binomial distribution to be applicable?}
+What is the probability of rolling 5 dice and getting (in this order) success, fail, success, success, and fail.
+$$P(10110) = \,?$$
 
-\begin{enumerate}[(a)]
-\item the trials must be independent
-\item the number of trials, $n$, must be fixed
-\item each trial outcome must be classified as a \textit{success} or a \textit{failure}
-\solnMult{the number of desired successes, $k$, must be greater than the number of trials}
-\item the probability of success, $p$, must be the same for each trial
-\end{enumerate}
+\pause
+\soln{$$P(10110) = \frac{1}{6} \cdot \frac{5}{6} \cdot \frac{1}{6} \cdot \frac{1}{6} \cdot \frac{5}{6} \approx 0.0032$$}
 
-\end{frame}
+\pause \vfill
+What is the probability of rolling 5 dice and getting (in this order) \\fail, fail, success, success, and success.
+$$P(00111)=\,?$$
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}
-\frametitle{}
-
-\pq{A 2012 Gallup survey suggests that 26.2\% of Americans are obese. Among a random sample of 10 Americans, what is the probability that exactly 8 are obese?}
-
-\begin{enumerate}[(a)]
-\item pretty high
-\solnMult{pretty low}
-\end{enumerate}
+\pause
+\soln{$$P(00111) = \frac{5}{6} \cdot \frac{5}{6} \cdot \frac{1}{6} \cdot \frac{1}{6} \cdot \frac{1}{6} \approx 0.0032 $$}
 
 \vfill
-
-\ct{Gallup: \webURL{http://www.gallup.com/poll/160061/obesity-rate-stable-2012.aspx}, January 23, 2013.} 
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}
-
-\pq{A 2012 Gallup survey suggests that 26.2\% of Americans are obese. Among a random sample of 10 Americans, what is the probability that exactly 8 are obese?}
-
-\begin{enumerate}[(a)]
-\item $0.262^8 \times 0.738^2$
-\item ${8 \choose 10} \times 0.262^8 \times 0.738^2$
-\solnMult{${10 \choose 8} \times 0.262^8 \times 0.738^2$} \soln{\orange{\only<2>{$ = 45 \times  0.262^8 \times 0.738^2 = 0.0005$}}}
-\item ${10 \choose 8} \times 0.262^2 \times 0.738^8$
-\end{enumerate}
-
-
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}
-\frametitle{The birthday problem}
-
-\dq{What is the probability that 2 randomly chosen people share a birthday?}
-
-\pause
-
-Pretty low, $\frac{1}{365} \approx 0.0027$.
-
-\pause
-
-\dq{What is the probability that at least 2 people out of 366 people share a birthday?}
-
-\pause
-
-Exactly 1! (Excluding the possibility of a leap year birthday.)
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}
-\frametitle{The birthday problem (cont.)}
-
-\dq{What is the probability that at least 2 people (1 match) out of 121 people share a birthday?}
-
-\pause
-
-Somewhat complicated to calculate, but we can think of it as the complement of the probability that there are no matches in 121 people.
-
-\vspace{-0.75cm}
-
-\begin{eqnarray*}
-P(no~matches) &=& 1 \times \pr{1 - \frac{1}{365}} \times \pr{1 - \frac{2}{365}} \times \cdots \times \pr{1 - \frac{120}{365}} \\
-\pause
-&=& \frac{365 \times 364 \times \cdots \times 245}{365^{121}} \\
-\pause
-&=& \frac{365!}{365^{121} \times (365-121)!} \\
-\pause
-&=& \frac{121! \times {365 \choose 121}}{365^{121}} 
-\pause
-\approx 0 \\
-\pause
-P(at~least~1~match) &\approx& 1
-\end{eqnarray*}
-
 \end{frame}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 
 \begin{frame}
-\frametitle{Expected value}
+Imagine a dice game where a 6 is ``success" and anything else is ``failure''. 
 
-\dq{A 2012 Gallup survey suggests that 26.2\% of Americans are obese. \\  
-
-Among a random sample of 100 Americans, how many would you expect to be obese?}
-
+What is the probability of rolling 5 dice and getting 3 successes?
 \pause
 
-\begin{itemize}
-
-\item Easy enough, $100 \times 0.262 = 26.2$.
-
-\pause
-
-\item Or more formally, $\mu = np = 100 \times 0.262 = 26.2$.
-
-\pause
-
-\item But this doesn't mean in every random sample of 100 people exactly 26.2 will be obese. In fact, that's not even possible. In some samples this value will be less, and in others more. How much would we expect this value to vary?
-
-\end{itemize}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}
-\frametitle{Expected value and its variability}
-
-\formula{Mean and standard deviation of binomial distribution}
-{\[ \mu = np \qquad \qquad \sigma = \sqrt{np(1-p)} \] }
-
-\pause
-
-\begin{itemize}
-
-\item Going back to the obesity rate:
-
-\[ \sigma = \sqrt{np(1-p)} = \sqrt{100 \times 0.262 \times 0.738} \approx  4.4\]
-
-\pause
-
-\item We would expect 26.2 out of 100 randomly sampled Americans to be obese, with a standard deviation of 4.4.
-
-\end{itemize}
-
-\Note{Mean and standard deviation of a binomial might not always be whole numbers, and that is alright, these values represent what we would expect to see on average.}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}
-\frametitle{Unusual observations}
-
-Using the notion that \hl{observations that are more than 2 standard deviations away from the mean are considered unusual} and the mean and the standard deviation we just computed, we can calculate a range for the plausible number of obese Americans in random samples of 100.
-
-\[ 26.2 \pm (2 \times 4.4) = (17.4, 35) \]
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}
-
-\pq{An August 2012 Gallup poll suggests that 13\% of Americans think home schooling provides an excellent education for children.  Would a random sample of 1,000 Americans where only 100 share this opinion be considered unusual?}
-\begin{multicols}{2}
-\begin{enumerate}[(a)]
-\item No
-\solnMult{Yes}
-\end{enumerate}
-\end{multicols}
-
-\only<1>{
-\begin{center}
-\includegraphics[width=0.8\textwidth]{3-4_binomial_distribution/figures/homeschool}
-\end{center}
-}
-
-\vspace{-0.5cm}
+\soln{We need to consider how many (disjoint) ways we can accomplish 3 successes.} \pause
+\begin{columns}
+\begin{column}{0.6\textwidth}
 \soln{
-{\small
-\only<2->{
-\begin{align*}
-\mu &= np = 1,000 \times 0.13 = 130 \\
-\sigma &= \sqrt{np(1-p)} = \sqrt{1,000 \times 0.13 \times 0.87} \approx 10.6
-\end{align*}
+11100 ~ 11010 ~ 11001 ~ 10110 ~ 10101\\ 10011 ~ 01110 ~ 01101 ~ 01011 ~ 00111}
+\end{column}
+\begin{column}{0.3\textwidth}
+\soln{
+$${5 \choose 3} = 10 $$}
+\end{column}
+\end{columns}
+
+\soln{
+There are ten ways to get 3 successes from 5 trials.
+\\\pause
+Each way has an equal probability.
+$$P(\text{a way}) = \left(\frac{1}{6}\right)^3 \left(\frac{5}{6}\right)^2 \approx 0.0032$$
+\pause
+Thus,
+$$P(\text{3 successes}) = {\bf 10}\left(\frac{1}{6}\right)^3 \left(\frac{5}{6}\right)^2 \approx {\bf 0.032}$$
 }
-\begin{changemargin}{+1cm}{+0cm}
-\pause
-\begin{enumerate}
-\only<3->{\item[Method 1:] Range of usual observations: $130 \pm 2 \times 10.6 = (108.8, 151.2)$ \\
-100 is outside this range, so would be considered unusual.}
-\only<4->{\item[Method 2:] Z-score of observation: $Z = \frac{x - mean}{SD} = \frac{100 - 130}{10.6} = -2.83$ \\
-100 is more than 2 SD below the mean, so would be considered unusual.}
-\end{enumerate}
-\end{changemargin}
-}}
-
-\vfill
-
-\ct{\webURL{http://www.gallup.com/poll/156974/private-schools-top-marks-educating-children.aspx}}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Normal approximation to the binomial}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}
-\frametitle{}
-
-\app{Shapes of binomial distributions}
-{
-For this activity you will use a web applet. Go to \webURL{https://gallery.shinyapps.io/dist_calc/} and choose Binomial coin experiment in the drop down menu on the left.
-\begin{itemize}
-\item Set the number of trials to 20 and the probability of success to 0.15. Describe the shape of the distribution of number of successes. 
-\item Keeping $p$ constant at 0.15, determine the minimum sample size required to obtain a unimodal and symmetric distribution of number of successes. Please submit only one response per team.
-\item Further considerations:
-\begin{itemize}
-\item What happens to the shape of the distribution as $n$ stays constant and $p$ changes?
-\item What happens to the shape of the distribution as $p$ stays constant and $n$ changes?
-\end{itemize}
-\end{itemize}
-}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}
-\frametitle{Distributions of number of successes}
-
-\dq{Hollow histograms of samples from the binomial model where $p = 0.10$ and $n = 10$, $30$, $100$, and $300$. What happens as $n$ increases?}
-
-\begin{center}
-\includegraphics[width=0.60\textwidth]{3-4_binomial_distribution/figures/fourBinomialModelsShowingApproxToNormal/fourBinomialModelsShowingApproxToNormal}
-\end{center}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}
-\frametitle{Low large is large enough?}
-
-The sample size is considered large enough if the expected number of successes and failures are both at least 10.
-\[ np \ge 10 \qquad \text{ and } \qquad n(1-p) \ge 10 \]
-
-\soln{\only<2->{$10 \times 0.13 = 1.3; 10 \times (1 - 0.13) = 8.7$}}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}
-\frametitle{}
-
-\pq{Below are four pairs of Binomial distribution parameters. Which distribution can be approximated by the normal distribution?}
-
-\begin{enumerate}[(a)]
-\item $n = 100, p = 0.95$
-\solnMult{$n = 25, p = 0.45$} \soln{\only<2>{\orange{$\rightarrow 25 \times 0.45 = 11.25; 25 \times 0.55 = 13.75$}}}
-\item $n = 150, p = 0.05$
-\item $n = 500, p = 0.015$
-\end{enumerate}
-
 \end{frame}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{frame}
-\frametitle{An analysis of Facebook users}
+\frametitle{Binomial mass function}
+Let $X$ represent the number of successes when $n$ trials are performed and each trial has $p$ chance of success. We use a formula to calculate the probability that $X$ is $k$.
 
-\dq{A recent study found that ``Facebook users get more than they give". For example:
-\begin{itemize}
-\item 40\% of Facebook users in our sample made a friend request, but 63\% received at least one request
-\item Users in our sample pressed the like button next to friends' content an average of 14 times, but had their content ``liked" an average of 20 times
-\item Users sent 9 personal messages, but received 12
-\item 12\% of users tagged a friend in a photo, but 35\% were themselves tagged in a photo
-\end{itemize}
-Any guesses for how this pattern can be explained?
-}
+$$P(X=k) ~~~~{\LARGE \boldsymbol{=}}~~~~ {\Large \boldsymbol{{n \choose k}\, p^{k}(1-p)^{n-k}}} $$
 
-\soln{\only<2>{Power users contribute much more content than the typical user.}}
-
-\ct{\webURL{http://www.pewinternet.org/Reports/2012/Facebook-users/Summary.aspx}}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}
-\frametitle{}
-
-\dq{This study also found that approximately 25\% of Facebook users are considered power users. The same study found that the average Facebook user has 245 friends. What is the probability that the average Facebook user with 245 friends has 70 or more friends who would be considered power users? Note any assumptions you must make.}
-
-We are given that $n = 245, p = 0.25$, and we are asked for the probability $P(K \ge 70)$. To proceed, we need independence, which we'll assume but could check if we had access to more Facebook data.
-
-\pause
-
-\begin{align*}
-P(X \ge 70) &= P(K = 70\text{ or }K = 71\text{ or }K = 72\text{ or }\cdots\text{ or } K = 245) \\
-&= P(K = 70) + P(K = 71) + P(K = 72) + \cdots + P(K = 245)
-\end{align*}
-
-\pause
-
-This seems like an awful lot of work...
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}
-\frametitle{Normal approximation to the binomial}
-
-When the sample size is large enough, the binomial distribution with parameters $n$ and $p$ can be approximated by the normal model with parameters $\mu = np$ and $\sigma = \sqrt{np(1-p)}$.
-
-\begin{itemize}
-
-\item In the case of the Facebook power users, $n = 245$ and $p = 0.25$.
-\[ \mu = 245 \times 0.25 = 61.25 \qquad \sigma = \sqrt{245 \times 0.25 \times 0.75} = 6.78 \]
-
-\item $Bin(n = 245, p = 0.25) \approx N(\mu = 61.25, \sigma = 6.78)$.
-
-\begin{center}
-\includegraphics[width=0.5\textwidth]{3-4_binomial_distribution/figures/fb_power_user/fb_power_user}
-\end{center}
-
-\end{itemize}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}
-\frametitle{}
-
-\dq{What is the probability that the average Facebook user with 245 friends has 70 or more friends who would be considered power users?}
-
-\pause
-
-\twocol{0.5}{0.5}{
-\begin{center}
-\includegraphics[width=\textwidth]{3-4_binomial_distribution/figures/fb_power_user/fb_power_user_norm}
-\end{center}
-}
-{
-\pause
-\[ Z = \frac{obs - mean}{SD} = \frac{70 - 61.25}{6.78} = 1.29 \]
-
-\pause
-{\footnotesize
-\begin{tabular}{c | rrrr>{\columncolor[gray]{0.6}[0pt]}r |}
-  \cline{2-6}
-& \multicolumn{5}{c}{Second decimal place of $Z$}  \\
-  \cline{2-6}
-$Z$ & 0.05 & 0.06 & 0.07 & 0.08 & 0.09   \\
-  \hline
-  \hline
-  1.0 & \tiny{0.8531} & \tiny{0.8554} & \tiny{0.8577} & \tiny{0.8599} & \tiny{0.8621} \\
-  1.1 & \tiny{0.8749} & \tiny{0.8770} & \tiny{0.8790} & \tiny{0.8810} & \tiny{0.8830} \\
-\rowcolor[gray]{.6}
-  1.2 & \tiny{0.8944} & \tiny{0.8962} & \tiny{0.8980} & \tiny{0.8997} & \orange{\tiny{0.9015}} \\  
+For example, if $n=4$ and $p=0.1$, then:
+\begin{tabular}{|c |c |c |}\hline
+$k$ & $P(X=k)$ unsimped & $P(X=k)$ \\ \hline
+0 & $(1)(0.1)^0(0.9)^4$ & 0.6561 \\
+1 & $(4)(0.1)^1(0.9)^3$ & 0.2916 \\
+2 & $(6)(0.1)^2(0.9)^2$ & 0.0486 \\
+3 & $(4)(0.1)^3(0.9)^1$ & 0.0036 \\
+4 & $(1)(0.1)^4(0.9)^0$ & 0.0001 \\ \hline
 \end{tabular}
-}
-
-\pause
-\[ P(Z > 1.29) = 1 - 0.9015 = 0.0985 \]
-}
 
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{A {\bf Binomial} is a sum of Bernoulli trials}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+A Bernoulli trial is a random variable that can take on two possible values, 0 or 1, and has a $p$ chance of being 1.
+
+\pause
+Let $W\sim Bernoulli(p=0.6)$.
+\begin{center}
+\begin{tabular}{|c|c|}\hline
+$w$ & $P(W=w)$ \\ \hline
+0 & 0.4 \\
+1 & 0.6 \\ \hline
+\end{tabular}
+\end{center}
+Determine $\mu$ and $\sigma$.
+
+\pause
+\soln{$$\mu = (0)(0.4) + (1)(0.6) = 0.6$$
+\\
+$$\sigma = \sqrt{(0-0.6)^2(0.4) + (1-0.6)^2(0.6)} = 0.4899 $$
+}
+\end{frame}
+
+
+
+\begin{frame}
+Now, try this more generally. Let $W\sim Bernoulli(p)$. 
+
+\pause
+\begin{center}
+\begin{tabular}{|c|c|}\hline
+$w$ & $P(W=w)$ \\ \hline
+0 & \soln{$(1-p)$} \\
+1 & \soln{$p$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pause
+Determine $\mu$ and $\sigma$.
+\pause
+\begin{align*}
+\mu &= (0)(1-p) + (1)(p) = \fbox{p}\\\\
+\sigma &= \sqrt{(0-p)^2(1-p) + (1-p)^2p} \\
+&=\sqrt{p^2(1-p) + (1-p)^2p} \\
+&=\sqrt{p^2-p^3 + p-2p^2+p^3} \\
+&=\sqrt{p-p^2} \\
+&=\sqrt{p(1-p)}
+\end{align*}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{A binomial is a sum of Bernoulli trials}
+In chapter 2.4 we learned the following rules.
+$$E(W_1 + W_2 + \cdots + W_n) = E(W_1) + E(W_2) + \cdots + E(W_n) $$
+$$Var(W_1 + W_2 + \cdots + W_n) = Var(W_1) + Var(W_2) + \cdots + Var(W_n) $$
+\pause
+For a specific $p$, for all $i$ between 1 and $n$, let $W_i\sim Bernoulli(p)$. Let $X$ represent the sum of those variables, making $X\sim Binomial(n,p)$.
+$$X = \sum_{i=1}^n W_i $$
+
+If so, then we know (by using those rules):
+$$E(X) = np $$
+$$Var(X) = np(1-p) $$
+$$SD(X) = \sqrt{np(1-p)} $$
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Binomial mean and standard deviation}
+Let $X\sim Binomial(n,p)$.
+The mean (expected value) of a binomial distribution:
+{\LARGE $$\mu = np $$}
+The standard deviation of a binomial distribution:
+{\LARGE $$ \sigma = \sqrt{np(1-p)} $$}
+\end{frame}
+
+
+\section{Binomial Distribution}
+
+\begin{frame}
+
+\end{frame}
 
 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.9.19)  3 MAR 2019 14:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.9.19)  4 MAR 2019 18:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1367,7 +1367,7 @@ LaTeX Font Info:    Font shape `OT1/txss/m/it' in size <10.95> not available
 LaTeX Font Info:    Font shape `OT1/txss/m/sl' will be
 (Font)              scaled to size 10.40245pt on input line 12.
 
-Overfull \vbox (29.09412pt too high) detected at line 12
+Overfull \vbox (30.37186pt too high) detected at line 12
  []
 
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
@@ -1382,7 +1382,7 @@ Package pdftex.def Info: 3-4_binomial_distribution/figures/ski/ski.pdf used on
 input line 12.
 (pdftex.def)             Requested size: 201.5113pt x 169.39595pt.
 
-Overfull \vbox (29.09412pt too high) detected at line 12
+Overfull \vbox (30.37186pt too high) detected at line 12
  []
 
 [2
@@ -1442,7 +1442,7 @@ LaTeX Font Info:    Try loading font information for U+wasy on input line 40.
 (/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
-Overfull \vbox (7.31288pt too high) detected at line 40
+Overfull \vbox (20.39177pt too high) detected at line 40
  []
 
 [4
@@ -1455,176 +1455,195 @@ Package pdftex.def Info: 3-4_binomial_distribution/figures/toes/toes.pdf used o
 n input line 40.
 (pdftex.def)             Requested size: 95.03114pt x 100.38992pt.
 
-Overfull \vbox (7.31288pt too high) detected at line 40
+Overfull \vbox (20.39177pt too high) detected at line 40
  []
 
 [5
 
 ]
-Overfull \vbox (9.048pt too high) detected at line 65
+<3-4_binomial_distribution/figures/stars/dots_7.pdf, id=63, 554.1282pt x 541.19
+861pt>
+File: 3-4_binomial_distribution/figures/stars/dots_7.pdf Graphic file (type pdf
+)
+ <use 3-4_binomial_distribution/figures/stars/dots_7.pdf>
+Package pdftex.def Info: 3-4_binomial_distribution/figures/stars/dots_7.pdf use
+d on input line 54.
+(pdftex.def)             Requested size: 166.23973pt x 162.36082pt.
+
+<3-4_binomial_distribution/figures/stars/dots_7_solution.pdf, id=64, 554.1282pt
+ x 541.19861pt>
+File: 3-4_binomial_distribution/figures/stars/dots_7_solution.pdf Graphic file 
+(type pdf)
+
+<use 3-4_binomial_distribution/figures/stars/dots_7_solution.pdf>
+Package pdftex.def Info: 3-4_binomial_distribution/figures/stars/dots_7_solutio
+n.pdf used on input line 54.
+(pdftex.def)             Requested size: 166.23973pt x 162.36082pt.
+
+Overfull \vbox (9.80971pt too high) detected at line 54
  []
 
 [6
 
-]
-Overfull \vbox (9.048pt too high) detected at line 65
+ <./3-4_binomial_distribution/figures/stars/dots_7.pdf>]
+File: 3-4_binomial_distribution/figures/stars/dots_7.pdf Graphic file (type pdf
+)
+
+<use 3-4_binomial_distribution/figures/stars/dots_7.pdf>
+Package pdftex.def Info: 3-4_binomial_distribution/figures/stars/dots_7.pdf use
+d on input line 54.
+(pdftex.def)             Requested size: 166.23973pt x 162.36082pt.
+File: 3-4_binomial_distribution/figures/stars/dots_7_solution.pdf Graphic file 
+(type pdf)
+
+<use 3-4_binomial_distribution/figures/stars/dots_7_solution.pdf>
+Package pdftex.def Info: 3-4_binomial_distribution/figures/stars/dots_7_solutio
+n.pdf used on input line 54.
+(pdftex.def)             Requested size: 166.23973pt x 162.36082pt.
+
+Overfull \vbox (9.80971pt too high) detected at line 54
  []
 
 [7
 
-]
-Overfull \vbox (9.048pt too high) detected at line 65
- []
+ <./3-4_binomial_distribution/figures/stars/dots_7_solution.pdf>]
+
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 78.
 
 [8
 
-]
-Overfull \vbox (9.048pt too high) detected at line 65
- []
+] [9
 
-[9
+] [10
 
-]
-LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 13.67995pt on input line 73.
-LaTeX Font Info:    Font shape `OT1/txss/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/txss/b/n' tried instead on input line 73.
-LaTeX Font Info:    Font shape `OT1/txss/b/n' will be
-(Font)              scaled to size 13.67995pt on input line 73.
- [10
+] [11
+
+] [12
 
 ]
-LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 8.54997pt on input line 109.
-LaTeX Font Info:    Font shape `OT1/txss/m/it' in size <9> not available
-(Font)              Font shape `OT1/txss/m/sl' tried instead on input line 109.
-
-LaTeX Font Info:    Font shape `OT1/txss/m/sl' will be
-(Font)              scaled to size 8.54997pt on input line 109.
-LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 4.74998pt on input line 109.
-
-Overfull \vbox (32.94783pt too high) detected at line 109
- []
-
-[11
-
-]
-Overfull \vbox (32.94783pt too high) detected at line 109
- []
-
-[12
-
-]
-Overfull \vbox (32.94783pt too high) detected at line 109
+Overfull \vbox (3.56047pt too high) detected at line 97
  []
 
 [13
 
 ]
-Overfull \vbox (32.94783pt too high) detected at line 109
+Overfull \vbox (3.56047pt too high) detected at line 97
  []
 
 [14
 
 ]
-Overfull \vbox (32.94783pt too high) detected at line 109
+Overfull \vbox (3.56047pt too high) detected at line 97
  []
 
 [15
 
 ]
-Overfull \vbox (32.94783pt too high) detected at line 109
- []
+\openout4 = `chp3-4.vrb'.
 
-[16
-
-]
-Overfull \vbox (32.94783pt too high) detected at line 109
- []
-
-[17
+ (./chp3-4.vrb
+LaTeX Font Info:    Try loading font information for OT1+txtt on input line 7.
+ (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txtt.fd
+File: ot1txtt.fd 2000/12/15 v3.1
+)) [16
 
 ]
-LaTeX Font Info:    Try loading font information for TS1+txss on input line 136
-.
- (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txss.fd
-File: ts1txss.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Font shape `TS1/txss/m/n' will be
-(Font)              scaled to size 10.40245pt on input line 136.
- [18
+LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
+(Font)              scaled to size 13.67995pt on input line 138.
+LaTeX Font Info:    Font shape `OT1/txss/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/txss/b/n' tried instead on input line 138.
+LaTeX Font Info:    Font shape `OT1/txss/b/n' will be
+(Font)              scaled to size 13.67995pt on input line 138.
+ [17
+
+] [18
 
 ] [19
 
 ]
+Overfull \vbox (30.71191pt too high) detected at line 171
+ []
+
 [20
 
-] [21
+]
+Overfull \vbox (30.71191pt too high) detected at line 171
+ []
+
+[21
 
 ]
-Overfull \vbox (3.86987pt too high) detected at line 163
+Overfull \vbox (30.71191pt too high) detected at line 171
  []
 
 [22
 
 ]
-Overfull \vbox (3.86987pt too high) detected at line 163
+Overfull \vbox (30.71191pt too high) detected at line 171
  []
 
 [23
 
 ]
-Overfull \vbox (3.86987pt too high) detected at line 163
+Overfull \vbox (26.9523pt too high) detected at line 206
  []
 
 [24
 
 ]
-Overfull \vbox (3.86987pt too high) detected at line 163
+Overfull \vbox (26.9523pt too high) detected at line 206
  []
 
 [25
 
 ]
-\openout4 = `chp3-4.vrb'.
-
- (./chp3-4.vrb
-
-Package amsmath Warning: Foreign command \atopwithdelims;
-(amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 6.
-
-LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 9.49997pt on input line 25.
-LaTeX Font Info:    Try loading font information for OT1+txtt on input line 26.
-
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txtt.fd
-File: ot1txtt.fd 2000/12/15 v3.1
-))
-Overfull \vbox (0.83475pt too high) detected at line 200
+Overfull \vbox (26.9523pt too high) detected at line 206
  []
 
 [26
 
-] (./chp3-4.vrb)
-Overfull \vbox (0.83475pt too high) detected at line 200
+]
+Overfull \vbox (26.9523pt too high) detected at line 206
  []
 
 [27
 
-] (./chp3-4.vrb)
-Overfull \vbox (0.83475pt too high) detected at line 200
+]
+Overfull \vbox (26.9523pt too high) detected at line 206
  []
 
 [28
 
 ]
-\openout4 = `chp3-4.vrb'.
 
- (./chp3-4.vrb) [29
+LaTeX Font Warning: Command \LARGE invalid in math mode on input line 225.
 
-] (./chp3-4.vrb) [30
+LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
+(Font)              scaled to size 16.41594pt on input line 225.
+
+LaTeX Font Warning: Font shape `U/wasy/b/n' in size <8> not available
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 225.
+
+
+LaTeX Font Warning: Font shape `U/wasy/b/n' in size <6> not available
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 225.
+
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 225.
+
+
+LaTeX Font Warning: Font shape `U/wasy/b/n' in size <7> not available
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 225.
+
+
+Overfull \vbox (15.45955pt too high) detected at line 225
+ []
+
+[29
+
+] [30
 
 ] [31
 
@@ -1632,314 +1651,47 @@ Overfull \vbox (0.83475pt too high) detected at line 200
 
 ] [33
 
-] [34
+]
+Overfull \vbox (29.75018pt too high) detected at line 283
+ []
 
-] [35
-
-] [36
+[34
 
 ]
+Overfull \vbox (29.75018pt too high) detected at line 283
+ []
+
+[35
+
+]
+Overfull \vbox (29.75018pt too high) detected at line 283
+ []
+
+[36
+
+]
+Overfull \vbox (29.75018pt too high) detected at line 283
+ []
+
 [37
 
-] [38
+]
+Overfull \vbox (12.77179pt too high) detected at line 300
+ []
 
-] [39
+[38
+
+]
+Overfull \vbox (12.77179pt too high) detected at line 300
+ []
+
+[39
 
 ] [40
 
 ] [41
 
-]
-Overfull \vbox (15.82394pt too high) detected at line 331
- []
-
-[42
-
-]
-Overfull \vbox (15.82394pt too high) detected at line 331
- []
-
-[43
-
-]
-Overfull \vbox (15.82394pt too high) detected at line 331
- []
-
-[44
-
-]
-Overfull \vbox (15.82394pt too high) detected at line 331
- []
-
-[45
-
-]
-Overfull \vbox (15.82394pt too high) detected at line 331
- []
-
-[46
-
-]
-Overfull \vbox (15.82394pt too high) detected at line 331
- []
-
-[47
-
-]
-Overfull \vbox (15.82394pt too high) detected at line 331
- []
-
-[48
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 359--359
-
- []
-
-[49
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 359--359
-
- []
-
-[50
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 359--359
-
- []
-
-[51
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 359--359
-
- []
-
-[52
-
-]
-Overfull \vbox (25.40843pt too high) detected at line 385
- []
-
-[53
-
-]
-Overfull \vbox (25.40843pt too high) detected at line 385
- []
-
-[54
-
-]
-Overfull \vbox (25.40843pt too high) detected at line 385
- []
-
-[55
-
-] [56
-
-]
-<3-4_binomial_distribution/figures/homeschool.png, id=346, 553.06625pt x 209.78
-375pt>
-File: 3-4_binomial_distribution/figures/homeschool.png Graphic file (type png)
- <use 3-4_binomial_distribution/figures/homeschool.png>
-Package pdftex.def Info: 3-4_binomial_distribution/figures/homeschool.png used 
-on input line 440.
-(pdftex.def)             Requested size: 256.31717pt x 97.22191pt.
-LaTeX Font Info:    Font shape `OT1/txss/m/it' in size <10> not available
-(Font)              Font shape `OT1/txss/m/sl' tried instead on input line 440.
-
-LaTeX Font Info:    Font shape `OT1/txss/m/sl' will be
-(Font)              scaled to size 9.49997pt on input line 440.
-
-Overfull \vbox (6.47717pt too high) detected at line 440
- []
-
-[57
-
- <./3-4_binomial_distribution/figures/homeschool.png>] [58
-
-] [59
-
-] [60
-
-]
-LaTeX Font Info:    Font shape `OT1/txss/m/it' in size <8> not available
-(Font)              Font shape `OT1/txss/m/sl' tried instead on input line 465.
-
-LaTeX Font Info:    Font shape `OT1/txss/m/sl' will be
-(Font)              scaled to size 7.59998pt on input line 465.
-LaTeX Font Info:    Font shape `TS1/txss/m/n' will be
-(Font)              scaled to size 9.49997pt on input line 465.
-
-Overfull \vbox (16.59679pt too high) detected at line 465
- []
-
-[61
-
-]
-<3-4_binomial_distribution/figures/fourBinomialModelsShowingApproxToNormal/four
-BinomialModelsShowingApproxToNormal.pdf, id=380, 397.485pt x 296.10625pt>
-File: 3-4_binomial_distribution/figures/fourBinomialModelsShowingApproxToNormal
-/fourBinomialModelsShowingApproxToNormal.pdf Graphic file (type pdf)
-
-<use 3-4_binomial_distribution/figures/fourBinomialModelsShowingApproxToNormal/
-fourBinomialModelsShowingApproxToNormal.pdf>
-Package pdftex.def Info: 3-4_binomial_distribution/figures/fourBinomialModelsSh
-owingApproxToNormal/fourBinomialModelsShowingApproxToNormal.pdf used on input l
-ine 478.
-(pdftex.def)             Requested size: 192.23909pt x 143.21375pt.
- [62
-
- <./3-4_binomial_distribution/figures/fourBinomialModelsShowingApproxToNormal/f
-ourBinomialModelsShowingApproxToNormal.pdf>] [63
-
-] [64
-
-] [65
-
-] [66
-
-]
-Overfull \vbox (24.43373pt too high) detected at line 528
- []
-
-[67
-
-]
-Overfull \vbox (24.43373pt too high) detected at line 528
- []
-
-[68
-
-] [69
-
-] [70
-
-] [71
-
-]
-<3-4_binomial_distribution/figures/fb_power_user/fb_power_user.pdf, id=440, 397
-.485pt x 296.10625pt>
-File: 3-4_binomial_distribution/figures/fb_power_user/fb_power_user.pdf Graphic
- file (type pdf)
-
-<use 3-4_binomial_distribution/figures/fb_power_user/fb_power_user.pdf>
-Package pdftex.def Info: 3-4_binomial_distribution/figures/fb_power_user/fb_pow
-er_user.pdf used on input line 572.
-(pdftex.def)             Requested size: 160.19762pt x 119.33951pt.
-
-Overfull \vbox (34.53581pt too high) detected at line 572
- []
-
-[72
-
- <./3-4_binomial_distribution/figures/fb_power_user/fb_power_user.pdf>]
-<3-4_binomial_distribution/figures/fb_power_user/fb_power_user_norm.pdf, id=454
-, 397.485pt x 296.10625pt>
-File: 3-4_binomial_distribution/figures/fb_power_user/fb_power_user_norm.pdf Gr
-aphic file (type pdf)
-
-<use 3-4_binomial_distribution/figures/fb_power_user/fb_power_user_norm.pdf>
-Package pdftex.def Info: 3-4_binomial_distribution/figures/fb_power_user/fb_pow
-er_user_norm.pdf used on input line 612.
-(pdftex.def)             Requested size: 160.19762pt x 119.33951pt.
-
-Overfull \hbox (7.7189pt too wide) detected at line 612
-\OT1/txr/m/it/10.95 Z \OT1/txr/m/n/10.95 = [] = [] = 1\OML/txmi/m/it/10.95 :\OT
-1/txr/m/n/10.95 29
- []
-
-
-Overfull \hbox (11.63904pt too wide) in paragraph at lines 612--612
-[][] 
- []
-
-[73
-
- <./3-4_binomial_distribution/figures/fb_power_user/fb_power_user_norm.pdf>]
-File: 3-4_binomial_distribution/figures/fb_power_user/fb_power_user_norm.pdf Gr
-aphic file (type pdf)
-<use 3-4_binomial_distribution/figures/fb_power_user/fb_power_user_norm.pdf>
-Package pdftex.def Info: 3-4_binomial_distribution/figures/fb_power_user/fb_pow
-er_user_norm.pdf used on input line 612.
-(pdftex.def)             Requested size: 160.19762pt x 119.33951pt.
-
-Overfull \hbox (7.7189pt too wide) detected at line 612
-\OT1/txr/m/it/10.95 Z \OT1/txr/m/n/10.95 = [] = [] = 1\OML/txmi/m/it/10.95 :\OT
-1/txr/m/n/10.95 29
- []
-
-
-Overfull \hbox (11.63904pt too wide) in paragraph at lines 612--612
-[][] 
- []
-
-[74
-
-]
-File: 3-4_binomial_distribution/figures/fb_power_user/fb_power_user_norm.pdf Gr
-aphic file (type pdf)
-
-<use 3-4_binomial_distribution/figures/fb_power_user/fb_power_user_norm.pdf>
-Package pdftex.def Info: 3-4_binomial_distribution/figures/fb_power_user/fb_pow
-er_user_norm.pdf used on input line 612.
-(pdftex.def)             Requested size: 160.19762pt x 119.33951pt.
-
-Overfull \hbox (7.7189pt too wide) detected at line 612
-\OT1/txr/m/it/10.95 Z \OT1/txr/m/n/10.95 = [] = [] = 1\OML/txmi/m/it/10.95 :\OT
-1/txr/m/n/10.95 29
- []
-
-
-Overfull \hbox (11.63904pt too wide) in paragraph at lines 612--612
-[][] 
- []
-
-[75
-
-]
-File: 3-4_binomial_distribution/figures/fb_power_user/fb_power_user_norm.pdf Gr
-aphic file (type pdf)
-
-<use 3-4_binomial_distribution/figures/fb_power_user/fb_power_user_norm.pdf>
-Package pdftex.def Info: 3-4_binomial_distribution/figures/fb_power_user/fb_pow
-er_user_norm.pdf used on input line 612.
-(pdftex.def)             Requested size: 160.19762pt x 119.33951pt.
-
-Overfull \hbox (7.7189pt too wide) detected at line 612
-\OT1/txr/m/it/10.95 Z \OT1/txr/m/n/10.95 = [] = [] = 1\OML/txmi/m/it/10.95 :\OT
-1/txr/m/n/10.95 29
- []
-
-
-Overfull \hbox (11.63904pt too wide) in paragraph at lines 612--612
-[][] 
- []
-
-[76
-
-]
-File: 3-4_binomial_distribution/figures/fb_power_user/fb_power_user_norm.pdf Gr
-aphic file (type pdf)
-
-<use 3-4_binomial_distribution/figures/fb_power_user/fb_power_user_norm.pdf>
-Package pdftex.def Info: 3-4_binomial_distribution/figures/fb_power_user/fb_pow
-er_user_norm.pdf used on input line 612.
-(pdftex.def)             Requested size: 160.19762pt x 119.33951pt.
-
-Overfull \hbox (7.7189pt too wide) detected at line 612
-\OT1/txr/m/it/10.95 Z \OT1/txr/m/n/10.95 = [] = [] = 1\OML/txmi/m/it/10.95 :\OT
-1/txr/m/n/10.95 29
- []
-
-
-Overfull \hbox (11.63904pt too wide) in paragraph at lines 612--612
-[][] 
- []
-
-[77
+] [42
 
 ]
 \tf@nav=\write7
@@ -1951,38 +1703,41 @@ Overfull \hbox (11.63904pt too wide) in paragraph at lines 612--612
 \tf@snm=\write9
 \openout9 = `chp3-4.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 617.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 617.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 321.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 321.
  (./chp3-4.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 617.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 617.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 321.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 321.
 Package rerunfilecheck Info: File `chp3-4.out' has not changed.
-(rerunfilecheck)             Checksum: CF77F4BD518A9250924CC6ADF11C132C;217.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 617.
+(rerunfilecheck)             Checksum: 614CBC71972D7A366091974D2287ADFB;186.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 321.
  ) ) 
 Here is how much of TeX's memory you used:
- 24146 strings out of 494910
- 459859 string characters out of 6179836
- 537099 words of memory out of 5000000
- 26635 multiletter control sequences out of 15000+600000
- 73927 words of font info for 165 fonts, out of 8000000 for 9000
+ 24008 strings out of 494910
+ 456412 string characters out of 6179836
+ 528096 words of memory out of 5000000
+ 26583 multiletter control sequences out of 15000+600000
+ 96937 words of font info for 246 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 63i,13n,88p,1753b,718s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,14n,74p,1753b,720s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texl
-ive/texmf-dist/fonts/type1/public/txfonts/rtcxss.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txs
-y.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txtt.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr
-i8a.pfb>
-Output written on chp3-4.pdf (77 pages, 236578 bytes).
+ive/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/t
+xfonts/txbex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txbs
+y.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/txfonts/txtt.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helveti
+c/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/urw/times/utmri8a.pfb>
+Output written on chp3-4.pdf (42 pages, 159885 bytes).
 PDF statistics:
- 565 PDF objects out of 1000 (max. 8388607)
- 450 compressed objects within 5 object streams
- 158 named destinations out of 1000 (max. 500000)
- 120 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 356 PDF objects out of 1000 (max. 8388607)
+ 280 compressed objects within 3 object streams
+ 88 named destinations out of 1000 (max. 500000)
+ 110 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,11 +1,31 @@
-\frametitle{Properties of the choose function}
+\frametitle{Evaluating $n$ choose $r$ with technology}
+If we wanted to evaluate $40 \choose 27$...
 
-\pq{Which of the following is false?}
+Geogebra Scientific Calculator:
+\begin{beamerboxesrounded}[shadow = true, lower = code body]{}
+{
+\begin{verbatim}
+nCr(40, 27)
+\end{verbatim}
+}
+\end{beamerboxesrounded}
 
-\begin{enumerate}[(a)]
-\item There are $n$ ways of getting 1 success in $n$ trials, ${n \choose 1} = n$.
-\item There is only 1 way of getting $n$ successes in $n$ trials, ${n \choose n} = 1$.
-\item There is only 1 way of getting $n$ failures in $n$ trials, ${n \choose 0} = 1$.
-\solnMult{There are $n-1$ ways of getting $n-1$ successes in $n$ trials, ${n \choose n-1} = n-1$.}
-\end{enumerate}
+R:
+\begin{beamerboxesrounded}[shadow = true, lower = code body]{}
+{
+\begin{verbatim}
+> choose(40,27)
+[1] 12033222880
+\end{verbatim}
+}
+\end{beamerboxesrounded}
+
+TI Calculator:
+\begin{beamerboxesrounded}[shadow = true, lower = code body]{}
+{
+\begin{verbatim}
+40 nCr 27
+\end{verbatim}
+}
+\end{beamerboxesrounded}
 
