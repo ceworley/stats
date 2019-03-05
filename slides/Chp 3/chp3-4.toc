@@ -1,5 +1,4 @@
-\beamer@endinputifotherversion {3.36pt}
-\select@language {english}
-\beamer@sectionintoc {1}{Binomial distribution}{8}{0}{1}
-\beamer@sectionintoc {2}{A {\bf Binomial} is a sum of Bernoulli trials}{15}{0}{2}
-\beamer@sectionintoc {3}{Binomial Distributions are (often) approximately normal}{19}{0}{3}
+\babel@toc {english}{}
+\beamer@sectionintoc {1}{Binomial distribution}{17}{0}{1}
+\beamer@sectionintoc {2}{A {\bf Binomial} is a sum of Bernoulli trials}{43}{0}{2}
+\beamer@sectionintoc {3}{Binomial Distributions are (often) approximately normal}{54}{0}{3}
