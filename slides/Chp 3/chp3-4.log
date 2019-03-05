@@ -1,12 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.2.27)  5 MAR 2019 09:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.2.27)  5 MAR 2019 13:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**chp3-4.tex
-(./chp3-4.tex
-LaTeX2e <2017-04-15>
-Babel <3.18> and hyphenation patterns for 7 language(s) loaded.
-(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamer.cls
+**\nonstopmode \input{chp3-4.tex}
+(./chp3-4.tex (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamer.cls
 Document Class: beamer 2018/02/20 v3.50 A class for typesetting presentations
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasemodes.sty
 (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
@@ -101,14 +98,6 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen125
 \Gm@dimlist=\toks15
 )
-
-Class beamer Warning: ``slidestop'' is obsolete. Use ``t'' instead on input lin
-e 336.
-
-
-Class beamer Warning: ``mathserif'' is obsolete. Use font theme ``serif'' with 
-option ``onlymath'' on input line 336.
-
 (/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
 File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
@@ -476,6 +465,12 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/sansmathaccent.sty
+Package: sansmathaccent 2013/03/28
+
+(/usr/share/texlive/texmf-dist/tex/latex/filehook/filehook.sty
+Package: filehook 2011/10/12 v0.5d Hooks for input files
 )))
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetranslator.sty
 (/usr/share/texlive/texmf-dist/tex/latex/translator/translator.sty
@@ -646,22 +641,10 @@ Package: amsthm 2017/10/31 v2.20.4
 \beamer@dimb=\dimen189
 )
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerouterthemedefault.sty)))
-(../lec_style.tex
-(/usr/share/texlive/texmf-dist/tex/latex/beamertheme-metropolis/beamerthememetr
-opolis.sty
-Package: beamerthememetropolis 2017/01/23 v1.2 Metropolis Beamer theme
- (/usr/share/texlive/texmf-dist/tex/latex/pgfopts/pgfopts.sty
-Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfpages.sty
+Package: pgfpages 2011/01/05 ver 0.02
 
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
-\pgfopts@list@add@a@toks=\toks43
-\pgfopts@list@add@b@toks=\toks44
-)
-(/usr/share/texlive/texmf-dist/tex/latex/beamertheme-metropolis/beamerinnerthem
-emetropolis.sty
-Package: beamerinnerthememetropolis 2017/01/23 Metropolis inner theme
- (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count154
 \calc@Bcount=\count155
@@ -674,100 +657,18 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count156
 \calc@Cskip=\skip59
 )
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
-Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
-File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
-\pgfnodeparttextbox=\box53
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
-File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
+\pgf@logicalpages=\count157
+\pgf@firstshipout=\count158
+\pgf@lastshipout=\count159
+\pgf@currentshipout=\count160
+\pgf@cpn=\count161
+\pgf@shipoutnextto=\count162
+\pgfphysicalheight=\dimen192
+\pgfphysicalwidth=\dimen193
+\pgfpages@shipoutbox=\box53
 )
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
-.sty
-Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen192
-\pgf@nodesepend=\dimen193
-)
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
-.sty
-Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
-)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
-Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen194
-\pgffor@skip=\dimen195
-\pgffor@stack=\toks45
-\pgffor@toks=\toks46
-))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
-Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
-.code.tex
-File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count157
-\pgfplotmarksize=\dimen196
-)
-\tikz@lastx=\dimen197
-\tikz@lasty=\dimen198
-\tikz@lastxsaved=\dimen199
-\tikz@lastysaved=\dimen256
-\tikzleveldistance=\dimen257
-\tikzsiblingdistance=\dimen258
-\tikz@figbox=\box54
-\tikz@figbox@bg=\box55
-\tikz@tempbox=\box56
-\tikz@tempbox@bg=\box57
-\tikztreelevel=\count158
-\tikznumberofchildren=\count159
-\tikznumberofcurrentchild=\count160
-\tikz@fig@count=\count161
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
-File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count162
-\pgfmatrixcurrentcolumn=\count163
-\pgf@matrix@numberofcolumns=\count164
-)
-\tikz@expandcount=\count165
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibrarytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
-)))
-\metropolis@titleseparator@linewidth=\skip60
-\metropolis@progressonsectionpage=\skip61
-\metropolis@progressonsectionpage@linewidth=\skip62
-\metropolis@blocksep=\skip63
-\metropolis@blockadjust=\skip64
-\metropolis@parskip=\skip65
-)
-(/usr/share/texlive/texmf-dist/tex/latex/beamertheme-metropolis/beamerouterthem
-emetropolis.sty
-Package: beamerouterthememetropolis 2017/01/23 Metropolis outer theme
-\metropolis@frametitle@padding=\skip66
-\metropolis@progressinheadfoot=\skip67
-\metropolis@progressinheadfoot@linewidth=\skip68
-)
-(/usr/share/texlive/texmf-dist/tex/latex/beamertheme-metropolis/beamercolorthem
-emetropolis.sty
-Package: beamercolorthememetropolis 2017/01/23 Metropolis color theme
-)
-(/usr/share/texlive/texmf-dist/tex/latex/beamertheme-metropolis/beamerfonttheme
-metropolis.sty
-Package: beamerfontthememetropolis 2017/01/23 Metropolis font theme
-
-
-Package beamerthememetropolis Warning: You need to compile with XeLaTeX or LuaL
-aTeX to use the Fira fonts on input line 95.
-
-)) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf.sty
+(../lec_style_handouts.tex
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf.sty
 Package: epstopdf 2016/05/15 v2.6 Conversion with epstopdf on the fly (HO)
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
@@ -798,12 +699,12 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2018/02/14 3.18 Babel common definitions
-\babel@savecnt=\count166
-\U@D=\dimen259
+\babel@savecnt=\count163
+\U@D=\dimen194
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
 LaTeX Info: Redefining \textlatin on input line 1839.
-\bbl@dirlevel=\count167
+\bbl@dirlevel=\count164
 )
 \l@british = a dialect from \language\l@english 
 \l@UKenglish = a dialect from \language\l@english 
@@ -813,8 +714,8 @@ LaTeX Info: Redefining \textlatin on input line 1839.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
-\inpenc@prehook=\toks47
-\inpenc@posthook=\toks48
+\inpenc@prehook=\toks43
+\inpenc@posthook=\toks44
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/latin1.def
 File: latin1.def 2015/03/17 v1.2c Input encoding file
@@ -824,57 +725,78 @@ Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
-\col@sep=\dimen260
-\extrarowheight=\dimen261
-\NC@list=\toks49
-\extratabsurround=\skip69
-\backup@length=\skip70
+\col@sep=\dimen195
+\extrarowheight=\dimen196
+\NC@list=\toks45
+\extratabsurround=\skip60
+\backup@length=\skip61
 )
-\everycr=\toks50
-\minrowclearance=\skip71
+\everycr=\toks46
+\minrowclearance=\skip62
 )
 (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
-\multirow@colwidth=\skip72
-\multirow@cntb=\count168
-\multirow@dima=\skip73
-\bigstrutjot=\dimen262
+\multirow@colwidth=\skip63
+\multirow@cntb=\count165
+\multirow@dima=\skip64
+\bigstrutjot=\dimen197
 )
-(/usr/share/texlive/texmf-dist/tex/generic/ulem/ulem.sty
-\UL@box=\box58
-\UL@hyphenbox=\box59
-\UL@skip=\skip74
-\UL@hook=\toks51
-\UL@height=\dimen263
-\UL@pe=\count169
-\UL@pixel=\dimen264
-\ULC@box=\box60
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
+\pgfnodeparttextbox=\box54
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
+.sty
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen198
+\pgf@nodesepend=\dimen199
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
+.sty
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
+)) (/usr/share/texlive/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box55
+\UL@hyphenbox=\box56
+\UL@skip=\skip65
+\UL@hook=\toks47
+\UL@height=\dimen256
+\UL@pe=\count166
+\UL@pixel=\dimen257
+\ULC@box=\box57
 Package: ulem 2012/05/18
-\ULdepth=\dimen265
+\ULdepth=\dimen258
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
-\c@tracingmulticols=\count170
-\mult@box=\box61
-\multicol@leftmargin=\dimen266
-\c@unbalance=\count171
-\c@collectmore=\count172
-\doublecol@number=\count173
-\multicoltolerance=\count174
-\multicolpretolerance=\count175
-\full@width=\dimen267
-\page@free=\dimen268
-\premulticols=\dimen269
-\postmulticols=\dimen270
-\multicolsep=\skip75
-\multicolbaselineskip=\skip76
-\partial@page=\box62
-\last@line=\box63
-\maxbalancingoverflow=\dimen271
-\mult@rightbox=\box64
-\mult@grightbox=\box65
-\mult@gfirstbox=\box66
-\mult@firstbox=\box67
+\c@tracingmulticols=\count167
+\mult@box=\box58
+\multicol@leftmargin=\dimen259
+\c@unbalance=\count168
+\c@collectmore=\count169
+\doublecol@number=\count170
+\multicoltolerance=\count171
+\multicolpretolerance=\count172
+\full@width=\dimen260
+\page@free=\dimen261
+\premulticols=\dimen262
+\postmulticols=\dimen263
+\multicolsep=\skip66
+\multicolbaselineskip=\skip67
+\partial@page=\box59
+\last@line=\box60
+\maxbalancingoverflow=\dimen264
+\mult@rightbox=\box61
+\mult@grightbox=\box62
+\mult@gfirstbox=\box63
+\mult@firstbox=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
 \@tempa=\box68
 \@tempa=\box69
 \@tempa=\box70
@@ -889,17 +811,14 @@ Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
 \@tempa=\box79
 \@tempa=\box80
 \@tempa=\box81
-\@tempa=\box82
-\@tempa=\box83
-\@tempa=\box84
-\c@columnbadness=\count176
-\c@finalcolumnbadness=\count177
-\last@try=\dimen272
-\multicolovershoot=\dimen273
-\multicolundershoot=\dimen274
-\mult@nat@firstbox=\box85
-\colbreak@box=\box86
-\mc@col@check@num=\count178
+\c@columnbadness=\count173
+\c@finalcolumnbadness=\count174
+\last@try=\dimen265
+\multicolovershoot=\dimen266
+\multicolundershoot=\dimen267
+\mult@nat@firstbox=\box82
+\colbreak@box=\box83
+\mc@col@check@num=\count175
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2017/04/05 v2.0i Standard LaTeX package
@@ -1071,30 +990,81 @@ LaTeX Info: Redefining \textsquare on input line 1063.
 LaTeX Info: Redefining \openbox on input line 1064.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count179
-\lst@gtempboxa=\box87
-\lst@token=\toks52
-\lst@length=\count180
-\lst@currlwidth=\dimen275
-\lst@column=\count181
-\lst@pos=\count182
-\lst@lostspace=\dimen276
-\lst@width=\dimen277
-\lst@newlines=\count183
-\lst@lineno=\count184
-\lst@maxwidth=\dimen278
+\lst@mode=\count176
+\lst@gtempboxa=\box84
+\lst@token=\toks48
+\lst@length=\count177
+\lst@currlwidth=\dimen268
+\lst@column=\count178
+\lst@pos=\count179
+\lst@lostspace=\dimen269
+\lst@width=\dimen270
+\lst@newlines=\count180
+\lst@lineno=\count181
+\lst@maxwidth=\dimen271
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count185
-\lst@skipnumbers=\count186
-\lst@framebox=\box88
+\c@lstnumber=\count182
+\lst@skipnumbers=\count183
+\lst@framebox=\box85
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen272
+\pgffor@skip=\dimen273
+\pgffor@stack=\toks49
+\pgffor@toks=\toks50
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
+.code.tex
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
+\pgf@plot@mark@count=\count184
+\pgfplotmarksize=\dimen274
+)
+\tikz@lastx=\dimen275
+\tikz@lasty=\dimen276
+\tikz@lastxsaved=\dimen277
+\tikz@lastysaved=\dimen278
+\tikzleveldistance=\dimen279
+\tikzsiblingdistance=\dimen280
+\tikz@figbox=\box86
+\tikz@figbox@bg=\box87
+\tikz@tempbox=\box88
+\tikz@tempbox@bg=\box89
+\tikztreelevel=\count185
+\tikznumberofchildren=\count186
+\tikznumberofcurrentchild=\count187
+\tikz@fig@count=\count188
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count189
+\pgfmatrixcurrentcolumn=\count190
+\pgf@matrix@numberofcolumns=\count191
+)
+\tikz@expandcount=\count192
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
+)))
 (/usr/share/texlive/texmf-dist/tex/latex/wasysym/wasysym.sty
 Package: wasysym 2003/10/30 v2.0 Wasy-2 symbol support package
 \symwasy=\mathgroup10
@@ -1106,11 +1076,11 @@ Package: fancyvrb 2008/02/07
 
 Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
 <2008/02/07> (tvz)
-\FV@CodeLineNo=\count187
+\FV@CodeLineNo=\count193
 \FV@InFile=\read2
-\FV@TabBox=\box89
-\c@FancyVerbLine=\count188
-\FV@StepNumber=\count189
+\FV@TabBox=\box90
+\c@FancyVerbLine=\count194
+\FV@StepNumber=\count195
 \FV@OutFile=\write5
 )) (./chp3-4.aux)
 \openout1 = `chp3-4.aux'.
@@ -1204,19 +1174,19 @@ LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count190
-\scratchdimen=\dimen279
-\scratchbox=\box90
-\nofMPsegments=\count191
-\nofMParguments=\count192
-\everyMPshowfont=\toks53
-\MPscratchCnt=\count193
-\MPscratchDim=\dimen280
-\MPnumerator=\count194
-\makeMPintoPDFobject=\count195
-\everyMPtoPDFconversion=\toks54
+\scratchcounter=\count196
+\scratchdimen=\dimen281
+\scratchbox=\box91
+\nofMPsegments=\count197
+\nofMParguments=\count198
+\everyMPshowfont=\toks51
+\MPscratchCnt=\count199
+\MPscratchDim=\dimen282
+\MPnumerator=\count266
+\makeMPintoPDFobject=\count267
+\everyMPtoPDFconversion=\toks52
 ) ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box91
+\AtBeginShipoutBox=\box92
 Package hyperref Info: Link coloring OFF on input line 53.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -1225,7 +1195,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count196
+\c@section@level=\count268
 )
 LaTeX Info: Redefining \ref on input line 53.
 LaTeX Info: Redefining \pageref on input line 53.
@@ -1235,15 +1205,19 @@ LaTeX Info: Redefining \nameref on input line 53.
 \@outlinefile=\write6
 \openout6 = `chp3-4.out'.
 
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/txr/m/n --> OT1/cmss/m/n on input line 53.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/txr/bx/n --> OT1/cmss/bx/n on input line 53.
 \symnumbers=\mathgroup11
 \sympureletters=\mathgroup12
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/txr/m/n --> OT1/txr/m/n on input line 53.
+(Font)                  OT1/cmss/m/n --> OT1/txr/m/n on input line 53.
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 53.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/txr/bx/n --> OT1/txr/bx/n on input line 53.
+(Font)                  OT1/txr/bx/n --> OT1/txss/bx/n on input line 53.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/txr/bx/n --> OT1/txr/bx/n on input line 53.
+(Font)                  OT1/txr/bx/n --> OT1/txss/bx/n on input line 53.
 LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 53.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
 (Font)                  OT1/txss/m/n --> OT1/txss/m/n on input line 53.
@@ -1251,26 +1225,26 @@ LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/txss/b/n --> OT1/txss/m/n on input line 53.
 LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 53.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/txr/m/it --> OT1/txr/m/it on input line 53.
+(Font)                  OT1/txr/m/it --> OT1/txss/m/it on input line 53.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/txr/bx/it --> OT1/txr/m/it on input line 53.
+(Font)                  OT1/txr/bx/it --> OT1/txss/m/it on input line 53.
 LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 53.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
 (Font)                  OT1/txtt/m/n --> OT1/txtt/m/n on input line 53.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/txtt/b/n --> OT1/txtt/m/n on input line 53.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/txr/m/n --> OT1/txr/bx/n on input line 53.
+(Font)                  OT1/txss/m/n --> OT1/txss/bx/n on input line 53.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/txr/m/it --> OT1/txr/bx/it on input line 53.
+(Font)                  OT1/txss/m/it --> OT1/txss/bx/it on input line 53.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/txr/bx/n --> OT1/txr/bx/n on input line 53.
+(Font)                  OT1/cmss/bx/n --> OT1/txr/bx/n on input line 53.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/txr/bx/n --> OT1/txr/bx/n on input line 53.
+(Font)                  OT1/txss/bx/n --> OT1/txss/bx/n on input line 53.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/txss/m/n --> OT1/txss/bx/n on input line 53.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/txr/m/it --> OT1/txr/bx/it on input line 53.
+(Font)                  OT1/txss/m/it --> OT1/txss/bx/it on input line 53.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/txtt/m/n --> OT1/txtt/bx/n on input line 53.
 
@@ -1298,12 +1272,10 @@ Dictionary: translator-numbers-dictionary, Language: English
 ry-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-\c@lstlisting=\count197
+\c@lstlisting=\count269
  (./chp3-4.nav)
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
 (Font)              scaled to size 5.69998pt on input line 53.
-LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 7.59998pt on input line 53.
 
 (./3-4_binomial_distribution/3-4_binomial_distribution.tex
 <3-4_binomial_distribution/figures/ski/ski.pdf, id=25, 671.69922pt x 564.64883p
@@ -1317,33 +1289,13 @@ LaTeX Font Info:    Font shape `OT1/txss/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/txss/b/n' tried instead on input line 12.
 LaTeX Font Info:    Font shape `OT1/txss/b/n' will be
 (Font)              scaled to size 10.40245pt on input line 12.
-LaTeX Font Info:    Font shape `OT1/txss/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/txss/m/sl' tried instead on input line 12.
-LaTeX Font Info:    Font shape `OT1/txss/m/sl' will be
-(Font)              scaled to size 10.40245pt on input line 12.
-
-Overfull \vbox (30.37186pt too high) detected at line 12
- []
-
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
 (Font)              scaled to size 3.79999pt on input line 12.
-[1
+ [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./3-4_binomial_distributio
 n/figures/ski/ski.pdf>]
-File: 3-4_binomial_distribution/figures/ski/ski.pdf Graphic file (type pdf)
-<use 3-4_binomial_distribution/figures/ski/ski.pdf>
-Package pdftex.def Info: 3-4_binomial_distribution/figures/ski/ski.pdf  used on
- input line 12.
-(pdftex.def)             Requested size: 201.5113pt x 169.39595pt.
-
-Overfull \vbox (30.37186pt too high) detected at line 12
- []
-
-[2
-
-]
-<3-4_binomial_distribution/figures/pascal/pascal.pdf, id=42, 300.92111pt x 185.
+<3-4_binomial_distribution/figures/pascal/pascal.pdf, id=36, 300.92111pt x 185.
 8584pt>
 File: 3-4_binomial_distribution/figures/pascal/pascal.pdf Graphic file (type pd
 f)
@@ -1352,70 +1304,21 @@ Package pdftex.def Info: 3-4_binomial_distribution/figures/pascal/pascal.pdf  u
 sed on input line 19.
 (pdftex.def)             Requested size: 300.92036pt x 185.85793pt.
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 11.39996pt on input line 19.
-LaTeX Font Info:    Font shape `OT1/txss/bx/n' in size <12> not available
-(Font)              Font shape `OT1/txss/b/n' tried instead on input line 19.
-LaTeX Font Info:    Font shape `OT1/txss/b/n' will be
-(Font)              scaled to size 11.39996pt on input line 19.
- [3
+(Font)              scaled to size 13.67995pt on input line 19.
+ [2
 
  <./3-4_binomial_distribution/figures/pascal/pascal.pdf>]
-<3-4_binomial_distribution/figures/toes/toes.pdf, id=50, 316.7681pt x 334.63052
+<3-4_binomial_distribution/figures/toes/toes.pdf, id=44, 316.7681pt x 334.63052
 pt>
 File: 3-4_binomial_distribution/figures/toes/toes.pdf Graphic file (type pdf)
 <use 3-4_binomial_distribution/figures/toes/toes.pdf>
 Package pdftex.def Info: 3-4_binomial_distribution/figures/toes/toes.pdf  used 
 on input line 40.
 (pdftex.def)             Requested size: 95.03114pt x 100.38992pt.
-LaTeX Font Info:    Try loading font information for OT1+txr on input line 40.
-
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
-File: ot1txr.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Try loading font information for U+txsya on input line 40.
-
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsya.fd
-File: utxsya.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Try loading font information for U+txsyb on input line 40.
-
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyb.fd
-File: utxsyb.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Try loading font information for U+txmia on input line 40.
-
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxmia.fd
-File: utxmia.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Try loading font information for U+txsyc on input line 40.
-
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
-File: utxsyc.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Try loading font information for U+wasy on input line 40.
-
-(/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
-File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
-)
-Overfull \vbox (20.39177pt too high) detected at line 40
- []
-
-[4
+ [3
 
  <./3-4_binomial_distribution/figures/toes/toes.pdf>]
-File: 3-4_binomial_distribution/figures/toes/toes.pdf Graphic file (type pdf)
-<use 3-4_binomial_distribution/figures/toes/toes.pdf>
-Package pdftex.def Info: 3-4_binomial_distribution/figures/toes/toes.pdf  used 
-on input line 40.
-(pdftex.def)             Requested size: 95.03114pt x 100.38992pt.
-
-Overfull \vbox (20.39177pt too high) detected at line 40
- []
-
-[5
-
-]
-<3-4_binomial_distribution/figures/stars/dots_7.pdf, id=63, 554.1282pt x 541.19
+<3-4_binomial_distribution/figures/stars/dots_7.pdf, id=52, 554.1282pt x 541.19
 861pt>
 File: 3-4_binomial_distribution/figures/stars/dots_7.pdf Graphic file (type pdf
 )
@@ -1423,7 +1326,7 @@ File: 3-4_binomial_distribution/figures/stars/dots_7.pdf Graphic file (type pdf
 Package pdftex.def Info: 3-4_binomial_distribution/figures/stars/dots_7.pdf  us
 ed on input line 54.
 (pdftex.def)             Requested size: 166.23973pt x 162.36082pt.
-<3-4_binomial_distribution/figures/stars/dots_7_solution.pdf, id=64, 554.1282pt
+<3-4_binomial_distribution/figures/stars/dots_7_solution.pdf, id=53, 554.1282pt
  x 541.19861pt>
 File: 3-4_binomial_distribution/figures/stars/dots_7_solution.pdf Graphic file 
 (type pdf)
@@ -1431,140 +1334,99 @@ File: 3-4_binomial_distribution/figures/stars/dots_7_solution.pdf Graphic file
 Package pdftex.def Info: 3-4_binomial_distribution/figures/stars/dots_7_solutio
 n.pdf  used on input line 54.
 (pdftex.def)             Requested size: 166.23973pt x 162.36082pt.
-
-Overfull \vbox (9.80971pt too high) detected at line 54
- []
-
-[6
+ [4
 
  <./3-4_binomial_distribution/figures/stars/dots_7.pdf>]
-File: 3-4_binomial_distribution/figures/stars/dots_7.pdf Graphic file (type pdf
+LaTeX Font Info:    Try loading font information for U+txsya on input line 78.
+
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsya.fd
+File: utxsya.fd 2000/12/15 v3.1
 )
-<use 3-4_binomial_distribution/figures/stars/dots_7.pdf>
-Package pdftex.def Info: 3-4_binomial_distribution/figures/stars/dots_7.pdf  us
-ed on input line 54.
-(pdftex.def)             Requested size: 166.23973pt x 162.36082pt.
-File: 3-4_binomial_distribution/figures/stars/dots_7_solution.pdf Graphic file 
-(type pdf)
-<use 3-4_binomial_distribution/figures/stars/dots_7_solution.pdf>
-Package pdftex.def Info: 3-4_binomial_distribution/figures/stars/dots_7_solutio
-n.pdf  used on input line 54.
-(pdftex.def)             Requested size: 166.23973pt x 162.36082pt.
+LaTeX Font Info:    Try loading font information for U+txsyb on input line 78.
 
-Overfull \vbox (9.80971pt too high) detected at line 54
- []
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyb.fd
+File: utxsyb.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Try loading font information for OT1+txr on input line 78.
 
-[7
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
+File: ot1txr.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Try loading font information for U+txmia on input line 78.
 
- <./3-4_binomial_distribution/figures/stars/dots_7_solution.pdf>]
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxmia.fd
+File: utxmia.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Try loading font information for U+txsyc on input line 78.
+
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
+File: utxsyc.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Try loading font information for U+wasy on input line 78.
+
+(/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
+File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
+)
+LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
+(Font)              scaled to size 7.59998pt on input line 78.
+LaTeX Font Info:    Font shape `OT1/txss/m/it' in size <10.95> not available
+(Font)              Font shape `OT1/txss/m/sl' tried instead on input line 78.
+LaTeX Font Info:    Font shape `OT1/txss/m/sl' will be
+(Font)              scaled to size 10.40245pt on input line 78.
+LaTeX Font Info:    Font shape `OT1/txss/m/it' in size <8> not available
+(Font)              Font shape `OT1/txss/m/sl' tried instead on input line 78.
+LaTeX Font Info:    Font shape `OT1/txss/m/sl' will be
+(Font)              scaled to size 7.59998pt on input line 78.
+LaTeX Font Info:    Font shape `OT1/txss/m/it' in size <6> not available
+(Font)              Font shape `OT1/txss/m/sl' tried instead on input line 78.
+LaTeX Font Info:    Font shape `OT1/txss/m/sl' will be
+(Font)              scaled to size 5.69998pt on input line 78.
+
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 78.
 
-[8
+[5
 
-] [9
-
-] [10
-
-] [11
-
-] [12
-
-]
-Overfull \vbox (3.56047pt too high) detected at line 97
- []
-
-[13
-
-]
-Overfull \vbox (3.56047pt too high) detected at line 97
- []
-
-[14
-
-]
-Overfull \vbox (3.56047pt too high) detected at line 97
- []
-
-[15
+] [6
 
 ]
 \openout4 = `chp3-4.vrb'.
 
  (./chp3-4.vrb
 LaTeX Font Info:    Try loading font information for OT1+txtt on input line 7.
- (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txtt.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txtt.fd
 File: ot1txtt.fd 2000/12/15 v3.1
-)) [16
-
-]
+))
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 13.67995pt on input line 138.
-LaTeX Font Info:    Font shape `OT1/txss/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/txss/b/n' tried instead on input line 138.
-LaTeX Font Info:    Font shape `OT1/txss/b/n' will be
-(Font)              scaled to size 13.67995pt on input line 138.
- [17
+(Font)              scaled to size 9.49997pt on input line 132.
+LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
+(Font)              scaled to size 6.64998pt on input line 132.
+LaTeX Font Info:    Font shape `OT1/txss/m/it' in size <14.4> not available
+(Font)              Font shape `OT1/txss/m/sl' tried instead on input line 132.
 
-] [18
+LaTeX Font Info:    Font shape `OT1/txss/m/sl' will be
+(Font)              scaled to size 13.67995pt on input line 132.
+LaTeX Font Info:    Font shape `OT1/txss/m/it' in size <10> not available
+(Font)              Font shape `OT1/txss/m/sl' tried instead on input line 132.
 
-] [19
+LaTeX Font Info:    Font shape `OT1/txss/m/sl' will be
+(Font)              scaled to size 9.49997pt on input line 132.
+LaTeX Font Info:    Font shape `OT1/txss/m/it' in size <7> not available
+(Font)              Font shape `OT1/txss/m/sl' tried instead on input line 132.
 
-]
-Overfull \vbox (30.71191pt too high) detected at line 171
- []
+LaTeX Font Info:    Font shape `OT1/txss/m/sl' will be
+(Font)              scaled to size 6.64998pt on input line 132.
+ [7
 
-[20
+] [8
 
-]
-Overfull \vbox (30.71191pt too high) detected at line 171
- []
-
-[21
-
-]
-Overfull \vbox (30.71191pt too high) detected at line 171
- []
-
-[22
+] [9
 
 ]
-Overfull \vbox (30.71191pt too high) detected at line 171
- []
-
-[23
-
-]
-Overfull \vbox (26.9523pt too high) detected at line 206
- []
-
-[24
-
-]
-Overfull \vbox (26.9523pt too high) detected at line 206
- []
-
-[25
-
-]
-Overfull \vbox (26.9523pt too high) detected at line 206
- []
-
-[26
-
-]
-Overfull \vbox (26.9523pt too high) detected at line 206
- []
-
-[27
-
-]
-Overfull \vbox (26.9523pt too high) detected at line 206
- []
-
-[28
+[10
 
 ]
 
@@ -1572,6 +1434,33 @@ LaTeX Font Warning: Command \LARGE invalid in math mode on input line 225.
 
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
 (Font)              scaled to size 16.41594pt on input line 225.
+LaTeX Font Info:    Font shape `OT1/txss/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/txss/b/n' tried instead on input line 225.
+LaTeX Font Info:    Font shape `OT1/txss/b/n' will be
+(Font)              scaled to size 16.41594pt on input line 225.
+LaTeX Font Info:    Font shape `OT1/txss/bx/n' in size <12> not available
+(Font)              Font shape `OT1/txss/b/n' tried instead on input line 225.
+LaTeX Font Info:    Font shape `OT1/txss/b/n' will be
+(Font)              scaled to size 11.39996pt on input line 225.
+LaTeX Font Info:    Font shape `OT1/txss/bx/n' in size <10> not available
+(Font)              Font shape `OT1/txss/b/n' tried instead on input line 225.
+LaTeX Font Info:    Font shape `OT1/txss/b/n' will be
+(Font)              scaled to size 9.49997pt on input line 225.
+LaTeX Font Info:    Font shape `OT1/txss/bx/it' in size <17.28> not available
+(Font)              Font shape `OT1/txss/b/sl' tried instead on input line 225.
+
+LaTeX Font Info:    Font shape `OT1/txss/b/sl' will be
+(Font)              scaled to size 16.41594pt on input line 225.
+LaTeX Font Info:    Font shape `OT1/txss/bx/it' in size <12> not available
+(Font)              Font shape `OT1/txss/b/sl' tried instead on input line 225.
+
+LaTeX Font Info:    Font shape `OT1/txss/b/sl' will be
+(Font)              scaled to size 11.39996pt on input line 225.
+LaTeX Font Info:    Font shape `OT1/txss/bx/it' in size <10> not available
+(Font)              Font shape `OT1/txss/b/sl' tried instead on input line 225.
+
+LaTeX Font Info:    Font shape `OT1/txss/b/sl' will be
+(Font)              scaled to size 9.49997pt on input line 225.
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <8> not available
 (Font)              Font shape `U/wasy/m/n' tried instead on input line 225.
@@ -1580,6 +1469,41 @@ LaTeX Font Warning: Font shape `U/wasy/b/n' in size <8> not available
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <6> not available
 (Font)              Font shape `U/wasy/m/n' tried instead on input line 225.
 
+LaTeX Font Info:    Font shape `OT1/txss/bx/n' in size <8> not available
+(Font)              Font shape `OT1/txss/b/n' tried instead on input line 225.
+LaTeX Font Info:    Font shape `OT1/txss/b/n' will be
+(Font)              scaled to size 7.59998pt on input line 225.
+LaTeX Font Info:    Font shape `OT1/txss/bx/n' in size <6> not available
+(Font)              Font shape `OT1/txss/b/n' tried instead on input line 225.
+LaTeX Font Info:    Font shape `OT1/txss/b/n' will be
+(Font)              scaled to size 5.69998pt on input line 225.
+LaTeX Font Info:    Font shape `OT1/txss/bx/it' in size <10.95> not available
+(Font)              Font shape `OT1/txss/b/sl' tried instead on input line 225.
+
+LaTeX Font Info:    Font shape `OT1/txss/b/sl' will be
+(Font)              scaled to size 10.40245pt on input line 225.
+LaTeX Font Info:    Font shape `OT1/txss/bx/it' in size <8> not available
+(Font)              Font shape `OT1/txss/b/sl' tried instead on input line 225.
+
+LaTeX Font Info:    Font shape `OT1/txss/b/sl' will be
+(Font)              scaled to size 7.59998pt on input line 225.
+LaTeX Font Info:    Font shape `OT1/txss/bx/it' in size <6> not available
+(Font)              Font shape `OT1/txss/b/sl' tried instead on input line 225.
+
+LaTeX Font Info:    Font shape `OT1/txss/b/sl' will be
+(Font)              scaled to size 5.69998pt on input line 225.
+LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
+(Font)              scaled to size 11.39996pt on input line 225.
+LaTeX Font Info:    Font shape `OT1/txss/m/it' in size <17.28> not available
+(Font)              Font shape `OT1/txss/m/sl' tried instead on input line 225.
+
+LaTeX Font Info:    Font shape `OT1/txss/m/sl' will be
+(Font)              scaled to size 16.41594pt on input line 225.
+LaTeX Font Info:    Font shape `OT1/txss/m/it' in size <12> not available
+(Font)              Font shape `OT1/txss/m/sl' tried instead on input line 225.
+
+LaTeX Font Info:    Font shape `OT1/txss/m/sl' will be
+(Font)              scaled to size 11.39996pt on input line 225.
 
 LaTeX Font Warning: Command \Large invalid in math mode on input line 225.
 
@@ -1587,344 +1511,72 @@ LaTeX Font Warning: Command \Large invalid in math mode on input line 225.
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <7> not available
 (Font)              Font shape `U/wasy/m/n' tried instead on input line 225.
 
+LaTeX Font Info:    Font shape `OT1/txss/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/txss/b/n' tried instead on input line 225.
+LaTeX Font Info:    Font shape `OT1/txss/b/n' will be
+(Font)              scaled to size 13.67995pt on input line 225.
+LaTeX Font Info:    Font shape `OT1/txss/bx/n' in size <7> not available
+(Font)              Font shape `OT1/txss/b/n' tried instead on input line 225.
+LaTeX Font Info:    Font shape `OT1/txss/b/n' will be
+(Font)              scaled to size 6.64998pt on input line 225.
+LaTeX Font Info:    Font shape `OT1/txss/bx/it' in size <14.4> not available
+(Font)              Font shape `OT1/txss/b/sl' tried instead on input line 225.
 
-Overfull \vbox (15.45955pt too high) detected at line 225
- []
+LaTeX Font Info:    Font shape `OT1/txss/b/sl' will be
+(Font)              scaled to size 13.67995pt on input line 225.
+LaTeX Font Info:    Font shape `OT1/txss/bx/it' in size <7> not available
+(Font)              Font shape `OT1/txss/b/sl' tried instead on input line 225.
 
-[29
+LaTeX Font Info:    Font shape `OT1/txss/b/sl' will be
+(Font)              scaled to size 6.64998pt on input line 225.
+[11
 
 ]
-LaTeX Font Info:    Font shape `OT1/txss/m/it' in size <17.28> not available
-(Font)              Font shape `OT1/txss/m/sl' tried instead on input line 241.
-
-LaTeX Font Info:    Font shape `OT1/txss/m/sl' will be
-(Font)              scaled to size 16.41594pt on input line 241.
-
-Overfull \hbox (15.71098pt too wide) in paragraph at lines 241--241
+Overfull \hbox (31.29413pt too wide) in paragraph at lines 247--247
  [] 
  []
 
-[30
+[12
+
+] [13
+
+] [14
+
+] [15
+
+] [16
+
+] [17
 
 ]
-Overfull \hbox (15.71098pt too wide) in paragraph at lines 241--241
- [] 
- []
-
-[31
-
-]
-Overfull \hbox (15.71098pt too wide) in paragraph at lines 262--262
- [] 
- []
-
-
-Overfull \vbox (42.89189pt too high) detected at line 262
- []
-
-[32
-
-]
-Overfull \hbox (15.71098pt too wide) in paragraph at lines 262--262
- [] 
- []
-
-
-Overfull \vbox (42.89189pt too high) detected at line 262
- []
-
-[33
-
-]
-Overfull \hbox (15.71098pt too wide) in paragraph at lines 262--262
- [] 
- []
-
-
-Overfull \vbox (42.89189pt too high) detected at line 262
- []
-
-[34
-
-]
-Overfull \hbox (15.71098pt too wide) in paragraph at lines 262--262
- [] 
- []
-
-
-Overfull \vbox (42.89189pt too high) detected at line 262
- []
-
-[35
-
-]
-Overfull \hbox (15.71098pt too wide) in paragraph at lines 262--262
- [] 
- []
-
-
-Overfull \vbox (42.89189pt too high) detected at line 262
- []
-
-[36
-
-]
-Overfull \hbox (15.71098pt too wide) in paragraph at lines 262--262
- [] 
- []
-
-
-Overfull \vbox (42.89189pt too high) detected at line 262
- []
-
-[37
-
-]
-Overfull \vbox (13.00755pt too high) detected at line 277
- []
-
-[38
-
-]
-Overfull \vbox (13.00755pt too high) detected at line 277
- []
-
-[39
-
-]
-Overfull \vbox (13.00755pt too high) detected at line 277
- []
-
-[40
-
-]
-Overfull \vbox (13.00755pt too high) detected at line 277
- []
-
-[41
-
-]
-Overfull \vbox (13.00755pt too high) detected at line 277
- []
-
-[42
-
-] [43
-
-] [44
-
-] [45
-
-] [46
-
-]
-Overfull \vbox (29.75018pt too high) detected at line 331
- []
-
-[47
-
-]
-Overfull \vbox (29.75018pt too high) detected at line 331
- []
-
-[48
-
-]
-Overfull \vbox (29.75018pt too high) detected at line 331
- []
-
-[49
-
-]
-Overfull \vbox (29.75018pt too high) detected at line 331
- []
-
-[50
-
-]
-Overfull \vbox (12.77179pt too high) detected at line 348
- []
-
-[51
-
-]
-Overfull \vbox (12.77179pt too high) detected at line 348
- []
-
-[52
-
-] [53
-
-] [54
-
-]
-<3-4_binomial_distribution/figures/bin_norm/geogebra-export.png, id=347, 4059.1
+<3-4_binomial_distribution/figures/bin_norm/geogebra-export.png, id=147, 4059.1
 65pt x 903.375pt>
 File: 3-4_binomial_distribution/figures/bin_norm/geogebra-export.png Graphic fi
 le (type png)
 <use 3-4_binomial_distribution/figures/bin_norm/geogebra-export.png>
 Package pdftex.def Info: 3-4_binomial_distribution/figures/bin_norm/geogebra-ex
-port.png  used on input line 377.
+port.png  used on input line 362.
 (pdftex.def)             Requested size: 324.73984pt x 72.27147pt.
 
-Overfull \hbox (4.34459pt too wide) in paragraph at lines 377--377
+Overfull \hbox (4.34459pt too wide) in paragraph at lines 362--362
  [] 
  []
 
-
-Overfull \vbox (25.58585pt too high) detected at line 377
- []
-
-[55
+[18
 
  <./3-4_binomial_distribution/figures/bin_norm/geogebra-export.png>]
-File: 3-4_binomial_distribution/figures/bin_norm/geogebra-export.png Graphic fi
-le (type png)
-<use 3-4_binomial_distribution/figures/bin_norm/geogebra-export.png>
-Package pdftex.def Info: 3-4_binomial_distribution/figures/bin_norm/geogebra-ex
-port.png  used on input line 377.
-(pdftex.def)             Requested size: 324.73984pt x 72.27147pt.
-
-Overfull \hbox (4.34459pt too wide) in paragraph at lines 377--377
- [] 
- []
-
-
-Overfull \vbox (25.58585pt too high) detected at line 377
- []
-
-[56
-
-]
-File: 3-4_binomial_distribution/figures/bin_norm/geogebra-export.png Graphic fi
-le (type png)
-<use 3-4_binomial_distribution/figures/bin_norm/geogebra-export.png>
-Package pdftex.def Info: 3-4_binomial_distribution/figures/bin_norm/geogebra-ex
-port.png  used on input line 377.
-(pdftex.def)             Requested size: 324.73984pt x 72.27147pt.
-
-Overfull \hbox (4.34459pt too wide) in paragraph at lines 377--377
- [] 
- []
-
-
-Overfull \vbox (25.58585pt too high) detected at line 377
- []
-
-[57
-
-]
-File: 3-4_binomial_distribution/figures/bin_norm/geogebra-export.png Graphic fi
-le (type png)
-<use 3-4_binomial_distribution/figures/bin_norm/geogebra-export.png>
-Package pdftex.def Info: 3-4_binomial_distribution/figures/bin_norm/geogebra-ex
-port.png  used on input line 377.
-(pdftex.def)             Requested size: 324.73984pt x 72.27147pt.
-
-Overfull \hbox (4.34459pt too wide) in paragraph at lines 377--377
- [] 
- []
-
-
-Overfull \vbox (25.58585pt too high) detected at line 377
- []
-
-[58
-
-]
-<3-4_binomial_distribution/figures/bin_norm/geogebra-export2.png, id=371, 2532.
+<3-4_binomial_distribution/figures/bin_norm/geogebra-export2.png, id=155, 2532.
 46124pt x 903.375pt>
 File: 3-4_binomial_distribution/figures/bin_norm/geogebra-export2.png Graphic f
 ile (type png)
 <use 3-4_binomial_distribution/figures/bin_norm/geogebra-export2.png>
 Package pdftex.def Info: 3-4_binomial_distribution/figures/bin_norm/geogebra-ex
-port2.png  used on input line 397.
+port2.png  used on input line 382.
 (pdftex.def)             Requested size: 202.60103pt x 72.27147pt.
 
-Overfull \vbox (23.56555pt too high) detected at line 397
- []
-
-[59
+[19
 
  <./3-4_binomial_distribution/figures/bin_norm/geogebra-export2.png>]
-File: 3-4_binomial_distribution/figures/bin_norm/geogebra-export2.png Graphic f
-ile (type png)
-<use 3-4_binomial_distribution/figures/bin_norm/geogebra-export2.png>
-Package pdftex.def Info: 3-4_binomial_distribution/figures/bin_norm/geogebra-ex
-port2.png  used on input line 397.
-(pdftex.def)             Requested size: 202.60103pt x 72.27147pt.
-
-Overfull \vbox (23.56555pt too high) detected at line 397
- []
-
-[60
-
-]
-File: 3-4_binomial_distribution/figures/bin_norm/geogebra-export2.png Graphic f
-ile (type png)
-<use 3-4_binomial_distribution/figures/bin_norm/geogebra-export2.png>
-Package pdftex.def Info: 3-4_binomial_distribution/figures/bin_norm/geogebra-ex
-port2.png  used on input line 397.
-(pdftex.def)             Requested size: 202.60103pt x 72.27147pt.
-
-Overfull \vbox (23.56555pt too high) detected at line 397
- []
-
-[61
-
-]
-File: 3-4_binomial_distribution/figures/bin_norm/geogebra-export2.png Graphic f
-ile (type png)
-<use 3-4_binomial_distribution/figures/bin_norm/geogebra-export2.png>
-Package pdftex.def Info: 3-4_binomial_distribution/figures/bin_norm/geogebra-ex
-port2.png  used on input line 397.
-(pdftex.def)             Requested size: 202.60103pt x 72.27147pt.
-
-Overfull \vbox (23.56555pt too high) detected at line 397
- []
-
-[62
-
-]
-File: 3-4_binomial_distribution/figures/bin_norm/geogebra-export2.png Graphic f
-ile (type png)
-<use 3-4_binomial_distribution/figures/bin_norm/geogebra-export2.png>
-Package pdftex.def Info: 3-4_binomial_distribution/figures/bin_norm/geogebra-ex
-port2.png  used on input line 397.
-(pdftex.def)             Requested size: 202.60103pt x 72.27147pt.
-
-Overfull \vbox (23.56555pt too high) detected at line 397
- []
-
-[63
-
-]
-File: 3-4_binomial_distribution/figures/bin_norm/geogebra-export2.png Graphic f
-ile (type png)
-<use 3-4_binomial_distribution/figures/bin_norm/geogebra-export2.png>
-Package pdftex.def Info: 3-4_binomial_distribution/figures/bin_norm/geogebra-ex
-port2.png  used on input line 397.
-(pdftex.def)             Requested size: 202.60103pt x 72.27147pt.
-
-Overfull \vbox (23.56555pt too high) detected at line 397
- []
-
-[64
-
-]
-File: 3-4_binomial_distribution/figures/bin_norm/geogebra-export2.png Graphic f
-ile (type png)
-<use 3-4_binomial_distribution/figures/bin_norm/geogebra-export2.png>
-Package pdftex.def Info: 3-4_binomial_distribution/figures/bin_norm/geogebra-ex
-port2.png  used on input line 397.
-(pdftex.def)             Requested size: 202.60103pt x 72.27147pt.
-
-Overfull \vbox (23.56555pt too high) detected at line 397
- []
-
-[65
-
-]
 \tf@nav=\write7
 \openout7 = `chp3-4.nav'.
 
@@ -1934,40 +1586,41 @@ Overfull \vbox (23.56555pt too high) detected at line 397
 \tf@snm=\write9
 \openout9 = `chp3-4.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 404.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 404.
- (./chp3-4.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 404.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 404.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 389.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 389.
+
+(./chp3-4.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 389.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 389.
 Package rerunfilecheck Info: File `chp3-4.out' has not changed.
 (rerunfilecheck)             Checksum: 3983E82CBB7F5724473BB0B1157CA0FD;222.
  ) ) 
 Here is how much of TeX's memory you used:
- 24199 strings out of 494847
- 459311 string characters out of 6179080
- 529543 words of memory out of 5000000
- 26761 multiletter control sequences out of 15000+600000
- 102053 words of font info for 254 fonts, out of 8000000 for 9000
+ 23938 strings out of 494847
+ 449393 string characters out of 6179080
+ 525595 words of memory out of 5000000
+ 26617 multiletter control sequences out of 15000+600000
+ 98855 words of font info for 253 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 63i,14n,74p,1834b,696s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 57i,14n,62p,815b,400s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texl
-ive/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/t
-xfonts/txbex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txbs
-y.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/txfonts/txtt.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helveti
-c/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/urw/times/utmri8a.pfb>
-Output written on chp3-4.pdf (65 pages, 311109 bytes).
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfont
+s/txbex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txbsy.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/txfonts/txtt.pfb></usr/share/texlive/texmf-dist/font
+s/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
+helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhv
+r8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on chp3-4.pdf (19 pages, 253263 bytes).
 PDF statistics:
- 491 PDF objects out of 1000 (max. 8388607)
- 387 compressed objects within 4 object streams
- 134 named destinations out of 1000 (max. 500000)
+ 225 PDF objects out of 1000 (max. 8388607)
+ 169 compressed objects within 2 object streams
+ 42 named destinations out of 1000 (max. 500000)
  120 words of extra memory for PDF output out of 10000 (max. 10000000)
 

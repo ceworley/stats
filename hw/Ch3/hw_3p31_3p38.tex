@@ -1,0 +1,198 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{multicol}
+\usepackage{listings}
+\lstset{ 
+basicstyle = \ttfamily,
+showstringspaces=false,
+columns=fullflexible,
+literate={*}{{\char42}}1
+         {-}{{\char45}}1
+         {"}{{\fontencoding{T1}\selectfont\textquotedbl}}1
+         {'}{{\fontencoding{T1}\selectfont\textquotesingle}}1
+}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{multirow,array}
+\usepackage{newtxtext,newtxmath}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textsc{BHCC Mat-181}}
+\chead{\textsc{Answers}}
+\rhead{\textsc{HW Exercises 3.31-3.38}}
+\rfoot{Page \thepage ~of \pageref{LastPage}}
+\setenumerate[1]{label={\bf 3.\theenumi: }}
+\setenumerate[2]{label={\bf (\theenumii): }}
+\setenumerate[3]{label={\bf \theenumiii: }}
+
+\begin{document}
+\newcommand{\N}[2]{\mathcal{N}\big(#1,~#2\big)}
+\newcommand{\Geo}[1]{\texttt{Geo}\big(#1\big)}
+\newcommand{\B}[2]{\mathcal{B}\big(#1,~#2\big)}
+\newcommand{\AND}{\textsc{~and~}}
+\newcommand{\OR}{\textsc{~or~}}
+
+We will use the notation $X\sim \B{n}{p}$ to say $X$ is binomially distributed with $n$ trials and chance of success $p$ (on each trial). 
+
+\begin{enumerate}
+\setcounter{enumi}{30}
+
+\item In all cases, the sides are all equally likely, so we can just say 1 in 4 sides corresponds to ``success'', but which side is ``success'' depends on the case. So, we can just define random variable $X\sim\B{3}{0.25}$, where $X$ is the number of successes. We make a table, where we use $k$ to represent specific (possible) outcomes.
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|c|c|c|}\hline
+$k$ & $P(X=k)$ before simplification & $P(X=k)$ \\ \hline
+0  & ${3\choose 0} (0.25)^{0} (0.75)^3$ &  0.421875 \\
+1  & ${3\choose 1} (0.25)^{1} (0.75)^2$ & 0.421875 \\
+2  & ${3\choose 2} (0.25)^{2} (0.75)^1$ &  0.140625 \\
+3  & ${3\choose 3} (0.25)^{3} (0.75)^0$ &  0.015625 \\ \hline
+\end{tabular}
+\end{center}
+\begin{enumerate}
+\item Reread as ``at least one success''. This is the complement of ``no successes''.
+$$P(X\ge 1) ~~=~~ 1-P(X=0) ~~=~~ 1-0.422 ~~=~~ \fbox{0.578}$$
+\item Reread as ``exactly two successes'', and look at the table.
+$$P(X = 2) ~~=~~ \fbox{0.141}$$
+\item Reread as ``exactly one success'', and look at the table.
+$$P(X = 1) ~~=~~ \fbox{0.422}$$
+\item Reread as ``at most two success''. This is the complement of ``exactly three successes''.
+$$P(X \le 2) ~~=~~ 1 - P(X=3) ~~=~~ 1-0.0156 ~~=~~ \fbox{0.9844} $$
+
+\end{enumerate}
+
+\newpage
+
+\item Let $X\sim\N{10}{0.07}$, where $X$ represents the number of teenagers suffering from arachnophobia.
+\begin{enumerate}
+\item We want to calculate $P(X\ge 1)$. This is the complement of $P(X=0)$.
+\begin{align*}
+P(X\ge 1) ~~&=~~1 - P(X=0)\\
+ &=~~ 1-{10\choose 0}(0.07)^0(0.93)^{10}\\
+ &=~~ \fbox{0.516}
+\end{align*}
+\item We want to calculate $P(X = 2)$. 
+\begin{align*}
+P(X = 2) ~~&=~~ {10\choose 2}(0.07)^2(0.93)^{8}\\
+ &=~~ \fbox{0.123}
+\end{align*}
+\item We want to calculate $P(X \le 1)$. 
+\begin{align*}
+P(X \le 1) ~~&=~~ {10\choose 0}(0.07)^0(0.93)^{10}+{10\choose 1}(0.07)^1(0.93)^{9}\\
+ &=~~ \fbox{0.848}
+\end{align*}
+\item No. There is a 15\% chance that, in the tent, more than 1 teenager is afraid of spiders.
+\end{enumerate}
+
+
+\item \begin{enumerate}
+\item $0.125 \times (1-0.125) = \fbox{0.109}$
+\item ${2\choose 1}(0.125)^1(1-0.125)^1 = \fbox{0.219} $
+\item ${6\choose 2}(0.125)^2(1-0.125)^4 = \fbox{0.137} $
+\item Complement. $1-{6\choose 0}(0.125)^0(1-0.125)^6 = \fbox{0.551} $
+\item Geometric. $(1-0.125)^3(0.125) = \fbox{0.0837}$
+\item We can calculate a $z$ score. First we need $\mu$ and $\sigma$ of the binomial distribution $\B{6}{0.75}$.
+$$\mu = (6)(0.75) = 4.5$$
+$$\sigma = \sqrt{(6)(0.75)(0.25)} = 1.06 $$
+$$z = \frac{2-4.5}{1.06} = -2.36 $$
+This $z$ score is considered unusual because $|-2.36| > 2$.
+
+We could also calculate the probability of having 2 {\bf or fewer} children with brown eyes.
+\begin{align*}
+P(X\le 2) &= {6\choose 0}(0.75)^0(0.25)^{6} +  {6\choose 1}(0.75)^1(0.25)^{5} + {6\choose 2}(0.75)^2(0.25)^{4}\\
+&= 0.0376
+\end{align*}
+So, having 2 {\bf or fewer} kids with brown eyes only happens about 4\% of the time. This is low enough to be unusual.
+\end{enumerate}
+
+\newpage
+
+\item \begin{enumerate}
+\item Let $X_\text{a} \sim \B{3}{0.25}$. We are asked for $P(X_\text{a} = 2)$.
+\begin{align*}
+P(X_\text{a} = 2) ~~&=~~ {3\choose 2}(0.25)^2(0.75)^{1} ~~=~~ \fbox{0.14}
+\end{align*}
+\item Let $X_\text{b} \sim \B{3}{0.25}$. We are asked for $P(X_\text{b} = 0)$.
+\begin{align*}
+P(X_\text{b} = 0) ~~&=~~ {3\choose 0}(0.25)^0(0.75)^{3} ~~=~~ \fbox{0.42}
+\end{align*}
+\item $X_\text{c} \sim \B{3}{0.25}$. 
+\begin{align*}
+P(X_\text{c} \ge 1) ~~&=~~ 1-P(X_\text{c} = 0) \\
+&=~~ 1-{3\choose 0}(0.25)^0(0.75)^{3} \\
+&=~~ \fbox{0.578}
+\end{align*}
+\item Geometric.
+$$(1-0.25)^2(0.25) = \fbox{0.14} $$
+\end{enumerate}
+
+
+%%%%%%%%%%% Ex 3.35 %%%%%%%%%%%%
+\item Let $X$ represent the number of games won. $X\sim \B{3}{18/38}$. We use $k$ to represent possible values of $X$.
+\begin{center}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{|c|c|c|}\hline
+$k$ & $P(X=k)$ before simplification & $P(X=k)$ \\ \hline
+0  & ${3\choose 0} (18/38)^{0} (20/38)^3$ &  0.1457938 \\
+1  & ${3\choose 1} (18/38)^{1} (20/38)^2$ & 0.3936434  \\
+2  & ${3\choose 2} (18/38)^{2} (20/38)^1$ &  0.3542790 \\
+3  & ${3\choose 3} (18/38)^{3} (20/38)^0$ &  0.1062837 \\ \hline
+\end{tabular}
+\end{center}
+The above probabilities are used for the distribution of $Y$. Let's use $y$ to represent possible values of $Y$ (where USD means \$). If the player loses three times, they will lose \$3. If someone loses twice but wins once, they net -1 USD... etc...
+\begin{center}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{|c|c|}\hline
+$y$ & $P(Y=y)$ \\ \hline
+-3 USD &  0.1457938 \\
+-1 USD&  0.3936434  \\
+1 USD&  0.3542790 \\
+3 USD&  0.1062837 \\ \hline
+\end{tabular}
+\end{center}
+
+\newpage
+
+%%%%%%%%%%% Ex 3.36 %%%%%%%%%%%%
+\item \begin{enumerate} 
+\item Geometric. $P(3) = (0.75)^2(0.25) = 0.140625$
+\item Binomial. $$P(3 \OR 4) = {5\choose 3}(0.25)^3(0.75)^2 + {5\choose 4}(0.25)^4(0.75)^1 = \fbox{0.1025} $$
+\item Binomial. $$P(3 \OR 4 \OR 5) = {5\choose 3}(0.25)^3(0.75)^2 + {5\choose 4}(0.25)^4(0.75)^1+ {5\choose 5}(0.25)^5(0.75)^0 = \fbox{0.1035} $$
+\end{enumerate}
+
+%%%%%%%%%%% Ex 3.37 %%%%%%%%%%%%
+\item \begin{enumerate} 
+\item We have 5 {\bf dependent} events connected with logical \textsc{and}, so we multiply.
+\begin{align*} 
+P(A_1B_2C_3D_4E_5) &= P(A_1)\cdot P(B_2|A_1) \cdot P(C_3|A_1B_2)\cdot P(D_4|A_1B_2C_3) \cdot P(E_5|A_1B_2C_3D_4)\\
+&= \frac{1}{5} \cdot \frac{1}{4} \cdot \frac{1}{3} \cdot \frac{1}{2} \cdot \frac{1}{1} \\
+&= \frac{1}{5!} \\
+&= 1/120 \\
+&= \fbox{0.008333}
+\end{align*}
+\item If each arrangement is equally likely, and the probability of alphabetical arrangement is $1/120$, then there must be $\fbox{120}$ arrangements possible.
+\item $8! = 40320$
+\end{enumerate}
+
+
+%%%%%%%%%%% Ex 3.38 %%%%%%%%%%%%
+\item \begin{enumerate} 
+\item Let $X\sim \B{3}{0.51}$. 
+$$P(X=2) ~~~=~~~ {3\choose 2}(0.51)^2(0.49)^1 ~~~=~~~ \fbox{0.3823} $$
+\item bbg bgb gbb. Three ways, each of which has probability of $(0.51)^2(0.49)^1$. Then, multiply by three (add 3 copies of the probability). $\fbox{0.3823}$
+\item Because 8 choose 3 is 56... there are 56 different ways.
+
+\end{enumerate}
+
+
+\end{enumerate}
+\end{document}
