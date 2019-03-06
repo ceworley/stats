@@ -1,0 +1,75 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{multicol}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{multirow,array}
+\usepackage{newtxtext,newtxmath}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+	\setenumerate[1]{label={\bf Q\theenumi: ~}}
+	\setenumerate[2]{label={\bf \theenumii: ~}}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{BHCC Mat-181}
+\rhead{\textsc{Final Project}}
+\rfoot{Page \thepage ~of \pageref{LastPage}}
+
+\begin{document}
+
+\section*{Final Project}
+
+You will complete a randomized controlled study with two groups: a control group and a treatment group. You will then perform a two-proportion test or a two-mean test to check for significance. You will write a report in the standard format: Abstract, Introduction, Method, Result, Discussion, and References.
+
+Most projects will use human participants. After finding a willing participant, you will randomly assign her to the control group or the treatment group. If the participant is assigned to the treatment group, a ``treatment'' is applied to the participant. Otherwise, a ``placebo'' is applied to the participant. Then, something is measured --- something you hypothesize to be affected by treatment but not placebo.
+
+Remember to also consider blinding. Your participants should be blind to whether or not they are receiving treatment. Also, ideally the person interacting with the participants would be blind to the treatment (but this is probably too difficult for us, thus we will do our best to maintain a poker face).
+
+You will perform a 2-sample hypothesis test. This might be a 2-proportion test or a 2-mean test. You will show your calculations or R commands in the Result section of your paper. If you need help with this, please ask.
+
+Your paper will have the following sections:
+\begin{description}
+\item[Abstract] You will write the abstract last but put it first. The abstract should be a very short summary of the paper.
+\item[Introduction] Here you should give some background. Cite some papers/websites that suggest other people are interested in this topic. Summarize the results of other research similar to yours. Describe what motivated your experiment.
+\item[Method] Describe how you found participants, how you assigned the participants, what did you do differently between treatment and control, what did you do the same for treatment and control, what blinding techniques were used, how many participants did you get in each group, and what unexpected difficulties did you find with your method?
+\item[Result] Make a diagram to summarize your data or a (very neat) table with your raw data. Logically walk through the hypothesis test, and show your calculations.
+\item[Discussion] Did the experiment support your original (alternative) hypothesis? Do you think a larger sample size should be used? What could you do differently to study this topic or related topics in the future? How surprised are you about your results? What are the implications of your work?
+\item[References] Provide an ordered list of references. The exact style of reference can be loose. But, please provide enough information for me to track down the references. 
+\end{description}
+
+\section*{Proposal}
+You will write a page describing what you will be testing and how you will test it. Please discuss your random-assignment strategy, your blinding strategies, how you'll find participants, what the ``treatment'' and ``control'' groups are, what you will measure, and what materials you'll need to make.
+
+\newpage
+
+\subsection*{Project examples}
+\begin{description}
+\item[stroop effect] I have read that people are slower at reading a list of words when the words are printed in mismatched colors rather than matched colors. Is this true of BHCC students?
+\item[implicit bias] How do BHCC students judge a paragraph based on the author's name? (names could suggest gender/nationality)
+\item[anchoring] Do BHCC students estimate $7\times6\times5\times4\times3\times2\times1$ as larger than $1\times2\times3\times4\times5\times6\times7$?
+\item[memory] Are students better able to recall words if they are related?
+\item[music and studying] Does instrumental/vocal music affect people's ability to answer reading comprehension questions accurately?
+\item[basketball] Are you more likely to sink a 3-point shot from straight on or from the side?
+\item[bouba/kiki effect] Does the sound of a made-up word affect our assignment of its meaning?
+\item[decoy effect] When deciding between ``brands'', can a decoy (a clearly worse option) change decision making?
+\item[rhyme-as-reason effect] Do people agree with a rhyming statement more than with an equivalent non-rhyming statement?
+\item[serial-position effect] Are people better at remembering the words at the beginning/end than words in the middle of a list?
+\item[McGurk effect] Can a visual cue affect what a person hears?
+\end{description}
+
+\begin{verbatim}
+https://en.wikipedia.org/wiki/List_of_memory_biases
+
+https://en.wikipedia.org/wiki/List_of_cognitive_biases
+\end{verbatim}
+
+
+\end{document}
