@@ -12,9 +12,9 @@ Now, imagine we sample from a new population/distribution, but we don't know the
 \end{column}
 \begin{column}{0.3\textwidth}
 \pause
-\soln{Well, our point estimate is $$\mu \approx \bar{x} = 26.4$$
+\soln{Well, our point estimate is $$\mu \approx \bar{x} = 81.5$$
 However, we want to also describe our uncertainty. To me, based on the previous slide, I'd guess the uncertainty is about $\pm 1/10$ of the range?
-$$\mu = 26.4 \pm 5 $$
+$$\mu = 81.5 \pm 20 $$
 }
 \end{column}
 \end{columns}

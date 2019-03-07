@@ -6,7 +6,7 @@ end = 50
 
 for(i in 1:end)
 {
-    rolls = c(rolls,51*runif(1))
+    rolls = c(rolls,203*runif(1))
     means = c(means,mean(rolls))
 }
 
