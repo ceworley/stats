@@ -1,0 +1,20 @@
+Now, imagine we sample from a new population/distribution, but we don't know the population parameters. What can we conclude?
+\begin{columns}
+\begin{column}{0.6\textwidth}
+\vspace{-20pt}
+\begin{center}
+\includegraphics[width=\textwidth]{4-1_var_in_est/figures/running_mean_4sided_die/running_weight.pdf}
+\end{center}
+\vspace{-30pt}
+\begin{center}
+\includegraphics[width=\textwidth]{4-1_var_in_est/figures/running_mean_4sided_die/weight_hist.pdf}
+\end{center}
+\end{column}
+\begin{column}{0.3\textwidth}
+\pause
+\soln{Well, our point estimate is $$\mu \approx \bar{x} = 26.4$$
+However, we want to also describe our uncertainty. To me, based on the previous slide, I'd guess the uncertainty is about $\pm 1/10$ of the range?
+$$\mu = 26.4 \pm 5 $$
+}
+\end{column}
+\end{columns}
