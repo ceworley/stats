@@ -40,6 +40,75 @@ $\:$ \\
 
 \end{frame}
 
+
+
+
+
+
+
+
+\begin{frame}
+
+Remember {\bf standard error}. \pause 
+
+We have a population with a mean $\mu$ and a standard deviation $\sigma$. \pause
+
+We take a sample of size $n$ and find the sample mean $\bar{x}$. \pause
+
+The standard error is calculated. $$SE = \frac{\sigma}{\sqrt{n}}$$ \pause
+
+There is a 68\% chance that $|\bar{x}-\mu| < SE$ and a 95\% chance that $|\bar{x}-\mu| < 2SE$.
+\pause
+
+A sampling distribution (distribution of sample means) is approximately normal! 
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{A running average}
+\includegraphics[scale=0.655]{4-2_conf_int/figures/run/running_die.pdf}
+\end{frame}
+
+
+\begin{frame}
+\includegraphics[scale=0.655]{4-2_conf_int/figures/run/running_die_overlay_lab1.pdf}
+68\% of data is within $\mu \pm SE$. 95\% of data is between $\mu \pm 2SE$.
+\end{frame}
+
+\begin{frame}
+\includegraphics[scale=0.6]{4-2_conf_int/figures/run/threedee.png}
+\end{frame}
+
+\begin{frame}
+\includegraphics[scale=0.5]{4-2_conf_int/figures/run/running_proportion.pdf}
+\end{frame}
+
+\begin{frame}
+\includegraphics[scale=0.5]{4-2_conf_int/figures/run/running_proportion_overlay.pdf}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Standard error in practice: confidence interval}
+In practice, we do not know $\mu$ or $\sigma$. We only have a single sample, which is characterized by $\bar{x}$ and $s$. \pause
+
+We estimate that $\sigma \approx s$. \pause
+
+We know that if we did repeat the sampling procedure many times, then 95\% of the time $|\bar{x}-\mu| < 2SE$. \pause
+
+Thus, we say we are 95\% confident that $\mu$ is within 2 SEs of $\bar{x}$. \pause
+
+To make frequentists happy, we do not say there is a 95\% chance that $\mu$ is within 2 SEs of $\bar{x}$. \pause
+
+Confidence intervals only try to capture the population parameter. A confidence interval says nothing about the confidence of capturing individual observations, a proportion of the observations, or about capturing point estimates. Confidence intervals only attempt to capture population parameters.
+
+\end{frame}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Constructing a confidence interval}
@@ -49,7 +118,7 @@ $\:$ \\
 \begin{frame}
 \frametitle{Average number of exclusive relationships}
 
-\dq{A random sample of 50 college students were asked how many exclusive relationships they have been in so far. This sample yielded a mean of 3.2 and a standard deviation of 1.74. Estimate the true average number of exclusive relationships using this sample.}
+\dq{A random sample of 50 college students was asked how many exclusive relationships they have been in so far. This sample yielded a mean of 3.2 and a standard deviation of 1.74. Estimate the true average number of exclusive relationships using this sample.}
 
 \pause 
 
@@ -57,10 +126,11 @@ $\:$ \\
 \[ \bar{x} = 3.2 \qquad s = 1.74 \]
 
 \pause
-
+\vspace{-0.25cm}
 The approximate 95\% confidence interval is defined as 
 \[ point~estimate \pm 2 \times SE \]
 
+\vspace{-0.25cm}
 \pause
 
 \vspace{-0.25cm}
@@ -124,7 +194,6 @@ Conditions when the point estimate = $\bar{x}$:
 
 \end{enumerate}
 
-$\:$ \\
 \pause
 
 \orange{Note:} We will discuss working with samples where $n < 30$ in the next chapter.
@@ -157,12 +226,27 @@ $\:$ \\
 \end{itemize}
 }
 {
-\includegraphics[width=\textwidth]{4-2_conf_int/figures/95PercentConfidenceInterval/95PercentConfidenceInterval}
+\includegraphics[width=0.7\textwidth]{4-2_conf_int/figures/95PercentConfidenceInterval/95PercentConfidenceInterval2}
 }
 
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+\frametitle{Same idea shown from running averages view.}
+\includegraphics[scale=0.5]{4-2_conf_int/figures/run/zoomed2.png}
+
+About 95\% of the time the population mean is withing 2 SE of the sample mean.
+\end{frame}
+
+
+
+
+
+
+
 
 \begin{frame}
 \frametitle{Width of an interval}
@@ -172,8 +256,6 @@ $\:$ \\
 \pause
 
 \soln{A wider interval.}
-
-$\:$ \\
 
 \pause
 
@@ -185,10 +267,10 @@ $\:$ \\
 \pause
 
 \soln{If the interval is too wide it may not be very informative.}
-
+{\scriptsize Image source: http://web.as.uky.edu/statistics/users/earo227/misc/garfield\_weather.gif}
 \end{frame}
 
-{\scriptsize Image source: http://web.as.uky.edu/statistics/users/earo227/misc/garfield\_weather.gif}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

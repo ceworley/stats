@@ -4,22 +4,22 @@
 
 % Option 1: Slides with solutions
 
-\documentclass[slidestop,compress,mathserif]{beamer}
-\newcommand{\soln}[1]{\textit{#1}}
-\newcommand{\solnGr}[1]{#1}
-\input{../lec_style.tex}
+%\documentclass[slidestop,compress,mathserif]{beamer}
+%\newcommand{\soln}[1]{\textit{#1}}
+%\newcommand{\solnGr}[1]{#1}
+%\input{../lec_style.tex}
 
 % Option 2: Handouts without solutions
 
-%\documentclass[11pt,containsverbatim,handout]{beamer}
-%\usepackage{pgfpages}
-%%\pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
-%%\pgfpagesuselayout{}[letterpaper,landscape,border shrink=5mm]
-%\newcommand{\soln}[1]{ }
-%\newcommand{\solnGr}{ }
-%%\newcommand{\soln}[1]{\textit{#1}}
-%%\newcommand{\solnGr}[1]{#1 }
-%\input{../lec_style_handouts.tex}
+\documentclass[11pt,containsverbatim,handout]{beamer}
+\usepackage{pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+%\pgfpagesuselayout{}[letterpaper,landscape,border shrink=5mm]
+\newcommand{\soln}[1]{ }
+\newcommand{\solnGr}{ }
+%\newcommand{\soln}[1]{\textit{#1}}
+%\newcommand{\solnGr}[1]{#1 }
+\input{../lec_style_handouts.tex}
 
 % Option 3: LARGE Handouts without solutions, high contrast 
 
@@ -39,7 +39,7 @@
 % Preamble
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title[Chp 4.1: Variability in estimates]{Chp 4.1: Variability in estimates}
+\title[Chp 4.2: Confidence Intervals]{Chp 4.2: Confidence Intervals}
 
 
 \begin{document}
@@ -49,8 +49,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\input{4-1_var_in_est/4-1_var_in_est }
-%\input{4-2_conf_int/4-2_conf_int}
+%\input{4-1_var_in_est/4-1_var_in_est }
+\input{4-2_conf_int/4-2_conf_int}
 %\input{4-3_hyp_test/4-3_hyp_test}
 %\input{4-4_clt/4-4_clt}
 %\input{4-5_inf_other_est/4-5_inf_other_est}
