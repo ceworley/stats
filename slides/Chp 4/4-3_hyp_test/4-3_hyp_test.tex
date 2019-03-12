@@ -9,7 +9,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}
-\frametitle{Remember when...}
+%\frametitle{Remember when...}
 
 Gender discrimination experiment:
 
@@ -33,10 +33,10 @@ Gender discrimination experiment:
 
 \pause
 
-Possible explanations:
+Possible explanations:\pause
 \begin{itemize}
-\item Promotion and gender are \hl{independent}, no gender discrimination, observed difference in proportions is simply due to chance. $\rightarrow$ \orange{null} - {\small (nothing is going on)}
-\item Promotion and gender are \hl{dependent}, there is gender discrimination, observed difference in proportions is not due to chance. $\rightarrow$ \orange{alternative} - {\small (something is going on)}
+\item Promotion and gender are \hl{independent}; there is no gender discrimination; observed difference in proportions is simply due to chance. $\rightarrow$ \orange{null} - {\small (nothing is going on)}
+\item Promotion and gender are \hl{dependent}; there is gender discrimination, observed difference in proportions is not due to chance. $\rightarrow$ \orange{alternative} - {\small (something is going on)}
 
 \end{itemize}
 
@@ -53,7 +53,7 @@ Possible explanations:
 
 \pause
 
-Since it was quite unlikely to obtain results like the actual data or something more extreme in the simulations (male promotions being 30\% or more higher than female promotions), we decided to reject the null hypothesis in favor of the alternative.
+Since it was quite unlikely to obtain results like the actual data or something more extreme in the simulations (male promotions being at least 30 percentage points higher than female promotions), we decided to reject the null hypothesis in favor of the alternative.
 
 \end{frame}
 
@@ -63,13 +63,14 @@ Since it was quite unlikely to obtain results like the actual data or something 
 \frametitle{Recap: hypothesis testing framework}
 
 \begin{itemize}
-\item We start with a \hl{null hypothesis ($H_0$)} that represents the status quo.
+\item We start with a \hl{null hypothesis ($H_0$)} that represents the status quo. (Difference [of means or proportions] due to chance.)
 \pause
-\item We also have an \hl{alternative hypothesis ($H_A$)} that represents our research question, i.e. what we're testing for.
+\item We also have an \hl{alternative hypothesis ($H_A$)} that represents our research question, i.e. what we're testing for. (Difference due to association between variables.)
 \pause
 \item We conduct a hypothesis test under the assumption that the null hypothesis is true, either via simulation or traditional methods based on the central limit theorem (coming up next...).
 \pause
-\item If the test results suggest that the data do not provide convincing evidence for the alternative hypothesis, we stick with the null hypothesis. If they do, then we reject the null hypothesis in favor of the alternative.
+%\item If the test results suggest that the data do not provide convincing evidence for the alternative hypothesis, we stick with the null hypothesis. If they do, then we reject the null hypothesis in favor of the alternative.
+\item If the difference is unusual under the null, we reject the null. (Unusual is measured with $z$ score and tail area.) Otherwise, we retain the null.
 \end{itemize}
 \pause
 We'll formally introduce the hypothesis testing framework using an example on testing a claim about a population mean.
@@ -84,8 +85,8 @@ We'll formally introduce the hypothesis testing framework using an example on te
 
 \begin{frame}
 \frametitle{Testing hypotheses using confidence intervals}
-
-\dq{Earlier we calculated a 95\% confidence interval for the average number of exclusive relationships college students have been in to be (2.7, 3.7). Based on this confidence interval, do these data support the hypothesis that college students on average have been in more than 3 exclusive relationships.}
+\vspace{-10pt}
+{\small Earlier we calculated a 95\% confidence interval for the average number of exclusive relationships college students have been in to be (2.7, 3.7). Based on this confidence interval, do these data support the hypothesis that college students on average have been in more than 3 exclusive relationships.}
 
 \pause
 
@@ -109,70 +110,106 @@ We'll formally introduce the hypothesis testing framework using an example on te
 
 \end{frame}
 
+
+
+\begin{frame}
+\frametitle{example study}
+On the Longfellow bridge, the speed limit is 25 miles per hour. A cycling advocate hopes to find evidence that cars speed on the bridge (but will look elsewhere if none exists... [this is a problem in research...]). The advocate decides to measure a random sample of car speeds and to apply a one-tailed test.\pause
+
+What are the relevant hypotheses? \pause
+
+\soln{null hypothesis, ~~$H_0$:~~ $\mu = 25$ } \pause 
+
+\soln{alternative hypothesis, ~~$H_a$:~~ $\mu > 25$ }
+\end{frame}
+
+\begin{frame}
+\frametitle{example study (fake data)}
+The advocate takes a sample of 80 cars, which yield a sample mean of 28 miles per hour and a standard deviation of 15 miles per hour. Does the advocate have significant evidence of speeding? \pause
+
+We wonder... maybe the true population mean is 25 mph and this sample mean of 28 mph is just due to natural fluctuation. \pause
+
+So, we want to know how common/uncommon this difference is from random fluctuation alone. \pause
+
+Luckily, sampling distributions are normal! So if we estimate that $\sigma \approx 15$ mph, we have everything we need to answer that question.
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Build the sampling distribution of the null hypothesis}
+The null hypothesis suggests that the population parameters are $\mu = 25$ and $\sigma \approx 15$. \pause
+
+What are the parameters of the null's {\bf sampling distribution}?
+\soln{$$\mu = 25$$} \pause
+\soln{$$SE = \frac{15}{\sqrt{80}} = 1.68$$}
+
+\end{frame}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}
-\frametitle{Number of college applications}
+%%\begin{frame}
+%%\frametitle{Number of college applications}
 
-\dq{{\small A similar survey asked how many colleges students applied to, and 206 students responded to this question. This sample yielded an average of 9.7 college applications with a standard deviation of 7. College Board website states that counselors recommend students apply to roughly 8 colleges.  Do these data provide convincing evidence that the average number of colleges all Duke students apply to is \emph{higher} than recommended?}}
+%%\dq{{\small A similar survey asked how many colleges students applied to, and 206 students responded to this question. This sample yielded an average of 9.7 college applications with a standard deviation of 7. College Board website states that counselors recommend students apply to roughly 8 colleges.  Do these data provide convincing evidence that the average number of colleges all Duke students apply to is \emph{higher} than recommended?}}
 
-\vfill
+%%\vfill
 
-\ct{\webURL{http://www.collegeboard.com/student/apply/the-application/151680.html}}
+%%\ct{\webURL{http://www.collegeboard.com/student/apply/the-application/151680.html}}
 
-\end{frame}
+%%\end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}
-\frametitle{Setting the hypotheses}
+%%\begin{frame}
+%%\frametitle{Setting the hypotheses}
 
-\begin{itemize}
+%%\begin{itemize}
 
-\item The \hl{parameter of interest} is the average number of schools applied to by \underline{all} Duke students.
+%%\item The \hl{parameter of interest} is the average number of schools applied to by \underline{all} Duke students.
 
-\pause
+%%\pause
 
-\item There may be two explanations why our sample mean is higher than the recommended 8 schools.
-\begin{itemize}
-\item The true population mean is different.
-\item The true population mean is 8, and the difference between the true population mean and the sample mean is simply due to natural sampling variability.
-\end{itemize}
+%%\item There may be two explanations why our sample mean is higher than the recommended 8 schools.
+%%\begin{itemize}
+%%\item The true population mean is different.
+%%\item The true population mean is 8, and the difference between the true population mean and the sample mean is simply due to natural sampling variability.
+%%\end{itemize}
 
-\pause
+%%\pause
 
-\item We start with the assumption the average number of colleges Duke students apply to is 8 (as recommended)
-\[ \mathhl{H_0:}~\mu = 8 \]
+%%\item We start with the assumption the average number of colleges Duke students apply to is 8 (as recommended)
+%%\[ \mathhl{H_0:}~\mu = 8 \]
 
-\pause
+%%\pause
 
-\item We test the claim that the average number of colleges Duke students apply to is greater than 8
-\[ \mathhl{H_A:}~\mu > 8 \]
+%%\item We test the claim that the average number of colleges Duke students apply to is greater than 8
+%%\[ \mathhl{H_A:}~\mu > 8 \]
 
-\end{itemize}
+%%\end{itemize}
 
-\end{frame}
+%%\end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Conditions for inference}
+%%\subsection{Conditions for inference}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}
-\frametitle{Number of college applications - conditions}
+%%\begin{frame}
+%%\frametitle{Number of college applications - conditions}
 
-\pq{Which of the following is \emph{not} a condition that needs to be met to proceed with this hypothesis test?}
+%%\pq{Which of the following is \emph{not} a condition that needs to be met to proceed with this hypothesis test?}
 
-\begin{enumerate}[(a)]
-\item Students in the sample should be independent of each other with respect to how many colleges they applied to.
-\item Sampling should have been done randomly.
-\item The sample size should be less than 10\% of the population of all Duke students.
-\solnMult{ There should be at least 10 successes and 10 failures in the sample.}
-\item The distribution of the number of colleges students apply to should not be extremely skewed.
-\end{enumerate}
+%%\begin{enumerate}[(a)]
+%%\item Students in the sample should be independent of each other with respect to how many colleges they applied to.
+%%\item Sampling should have been done randomly.
+%%\item The sample size should be less than 10\% of the population of all Duke students.
+%%\solnMult{ There should be at least 10 successes and 10 failures in the sample.}
+%%\item The distribution of the number of colleges students apply to should not be extremely skewed.
+%%\end{enumerate}
 
-\end{frame}
+%%\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -183,24 +220,22 @@ We'll formally introduce the hypothesis testing framework using an example on te
 \begin{frame}
 \frametitle{Test statistic}
 
-In order to evaluate if the observed sample mean is unusual for the hypothesized sampling distribution, we determine how many standard errors away from the null it is, which is also called the \hl{test statistic}.
+%In order to evaluate if the observed sample mean is unusual for the hypothesized sampling distribution, we determine how many standard errors away from the null it is, which is also called the \hl{test statistic}.
 
-\pause
+The {\bf test statistic} is how many standard errors the null's population mean and the observed sample mean are from each other. \pause
+
+The test statistic is a measure of how unusual the observed sample mean would be if the null's hypothesis were true. \pause
 
 \twocol{0.55}{0.45}{
 \begin{center}
-\includegraphics[width=\textwidth]{4-3_hyp_test/figures/app/app_z}
-\end{center}
-\pause
-\[ \bar{x} \sim N \pr{ \mu = 8, SE = \frac{7}{\sqrt{206}} = 0.5 } \]
-\pause
-\[ Z = \frac{9.7 - 8}{0.5} = 3.4 \]
+\includegraphics[width=0.9\textwidth]{4-3_hyp_test/figures/null.png}
+\end{center} \pause
 }
 {
-\pause
-\dq{The sample mean is 3.4 standard errors away from the hypothesized value. Is this considered unusually high? That is, is the result \hl{statistically significant}?}
-\pause
-\soln{Yes, and we can quantify how unusual it is using a p-value.}
+   In this case, the test statistic is $z = \frac{28-25}{1.68} = 1.79$. \pause
+   \vspace{10pt}
+      
+   We quantify how unusual this is with a $p$-value.
 }
 
 \end{frame}
@@ -229,45 +264,42 @@ In order to evaluate if the observed sample mean is unusual for the hypothesized
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}
-\frametitle{Number of college applications - p-value}
-
-\hl{p-value:} probability of observing data at least as favorable to $H_A$ as our current data set (a sample mean greater than 9.7), if in fact $H_0$ were true (the true population mean was 8).
-
+\frametitle{Speeding example}
+$p$-value: The probability of observing data at least as favorable to $H_A$ as our current data set (a sample mean greater than 28) if in fact $H_0$ were true (the population mean was 25).
 \begin{center}
-\includegraphics[width=0.55\textwidth]{4-3_hyp_test/figures/app/app_pval_gr}
-\end{center}
-
+\includegraphics[width=0.9\textwidth]{4-3_hyp_test/figures/null.png}
+\end{center} 
 \pause
 
-\[ P(\bar{x} > 9.7~|~\mu = 8) = P(Z > 3.4) = 0.0003 \]
+$$P(\bar{x} > 28 | \mu = 25) = P(Z > 1.79) = 0.0375 $$
 
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}
-\frametitle{Number of college applications - Making a decision}
+\frametitle{Making a decision}
 
 \begin{itemize}
 
-\item p-value = 0.0003
+\item p-value = 0.0375
 
 \pause
 
 \begin{itemize}
-\item If the true average of the number of colleges Duke students applied to is 8, there is only 0.03\% chance of observing a random sample of 206 Duke students who on average apply to 9.7 or more schools.
+\item If the true average speed 25, there is only 3.25\% chance of observing a random sample of 80 drivers who on average drive 28 mph or more.
 \pause
-\item This is a pretty low probability for us to think that a sample mean of 9.7 or more schools is likely to happen simply by chance.
+\item This is a pretty low probability for us to think that a sample mean of 28 mph is likely to happen simply by chance.
 \end{itemize}
 
 \pause
 \item Since p-value is \orange{low} (lower than 5\%) we \orange{reject $H_0$}.
 
 \pause
-\item The data provide convincing evidence that Duke students apply to more than 8 schools on average.
+\item The data provide convincing evidence that cars speed.
 
 \pause
-\item The difference between the null value of 8 schools and observed sample mean of 9.7 schools is \orange{not due to chance} or sampling variability.
+\item The difference between the null value of 25 mph and observed sample mean of 28 mph is \orange{not due to chance} or sampling variability.
 
 \end{itemize}
 
@@ -280,7 +312,7 @@ In order to evaluate if the observed sample mean is unusual for the hypothesized
 
 \pq{{\footnotesize A poll by the National Sleep Foundation found that college students average about 7 hours of sleep per night. A sample of 169 college students taking an introductory statistics class yielded an average of 6.88 hours, with a standard deviation of  0.94 hours. Assuming that this is a random sample representative of all college students {\scriptsize \textit{(bit of a leap of faith?)}}, a hypothesis test was conducted to evaluate if college students on average sleep \emph{less than} 7 hours per night. The p-value for this hypothesis test is 0.0485. Which of the following is correct?}}
 
-\begin{enumerate}[(a)]
+\begin{enumerate}[(a)] \small
 \item Fail to reject $H_0$, the data provide convincing evidence that college students sleep less than 7 hours on average.
 \solnMult{ Reject $H_0$, the data provide convincing evidence that college students sleep less than 7 hours on average. }
 \item Reject $H_0$, the data prove that college students sleep more than 7 hours on average.
