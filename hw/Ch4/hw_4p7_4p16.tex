@@ -1,0 +1,92 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{multicol}
+\usepackage{listings}
+\lstset{ 
+basicstyle = \ttfamily,
+showstringspaces=false,
+columns=fullflexible,
+frame = single,
+literate={*}{{\char42}}1
+         {-}{{\char45}}1
+         {"}{{\fontencoding{T1}\selectfont\textquotedbl}}1
+         {'}{{\fontencoding{T1}\selectfont\textquotesingle}}1
+}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{multirow,array}
+\usepackage{newtxtext,newtxmath}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textsc{BHCC Mat-181}}
+\chead{\textsc{Answers}}
+\rhead{\textsc{HW Exercises 4.7-4.16}}
+\rfoot{Page \thepage ~of \pageref{LastPage}}
+\setenumerate[1]{label={\bf 4.\theenumi: }}
+\setenumerate[2]{label={\bf (\theenumii): }}
+\setenumerate[3]{label={\bf \theenumiii: }}
+
+\begin{document}
+\newcommand{\N}[2]{\mathcal{N}\big(#1,~#2\big)}
+\newcommand{\Geo}[1]{\texttt{Geo}\big(#1\big)}
+\newcommand{\B}[2]{\mathcal{B}\big(#1,~#2\big)}
+\newcommand{\AND}{\textsc{~and~}}
+\newcommand{\OR}{\textsc{~or~}}
+\newcommand{\zs}{z^{\star}}
+
+\begin{enumerate}
+\setcounter{enumi}{6}
+%%%%%%%%%%%%%% 4.7
+\item $CI = 0.45 \pm (1.96)(0.012) = (0.426,\,0.474)$\\
+We are 95\% confident the true population proportion is between 42.6\% and 47.4\%.
+
+%%%%%%%%%%%%% 4.8
+\item We need to determine $z^{\star}$ such that $P(|Z| \le z^{\star}) = 0.99$. We draw a sketch of a centrally symmetric area of 0.99, leaving two tails, each with 0.005 area. We can use the $z$ table in reverse to find $\zs$ such that $P(Z<\zs) = 0.995$.  We determine that $\zs = 2.58$. 
+$$CI = 0.52 \pm (2.58)(0.024) = (0.458,\,0.582)$$
+We are 99\% confident that the true population proportion is between 0.458 and 0.582.
+
+%%%%%%%%%%%% 4.9
+\item \begin{enumerate}
+\item False, we only have some level of confidence.
+\item True, this is was a condidence interval is.
+\item True, the entire confidence interval is below 50\%.
+\item False. This is not what standard error is. Standard error is the standard deviation of a sampling distribution. The standard error comes from the random samples being different, not from the individuals.
+\end{enumerate}
+
+
+%%%%%%%%%%%% 4.10
+\item \begin{enumerate}
+\item False. The confidence interval straddles the 50\% mark.
+\item False. If the poll reached 97.6\% of users, the standard error would be tiny (of course we are not sure how to deal with this situation exactly because it would mean sampling more than 10\% of the population). Standard error comes from differences between random samples. It does decrease with larger sample sizes, but it is often not even a percentage... 
+\item False. A higher sample size gives a smaller standard error.
+\item False. A higher confidence level has a wider confidence interval.
+\end{enumerate}
+
+%%%%%%%%%%%% 4.11
+\item \begin{enumerate}
+\item We are 95\% confident that the true population mean is between 1.38 and 1.92 hours.
+\item The confidence level is higher.
+\item Larger sample size leads to smaller margin of error.
+\end{enumerate}
+
+\item \begin{enumerate}
+\item .
+\end{enumerate}
+
+\item \begin{enumerate}
+\item .
+\end{enumerate}
+
+
+\end{enumerate}
+\end{document}

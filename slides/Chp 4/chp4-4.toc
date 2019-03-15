@@ -1,0 +1,2 @@
+\babel@toc {english}{}
+\beamer@sectionintoc {1}{Examining the Central Limit Theorem}{1}{0}{1}
