@@ -1,0 +1,37 @@
+Area under standard normal distribution
+
+Normal probabilities (need to find z scores)
+
+Comparing unusualness (normal)
+
+Finding percentile scores/cutoff scores
+    IQR
+
+Finding standard deviation from two scores' percentiles
+    mean = a
+    75th percentile = b
+    normal
+
+68-95-99.7 Rule (the empirical rule)
+    Used to judge normalness (along with QQ plots)
+
+Bernoulli
+Geometric
+Binomial
+Proportion sampling
+Mean sampling
+Normal
+
+drawing with or without replacement
+
+normal approximation to binomial distribution
+
+
+inference
+    point estimate
+    standard error
+    standard deviation
+    confidence interval
+    hypothesis testing (one sample z test)
+
+

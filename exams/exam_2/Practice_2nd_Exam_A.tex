@@ -1,0 +1,235 @@
+\documentclass[12pt,letterpaper,addpoints]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{multicol}
+\usepackage{multirow,array}
+\usepackage{newtxtext,newtxmath}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\firstpageheader{}{}{\includegraphics[scale=0.5]{BHCClogoBW.jpg}\hspace{-40pt}\vspace{-50pt}}
+\firstpagefooter{}{}{Page \thepage ~of \pageref{LastPage}}
+\runningheader{ \textsc{Math 181 2nd Exam Practice A}}{}{ \textsc{Spring 2019}}%{\includegraphics[scale=.5]{BHCClogoBW.jpg}\vspace{-10pt}}%\hspace{-60pt}\vspace{-10pt}}
+\runningheadrule
+\runningfooter{}{}{Page \thepage ~of \pageref{LastPage}}
+\renewcommand{\thequestion}{{\bf Q\arabic{question}}}
+%\renewcommand{\questionlabel}{{\thequestion .}}
+%\pointformat{\fbox{\themarginpoints \,pt}}
+%\pointsinrightmargin
+%\setlength{\rightpointsmargin}{1.5cm}
+%\pointsinmargin
+%\setlength{\marginpointssep}{10pt}
+
+\begin{document}
+
+\newcommand{\AND}{~\textsc{and}~}
+\newcommand{\OR}{~\textsc{or}~}
+
+\begin{center}
+\text{ }\\
+\vspace{40pt}
+\textsc{{\Huge Math 181 2nd Exam Practice A}}\\\vspace{5pt}
+\textsc{{\large Spring 2019}}\\
+\vspace{60pt}
+\makebox[\textwidth]{\large Name:\enspace\hrulefill}\\
+\vspace{40pt}
+\fbox{\fbox{\begin{minipage}{6in}
+\vspace{0.2in}
+\begin{itemize}
+\item Write your {\bf full name} on the line above.
+\item Show your work. Incorrect answers with work can receive partial credit.
+\item Attempt every question; showing you understand the question earns some credit.
+\item If you run out of room for an answer, continue on the back of the page. Before doing so, write ``see back'' with a circle around it.
+\item You can use 1 page (front and back) of notes.
+\item You can use (and probably need) a calculator.
+\item You can use the Geogebra Scientific Calculator instead of a calculator. You need to put your phone on {\bf airplane mode} and then within the application, start {\bf exam mode}; you should see a green bar with a timer counting up.
+\item If a question is confusing or ambiguous, please ask for clarification; however, you will not be told how to  answer the question.
+\item {\bf Box your final answer}.
+\item A formula sheet is attached to this test.
+\vspace{0.2in}
+\end{itemize}
+\end{minipage}
+\begin{minipage}{0.2in}\text{ }\end{minipage}}}
+\vfill
+Do not write in this grade table.\\
+\gradetable[h][questions]\\
+\vfill
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\N}[2]{\mathcal{N}\big(#1\,,~#2\big)}
+\newcommand{\Bern}[1]{\texttt{Bern}\big(#1\big)}
+\newcommand{\Geo}[1]{\texttt{Geo}\big(#1\big)}
+\newcommand{\B}[2]{\mathcal{B}\big(#1\,,~#2\big)}
+\newcommand{\Sampp}[2]{\texttt{Samp}_{\hat{p}}\big(#1,~#2\big)}
+%\newcommand{\Sampx}[2]{\texttt{Samp}_{\hat{p}}\big(#1,~#2\big)}
+
+\newpage
+
+\begin{multicols}{2}
+
+\rhead{\textsc{Definitions and Formulas}}
+
+{\bf Normal Distribution:}\\
+$X \sim \N{\mu}{\sigma}$\\
+$\mu = \text{ population mean} $\\
+$\sigma = \text{ population standard deviation} $\\
+$x = \text{ possible value of }X $\\
+$P = \text{ percentile of } x$
+\begin{align*}
+P &= \Phi(x)\\
+x &= \Phi^{-1}(P)
+\end{align*}
+
+{\bf Bernoulli Distribution:}\\
+$X \sim \Bern{p} $\\
+$X = \text{ 0 for fail or 1 for success}$\\
+$p = \text{ probability of success}$
+\begin{align*}
+P(X=0) ~&=~ 1-p \\
+P(X=1) ~&=~ p \\
+\mu ~&=~ p\\
+\sigma ~&=~ \sqrt{p(1-p)}
+\end{align*}
+
+{\bf Geometric Distribution:}\\
+$X \sim \Geo{p}$ \\
+$X = \text{ number of trials until first success}$\\
+$p = \text{ probability of success on each trial}$\\
+$n = \text{ a possible number of trials}$
+\begin{align*}
+P(X=n) ~&=~ (1-p)^{n-1}(p)\\
+\mu ~&=~ \frac{1}{p}\\
+\sigma ~&=~ \sqrt{\frac{1-p}{p^2}} 
+\end{align*}
+
+{\bf Binomial Distribution:}\\
+$X \sim \B{n}{p}$\\
+$X = \text{ number of successes from $n$ trials} $\\
+$p = \text{ probability of success on each trial}$\\
+$n = \text{ number of trials}$\\
+$k = \text{ a possible number of successes}$
+\begin{align*}
+P(X=k) ~&=~ {n \choose k} p^k (1-p)^{n-k}\\
+\mu ~&=~ np\\
+\sigma ~&=~ \sqrt{np(1-p)} 
+\end{align*}
+If $np \ge 10$ and $n(1-p) \ge 10$, then
+$$X \sim \N{\mu}{\sigma} $$
+Continuity correction:
+$$P(X \le k) ~\approx~ \Phi\left(\frac{k+0.5-\mu}{\sigma}\right)$$
+$$P(X < k) ~\approx~ \Phi\left(\frac{k-0.5-\mu}{\sigma}\right)$$
+
+
+%{\bf Proportion-Sampling Distribution:}\\
+%%$\hat{p} \sim \Sampp{n}{p}$\\
+%$\hat{p} = \text{ sample proportion} $\\
+%$p = \text{ population proportion}$\\
+%$n = \text{ number of trials}$\\
+%$y = \text{ a possible sample proportion}$
+%\begin{align*}
+%P\left( \hat{p}=y \right) ~&=~ {n \choose ny} p^{ny} (1-p)^{n-ny}\\
+%\mu ~&=~ p\\
+%\sigma ~&=~ \sqrt{\frac{p(1-p)}{n}} 
+%\end{align*}
+%If $np \ge 10$ and $n(1-p) \ge 10$, then
+%$$\hat{p} \sim \N{\mu}{\sigma} $$
+%Continuity correction:
+%$$P(\hat{p} \le y) ~\approx~ \Phi\left(\frac{ny+0.5-\mu}{n\sigma}\right)$$
+%$$P(\hat{p} < y) ~\approx~ \Phi\left(\frac{ny-0.5-\mu}{n\sigma}\right)$$
+
+{\bf Mean-Sampling Distribution:}\\
+$\bar{X} = \text{ sample mean}$\\
+$s = \text{ sample standard deviation}$\\
+$n = \text{ sample size}$\\
+$\mu = \text{ population mean}$\\
+$\sigma = \text{ population standard deviation}$\\
+$SE = \text{ standard error}$
+$$SE = \frac{\sigma}{\sqrt{n}} $$
+If $n\ge 30$ (or if population is normal) then:
+$$\bar{X} \sim \N{\mu}{SE} $$
+
+{\bf Confidence Interval:}\\
+$CI = \text{ confidence interval}$\\
+$\gamma = \text{ confidence level}$\\
+$\bar{x} = \text{ sample mean}$ \\
+$s = \text{ sample standard deviation}$ 
+\begin{align*}
+z^{\star} &= \Phi^{-1}\left(\frac{\gamma+1}{2} \right) \\
+SE &\approx \frac{s}{\sqrt{n}}\\
+CI &= \bar{x} \pm z^{\star} SE
+\end{align*}
+
+
+\end{multicols}
+
+
+
+%\newpage
+%
+%\rhead{\textsc{Definitions and Formulas}}
+%{\bf Sample statistics:}\vspace{-10pt}
+%\begin{multicols}{2}\noindent
+%$n=\text{sample size} $\\
+%$x_i=\text{the $i$th value in a sample} $\\
+%$\bar x = \text{sample mean}$\\
+%$s = \text{sample standard deviation}$\\\\
+%$\bar x = \cfrac{\sum_{i=1}^n x_i}{n}$
+%
+%\columnbreak \noindent
+%$Q_1$ = first quartile\\
+%$m$ = median\\
+%$Q_3$ = third quartile\\
+%IQR = inter-quartile range = $Q3-Q1$\\\\
+%$s = \sqrt{\cfrac{\sum_{i=1}^n (x_i-\bar x)^2}{n-1}}$ 
+%\end{multicols}
+%
+%{\bf Population parameters:}\\
+%$\mu = \text{population mean}$\\
+%$\sigma = \text{population standard deviation}$\\
+%
+%{\bf Probability:}\\
+%$\Omega = \text{set of all possible equally likely outcomes}$\\
+%$A = \text{event A, a set of outcomes}$\\
+%$A^c = \text{The complement of }A$\\
+%$B = \text{event B, another set of outcomes}$\\
+%$|A| = \text{size of set, number of outcomes in } A$\\
+%$P(A) = \text{probability of }A$\\
+%$P(A \AND B) = \text{probability of both $A$ and $B$}$\\
+%$P(A \OR B) = \text{probability of either $A$ or $B$ (or both)}$\\
+%$P(A | B) = \text{probability of $A$ given $B$}$\\\\
+%$P(A) = \cfrac{|A|}{|\Omega|}$\\\\
+%$0 \le P(A) \le 1$\\
+%$P(A \AND B) = P(A) \cdot P(B|A)$\\
+%$P(A \OR B) = P(A) + P(B) - P(A\AND B)$\\
+%$P(A^c) = 1 - P(A)$
+%\\\\
+%$A$, $B$ are disjoint (mutually exclusive) ~~$\iff~~P(A\AND B) = 0$\\
+%$A$, $B$ are non-disjoint ~~$\iff~~P(A\AND B) > 0$\\
+%$A$, $B$ are exhaustive ~~$\iff~~P(A\OR B) = 1$\\
+%$A$, $B$ are complements ~~$\iff$~~ $A$, $B$ are disjoint and exhaustive ~~$\iff$~~ $B=A^c$\\
+%$A$, $B$ are independent ~~$\iff~~P(A\AND B) = P(A)\times P(B) ~~\iff~~ P(A|B)=P(A)$\\
+%
+%{\bf Random variables and distributions:}\\
+%$X=$ random variable \\
+%$x_i=$ the $i$th possible value of $X$. (Notice different meaning here {vs.} sample statistics.)\\
+%$k=$ number of possible values of $X$.\\
+%$E(X)=\mu=$ expected value of $X$\\
+%$\sigma=$ standard deviation of $X$\\
+%$\mu = \sum_{i=1}^k  x_i \cdot P(X=x_i) $\\
+%$\sigma = \sqrt{\sum_{i=1}^k (x_i-\mu)^2 \cdot P(X=x_i)}$
+
+
+\newpage
+\lhead{\textsc{Math 181}}
+\rhead{\textsc{Second Exam Practice A}}
+\begin{questions}
+\question[10] Hi
+\end{questions}
+\end{document}
