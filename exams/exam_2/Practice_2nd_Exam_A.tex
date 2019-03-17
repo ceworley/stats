@@ -74,17 +74,20 @@ Do not write in this grade table.\\
 
 \begin{multicols}{2}
 
-\rhead{\textsc{Definitions and Formulas}}
+%\rhead{\textsc{Definitions and Formulas}}
 
 {\bf Normal Distribution:}\\
 $X \sim \N{\mu}{\sigma}$\\
 $\mu = \text{ population mean} $\\
 $\sigma = \text{ population standard deviation} $\\
 $x = \text{ possible value of }X $\\
-$P = \text{ percentile of } x$
+$\ell = \text{ percentile of } x \text{ (left area)}$\\
+$\Phi(z) = \text{ standard normal cumulative function}$
 \begin{align*}
-P &= \Phi(x)\\
-x &= \Phi^{-1}(P)
+z &= \frac{x-\mu}{\sigma}\\
+P(X < x) &= \Phi(z)\\
+\ell &= \Phi(z)\\
+z &= \Phi^{-1}(\ell)
 \end{align*}
 
 {\bf Bernoulli Distribution:}\\
@@ -109,6 +112,19 @@ P(X=n) ~&=~ (1-p)^{n-1}(p)\\
 \sigma ~&=~ \sqrt{\frac{1-p}{p^2}} 
 \end{align*}
 
+{\bf Mean-Sampling Distribution:}\\
+$\bar{X} = \text{ sample mean}$\\
+$s = \text{ sample standard deviation}$\\
+$n = \text{ sample size}$\\
+$\mu = \text{ population mean}$\\
+$\sigma = \text{ population standard deviation}$\\
+$SE = \text{ standard error}$
+$$SE = \frac{\sigma}{\sqrt{n}} $$
+If $n\ge 30$ (or if population is normal) then:
+$$\bar{X} \sim \N{\mu}{SE} $$
+
+\columnbreak
+
 {\bf Binomial Distribution:}\\
 $X \sim \B{n}{p}$\\
 $X = \text{ number of successes from $n$ trials} $\\
@@ -124,7 +140,7 @@ If $np \ge 10$ and $n(1-p) \ge 10$, then
 $$X \sim \N{\mu}{\sigma} $$
 Continuity correction:
 $$P(X \le k) ~\approx~ \Phi\left(\frac{k+0.5-\mu}{\sigma}\right)$$
-$$P(X < k) ~\approx~ \Phi\left(\frac{k-0.5-\mu}{\sigma}\right)$$
+
 
 
 %{\bf Proportion-Sampling Distribution:}\\
@@ -144,16 +160,7 @@ $$P(X < k) ~\approx~ \Phi\left(\frac{k-0.5-\mu}{\sigma}\right)$$
 %$$P(\hat{p} \le y) ~\approx~ \Phi\left(\frac{ny+0.5-\mu}{n\sigma}\right)$$
 %$$P(\hat{p} < y) ~\approx~ \Phi\left(\frac{ny-0.5-\mu}{n\sigma}\right)$$
 
-{\bf Mean-Sampling Distribution:}\\
-$\bar{X} = \text{ sample mean}$\\
-$s = \text{ sample standard deviation}$\\
-$n = \text{ sample size}$\\
-$\mu = \text{ population mean}$\\
-$\sigma = \text{ population standard deviation}$\\
-$SE = \text{ standard error}$
-$$SE = \frac{\sigma}{\sqrt{n}} $$
-If $n\ge 30$ (or if population is normal) then:
-$$\bar{X} \sim \N{\mu}{SE} $$
+
 
 {\bf Confidence Interval:}\\
 $CI = \text{ confidence interval}$\\
@@ -166,6 +173,18 @@ SE &\approx \frac{s}{\sqrt{n}}\\
 CI &= \bar{x} \pm z^{\star} SE
 \end{align*}
 
+{\bf Hypothesis testing:}\\
+$H_0:~~~\mu = \mu_0$\\
+$H_A:~~~\mu \ne \mu_0$\\
+$\bar{x} = \text{ a possible/specific/observed sample mean}$\\
+$s = \text{ sample standard deviation}$\\
+$\alpha = \text{ significance level} $
+\begin{align*}
+\sigma &\approx s\\
+p\text{-value } &= P\left(\lvert Z \rvert > \left| \frac{\bar{x}-\mu_0}{SE} \right|  \right)\\
+&= \Phi\left( \left| \frac{\bar{x}-\mu_0}{SE} \right| \right) - \Phi\left( -\left| \frac{\bar{x}-\mu_0}{SE} \right| \right)
+\end{align*}
+If $p$-value $< \alpha$, then reject $H_0$, else retain $H_0$.
 
 \end{multicols}
 
@@ -227,9 +246,48 @@ CI &= \bar{x} \pm z^{\star} SE
 
 
 \newpage
-\lhead{\textsc{Math 181}}
-\rhead{\textsc{Second Exam Practice A}}
+
 \begin{questions}
-\question[10] Hi
+\question[10] Brood XIV is a population of 17-year cicadas in eastern United States, including Massachusetts. The juvenile lifespan is (approximately) normally distributed with mean of 16.8 years and standard deviation of 0.1 years.  
+\begin{parts}
+\part Let $X\sim \N{16.8}{0.1}$. What is the probability that $X$ is larger than $16.7$?
+\vfill
+\part What is the IQR of juvenile lifespans?
+\vfill
+\end{parts}
+
+\newpage
+
+\question[10] A 20-sided die (icosahedron) has a 5\% chance of landing on each side. Imagine that only one side is a success and the rest are fails.
+\begin{parts}
+\part What is the chance the first success happens on the third roll?
+\vfill
+\part What is the chance of getting exactly 5 successes in 100 rolls?
+\vfill
+\part What is the chance of getting between at least 10 and less than 30 successes in 300 trials?
+\vfill
+\end{parts}
+
+\newpage
+
+\question[10] You collect 45 measurements with a mean of 88.5 mm and a standard deviation of 11.0 mm.
+\begin{parts}
+\part Determine a 90\% confidence interval.
+\vfill
+\part Determine a 99\% confidence interval.
+\vfill
+\part If a normally distributed population has a mean of 90 and a standard deviation of 11, what is the chance that 45 measurements will have a mean lower than 88.5?
+\vfill
+\end{parts}
+
+\newpage
+
+\question[10] You had been told that adult elephants have a mean weight of 255 kg. You decided to measure the weights of 50 random elephants and run a hypothesis test with a significance level of 0.05.
+\\
+Your sample has a mean of 249.8 kg and a standard deviation of 12.34 kg. What is your conclusion and why? Show your work for full credit.
+
+
+
+
 \end{questions}
 \end{document}
