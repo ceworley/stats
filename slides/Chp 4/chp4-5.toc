@@ -1,0 +1,7 @@
+\babel@toc {english}{}
+\beamer@sectionintoc {1}{Inference for other estimators}{1}{0}{1}
+\beamer@subsectionintoc {1}{1}{Confidence intervals for nearly normal point estimates}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Hypothesis testing for nearly normal point estimates}{6}{0}{1}
+\beamer@subsectionintoc {1}{3}{Non-normal point estimates}{14}{0}{1}
+\beamer@subsectionintoc {1}{4}{When to retreat}{15}{0}{1}
+\beamer@subsectionintoc {1}{5}{Statistical significance versus practical significance}{16}{0}{1}

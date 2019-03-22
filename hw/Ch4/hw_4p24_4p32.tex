@@ -1,0 +1,162 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{multicol}
+\usepackage{listings}
+\lstset{ 
+basicstyle = \ttfamily,
+showstringspaces=false,
+columns=fullflexible,
+frame = single,
+literate={*}{{\char42}}1
+         {-}{{\char45}}1
+         {"}{{\fontencoding{T1}\selectfont\textquotedbl}}1
+         {'}{{\fontencoding{T1}\selectfont\textquotesingle}}1
+}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{multirow,array}
+\usepackage{newtxtext,newtxmath}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textsc{BHCC Mat-181}}
+\chead{\textsc{Answers}}
+\rhead{\textsc{HW Exercises 4.24-4.32}}
+\rfoot{Page \thepage ~of \pageref{LastPage}}
+\setenumerate[1]{label={\bf 4.\theenumi: }}
+\setenumerate[2]{label={\bf (\theenumii): }}
+\setenumerate[3]{label={\bf \theenumiii: }}
+
+\begin{document}
+\newcommand{\N}[2]{\mathcal{N}\big(#1,~#2\big)}
+\newcommand{\Geo}[1]{\texttt{Geo}\big(#1\big)}
+\newcommand{\B}[2]{\mathcal{B}\big(#1,~#2\big)}
+\newcommand{\AND}{\textsc{~and~}}
+\newcommand{\OR}{\textsc{~or~}}
+\newcommand{\zs}{z^{\star}}
+
+\begin{enumerate}
+\setcounter{enumi}{23}
+
+\item \begin{enumerate}
+\item Yep. The sample is random. The size of the sample is not larger than 10\% of the population (children in a large city), so the draws are independent. The population data does not seem very skewed, nor do we have reason to suspect it is skewed.
+\item Okay, but maybe children of this city are not representative of children of the online article. It should say ``the average age at which gifted children in this city first count to 10''.  Anyway, lets perform the hypothesis test.\\
+We state the hypotheses.
+$$H_0:~~\mu=32$$
+$$H_A:~~\mu<32$$
+We find the standard error.
+$$SE = \frac{4.31}{\sqrt{36}} = 0.718$$
+We find the $z$-score.
+$$z = \frac{30.69-32}{0.718} = -1.82 $$
+We are doing a left-tail test because the alternative is $<$, so the $p$-value is a left area.
+$$p\text{-value } = P(Z<-1.82) = 0.034 $$
+The $p$-value is less than our significance level (0.10), so we reject the null. We conclude that gifted children in this city on average count to ten before 32 months.
+\item We think that the null population $X\sim \N{32}{4.31}$ only produces means as low as (or lower than) 30.69 about 3.4\% of the time. 
+\item We determine $z^\star$ such that $P(|Z|<z^\star) = 0.9$ which implies $P(Z<z^\star) = 0.95$.
+$$z^\star = \Phi^{-1}(0.95) = 1.64 $$
+We use the confidence interval formula.
+$$CI ~~=~~ \bar{x} \pm z^\star SE  ~~=~~ 30.69 \pm (1.64)(0.718)$$
+$$CI = (29.5,\,31.9)$$
+\item Yes, because our confidence interval does not include 32. Both strategies suggest the sample did not come from a population with $\mu=32$ and $\sigma=4.31$.
+\end{enumerate}
+
+\item \begin{enumerate}
+\item We need random sampling, independence, sample size over 30, and the population to not have a strong skew. The sample size is surely less than 10\% of all ER visits. I don't have any reason to think wait times would have a strong skew, so we will assume the skew is not too strong.
+\item We state the hypotheses.
+$$H_0: ~~ \mu = 127 $$
+$$H_A: ~~ \mu \ne 127 $$
+We calculate the standard error.
+$$SE ~~=~~ \frac{39}{\sqrt{64}} ~~=~~ 4.875 $$
+We calculate a $z$-score.
+$$z = \frac{137.5-127}{4.875} = 2.15 $$
+We calculate the two-tailed $p$-value.
+$$p\text{-value} ~~=~~ P(|Z|<2.15) ~~=~~ 2P(Z<-2.15) ~~=~~ 2\Phi(-2.15) ~~=~~ 0.0316 $$
+We compare the $p$-value to $\alpha$.
+$$0.0316 < 0.05 $$
+Because $p$-value $< \alpha$, we reject the null hypothesis. We conclude that the average wait time has increased.
+\item The conclusion would change: we would retain the null. This is because 0.0316 is larger than 0.01.
+\end{enumerate}
+
+\item \begin{enumerate}
+\item We state the hypotheses.
+$$H_0:~~\mu = 100$$
+$$H_A:~~\mu \ne 100$$
+We calculate the standard error.
+$$SE = \frac{6.5}{\sqrt{36}} = 1.083 $$
+We calculate a $z$ score.
+$$z ~~=~~ \frac{118.2-100}{6.5} ~~=~~ 2.8 $$
+We determine the two-tail probability.
+$$p\text{-value} ~~=~~ P(|Z|<2.8) ~~=~~ 2P(Z<-2.8) ~~=~~ 2\Phi(-2.8) ~~=~~ 0.00511 $$
+This is smaller than 0.1. We reject the null hypothesis. We conclude that the average IQ of mothers of gifted children is higher than 100.
+\item We already have $SE=1.083$. We need $z^\star$ such that $P(|Z|<z^\star) = 0.90$. If you draw a sketch of a normal curve, you'll notice this $z^\star$ also satisfies $P(Z<z^\star) = 0.95$.
+$$z^\star = \Phi^{-1}(0.95) = 1.64 $$
+We find the confidence interval.
+$$CI ~~=~~ 118.2 \pm (1.64)(1.083) $$
+$$CI ~~=~~ (116.4,\,120.0) $$
+\item Yes. Both strategies suggest that these mothers' average IQ is not 100.
+\end{enumerate}
+
+\item We want to find $\bar{x}$ such that $P\left(Z>\frac{\bar{x}-30}{10/\sqrt{70}}\right)=0.05$. Let $z_{\alpha} = \frac{\bar{x}-30}{10/\sqrt{70}}$. We want to find $z_{\alpha}$ such that $P\left(Z>z_{\alpha}\right)=0.05$. If you draw a sketch, or use the reasoning of a complement, then it should be clear that we want a left area of 0.95.
+$$P(Z<z_{\alpha}) = 0.95 $$
+We determine $z_{\alpha}$.
+$$z_{\alpha} ~=~ \Phi^{-1}(0.95) ~=~ 1.645 $$
+So,
+$$1.645 = \frac{\bar{x}-30}{10/\sqrt{70}} $$
+We solve for $\bar{x}$.
+$$\bar{x} ~~=~~ \frac{1.645 \times 10}{\sqrt{70}} + 30 ~~=~~ 31.97$$
+
+\item We want to find $\bar{x}$ such that $P\left(|Z|>\frac{\bar{x}-30}{10/\sqrt{70}}\right)=0.05$. From the $p$-value of 0.05, we can determine a two-tail $z$ score.
+$$P(|Z|>z) = 0.05 $$
+$$P(Z<-z) = 0.025 $$
+$$z ~~=~~ -\Phi^{-1}(0.025) ~~=~~ 1.96$$
+Thus,
+$$1.96 = \frac{\bar{x}-30}{10/\sqrt{70}} $$
+Do some algebra.
+$$\bar{x} = 32.34 $$
+
+
+\item \begin{enumerate}
+\item Diana's skeptical position is that any changes in her symptoms are due to chance, not due to the drug.
+\item The Type 1 Error is deciding the drug helps when it doesn't.
+\item The Type 2 Error is deciding the drug does not help when it does.
+\end{enumerate}
+
+
+\item \begin{enumerate}
+\item The null hypothesis claims the restaurant is sanitary. The alternative hypothesis claims the restaurant is unsanitary.
+\item The Type 1 Error would be deciding the restaurant is unsanitary when it is actually sanitary.
+\item The Type 2 Error would be deciding the restaurant is sanitary when it is actually unsanitary.
+\item Type 1 Error is more problematic for the restaurant owner because it is like a false conviction. The restaurant's license would be revoked when it shouldn't have been.
+\item Type 2 Error is more problematic for the diners. They can find another restaurant if this one closes, but if it stays open while unsanitary, they might get sick.
+\item I'd prefer if the safety inspector only required strong evidence. I don't like getting food poisoning. Sure, some restaurants will be closed when they shouldn't be, but there will be fewer unsanitary restaurants.
+\end{enumerate}
+
+\item \begin{enumerate}
+\item The standard error of a sample mean is larger with a smaller sample size. {\bf Scenario I} has a larger standard error.
+\item A higher confidence level has a higher margin of error. {\bf Scenario I} has a larger margin of error.
+\item Same. The sample size does not affect the calculation of the $p$-value for a given $z$-score.
+\item We are more likely to make a Type 2 Error when we have a stricter cutoff. {\bf Scenario I} has a larger chance of Type 2 Error.
+\end{enumerate} 
+
+\item \begin{enumerate}
+\item True. A larger confidence level gives a wider confidence interval.
+\item False. Increasing the significance level will increase the probability of making a Type 1 Error.
+\item False. We didn't reject the possibility that $\mu=5$. With more data we might. We could say, ``Under this scenario, the true population mean {\bf might be} 5.''
+\item True. The power of the test is the chance of NOT making Type 2 Error when the alternative is true.
+\item True. For small effect sizes, we require very large sample sizes; however, these small effect sizes are usually not very interesting...
+\end{enumerate}
+
+
+
+
+\end{enumerate}
+\end{document}

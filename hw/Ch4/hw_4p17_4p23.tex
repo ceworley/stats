@@ -1,0 +1,107 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{multicol}
+\usepackage{listings}
+\lstset{ 
+basicstyle = \ttfamily,
+showstringspaces=false,
+columns=fullflexible,
+frame = single,
+literate={*}{{\char42}}1
+         {-}{{\char45}}1
+         {"}{{\fontencoding{T1}\selectfont\textquotedbl}}1
+         {'}{{\fontencoding{T1}\selectfont\textquotesingle}}1
+}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{multirow,array}
+\usepackage{newtxtext,newtxmath}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textsc{BHCC Mat-181}}
+\chead{\textsc{Answers}}
+\rhead{\textsc{HW Exercises 4.7-4.16}}
+\rfoot{Page \thepage ~of \pageref{LastPage}}
+\setenumerate[1]{label={\bf 4.\theenumi: }}
+\setenumerate[2]{label={\bf (\theenumii): }}
+\setenumerate[3]{label={\bf \theenumiii: }}
+
+\begin{document}
+\newcommand{\N}[2]{\mathcal{N}\big(#1,~#2\big)}
+\newcommand{\Geo}[1]{\texttt{Geo}\big(#1\big)}
+\newcommand{\B}[2]{\mathcal{B}\big(#1,~#2\big)}
+\newcommand{\AND}{\textsc{~and~}}
+\newcommand{\OR}{\textsc{~or~}}
+\newcommand{\zs}{z^{\star}}
+
+\begin{enumerate}
+\setcounter{enumi}{16}
+
+\item \begin{enumerate}
+\item The null hypothesis claims New Yorkers sleep 8 hours on average. 
+$$H_0: ~~\mu = 8 $$
+The alternative hypothesis claims New Yorkers sleep less than 8 hours on average.
+$$H_A: ~~\mu < 8 $$
+\item The null hypothesis claims employees waste 15 minutes on average.
+$$H_0: ~~\mu=15 $$
+The alternative hypothesis claims employees waste more than 15 minutes on average.
+$$H_A: ~~\mu > 15 $$
+\end{enumerate}
+
+\item \begin{enumerate}
+\item The null hypothesis claims the average calories is 1100.
+$$H_0: ~~\mu = 1100 $$
+The alternative hypothesis claims the average calories is not 1100.
+$$H_A: ~~\mu \ne 1100 $$
+\item The null hypothesis claims the population's average score is 462.
+$$H_0: ~~\mu=462 $$
+The alternative hypothesis claims the population's average score is not 462.
+$$H_A: ~~\mu \ne 462 $$
+\end{enumerate}
+
+\item The claims should be about the population mean, not the sample mean. The null should be an equality. Both hypotheses should involve the same number (10).
+$$H_0:~~\mu = 10 $$
+$$H_A:~~\mu > 10 $$
+
+\item The claims should be about the population parameter. The alternative should be an inequality because she is interested in a value being higher or lower.
+$$H_0:~~\mu = 23.44 $$
+$$H_A:~~\mu \ne 23.44 $$
+
+\item \begin{enumerate}
+\item That claim is not supported. Our confidence interval has a maximum of 2.45 hours.
+\item Sure. Our confidence interval is (2.133, 2.45) hours.
+\item Yep. A 99\% confidence interval will be even larger, so it will still straddle $2.2$.
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%% 4.22
+\item \begin{enumerate}
+\item I think her claim is outside of the confidence interval, so I am skeptical. Maybe she is just estimating to the nearest power of 10? 
+\item Nope. A 90\% confidence interval is even smaller! 
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%% 4.23
+\item We will use a 5\% significance level. We state the hypotheses.
+$$H_0: ~~ \mu = 130 $$
+$$H_A: ~~ \mu \ne 130  $$
+We assume $\sigma \approx 17$ and calculate the standard error.
+$$SE = \frac{17}{\sqrt{35}} = 2.87$$
+We find a $z$-score.
+$$z = \frac{\bar{x}-\mu}{SE} = \frac{134-130}{2.87} = 1.39 $$
+Because the alternative hypthesis is $\ne$, we find a two-tail area.
+$$p\text{-value} ~=~ P(|Z|>1.39) ~=~ 2P(Z<-1.39) ~=~ 0.16 $$
+The $p$-value is bigger than 5\%, we retain the null. We do not have sufficient evidence to claim the bags are lying.
+
+\end{enumerate}
+\end{document}

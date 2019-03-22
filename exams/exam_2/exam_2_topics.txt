@@ -35,3 +35,7 @@ inference
     hypothesis testing (one sample z test)
 
 
+Type 1 error
+Type 2 error
+
+power of test?
