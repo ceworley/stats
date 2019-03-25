@@ -8,7 +8,7 @@
 \frametitle{Inference for other estimators}
 
 \begin{itemize}
-
+ \vspace{-10pt}
 \item The sample mean is not the only point estimate for which the sampling distribution is nearly normal. For example, the sampling distribution of sample proportions is also nearly normal when $n$ is sufficiently large.
 
 \item An important assumption about point estimates is that they are \hl{unbiased}, i.e. the sampling distribution of the estimate is centered at the true population parameter it estimates. 
@@ -43,6 +43,46 @@ $\:$ \\
 Remember that the value $z^\star SE$ is called the \hl{margin of error}.
 
 \end{frame}
+
+
+%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+\frametitle{Some important point estimates with (approximately) normal sampling distributions}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}\hline
+point estimate &  point estimate & standard error \\ \hline
+sample mean & $\bar{X}$ &  $\frac{s}{\sqrt{n}}$ \\&&\\
+difference of means & $\bar{X}_2-\bar{X}_1$ & $\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}$ \\&&\\
+proportion & $\hat{p}$ & $\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$ \\ 
+\hline
+\end{tabular}
+\end{center}
+
+Rule from chapter 2.4: 
+$$\texttt{Var}(aX+bY) = a^2 \texttt{Var}(X) + b^2\texttt{Var} (Y)$$
+Applied to difference of means:
+$$\texttt{Var}(\bar{X}_2+(-1)\bar{X}_1) = \texttt{Var}(\bar{X}_1) + \texttt{Var} (\bar{X}_2)$$
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Example of difference of means sampling distribution}
+\begin{itemize}
+\item An 8-sided die has $\mu=4.5$ and $\sigma=2.29$.
+\item A 10-sided die has $\mu=5.5$ and $\sigma=2.87$. 
+\pause
+\item The mean of 100 8-sided rolls $\sim \mathcal{N}\left(4.5,\,\frac{2.29}{\sqrt{100}}\right)$ 
+\pause
+\item The mean of 100 10-sided rolls $\sim \mathcal{N}\left(5.5,\,\frac{2.87}{\sqrt{100}}\right)$ 
+\pause
+\item The difference of those means  $\sim \mathcal{N}\left(1,\,\sqrt{\frac{2.29^2}{100}+\frac{2.87^2}{100}}\right)$ 
+\end{itemize}
+
+\end{frame}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
