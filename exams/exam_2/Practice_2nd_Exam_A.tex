@@ -181,10 +181,12 @@ $s = \text{ sample standard deviation}$\\
 $\alpha = \text{ significance level} $
 \begin{align*}
 \sigma &\approx s\\
-p\text{-value } &= P\left(\lvert Z \rvert > \left| \frac{\bar{x}-\mu_0}{SE} \right|  \right)\\
-&= \Phi\left( \left| \frac{\bar{x}-\mu_0}{SE} \right| \right) - \Phi\left( -\left| \frac{\bar{x}-\mu_0}{SE} \right| \right)
+z &= \left| \frac{\bar{x}-\mu_0}{SE} \right|\\\\
+p\text{-value } &= P\left(\lvert Z \rvert > z  \right)\\
+&= 2 \Phi\left( -z \right)
 \end{align*}
 If $p$-value $< \alpha$, then reject $H_0$, else retain $H_0$.
+
 
 \end{multicols}
 
@@ -248,9 +250,9 @@ If $p$-value $< \alpha$, then reject $H_0$, else retain $H_0$.
 \newpage
 
 \begin{questions}
-\question[10] Brood XIV is a population of 17-year cicadas in eastern United States, including Massachusetts. The juvenile lifespan is (approximately) normally distributed with mean of 16.8 years and standard deviation of 0.1 years.  
+\question[10] Brood XIV is a population of 17-year cicadas in eastern United States, including Massachusetts. The juvenile lifespan is normally distributed with mean of 16.8 years and standard deviation of 0.1 years.  
 \begin{parts}
-\part Let $X\sim \N{16.8}{0.1}$. What is the probability that $X$ is larger than $16.7$?
+\part What is the probability of a random juvenile's lifespan being more than 16.7 years? \\In other words, let $X\sim \N{16.8}{0.1}$ and find $P(X>16.7)$.
 \vfill
 \part What is the IQR of juvenile lifespans?
 \vfill
@@ -264,7 +266,7 @@ If $p$-value $< \alpha$, then reject $H_0$, else retain $H_0$.
 \vfill
 \part What is the chance of getting exactly 5 successes in 100 rolls?
 \vfill
-\part What is the chance of getting between at least 10 and less than 30 successes in 300 trials?
+\part What is the chance of getting between at least 10 and less than 30 successes in 300 rolls?
 \vfill
 \end{parts}
 
@@ -287,7 +289,8 @@ If $p$-value $< \alpha$, then reject $H_0$, else retain $H_0$.
 Your sample has a mean of 249.8 kg and a standard deviation of 12.34 kg. What is your conclusion and why? Show your work for full credit.
 
 
-
-
 \end{questions}
+
+
+
 \end{document}

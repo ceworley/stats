@@ -1,0 +1,446 @@
+\documentclass[12pt,letterpaper,addpoints]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{multicol}
+\usepackage{multirow,array}
+\usepackage{newtxtext,newtxmath}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{pdfpages}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\firstpageheader{}{}{\includegraphics[scale=0.5]{BHCClogoBW.jpg}\hspace{-40pt}\vspace{-50pt}}
+\firstpagefooter{}{}{Page \thepage ~of \pageref{LastPage}}
+\runningheader{ \textsc{Math 181 2nd Exam Practice B }}{SOLUTIONS}{ \textsc{Spring 2019}}%{\includegraphics[scale=.5]{BHCClogoBW.jpg}\vspace{-10pt}}%\hspace{-60pt}\vspace{-10pt}}
+\runningheadrule
+\runningfooter{}{}{Page \thepage ~of \pageref{LastPage}}
+\renewcommand{\thequestion}{{\bf Q\arabic{question}}}
+%\renewcommand{\questionlabel}{{\thequestion .}}
+%\pointformat{\fbox{\themarginpoints \,pt}}
+%\pointsinrightmargin
+%\setlength{\rightpointsmargin}{1.5cm}
+%\pointsinmargin
+%\setlength{\marginpointssep}{10pt}
+
+\begin{document}
+\printanswers
+
+\newcommand{\AND}{~\textsc{and}~}
+\newcommand{\OR}{~\textsc{or}~}
+
+\begin{center}
+\text{ }\\
+\vspace{40pt}
+\textsc{{\Huge Math 181 2nd Exam Practice B SOLUTIONS}}\\\vspace{5pt}
+\textsc{{\large Spring 2019}}\\
+\vspace{60pt}
+\makebox[\textwidth]{\large Name:\enspace\hrulefill}\\
+\vspace{40pt}
+\fbox{\fbox{\begin{minipage}{6in}
+\vspace{0.2in}
+\begin{itemize}
+\item Write your {\bf full name} on the line above.
+\item Show your work. Incorrect answers with work can receive partial credit.
+\item Attempt every question; showing you understand the question earns some credit.
+\item If you run out of room for an answer, continue on the back of the page. Before doing so, write ``see back'' with a circle around it.
+\item You can use 1 page (front and back) of notes.
+\item You can use (and probably need) a calculator.
+\item You can use the Geogebra Scientific Calculator instead of a calculator. You need to put your phone on {\bf airplane mode} and then within the application, start {\bf exam mode}; you should see a green bar with a timer counting up.
+\item If a question is confusing or ambiguous, please ask for clarification; however, you will not be told how to  answer the question.
+\item {\bf Box your final answer}.
+\item A formula sheet is attached to this test.
+\vspace{0.2in}
+\end{itemize}
+\end{minipage}
+\begin{minipage}{0.2in}\text{ }\end{minipage}}}
+\vfill
+Do not write in this grade table.\\
+\gradetable[h][questions]\\
+\vfill
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\N}[2]{\mathcal{N}\big(#1\,,~#2\big)}
+\newcommand{\Bern}[1]{\texttt{Bern}\big(#1\big)}
+\newcommand{\Geo}[1]{\texttt{Geo}\big(#1\big)}
+\newcommand{\B}[2]{\mathcal{B}\big(#1\,,~#2\big)}
+\newcommand{\Sampp}[2]{\texttt{Samp}_{\hat{p}}\big(#1,~#2\big)}
+%\newcommand{\Sampx}[2]{\texttt{Samp}_{\hat{p}}\big(#1,~#2\big)}
+
+\newpage
+
+\begin{multicols}{2}
+
+%\rhead{\textsc{Definitions and Formulas}}
+
+{\bf Normal Distribution:}\\
+$X \sim \N{\mu}{\sigma}$\\
+$\mu = \text{ population mean} $\\
+$\sigma = \text{ population standard deviation} $\\
+$x = \text{ possible value of }X $\\
+$\ell = \text{ percentile of } x \text{ (left area)}$\\
+$\Phi(z) = \text{ standard normal cumulative function}$
+\begin{align*}
+z &= \frac{x-\mu}{\sigma}\\
+P(X < x) &= \Phi(z)\\
+\ell &= \Phi(z)\\
+z &= \Phi^{-1}(\ell)
+\end{align*}
+
+{\bf Bernoulli Distribution:}\\
+$X \sim \Bern{p} $\\
+$X = \text{ 0 for fail or 1 for success}$\\
+$p = \text{ probability of success}$
+\begin{align*}
+P(X=0) ~&=~ 1-p \\
+P(X=1) ~&=~ p \\
+\mu ~&=~ p\\
+\sigma ~&=~ \sqrt{p(1-p)}
+\end{align*}
+
+{\bf Geometric Distribution:}\\
+$X \sim \Geo{p}$ \\
+$X = \text{ number of trials until first success}$\\
+$p = \text{ probability of success on each trial}$\\
+$n = \text{ a possible number of trials}$
+\begin{align*}
+P(X=n) ~&=~ (1-p)^{n-1}(p)\\
+\mu ~&=~ \frac{1}{p}\\
+\sigma ~&=~ \sqrt{\frac{1-p}{p^2}} 
+\end{align*}
+
+{\bf Mean-Sampling Distribution:}\\
+$\bar{X} = \text{ sample mean}$\\
+$s = \text{ sample standard deviation}$\\
+$n = \text{ sample size}$\\
+$\mu = \text{ population mean}$\\
+$\sigma = \text{ population standard deviation}$\\
+$SE = \text{ standard error}$
+$$SE = \frac{\sigma}{\sqrt{n}} $$
+If $n\ge 30$ (or if population is normal) then:
+$$\bar{X} \sim \N{\mu}{SE} $$
+
+\columnbreak
+
+{\bf Binomial Distribution:}\\
+$X \sim \B{n}{p}$\\
+$X = \text{ number of successes from $n$ trials} $\\
+$p = \text{ probability of success on each trial}$\\
+$n = \text{ number of trials}$\\
+$k = \text{ a possible number of successes}$
+\begin{align*}
+P(X=k) ~&=~ {n \choose k} p^k (1-p)^{n-k}\\
+\mu ~&=~ np\\
+\sigma ~&=~ \sqrt{np(1-p)} 
+\end{align*}
+If $np \ge 10$ and $n(1-p) \ge 10$, then
+$$X \sim \N{\mu}{\sigma} $$
+Continuity correction:
+$$P(X \le k) ~\approx~ \Phi\left(\frac{k+0.5-\mu}{\sigma}\right)$$
+
+
+
+%{\bf Proportion-Sampling Distribution:}\\
+%%$\hat{p} \sim \Sampp{n}{p}$\\
+%$\hat{p} = \text{ sample proportion} $\\
+%$p = \text{ population proportion}$\\
+%$n = \text{ number of trials}$\\
+%$y = \text{ a possible sample proportion}$
+%\begin{align*}
+%P\left( \hat{p}=y \right) ~&=~ {n \choose ny} p^{ny} (1-p)^{n-ny}\\
+%\mu ~&=~ p\\
+%\sigma ~&=~ \sqrt{\frac{p(1-p)}{n}} 
+%\end{align*}
+%If $np \ge 10$ and $n(1-p) \ge 10$, then
+%$$\hat{p} \sim \N{\mu}{\sigma} $$
+%Continuity correction:
+%$$P(\hat{p} \le y) ~\approx~ \Phi\left(\frac{ny+0.5-\mu}{n\sigma}\right)$$
+%$$P(\hat{p} < y) ~\approx~ \Phi\left(\frac{ny-0.5-\mu}{n\sigma}\right)$$
+
+
+
+{\bf Confidence Interval:}\\
+$CI = \text{ confidence interval}$\\
+$\gamma = \text{ confidence level}$\\
+$\bar{x} = \text{ sample mean}$ \\
+$s = \text{ sample standard deviation}$ 
+\begin{align*}
+z^{\star} &= \Phi^{-1}\left(\frac{\gamma+1}{2} \right) \\
+SE &\approx \frac{s}{\sqrt{n}}\\
+CI &= \bar{x} \pm z^{\star} SE
+\end{align*}
+
+{\bf Hypothesis testing:}\\
+$H_0:~~~\mu = \mu_0$\\
+$H_A:~~~\mu \ne \mu_0$\\
+$\bar{x} = \text{ a possible/specific/observed sample mean}$\\
+$s = \text{ sample standard deviation}$\\
+$\alpha = \text{ significance level} $
+\begin{align*}
+\sigma &\approx s\\
+z &= \left| \frac{\bar{x}-\mu_0}{SE} \right|\\\\
+p\text{-value } &= P\left(\lvert Z \rvert > z  \right)\\
+&= 2 \Phi\left( -z \right)
+\end{align*}
+If $p$-value $< \alpha$, then reject $H_0$, else retain $H_0$.
+
+\end{multicols}
+
+
+
+%\newpage
+%
+%\rhead{\textsc{Definitions and Formulas}}
+%{\bf Sample statistics:}\vspace{-10pt}
+%\begin{multicols}{2}\noindent
+%$n=\text{sample size} $\\
+%$x_i=\text{the $i$th value in a sample} $\\
+%$\bar x = \text{sample mean}$\\
+%$s = \text{sample standard deviation}$\\\\
+%$\bar x = \cfrac{\sum_{i=1}^n x_i}{n}$
+%
+%\columnbreak \noindent
+%$Q_1$ = first quartile\\
+%$m$ = median\\
+%$Q_3$ = third quartile\\
+%IQR = inter-quartile range = $Q3-Q1$\\\\
+%$s = \sqrt{\cfrac{\sum_{i=1}^n (x_i-\bar x)^2}{n-1}}$ 
+%\end{multicols}
+%
+%{\bf Population parameters:}\\
+%$\mu = \text{population mean}$\\
+%$\sigma = \text{population standard deviation}$\\
+%
+%{\bf Probability:}\\
+%$\Omega = \text{set of all possible equally likely outcomes}$\\
+%$A = \text{event A, a set of outcomes}$\\
+%$A^c = \text{The complement of }A$\\
+%$B = \text{event B, another set of outcomes}$\\
+%$|A| = \text{size of set, number of outcomes in } A$\\
+%$P(A) = \text{probability of }A$\\
+%$P(A \AND B) = \text{probability of both $A$ and $B$}$\\
+%$P(A \OR B) = \text{probability of either $A$ or $B$ (or both)}$\\
+%$P(A | B) = \text{probability of $A$ given $B$}$\\\\
+%$P(A) = \cfrac{|A|}{|\Omega|}$\\\\
+%$0 \le P(A) \le 1$\\
+%$P(A \AND B) = P(A) \cdot P(B|A)$\\
+%$P(A \OR B) = P(A) + P(B) - P(A\AND B)$\\
+%$P(A^c) = 1 - P(A)$
+%\\\\
+%$A$, $B$ are disjoint (mutually exclusive) ~~$\iff~~P(A\AND B) = 0$\\
+%$A$, $B$ are non-disjoint ~~$\iff~~P(A\AND B) > 0$\\
+%$A$, $B$ are exhaustive ~~$\iff~~P(A\OR B) = 1$\\
+%$A$, $B$ are complements ~~$\iff$~~ $A$, $B$ are disjoint and exhaustive ~~$\iff$~~ $B=A^c$\\
+%$A$, $B$ are independent ~~$\iff~~P(A\AND B) = P(A)\times P(B) ~~\iff~~ P(A|B)=P(A)$\\
+%
+%{\bf Random variables and distributions:}\\
+%$X=$ random variable \\
+%$x_i=$ the $i$th possible value of $X$. (Notice different meaning here {vs.} sample statistics.)\\
+%$k=$ number of possible values of $X$.\\
+%$E(X)=\mu=$ expected value of $X$\\
+%$\sigma=$ standard deviation of $X$\\
+%$\mu = \sum_{i=1}^k  x_i \cdot P(X=x_i) $\\
+%$\sigma = \sqrt{\sum_{i=1}^k (x_i-\mu)^2 \cdot P(X=x_i)}$
+
+
+\newpage
+\newcommand{\zlo}{z_\textsc{lower}}
+\newcommand{\zhi}{z_\textsc{upper}}
+
+\begin{questions}
+\question[10] Hannah is curious about the expected number of rolls of a 6-sided die before getting every side, but Hannah forgets how to analyze it mathematically. So, she gets a 6-sided die and rolls it until she sees every number and writes down how many rolls it took. She repeats this over and over, getting the following sample:
+\begin{center}
+\begin{tabular}{*{15}{c}}
+18 & 19 & 26 & 23 & 17 & 12 & 11 & 12 & 23 & 16 & 13 & 8 & 10 & 8 & 7 \\
+ 19 & 14 & 11 & 15 & 17 & 20 & 24 & 12 & 18 & 10 & 9 & 22 & 24 & 14 & 14
+\end{tabular}
+\end{center}
+Hannah determines the sample size $n=30$, sample mean $\bar{x}=15.53$, and sample standard deviation $s=5.41$.
+\begin{parts}
+\part Determine a 92\% confidence interval for the expected number of rolls to get all sides. You can assume the sampling distribution is normal (even though the population is not normal).
+\begin{solution}
+We need to consider the sampling distribution. Because $n\ge30$, we think the sampling distribution is approximately normal. We need standard error for sampling distributions.
+$$SE = \frac{5.41}{\sqrt{30}} = 0.9877$$
+%$$\bar{X} \sim \N{15.53}{0.9877} $$
+We draw a sketch, where $ME$ is the margin of error, defined as $ME=z^\star SE$.
+\begin{center}
+\includegraphics[scale=0.8]{figures/sketch5.pdf}
+\end{center}
+We can find $z^\star$ by recognizing it's left area is 0.96. In other words, $\Phi(z^\star)=0.96$. In other words, $P(Z<z^\star)=0.96$. In other words, $\ell=0.96$. One way or another, we need to use the $z$ table backwards to find $z^\star$.
+$$z^\star ~~=~~ \Phi^{-1}(0.96) ~~=~~ 1.75  $$
+We now can create a confidence interval.
+\begin{align*}
+CI ~&=~ \bar{x} \pm ME \\
+&=~ \bar{x} \pm z^\star SE \\
+&=~ 15.53 \pm (1.75) (0.9877) \\
+&=~ (13.8\,,~17.3)
+\end{align*}
+\end{solution}
+\part After this study, would you believe a friend that suggests the expected number of rolls is 11? Why or why not?
+\begin{solution}
+Nope. 11 is outside the confidence interval. In fact, 11 would have a $z$-score of $-4.59$, which makes it quite inconsistent with our study.
+\end{solution}
+\end{parts}
+
+\newpage
+
+\question[10] Imagine each trial has a 42\% chance of success.  Let random variable $W$ represent the result of a trial, where 0 means failure and 1 means success.
+\begin{parts}
+\part What is the standard deviation of $W$?
+\begin{solution}
+A single trial follows a Bernoulli distribution.
+$$\sigma = \sqrt{p(1-p)} = \sqrt{(0.42)(0.58)} = \fbox{0.494} $$
+\end{solution}
+\vfill
+\part What is the expected number of trials until getting a success?
+\begin{solution}
+Trials until success follows a geometric distribution.
+$$\mu = \frac{1}{p} = \frac{1}{0.42} = \fbox{2.38} $$
+\end{solution}
+\vfill
+\part What is the standard deviation of number of trials until getting a success?
+\begin{solution}
+Trials until success follows a geometric distribution.
+$$\sigma = \sqrt{\frac{1-p}{p^2}} = \sqrt{\frac{0.58}{(0.42)^2}} = \fbox{1.81}$$
+\end{solution}
+\vfill
+\part What is the probability of getting 30 successes from 75 trials?
+\begin{solution}
+Number of successes in $n$ trials follows a binomial distribution.
+$$P(X=30)~~=~~{75 \choose 30}(0.42)^{30}(0.58)^{45}$$
+$$P(X=30)~~=~~\fbox{0.088}$$
+\end{solution}
+\vfill
+\end{parts}
+
+
+\newpage
+
+\question[10] If each trial has a 33\% chance of success and there are 200 trials, what is the probability that the number of successes is more than 67? Please use a normal approximation with the continuity correction.
+\begin{solution}
+We determine the mean and standard deviation of the binomial distribution.
+\begin{align*}
+\mu &= np \\
+&= (200)(0.33) \\
+&= 66
+\end{align*}
+\begin{align*}
+\sigma &= \sqrt{np(1-p)} \\
+&= \sqrt{(200)(0.33)(0.67)} \\
+&= 6.65
+\end{align*}
+A sketch is helpful... your sketch can be simpler. If you look closely, the continuity correction should be clear.
+\begin{center}
+\includegraphics[scale=1]{figures/sketch6.pdf}
+\end{center}
+In order to estimate the area of the bars higher than 67, we find the area under the curve when $x>67.5$. That extra 0.5 is the continuity correction, necessary because these bars have width of 1 and are centered on the integers. We find the $z$-score.
+$$z = \frac{67.5-66}{6.65} = 0.23 $$
+We find the right area.
+\begin{align*}
+P(X>67) ~~&\approx~~ P(Z>0.23) \\
+&=~~ 1-\Phi(0.23) \\
+&=~~ 1-0.5910 \\
+&=~~ \fbox{0.4090}
+\end{align*}
+\end{solution}
+
+
+
+\newpage
+
+\question[10] Perform a two-tail hypothesis test with $\mu_0=100$, $n=50$, $\bar{x}=103.2$, $s=14.4$, and $\alpha=0.10$.
+\begin{solution}
+State the hypotheses.
+$$H_0:~~ \mu=100 $$
+$$H_A:~~ \mu\ne 100 $$
+Calculate the standard error of the null's sampling distribution by assuming $\sigma \approx s$.
+$$SE ~=~ \frac{14.4}{\sqrt{50}} ~=~ 2.036468 $$
+Find a $z$-score.
+$$z = \frac{103.2-100}{2.036} = 1.57 $$
+Draw a sketch of the null's sampling distribution.
+\begin{center}
+\includegraphics[scale=1]{figures/sketch7.pdf}
+\end{center}
+We calculate the $p$-value.
+\begin{align*}
+p\text{-value} ~~&=~~ 2 \cdot \Phi(-1.57) \\
+&=~~ (2)(0.0582) \\
+&=~~ 0.1164
+\end{align*}
+Compare $p$-value to $\alpha$.
+\begin{align*}
+0.1164 &> 0.10 \\
+p\text{-value} &> \alpha
+\end{align*}
+So, we \fbox{retain the null.}
+\end{solution}
+
+
+
+\newpage
+
+\question[10] Let $X\sim\N{500}{20}$.
+\begin{parts}
+\part Evaluate $P(470 < X < 520)$.
+\begin{solution}
+Find the $z$-scores.
+$$\zlo = \frac{470-500}{20} = -1.5 $$
+$$\zhi = \frac{520-500}{20} = 1 $$
+Make a sketch.
+\begin{center}
+\includegraphics[scale=0.8]{figures/sketch8.pdf}
+\end{center}
+Calculate the probability.
+\begin{align*}
+P(470<X<520) ~~&=~~ \Phi(1) - \Phi(-1.5) \\
+&=~~ 0.8413-0.0668 \\
+&=~~ \fbox{0.7745}
+\end{align*}
+\end{solution}
+
+\part Determine $x$ such that $P(X > x) ~=~ 0.40$.
+\begin{solution}
+Draw a sketch.
+\begin{center}
+\includegraphics[scale=0.8]{figures/sketch9.pdf}
+\end{center}
+We want the horizontal coordinate of the boundary. Find the $z$.
+$$z ~=~ \Phi^{-1}(0.6) ~=~ 0.25$$
+Find $x$.
+$$x ~~=~~ \mu + z\sigma ~~=~~ 500+(0.25)(20) ~~=~~ \fbox{505}  $$
+\end{solution}
+\end{parts}
+
+\newpage
+
+\question[10] There is a continuous population with $\mu=500$ and $\sigma=20$. What is the probability that a sample of size 100 has a mean between 500 and 503?
+\begin{solution}
+Calculate the standard error.
+$$SE = \frac{20}{\sqrt{100}} = 2 $$
+Find the $z$-scores.
+$$\zlo = \frac{500-500}{2} = 0 $$
+$$\zhi = \frac{503-500}{2} = 1.5 $$
+Sketch the sampling distribution with the shaded region.
+\begin{center}
+\includegraphics[scale=1]{figures/sketch10.pdf}
+\end{center}
+Calculate the probability.
+\begin{align*}
+P(500<\bar{X}<503) ~~&=~~ \Phi(1.5) - \Phi(0) \\
+&=~~ 0.9332-0.5000 \\
+&=~~ \fbox{0.4332}
+\end{align*}
+
+\end{solution}
+
+\end{questions}
+
+\includepdf[pages=1]{ztable/ztable.pdf}
+\includepdf[pages=2]{ztable/ztable.pdf}
+
+\end{document}

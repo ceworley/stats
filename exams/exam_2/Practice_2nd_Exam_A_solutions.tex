@@ -1,0 +1,403 @@
+\documentclass[12pt,letterpaper,addpoints]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{multicol}
+\usepackage{multirow,array}
+\usepackage{newtxtext,newtxmath}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\firstpageheader{}{}{\includegraphics[scale=0.5]{BHCClogoBW.jpg}\hspace{-40pt}\vspace{-50pt}}
+\firstpagefooter{}{}{Page \thepage ~of \pageref{LastPage}}
+\runningheader{ \textsc{Math 181 2nd Exam Practice A SOLUTIONS}}{}{ \textsc{Spring 2019}}%{\includegraphics[scale=.5]{BHCClogoBW.jpg}\vspace{-10pt}}%\hspace{-60pt}\vspace{-10pt}}
+\runningheadrule
+\runningfooter{}{}{Page \thepage ~of \pageref{LastPage}}
+\renewcommand{\thequestion}{{\bf Q\arabic{question}}}
+%\renewcommand{\questionlabel}{{\thequestion .}}
+%\pointformat{\fbox{\themarginpoints \,pt}}
+%\pointsinrightmargin
+%\setlength{\rightpointsmargin}{1.5cm}
+%\pointsinmargin
+%\setlength{\marginpointssep}{10pt}
+
+\begin{document}
+\printanswers
+
+\newcommand{\AND}{~\textsc{and}~}
+\newcommand{\OR}{~\textsc{or}~}
+
+\begin{center}
+\text{ }\\
+\vspace{40pt}
+\textsc{{\Huge Math 181 2nd Exam Practice A SOLUTIONS}}\\\vspace{5pt}
+\textsc{{\large Spring 2019}}\\
+\vspace{60pt}
+\makebox[\textwidth]{\large Name:\enspace\hrulefill}\\
+\vspace{40pt}
+\fbox{\fbox{\begin{minipage}{6in}
+\vspace{0.2in}
+\begin{itemize}
+\item Write your {\bf full name} on the line above.
+\item Show your work. Incorrect answers with work can receive partial credit.
+\item Attempt every question; showing you understand the question earns some credit.
+\item If you run out of room for an answer, continue on the back of the page. Before doing so, write ``see back'' with a circle around it.
+\item You can use 1 page (front and back) of notes.
+\item You can use (and probably need) a calculator.
+\item You can use the Geogebra Scientific Calculator instead of a calculator. You need to put your phone on {\bf airplane mode} and then within the application, start {\bf exam mode}; you should see a green bar with a timer counting up.
+\item If a question is confusing or ambiguous, please ask for clarification; however, you will not be told how to  answer the question.
+\item {\bf Box your final answer}.
+\item A formula sheet is attached to this test.
+\vspace{0.2in}
+\end{itemize}
+\end{minipage}
+\begin{minipage}{0.2in}\text{ }\end{minipage}}}
+\vfill
+Do not write in this grade table.\\
+\gradetable[h][questions]\\
+\vfill
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\N}[2]{\mathcal{N}\big(#1\,,~#2\big)}
+\newcommand{\Bern}[1]{\texttt{Bern}\big(#1\big)}
+\newcommand{\Geo}[1]{\texttt{Geo}\big(#1\big)}
+\newcommand{\B}[2]{\mathcal{B}\big(#1\,,~#2\big)}
+\newcommand{\Sampp}[2]{\texttt{Samp}_{\hat{p}}\big(#1,~#2\big)}
+%\newcommand{\Sampx}[2]{\texttt{Samp}_{\hat{p}}\big(#1,~#2\big)}
+
+\newpage
+
+\begin{multicols}{2}
+
+%\rhead{\textsc{Definitions and Formulas}}
+
+{\bf Normal Distribution:}\\
+$X \sim \N{\mu}{\sigma}$\\
+$\mu = \text{ population mean} $\\
+$\sigma = \text{ population standard deviation} $\\
+$x = \text{ possible value of }X $\\
+$\ell = \text{ percentile of } x \text{ (left area)}$\\
+$\Phi(z) = \text{ standard normal cumulative function}$
+\begin{align*}
+z &= \frac{x-\mu}{\sigma}\\
+P(X < x) &= \Phi(z)\\
+\ell &= \Phi(z)\\
+z &= \Phi^{-1}(\ell)
+\end{align*}
+
+{\bf Bernoulli Distribution:}\\
+$X \sim \Bern{p} $\\
+$X = \text{ 0 for fail or 1 for success}$\\
+$p = \text{ probability of success}$
+\begin{align*}
+P(X=0) ~&=~ 1-p \\
+P(X=1) ~&=~ p \\
+\mu ~&=~ p\\
+\sigma ~&=~ \sqrt{p(1-p)}
+\end{align*}
+
+{\bf Geometric Distribution:}\\
+$X \sim \Geo{p}$ \\
+$X = \text{ number of trials until first success}$\\
+$p = \text{ probability of success on each trial}$\\
+$n = \text{ a possible number of trials}$
+\begin{align*}
+P(X=n) ~&=~ (1-p)^{n-1}(p)\\
+\mu ~&=~ \frac{1}{p}\\
+\sigma ~&=~ \sqrt{\frac{1-p}{p^2}} 
+\end{align*}
+
+{\bf Mean-Sampling Distribution:}\\
+$\bar{X} = \text{ sample mean}$\\
+$s = \text{ sample standard deviation}$\\
+$n = \text{ sample size}$\\
+$\mu = \text{ population mean}$\\
+$\sigma = \text{ population standard deviation}$\\
+$SE = \text{ standard error}$
+$$SE = \frac{\sigma}{\sqrt{n}} $$
+If $n\ge 30$ (or if population is normal) then:
+$$\bar{X} \sim \N{\mu}{SE} $$
+
+\columnbreak
+
+{\bf Binomial Distribution:}\\
+$X \sim \B{n}{p}$\\
+$X = \text{ number of successes from $n$ trials} $\\
+$p = \text{ probability of success on each trial}$\\
+$n = \text{ number of trials}$\\
+$k = \text{ a possible number of successes}$
+\begin{align*}
+P(X=k) ~&=~ {n \choose k} p^k (1-p)^{n-k}\\
+\mu ~&=~ np\\
+\sigma ~&=~ \sqrt{np(1-p)} 
+\end{align*}
+If $np \ge 10$ and $n(1-p) \ge 10$, then
+$$X \sim \N{\mu}{\sigma} $$
+Continuity correction:
+$$P(X \le k) ~\approx~ \Phi\left(\frac{k+0.5-\mu}{\sigma}\right)$$
+
+
+
+%{\bf Proportion-Sampling Distribution:}\\
+%%$\hat{p} \sim \Sampp{n}{p}$\\
+%$\hat{p} = \text{ sample proportion} $\\
+%$p = \text{ population proportion}$\\
+%$n = \text{ number of trials}$\\
+%$y = \text{ a possible sample proportion}$
+%\begin{align*}
+%P\left( \hat{p}=y \right) ~&=~ {n \choose ny} p^{ny} (1-p)^{n-ny}\\
+%\mu ~&=~ p\\
+%\sigma ~&=~ \sqrt{\frac{p(1-p)}{n}} 
+%\end{align*}
+%If $np \ge 10$ and $n(1-p) \ge 10$, then
+%$$\hat{p} \sim \N{\mu}{\sigma} $$
+%Continuity correction:
+%$$P(\hat{p} \le y) ~\approx~ \Phi\left(\frac{ny+0.5-\mu}{n\sigma}\right)$$
+%$$P(\hat{p} < y) ~\approx~ \Phi\left(\frac{ny-0.5-\mu}{n\sigma}\right)$$
+
+
+
+{\bf Confidence Interval:}\\
+$CI = \text{ confidence interval}$\\
+$\gamma = \text{ confidence level}$\\
+$\bar{x} = \text{ sample mean}$ \\
+$s = \text{ sample standard deviation}$ 
+\begin{align*}
+z^{\star} &= \Phi^{-1}\left(\frac{\gamma+1}{2} \right) \\
+SE &\approx \frac{s}{\sqrt{n}}\\
+CI &= \bar{x} \pm z^{\star} SE
+\end{align*}
+
+{\bf Hypothesis testing:}\\
+$H_0:~~~\mu = \mu_0$\\
+$H_A:~~~\mu \ne \mu_0$\\
+$\bar{x} = \text{ a possible/specific/observed sample mean}$\\
+$s = \text{ sample standard deviation}$\\
+$\alpha = \text{ significance level} $
+\begin{align*}
+\sigma &\approx s\\
+z &= \left| \frac{\bar{x}-\mu_0}{SE} \right|\\\\
+p\text{-value } &= P\left(\lvert Z \rvert > z  \right)\\
+&= 2 \Phi\left( -z \right)
+\end{align*}
+If $p$-value $< \alpha$, then reject $H_0$, else retain $H_0$.
+
+
+\end{multicols}
+
+
+
+%\newpage
+%
+%\rhead{\textsc{Definitions and Formulas}}
+%{\bf Sample statistics:}\vspace{-10pt}
+%\begin{multicols}{2}\noindent
+%$n=\text{sample size} $\\
+%$x_i=\text{the $i$th value in a sample} $\\
+%$\bar x = \text{sample mean}$\\
+%$s = \text{sample standard deviation}$\\\\
+%$\bar x = \cfrac{\sum_{i=1}^n x_i}{n}$
+%
+%\columnbreak \noindent
+%$Q_1$ = first quartile\\
+%$m$ = median\\
+%$Q_3$ = third quartile\\
+%IQR = inter-quartile range = $Q3-Q1$\\\\
+%$s = \sqrt{\cfrac{\sum_{i=1}^n (x_i-\bar x)^2}{n-1}}$ 
+%\end{multicols}
+%
+%{\bf Population parameters:}\\
+%$\mu = \text{population mean}$\\
+%$\sigma = \text{population standard deviation}$\\
+%
+%{\bf Probability:}\\
+%$\Omega = \text{set of all possible equally likely outcomes}$\\
+%$A = \text{event A, a set of outcomes}$\\
+%$A^c = \text{The complement of }A$\\
+%$B = \text{event B, another set of outcomes}$\\
+%$|A| = \text{size of set, number of outcomes in } A$\\
+%$P(A) = \text{probability of }A$\\
+%$P(A \AND B) = \text{probability of both $A$ and $B$}$\\
+%$P(A \OR B) = \text{probability of either $A$ or $B$ (or both)}$\\
+%$P(A | B) = \text{probability of $A$ given $B$}$\\\\
+%$P(A) = \cfrac{|A|}{|\Omega|}$\\\\
+%$0 \le P(A) \le 1$\\
+%$P(A \AND B) = P(A) \cdot P(B|A)$\\
+%$P(A \OR B) = P(A) + P(B) - P(A\AND B)$\\
+%$P(A^c) = 1 - P(A)$
+%\\\\
+%$A$, $B$ are disjoint (mutually exclusive) ~~$\iff~~P(A\AND B) = 0$\\
+%$A$, $B$ are non-disjoint ~~$\iff~~P(A\AND B) > 0$\\
+%$A$, $B$ are exhaustive ~~$\iff~~P(A\OR B) = 1$\\
+%$A$, $B$ are complements ~~$\iff$~~ $A$, $B$ are disjoint and exhaustive ~~$\iff$~~ $B=A^c$\\
+%$A$, $B$ are independent ~~$\iff~~P(A\AND B) = P(A)\times P(B) ~~\iff~~ P(A|B)=P(A)$\\
+%
+%{\bf Random variables and distributions:}\\
+%$X=$ random variable \\
+%$x_i=$ the $i$th possible value of $X$. (Notice different meaning here {vs.} sample statistics.)\\
+%$k=$ number of possible values of $X$.\\
+%$E(X)=\mu=$ expected value of $X$\\
+%$\sigma=$ standard deviation of $X$\\
+%$\mu = \sum_{i=1}^k  x_i \cdot P(X=x_i) $\\
+%$\sigma = \sqrt{\sum_{i=1}^k (x_i-\mu)^2 \cdot P(X=x_i)}$
+
+
+\newpage
+\newcommand{\zlo}{z_\textsc{lower}}
+\newcommand{\zhi}{z_\textsc{upper}}
+
+\begin{questions}
+\question[10] Brood XIV is a population of 17-year cicadas in eastern United States, including Massachusetts. The juvenile lifespan is normally distributed with mean of 16.8 years and standard deviation of 0.1 years.  
+\begin{parts}
+\part What is the probability of a random juvenile's lifespan being more than 16.7 years? \\In other words, let $X\sim \N{16.8}{0.1}$ and find $P(X>16.7)$.
+\begin{solution}
+Find the $z$-score.
+$$z = \frac{16.7-16.8}{0.1} = -1 $$
+Draw a sketch.
+\begin{center}
+\includegraphics[scale=0.8]{figures/sketch1.pdf}
+\end{center}
+Find the area.
+\begin{align*}
+P(X>16.7) ~~&=~~ P(Z>-1) \\
+&=~~ 1-P(Z<-1)\\
+&=~~ 1-\Phi(-1)\\
+&=~~ 1-0.1587\\
+&=~~ \fbox{0.8413}
+\end{align*}
+\end{solution}
+\part What is the IQR of juvenile lifespans?
+\begin{solution}
+We find the $z$-scores of 25th percentile and 75th percentile. So, let's find $z_\textsc{low}$ such that $P(Z<z_\textsc{low}) = 0.25$.
+$$z_\textsc{low} ~~=~~ \Phi^{-1}(0.25) ~~=~~ -0.67 $$
+Let's find $z_\textsc{high}$ such that $P(Z<z_\textsc{high}) = 0.75$.
+$$z_\textsc{high} ~~=~~ \Phi^{-1}(0.75) ~~=~~ 0.67 $$
+We find the associated $x$ scores.
+$$x_\textsc{low} ~~=~~ 16.8 + (-0.67)(0.1) ~~=~~ 16.733 $$
+$$x_\textsc{high} ~~=~~ 16.8 + (0.67)(0.1) ~~=~~ 16.867 $$
+To find IQR, we find the difference.
+$$IQR ~~=~~ 16.867-16.733 ~~=~~ \fbox{0.134} $$
+\end{solution}
+\end{parts}
+
+\newpage
+
+\question[10] A 20-sided die (icosahedron) has a 5\% chance of landing on each side. Imagine that only one side is a success and the rest are fails.
+\begin{parts}
+\part What is the chance the first success happens on the third roll?
+\begin{solution}
+We use a geometric model. $p=0.05$ and $n=3$.
+$$P(\text{Fail, Fail, Success}) ~~=~~ (0.95)^2(0.05) ~~=~~ \fbox{0.045} $$
+\end{solution}
+\part What is the chance of getting exactly 5 successes in 100 rolls?
+\begin{solution}
+We use a binomial model. $p=0.05$ and $n=100$ and $k=5$. Let $X$ represent the number of successes when 100 of these dice are thrown.
+\begin{align*}
+P(X=5) ~~&=~~ {100 \choose 5}(0.05)^5(0.95)^{95} \\\\
+&=~~ \fbox{0.18}
+\end{align*}
+\end{solution}
+\part What is the chance of getting between at least 10 and less than 30 successes in 300 rolls?
+\begin{solution}
+We hope to use the normal approximation to the binomial distribution. We first check to make sure we can use the normal approximation.
+$$np = (300)(0.05) = 15 > 10 $$
+$$n(1-p) = (300)(0.95) = 285 > 10 $$
+Great, we can. We determine the mean and standard deviation of the binomial distribution.
+$$\mu = np = (300)(0.05) = 15 $$
+$$\sigma = \sqrt{np(1-p)} = \sqrt{(300)(0.05)(0.95)} = 3.7749 $$
+We find the $z$-scores. REMEMBER THE CONTINUITY CORRECTIONS!
+$$\zlo = \frac{10-0.5-15}{3.77} = -1.46 $$
+$$\zhi = \frac{30-0.5-15}{3.77} = 3.84 $$
+Because $\zhi$ is larger than 3.5, we can ignore that upper bound (and just find a right area instead.)
+$$P(10 \le X < 30) ~~\approx~~ P(Z>-1.46) ~~=~~ 1-P(Z<-1.46) ~~=~~ \fbox{0.93}$$
+\end{solution}
+\end{parts}
+
+\newpage
+
+\question[10] You collect 45 measurements with a mean of 88.5 mm and a standard deviation of 11.0 mm.
+\begin{parts}
+\part Determine a 90\% confidence interval.
+\begin{solution}
+We calculate the standard error.
+$$SE = \frac{11}{\sqrt{45}} = 1.63978 $$
+We determine $z^\star$ such that $P(|Z|<z^\star) = 0.90$.
+\begin{center}
+\includegraphics[scale=0.8]{figures/sketch2.pdf}
+\end{center}
+Using symmetry, we recognize how to find $z^\star$.
+$$z^\star ~~=~~ \Phi^{-1}(0.95) ~~=~~ 1.64$$
+We find the confidence interval.
+\begin{align*}
+CI ~~&=~~ \bar{x} \pm z^\star SE \\
+&=~~ 88.5 \pm (1.64)(1.63978) \\
+&=~~ (85.81,\,91.19)
+\end{align*}
+\end{solution}
+\part Determine a 99\% confidence interval.
+\begin{solution}
+The standard error is the same as above. We calculate a new $z^\star$.
+$$z^\star ~~=~~ \Phi^{-1}(0.995) ~~=~~ 2.58 $$
+We find the confidence interval.
+\begin{align*}
+CI ~~&=~~ \bar{x} \pm z^\star SE \\
+&=~~ 88.5 \pm (2.58)(1.63978) \\
+&=~~ (84.27,\,92.73)
+\end{align*}
+\end{solution}
+\newpage
+\part If a normally distributed population has a mean of 90 and a standard deviation of 11, what is the chance that 45 measurements will have a mean lower than 88.5?
+\begin{solution}
+Let $X$ represent a single measurement.
+$$X \sim \N{90}{11} $$
+Let $\bar{X}$ represent the mean of 45 measurements.
+$$\bar{X} \sim \mathcal{N}\left(90\,,~\frac{11}{\sqrt{45}}\right) $$
+$$\bar{X} \sim \mathcal{N}\left(90\,,~1.64\right) $$
+We hope to calculate $P(\bar{X} < 88.5)$. We draw a sketch.
+\begin{center}
+\includegraphics[scale=0.8]{figures/sketch3.pdf}
+\end{center}
+We calculate the $z$-score.
+$$z = \frac{88.5-90}{1.64} = -0.91 $$
+We calculate the probability.
+$$P(\bar{X}<88.5) ~~=~~ P(Z<-0.91) ~~=~~ \fbox{0.1814} $$
+\end{solution}
+\end{parts}
+
+\newpage
+
+\question[10] You had been told that adult elephants have a mean weight of 255 kg. You decided to measure the weights of 50 random elephants and run a hypothesis test with a significance level of 0.05.
+\\
+Your sample has a mean of 249.8 kg and a standard deviation of 12.34 kg. What is your conclusion and why? Show your work for full credit.
+\begin{solution}
+We state the hypotheses.
+$$H_0: ~~\mu=255 $$
+$$H_A: ~~\mu\ne 255 $$
+We describe the null's sampling distribution by assuming $\sigma \approx 12.34$. We calculate the standard error: $SE = 12.34/\sqrt{50} = 1.75$
+$$\bar{X}_0 \sim \N{255}{1.75} $$
+We find the $z$-score of the actual sample's mean ($249.8$) under the null's sampling distribution.
+$$z = \frac{249.8-255}{1.75} = -2.97 $$
+We sketch the null's sampling distribution, along with a two-tailed area using $249.8$ (the actual sample's mean) as a boundary.
+\begin{center}
+\includegraphics[scale=0.8]{figures/sketch4.pdf}
+\end{center}
+We determine the probability.
+$$P(|Z|>2.97) ~~=~~ 2 P(Z<-2.97) ~~=~~ (2)(0.0015) ~~=~~ 0.003$$
+$$p\text{-value} ~~=~~ 0.003 $$
+We compare the $p$-value to the significance level.
+$$0.003 < 0.05 $$
+$$p\text{-value} < \alpha $$
+We reject the null hypothesis. We conclude the true mean weight of elephants is not 255 kg.
+\end{solution}
+
+\end{questions}
+
+
+
+\end{document}

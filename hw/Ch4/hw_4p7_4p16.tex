@@ -80,13 +80,59 @@ We are 99\% confident that the true population proportion is between 0.458 and 0
 \end{enumerate}
 
 \item \begin{enumerate}
-\item .
+\item We are 95\% confident that the true mean is between 3.4 and 4.24. In other words, we think if we repeated the whole survey infinite times (with new samples) and calculated new confidence intervals the same way, then 95\% of the time the true mean would fall in the various confidence intervals.
+\item I think if I repeat this process, then 95\% of the time the various confidence intervals will contain the true population mean. 
+
+Sometimes gambling is fun. Given no other information, my cutoff odds would be 5:95 on the true mean being in the interval.
+\item Larger
+\item Standard error of the smaller sample is larger. If we could combine all the data, then the standard error would be smaller (but we were not told the population mean stayed constant, so we can't combine the data).
 \end{enumerate}
 
 \item \begin{enumerate}
-\item .
+\item False. The sampling distribution is probably normal.
+\item False, we know the sample mean.
+\item True. This is what a confidence interval is.
+\item False. We would need to know the population mean to make a statement like this.
+\item False. A larger confidence interval needs a larger interval.
+\item True.
+\item False. We would need to quadruple the sample size.
 \end{enumerate}
 
+
+\item \begin{enumerate}
+\item False. We know the sample mean exactly (\$84.71).
+\item False. That skew is not harsh and our sample size is quite large. However, there is a possibility that we just don't know how much skew there truly is. Maybe some people spend a million dollars a day...
+\item False. If we assumed the population mean was truly \$84.71, then this would be true, but we don't have any reason to think that.
+\item True.
+\item False. We would need a sample 9 times larger.
+\item True.
+\end{enumerate}
+
+\item We assume the sampling distribution is approximately normal because our sample size is larger than 30 and there is no reason to think the population is extremely skewed. Notice we did not assume the population was normally distributed!\\
+We find the standard error.
+$$SE = \frac{1.97}{\sqrt{203}} = \fbox{0.138} $$
+We find $z^\star$.
+$$P(|Z| < z^\star) = 0.9 $$
+$$P(Z < z^\star) = 0.95 $$
+$$z^\star = \Phi^{-1}(0.95) = \fbox{1.64} $$
+We find the confidence interval.
+$$CI = \bar{x} \pm z^\star SE $$
+$$CI = 3.2\pm (1.64)(0.138) $$
+$$CI = (2.97,\, 3.43) $$
+We are 90\% confident that the true population mean is between 2.97 and 3.43.
+
+\item We assume the sampling distribution is approximately normal because our sample size is larger than 30 and there is no reason to think the population is extremely skewed. Notice we did not assume the population was normally distributed!\\
+We find the standard error.
+$$SE = \frac{4.72}{\sqrt{5534}} = 0.0634 $$
+We find $z^\star$.
+$$P(|Z| < z^\star) = 0.95 $$
+$$P(Z < z^\star) = 0.975 $$
+$$z^\star = \Phi^{-1}(0.975) = \fbox{1.96} $$
+We find the confidence interval.
+$$CI = \bar{x} \pm z^\star SE $$
+$$CI = 23.44\pm (1.96)(0.0634) $$
+$$CI = (23.3,\, 23.6) $$
+We are 95\% confident that the true population mean is between 23.3 and 23.6.
 
 \end{enumerate}
 \end{document}
