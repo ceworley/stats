@@ -16,7 +16,7 @@
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
 \firstpageheader{}{}{\includegraphics[scale=0.5]{BHCClogoBW.jpg}\hspace{-40pt}\vspace{-50pt}}
 \firstpagefooter{}{}{Page \thepage ~of \pageref{LastPage}}
-\runningheader{ \textsc{Math 181 2nd Exam Practice B}}{}{ \textsc{Spring 2019}}%{\includegraphics[scale=.5]{BHCClogoBW.jpg}\vspace{-10pt}}%\hspace{-60pt}\vspace{-10pt}}
+\runningheader{ \textsc{Math 181 2nd Exam Practice C}}{}{ \textsc{Spring 2019}}%{\includegraphics[scale=.5]{BHCClogoBW.jpg}\vspace{-10pt}}%\hspace{-60pt}\vspace{-10pt}}
 \runningheadrule
 \runningfooter{}{}{Page \thepage ~of \pageref{LastPage}}
 \renewcommand{\thequestion}{{\bf Q\arabic{question}}}
@@ -35,7 +35,7 @@
 \begin{center}
 \text{ }\\
 \vspace{40pt}
-\textsc{{\Huge Math 181 2nd Exam Practice B}}\\\vspace{5pt}
+\textsc{{\Huge Math 181 2nd Exam Practice C}}\\\vspace{5pt}
 \textsc{{\large Spring 2019}}\\
 \vspace{60pt}
 \makebox[\textwidth]{\large Name:\enspace\hrulefill}\\
@@ -182,9 +182,9 @@ $s = \text{ sample standard deviation}$\\
 $\alpha = \text{ significance level} $
 \begin{align*}
 \sigma &\approx s\\
-z &= \left| \frac{\bar{x}-\mu_0}{SE} \right|\\\\
-p\text{-value } &= P\left(\lvert Z \rvert > z  \right)\\
-&= 2 \Phi\left( -z \right)
+z &=  \frac{\bar{x}-\mu_0}{SE} \\\\
+p\text{-value } &= P\left(\lvert Z \rvert > |z|  \right)\\
+&= 2 \cdot \Phi\left( -|z| \right)
 \end{align*}
 If $p$-value $< \alpha$, then reject $H_0$, else retain $H_0$.
 
@@ -252,58 +252,45 @@ If $p$-value $< \alpha$, then reject $H_0$, else retain $H_0$.
 \newcommand{\zhi}{z_\textsc{upper}}
 
 \begin{questions}
-\question[10] Hannah is curious about the expected number of rolls of a 6-sided die before getting every side, but Hannah forgets how to analyze it mathematically. So, she gets a 6-sided die and rolls it until she sees every number and writes down how many rolls it took. She repeats this over and over, getting the following sample:
-\begin{center}
-\begin{tabular}{*{15}{c}}
-18 & 19 & 26 & 23 & 17 & 12 & 11 & 12 & 23 & 16 & 13 & 8 & 10 & 8 & 7 \\
- 19 & 14 & 11 & 15 & 17 & 20 & 24 & 12 & 18 & 10 & 9 & 22 & 24 & 14 & 14
-\end{tabular}
-\end{center}
-Hannah determines the sample size $n=30$, sample mean $\bar{x}=15.53$, and sample standard deviation $s=5.41$.
-\begin{parts}
-\part Determine a 92\% confidence interval for the expected number of rolls to get all sides. You can assume the sampling distribution is normal (even though the population is not normal).
+\question[10] Let random variable $X$ be normally distributed with mean $\mu=50$ and standard deviation $\sigma=12$. What is the probability that $X$ is between 46 and 54?
 \vfill
-\part After this study, would you believe a friend that suggests the expected number of rolls is 11? Why or why not?
+\question[10] Let random variable $\bar{X}$ be the sample mean of 36 draws from a normally distributed population with mean $\mu=50$ and standard deviation $\sigma=12$. What is the probability that $\bar{X}$ is between 46 and 54?
+\vfill
+
+\newpage
+
+\question[10] Let random variable $X$ be normally distributed with mean $\mu=50$ and standard deviation $\sigma=12$. What is the $x$-score of the 80th percentile?
+\vfill
+
+
+\question[10] Let random variable $Y$ be normally distributed with mean $\mu=72$ and an unknown standard deviation $\sigma$. However, you know the 90th percentile is $y=79$. What is the distribution's standard deviation?
+\vfill
+
+\question[10] Let random variable $W$ be normally distributed with an unknown mean $\mu$ and standard deviation $\sigma=0.5$. However, you know the 30th percentile is $w=8$. What is the distribution's mean?
+\vfill
+
+\newpage
+
+\question[10] Let each trial have a probability of success $p=0.61$. 
+\begin{parts}
+\part What is the probability that in 400 trials there are 250 successes?
+\vfill
+\part What is the probability that in 400 trials there are at least 250 successes? (Please use a normal approximation and continuity correction. Also, remember that $p=0.61$.)
 \vfill
 \end{parts}
 
 \newpage
 
-\question[10] Imagine each trial has a 42\% chance of success.  Let random variable $W$ represent the result of a trial, where 0 means failure and 1 means success.
-\begin{parts}
-\part What is the standard deviation of $W$?
-\vfill
-\part What is the expected number of trials until getting a success?
-\vfill
-\part What is the standard deviation of number of trials until getting a success?
-\vfill
-\part What is the probability of getting 30 successes from 75 trials?
-\vfill
-\end{parts}
-
+\question[10] A random sample of size $n=89$ has a mean $\bar{x}=23.4$ and a sample standard deviation $s=5.6$ (and no apparent skew). Determine a confidence interval of the population's mean using a confidence level of $75$\%.
 
 \newpage
 
-\question[10] If each trial has a 33\% chance of success and there are 200 trials, what is the probability that the number of successes is more than 67? Please use a normal approximation with the continuity correction.
+\question[10] A population is claimed to have a mean $\mu=678$. However, you are skeptical, so you decide you'll take a random sample and run a two-tail hypothesis test with a significance level $\alpha=0.05$.  
+
+Your random sample of size $n=211$ results in a sample mean of $\bar{x}=664.4$ and a sample standard deviation $s=101.3$. What do you conclude?
 
 \newpage
-
-\question[10] Perform a two-tail hypothesis test with $\mu_0=100$, $n=50$, $\bar{x}=103.2$, $s=14.4$, and $\alpha=0.10$.
-
-\newpage
-
-\question[10] Let $X\sim\N{500}{20}$.
-\begin{parts}
-\part Evaluate $P(470 < X < 520)$.
-\vfill
-\part Determine $x$ such that $P(X > x) ~=~ 0.40$.
-\vfill
-\end{parts}
-
-\newpage
-
-\question[10] There is a continuous population with $\mu=500$ and $\sigma=20$. What is the probability that a sample of size 100 has a mean between 500 and 503?
-\vfill
+\question[10] What is a sampling distribution?
 
 \end{questions}
 

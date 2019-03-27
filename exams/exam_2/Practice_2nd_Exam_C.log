@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.2.27)  26 MAR 2019 22:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.2.27)  26 MAR 2019 22:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**\nonstopmode \input{Practice_2nd_Exam_B_solutions.tex}
-(./Practice_2nd_Exam_B_solutions.tex
+**\nonstopmode \input{Practice_2nd_Exam_C.tex}
+(./Practice_2nd_Exam_C.tex
 (/usr/share/texlive/texmf-dist/tex/latex/exam/exam.cls
 Document Class: exam 2017/12/17 Version 2.603 by Philip Hirschhorn
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
@@ -1016,8 +1016,8 @@ File: t1ntxtlf.fd 2015/01/17 v1.0 font definition file for T1/ntx/tlf
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 12.0pt on input line 30.
 
-(./Practice_2nd_Exam_B_solutions.aux)
-\openout1 = `Practice_2nd_Exam_B_solutions.aux'.
+(./Practice_2nd_Exam_C.aux)
+\openout1 = `Practice_2nd_Exam_C.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 30.
 LaTeX Font Info:    Try loading font information for OML+ntxmi on input line 30
@@ -1170,60 +1170,60 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/sc' will be
-(Font)              scaled to size 12.0pt on input line 39.
+(Font)              scaled to size 12.0pt on input line 38.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/sc' will be
-(Font)              scaled to size 24.88pt on input line 39.
+(Font)              scaled to size 24.88pt on input line 38.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/sc' will be
-(Font)              scaled to size 14.4pt on input line 40.
+(Font)              scaled to size 14.4pt on input line 39.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 14.4pt on input line 42.
-LaTeX Font Info:    Try loading font information for TS1+ntxtlf on input line 6
-0.
+(Font)              scaled to size 14.4pt on input line 41.
+LaTeX Font Info:    Try loading font information for TS1+ntxtlf on input line 5
+9.
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
 File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
 )
 LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.0pt on input line 60.
+(Font)              scaled to size 12.0pt on input line 59.
 LaTeX Font Info:    Font shape `T1/ntxtlf/bx/n' in size <12> not available
-(Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 60.
+(Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 59.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 12.0pt on input line 60.
-LaTeX Font Info:    Try loading font information for OT1+ntxtlf on input line 6
-0.
+(Font)              scaled to size 12.0pt on input line 59.
+LaTeX Font Info:    Try loading font information for OT1+ntxtlf on input line 5
+9.
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/ot1ntxtlf.fd
 File: ot1ntxtlf.fd 2015/01/17 v1.0 font definition file for OT1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.0pt on input line 60.
+(Font)              scaled to size 12.0pt on input line 59.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.8pt on input line 60.
+(Font)              scaled to size 8.8pt on input line 59.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.6pt on input line 60.
-LaTeX Font Info:    Try loading font information for U+msa on input line 60.
+(Font)              scaled to size 6.6pt on input line 59.
+LaTeX Font Info:    Try loading font information for U+msa on input line 59.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 60.
+LaTeX Font Info:    Try loading font information for U+msb on input line 59.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+ntxmia on input line 60.
+LaTeX Font Info:    Try loading font information for U+ntxmia on input line 59.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/untxmia.fd
 File: untxmia.fd 2016/01/31 Fontinst v1.933 font definitions for U/ntxmia.
 )
-LaTeX Font Info:    Try loading font information for U+ntxsym on input line 60.
+LaTeX Font Info:    Try loading font information for U+ntxsym on input line 59.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
 )
-LaTeX Font Info:    Try loading font information for U+ntxsyc on input line 60.
+LaTeX Font Info:    Try loading font information for U+ntxsyc on input line 59.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/untxsyc.fd
@@ -1232,158 +1232,125 @@ File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 <BHCClogoBW.jpg, id=1, 293.898pt x 118.5228pt>
 File: BHCClogoBW.jpg Graphic file (type jpg)
 <use BHCClogoBW.jpg>
-Package pdftex.def Info: BHCClogoBW.jpg  used on input line 75.
+Package pdftex.def Info: BHCClogoBW.jpg  used on input line 74.
 (pdftex.def)             Requested size: 146.94862pt x 59.26125pt.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./BHCClogoBW.jpg>]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.8pt on input line 83.
+(Font)              scaled to size 8.8pt on input line 82.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.6pt on input line 83.
-LaTeX Font Info:    Try loading font information for T1+ntxtt on input line 96.
+(Font)              scaled to size 6.6pt on input line 82.
+LaTeX Font Info:    Try loading font information for T1+ntxtt on input line 95.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/t1ntxtt.fd
 File: t1ntxtt.fd 2012/04/20 v3.1
 )
 LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
-(Font)              scaled to size 12.0pt on input line 96.
+(Font)              scaled to size 12.0pt on input line 95.
 
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 140.
+(amsmath)                 on input line 139.
 
-[2]
-<figures/sketch5.pdf, id=23, 433.62pt x 144.54pt>
-File: figures/sketch5.pdf Graphic file (type pdf)
-<use figures/sketch5.pdf>
-Package pdftex.def Info: figures/sketch5.pdf  used on input line 272.
-(pdftex.def)             Requested size: 346.89647pt x 115.63214pt.
- [3 <./figures/sketch5.pdf>] [4]
-<figures/sketch6.pdf, id=38, 433.62pt x 216.81pt>
-File: figures/sketch6.pdf Graphic file (type pdf)
-<use figures/sketch6.pdf>
-Package pdftex.def Info: figures/sketch6.pdf  used on input line 339.
-(pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
- [5 <./figures/sketch6.pdf>]
-<figures/sketch7.pdf, id=50, 433.62pt x 216.81pt>
-File: figures/sketch7.pdf Graphic file (type pdf)
-<use figures/sketch7.pdf>
-Package pdftex.def Info: figures/sketch7.pdf  used on input line 367.
-(pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
- [6 <./figures/sketch7.pdf>]
-<figures/sketch8.pdf, id=62, 433.62pt x 180.675pt>
-File: figures/sketch8.pdf Graphic file (type pdf)
-<use figures/sketch8.pdf>
-Package pdftex.def Info: figures/sketch8.pdf  used on input line 396.
-(pdftex.def)             Requested size: 346.89647pt x 144.54018pt.
-<figures/sketch9.pdf, id=63, 433.62pt x 180.675pt>
-File: figures/sketch9.pdf Graphic file (type pdf)
-<use figures/sketch9.pdf>
-Package pdftex.def Info: figures/sketch9.pdf  used on input line 410.
-(pdftex.def)             Requested size: 346.89647pt x 144.54018pt.
- [7 <./figures/sketch8.pdf> <./figures/sketch9.pdf>]
-<figures/sketch10.pdf, id=84, 433.62pt x 180.675pt>
-File: figures/sketch10.pdf Graphic file (type pdf)
-<use figures/sketch10.pdf>
-Package pdftex.def Info: figures/sketch10.pdf  used on input line 430.
-(pdftex.def)             Requested size: 433.61894pt x 180.67455pt.
-<ztable/ztable.pdf, id=85, 614.295pt x 794.97pt>
+[2] [3] [4] [5] [6] [7]
+<ztable/ztable.pdf, id=40, 614.295pt x 794.97pt>
 File: ztable/ztable.pdf Graphic file (type pdf)
 <use ztable/ztable.pdf>
-Package pdftex.def Info: ztable/ztable.pdf  used on input line 443.
+Package pdftex.def Info: ztable/ztable.pdf  used on input line 297.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: ztable/ztable.pdf Graphic file (type pdf)
 <use ztable/ztable.pdf>
-Package pdftex.def Info: ztable/ztable.pdf  used on input line 443.
+Package pdftex.def Info: ztable/ztable.pdf  used on input line 297.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
-<ztable/ztable.pdf, id=88, page=1, 614.295pt x 794.97pt>
+<ztable/ztable.pdf, id=43, page=1, 614.295pt x 794.97pt>
 File: ztable/ztable.pdf Graphic file (type pdf)
 <use ztable/ztable.pdf, page 1>
-Package pdftex.def Info: ztable/ztable.pdf , page1 used on input line 443.
+Package pdftex.def Info: ztable/ztable.pdf , page1 used on input line 297.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: ztable/ztable.pdf Graphic file (type pdf)
 <use ztable/ztable.pdf, page 1>
-Package pdftex.def Info: ztable/ztable.pdf , page1 used on input line 443.
+Package pdftex.def Info: ztable/ztable.pdf , page1 used on input line 297.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
- [8 <./figures/sketch10.pdf>]
+ [8]
 File: ztable/ztable.pdf Graphic file (type pdf)
 <use ztable/ztable.pdf, page 1>
-Package pdftex.def Info: ztable/ztable.pdf , page1 used on input line 443.
-(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
-File: ztable/ztable.pdf Graphic file (type pdf)
-<use ztable/ztable.pdf, page 1>
-Package pdftex.def Info: ztable/ztable.pdf , page1 used on input line 443.
+Package pdftex.def Info: ztable/ztable.pdf , page1 used on input line 297.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: ztable/ztable.pdf Graphic file (type pdf)
 <use ztable/ztable.pdf, page 1>
-Package pdftex.def Info: ztable/ztable.pdf , page1 used on input line 443.
+Package pdftex.def Info: ztable/ztable.pdf , page1 used on input line 297.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: ztable/ztable.pdf Graphic file (type pdf)
+<use ztable/ztable.pdf, page 1>
+Package pdftex.def Info: ztable/ztable.pdf , page1 used on input line 297.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
  [9 <./ztable/ztable.pdf>]
 File: ztable/ztable.pdf Graphic file (type pdf)
 <use ztable/ztable.pdf>
-Package pdftex.def Info: ztable/ztable.pdf  used on input line 444.
+Package pdftex.def Info: ztable/ztable.pdf  used on input line 298.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: ztable/ztable.pdf Graphic file (type pdf)
 <use ztable/ztable.pdf>
-Package pdftex.def Info: ztable/ztable.pdf  used on input line 444.
+Package pdftex.def Info: ztable/ztable.pdf  used on input line 298.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
-<ztable/ztable.pdf, id=138, page=2, 614.295pt x 794.97pt>
+<ztable/ztable.pdf, id=85, page=2, 614.295pt x 794.97pt>
 File: ztable/ztable.pdf Graphic file (type pdf)
 <use ztable/ztable.pdf, page 2>
-Package pdftex.def Info: ztable/ztable.pdf , page2 used on input line 444.
+Package pdftex.def Info: ztable/ztable.pdf , page2 used on input line 298.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: ztable/ztable.pdf Graphic file (type pdf)
 <use ztable/ztable.pdf, page 2>
-Package pdftex.def Info: ztable/ztable.pdf , page2 used on input line 444.
+Package pdftex.def Info: ztable/ztable.pdf , page2 used on input line 298.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: ztable/ztable.pdf Graphic file (type pdf)
 <use ztable/ztable.pdf, page 2>
-Package pdftex.def Info: ztable/ztable.pdf , page2 used on input line 444.
+Package pdftex.def Info: ztable/ztable.pdf , page2 used on input line 298.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: ztable/ztable.pdf Graphic file (type pdf)
 <use ztable/ztable.pdf, page 2>
-Package pdftex.def Info: ztable/ztable.pdf , page2 used on input line 444.
+Package pdftex.def Info: ztable/ztable.pdf , page2 used on input line 298.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: ztable/ztable.pdf Graphic file (type pdf)
 <use ztable/ztable.pdf, page 2>
-Package pdftex.def Info: ztable/ztable.pdf , page2 used on input line 444.
+Package pdftex.def Info: ztable/ztable.pdf , page2 used on input line 298.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
  [10 <./ztable/ztable.pdf>]
-This exam contains 6 questions with 8 parts, 0 subparts, and 0 subsubparts.
-This exam has a total of 60 points.
+This exam contains 9 questions with 2 parts, 0 subparts, and 0 subsubparts.
+This exam has a total of 90 points.
 This exam has a total of 0 bonus points.
 
 AED: lastpage setting LastPage
-(./Practice_2nd_Exam_B_solutions.aux) ) 
+(./Practice_2nd_Exam_C.aux) ) 
 Here is how much of TeX's memory you used:
- 8829 strings out of 494847
- 120104 string characters out of 6179080
- 226108 words of memory out of 5000000
- 11913 multiletter control sequences out of 15000+600000
- 73559 words of font info for 125 fonts, out of 8000000 for 9000
+ 8792 strings out of 494847
+ 119152 string characters out of 6179080
+ 226069 words of memory out of 5000000
+ 11883 multiletter control sequences out of 15000+600000
+ 67467 words of font info for 123 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 40i,18n,48p,893b,525s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc
-/dvips/newtx/ntx-ot1-tlf.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/bas
-e/8r.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{/
-usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/share/texlive/texmf-di
-st/fonts/enc/dvips/newtx/ntx-ec-tlf-sc.enc}</usr/share/texmf/fonts/type1/public
-/tex-gyre/qtmb.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmr.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/txfonts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/newtx/txexs.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/tx
-fonts/txmia.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Practice_2nd_Exam_B_solutions.pdf (10 pages, 429521 bytes).
+ 40i,18n,48p,883b,525s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/new
+tx/ntx-ot1-tlf.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{
+/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{/usr/share/
+texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/share/texlive/texmf-dist/fonts/e
+nc/dvips/newtx/ntx-ec-tlf-sc.enc}</usr/share/texmf/fonts/type1/public/tex-gyre/
+qtmb.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmr.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/newtx/rntxmi.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+txfonts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txexs
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txmia.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
+w/times/utmri8a.pfb>
+Output written on Practice_2nd_Exam_C.pdf (10 pages, 371341 bytes).
 PDF statistics:
- 188 PDF objects out of 1000 (max. 8388607)
- 139 compressed objects within 2 object streams
+ 137 PDF objects out of 1000 (max. 8388607)
+ 100 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
