@@ -1,0 +1,333 @@
+\documentclass[12pt,letterpaper,addpoints]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{multicol}
+\usepackage{multirow,array}
+\usepackage{newtxtext,newtxmath}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{pdfpages}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\firstpageheader{}{}{\includegraphics[scale=0.5]{BHCClogoBW.jpg}\hspace{-40pt}\vspace{-50pt}}
+\firstpagefooter{}{}{Page \thepage ~of \pageref{LastPage}}
+\runningheader{ \textsc{Math 181 2nd Exam}}{}{ \textsc{Spring 2019}}%{\includegraphics[scale=.5]{BHCClogoBW.jpg}\vspace{-10pt}}%\hspace{-60pt}\vspace{-10pt}}
+\runningheadrule
+\runningfooter{}{}{Page \thepage ~of \pageref{LastPage}}
+\renewcommand{\thequestion}{{\bf Q\arabic{question}}}
+%\renewcommand{\questionlabel}{{\thequestion .}}
+%\pointformat{\fbox{\themarginpoints \,pt}}
+%\pointsinrightmargin
+%\setlength{\rightpointsmargin}{1.5cm}
+%\pointsinmargin
+%\setlength{\marginpointssep}{10pt}
+
+\begin{document}
+
+\newcommand{\AND}{~\textsc{and}~}
+\newcommand{\OR}{~\textsc{or}~}
+
+\begin{center}
+\text{ }\\
+\vspace{40pt}
+\textsc{{\Huge Math 181 2nd Exam}}\\\vspace{5pt}
+\textsc{{\large Spring 2019}}\\
+\vspace{60pt}
+\makebox[\textwidth]{\large Name:\enspace\hrulefill}\\
+\vspace{40pt}
+\fbox{\fbox{\begin{minipage}{6in}
+\vspace{0.2in}
+\begin{itemize}
+\item Write your {\bf full name} on the line above.
+\item Show your work. Incorrect answers with work can receive partial credit.
+\item Attempt every question; showing you understand the question earns some credit.
+\item If you run out of room for an answer, continue on the back of the page. Before doing so, write ``see back'' with a circle around it.
+\item You can use 1 page (front and back) of notes in addition to the formula sheet (on page 2) and $z$-table (last page).
+\item You can use (and probably need) a calculator.
+\item You can use the Geogebra Scientific Calculator instead of a calculator. You need to put your phone on {\bf airplane mode} and then within the application, start {\bf exam mode}; you should see a green bar with a timer counting up.
+\item If a question is confusing or ambiguous, please ask for clarification; however, you will not be told how to  answer the question.
+\item {\bf Box your final answer}.
+\item You can rip off the $z$-table, but please keep the rest of the test intact.
+\vspace{0.2in}
+\end{itemize}
+\end{minipage}
+\begin{minipage}{0.2in}\text{ }\end{minipage}}}
+\vfill
+Do not write in this grade table.\\
+\gradetable[h][questions]\\
+\vfill
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\N}[2]{\mathcal{N}\big(#1\,,~#2\big)}
+\newcommand{\Bern}[1]{\texttt{Bern}\big(#1\big)}
+\newcommand{\Geo}[1]{\texttt{Geo}\big(#1\big)}
+\newcommand{\B}[2]{\mathcal{B}\big(#1\,,~#2\big)}
+\newcommand{\Sampp}[2]{\texttt{Samp}_{\hat{p}}\big(#1,~#2\big)}
+%\newcommand{\Sampx}[2]{\texttt{Samp}_{\hat{p}}\big(#1,~#2\big)}
+
+\newpage
+
+\begin{multicols}{2}
+
+%\rhead{\textsc{Definitions and Formulas}}
+
+{\bf Normal Distribution:}\\
+$X \sim \N{\mu}{\sigma}$\\
+$\mu = \text{ population mean} $\\
+$\sigma = \text{ population standard deviation} $\\
+$x = \text{ possible value of }X $\\
+$\ell = \text{ percentile of } x \text{ (left area)}$\\
+$\Phi(z) = \text{ standard normal cumulative function}$
+\begin{align*}
+z &= \frac{x-\mu}{\sigma}\\
+P(X < x) &= \Phi(z)\\
+\ell &= \Phi(z)\\
+z &= \Phi^{-1}(\ell)
+\end{align*}
+
+{\bf Bernoulli Distribution:}\\
+$X \sim \Bern{p} $\\
+$X = \text{ 0 for fail or 1 for success}$\\
+$p = \text{ probability of success}$
+\begin{align*}
+P(X=0) ~&=~ 1-p \\
+P(X=1) ~&=~ p \\
+\mu ~&=~ p\\
+\sigma ~&=~ \sqrt{p(1-p)}
+\end{align*}
+
+{\bf Geometric Distribution:}\\
+$X \sim \Geo{p}$ \\
+$X = \text{ number of trials until first success}$\\
+$p = \text{ probability of success on each trial}$\\
+$n = \text{ a possible number of trials}$
+\begin{align*}
+P(X=n) ~&=~ (1-p)^{n-1}(p)\\
+\mu ~&=~ \frac{1}{p}\\
+\sigma ~&=~ \sqrt{\frac{1-p}{p^2}} 
+\end{align*}
+
+{\bf Mean-Sampling Distribution:}\\
+$\bar{X} = \text{ sample mean}$\\
+$s = \text{ sample standard deviation}$\\
+$n = \text{ sample size}$\\
+$\mu = \text{ population mean}$\\
+$\sigma = \text{ population standard deviation}$\\
+$SE = \text{ standard error}$
+$$SE = \frac{\sigma}{\sqrt{n}} $$
+If $n\ge 30$ (or if population is normal) then:
+$$\bar{X} \sim \N{\mu}{SE} $$
+
+\columnbreak
+
+{\bf Binomial Distribution:}\\
+$X \sim \B{n}{p}$\\
+$X = \text{ number of successes from $n$ trials} $\\
+$p = \text{ probability of success on each trial}$\\
+$n = \text{ number of trials}$\\
+$k = \text{ a possible number of successes}$
+\begin{align*}
+P(X=k) ~&=~ {n \choose k} p^k (1-p)^{n-k}\\
+\mu ~&=~ np\\
+\sigma ~&=~ \sqrt{np(1-p)} 
+\end{align*}
+If $np \ge 10$ and $n(1-p) \ge 10$, then
+$$X \sim \N{\mu}{\sigma} $$
+Continuity correction:
+$$P(X \le k) ~\approx~ \Phi\left(\frac{k+0.5-\mu}{\sigma}\right)$$
+
+
+
+%{\bf Proportion-Sampling Distribution:}\\
+%%$\hat{p} \sim \Sampp{n}{p}$\\
+%$\hat{p} = \text{ sample proportion} $\\
+%$p = \text{ population proportion}$\\
+%$n = \text{ number of trials}$\\
+%$y = \text{ a possible sample proportion}$
+%\begin{align*}
+%P\left( \hat{p}=y \right) ~&=~ {n \choose ny} p^{ny} (1-p)^{n-ny}\\
+%\mu ~&=~ p\\
+%\sigma ~&=~ \sqrt{\frac{p(1-p)}{n}} 
+%\end{align*}
+%If $np \ge 10$ and $n(1-p) \ge 10$, then
+%$$\hat{p} \sim \N{\mu}{\sigma} $$
+%Continuity correction:
+%$$P(\hat{p} \le y) ~\approx~ \Phi\left(\frac{ny+0.5-\mu}{n\sigma}\right)$$
+%$$P(\hat{p} < y) ~\approx~ \Phi\left(\frac{ny-0.5-\mu}{n\sigma}\right)$$
+
+
+
+{\bf Confidence Interval:}\\
+$CI = \text{ confidence interval}$\\
+$\gamma = \text{ confidence level}$\\
+$\bar{x} = \text{ sample mean}$ \\
+$s = \text{ sample standard deviation}$ 
+\begin{align*}
+z^{\star} &= \Phi^{-1}\left(\frac{\gamma+1}{2} \right) \\
+SE &\approx \frac{s}{\sqrt{n}}\\
+CI &= \bar{x} \pm z^{\star} SE
+\end{align*}
+
+{\bf Hypothesis testing:}\\
+$H_0:~~~\mu = \mu_0$\\
+$H_A:~~~\mu \ne \mu_0$\\
+$\bar{x} = \text{ a possible/specific/observed sample mean}$\\
+$s = \text{ sample standard deviation}$\\
+$\alpha = \text{ significance level} $
+\begin{align*}
+\sigma &\approx s\\
+z &= \frac{\bar{x}-\mu_0}{SE}\\\\
+p\text{-value } &= P\left(\lvert Z \rvert > |z|  \right)\\
+&= 2 \cdot \Phi\left( -|z| \right)
+\end{align*}
+If $p$-value $< \alpha$, then reject $H_0$, else retain $H_0$.
+
+\end{multicols}
+
+
+
+%\newpage
+%
+%\rhead{\textsc{Definitions and Formulas}}
+%{\bf Sample statistics:}\vspace{-10pt}
+%\begin{multicols}{2}\noindent
+%$n=\text{sample size} $\\
+%$x_i=\text{the $i$th value in a sample} $\\
+%$\bar x = \text{sample mean}$\\
+%$s = \text{sample standard deviation}$\\\\
+%$\bar x = \cfrac{\sum_{i=1}^n x_i}{n}$
+%
+%\columnbreak \noindent
+%$Q_1$ = first quartile\\
+%$m$ = median\\
+%$Q_3$ = third quartile\\
+%IQR = inter-quartile range = $Q3-Q1$\\\\
+%$s = \sqrt{\cfrac{\sum_{i=1}^n (x_i-\bar x)^2}{n-1}}$ 
+%\end{multicols}
+%
+%{\bf Population parameters:}\\
+%$\mu = \text{population mean}$\\
+%$\sigma = \text{population standard deviation}$\\
+%
+%{\bf Probability:}\\
+%$\Omega = \text{set of all possible equally likely outcomes}$\\
+%$A = \text{event A, a set of outcomes}$\\
+%$A^c = \text{The complement of }A$\\
+%$B = \text{event B, another set of outcomes}$\\
+%$|A| = \text{size of set, number of outcomes in } A$\\
+%$P(A) = \text{probability of }A$\\
+%$P(A \AND B) = \text{probability of both $A$ and $B$}$\\
+%$P(A \OR B) = \text{probability of either $A$ or $B$ (or both)}$\\
+%$P(A | B) = \text{probability of $A$ given $B$}$\\\\
+%$P(A) = \cfrac{|A|}{|\Omega|}$\\\\
+%$0 \le P(A) \le 1$\\
+%$P(A \AND B) = P(A) \cdot P(B|A)$\\
+%$P(A \OR B) = P(A) + P(B) - P(A\AND B)$\\
+%$P(A^c) = 1 - P(A)$
+%\\\\
+%$A$, $B$ are disjoint (mutually exclusive) ~~$\iff~~P(A\AND B) = 0$\\
+%$A$, $B$ are non-disjoint ~~$\iff~~P(A\AND B) > 0$\\
+%$A$, $B$ are exhaustive ~~$\iff~~P(A\OR B) = 1$\\
+%$A$, $B$ are complements ~~$\iff$~~ $A$, $B$ are disjoint and exhaustive ~~$\iff$~~ $B=A^c$\\
+%$A$, $B$ are independent ~~$\iff~~P(A\AND B) = P(A)\times P(B) ~~\iff~~ P(A|B)=P(A)$\\
+%
+%{\bf Random variables and distributions:}\\
+%$X=$ random variable \\
+%$x_i=$ the $i$th possible value of $X$. (Notice different meaning here {vs.} sample statistics.)\\
+%$k=$ number of possible values of $X$.\\
+%$E(X)=\mu=$ expected value of $X$\\
+%$\sigma=$ standard deviation of $X$\\
+%$\mu = \sum_{i=1}^k  x_i \cdot P(X=x_i) $\\
+%$\sigma = \sqrt{\sum_{i=1}^k (x_i-\mu)^2 \cdot P(X=x_i)}$
+
+
+\newpage
+\newcommand{\zlo}{z_\textsc{lower}}
+\newcommand{\zhi}{z_\textsc{upper}}
+\newcommand{\blankpage}{%\thispagestyle{empty}
+\fullwidth{This page was intentionally left blank for you to have extra space to show work if necessary. All test questions are on odd pages (the fronts).}
+%\addtocounter{page}{-1}
+\newpage}
+
+\begin{questions}
+\question[10] Let random variable $X$ be normally distributed with mean $\mu=33$ and standard deviation $\sigma=4$.
+\begin{parts}
+\part Evaluate $P(X < 37)$.
+\vfill
+\part Determine $x$ such that $P(X<x) = 0.33$.
+\vfill
+\end{parts}
+
+\newpage
+\blankpage
+
+\question[10] Imagine a scratch-off lottery has a chance of success $p=0.01$.
+\begin{parts}
+\part What is the mean number of trials until the first success?
+\vfill
+\part What is the probability of getting the first success on the twelfth trial?
+\vfill
+\end{parts}
+
+\newpage
+\blankpage
+
+\question[10] Let each trial have a chance of success $p=0.25$. We will predict what happens when we have 100 trials.
+\begin{parts}
+\part What is the probability of getting exactly 26 successes?
+\vfill
+\part What is the probability of getting fewer than 26 successes? (Use a normal approximation and continuity correction.)
+\vfill
+\part What is the probability of getting more than 26 successes? 
+\vfill
+\end{parts}
+
+
+\newpage
+\blankpage
+
+\question[10] A uniformly distributed population has a mean $\mu=250$ and a standard deviation $\sigma=18$. When a sample of size $n=144$ is taken, what is the probability of getting a sample mean between 247 and 253?
+\newpage
+\blankpage
+
+\question[10] A sample of size $n=144$ has a mean $\bar{x}=253.92$ and a standard deviation $s=17.54$. Construct a confidence interval of the population's mean based on the sample using a confidence level $\gamma=0.99$.
+
+\newpage
+\blankpage
+
+\question[10] Imagine you thought a uniformly distributed population had a mean $\mu=250$ and standard deviation $s=18$. However, you are skeptical, so you decide to run a two-tailed hypothesis test with a significance level $\alpha=0.01$.
+
+Your sample of size $n=144$ results in a mean $\bar{x}=253.92$. 
+
+\begin{parts}
+\part State the hypotheses.
+\vfill
+\part Describe and sketch the null's sampling distribution. 
+\vfill
+\part Find a $z$ score of the sample mean.
+\vfill
+\part Calculate the $p$-value.
+\vfill
+\part Make your conclusion.
+\vfill
+\end{parts}
+
+
+\newpage
+\blankpage
+\end{questions}
+
+
+
+
+
+\includepdf[pages=1]{ztable/ztable.pdf}
+\includepdf[pages=2]{ztable/ztable.pdf}
+
+\end{document}
