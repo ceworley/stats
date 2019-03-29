@@ -16,7 +16,7 @@
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
 \firstpageheader{}{}{\includegraphics[scale=0.5]{BHCClogoBW.jpg}\hspace{-40pt}\vspace{-50pt}}
 \firstpagefooter{}{}{Page \thepage ~of \pageref{LastPage}}
-\runningheader{ \textsc{Math 181 2nd Exam}}{}{ \textsc{Spring 2019}}%{\includegraphics[scale=.5]{BHCClogoBW.jpg}\vspace{-10pt}}%\hspace{-60pt}\vspace{-10pt}}
+\runningheader{ \textsc{Math 181 2nd Exam}}{SOLUTIONS}{ \textsc{Spring 2019}}%{\includegraphics[scale=.5]{BHCClogoBW.jpg}\vspace{-10pt}}%\hspace{-60pt}\vspace{-10pt}}
 \runningheadrule
 \runningfooter{}{}{Page \thepage ~of \pageref{LastPage}}
 \renewcommand{\thequestion}{{\bf Q\arabic{question}}}
@@ -35,7 +35,7 @@
 \begin{center}
 \text{ }\\
 \vspace{40pt}
-\textsc{{\Huge Math 181 2nd Exam}}\\\vspace{5pt}
+\textsc{{\Huge Math 181 2nd Exam SOLUTIONS}}\\\vspace{5pt}
 \textsc{{\large Spring 2019}}\\
 \vspace{60pt}
 \makebox[\textwidth]{\large Name:\enspace\hrulefill}\\
@@ -236,7 +236,7 @@ P(X=12) ~~&=~~ (1-0.01)^{12-1}(0.01) \\
 This situation is described by a binomial distribution.
 \begin{align*}
 P(X=26) ~~&=~~ {100 \choose 26} (0.25)^{26}(0.75)^{74}\\
-&=~~ \fbox{0.0883}
+&=~~ \fbox{0.09}
 \end{align*}
 \end{solution}
 \vfill
@@ -251,23 +251,23 @@ We find the parameters needed to construct a normal approximation.
 $$\mu ~~=~~ np ~~=~~ (100)(0.25) ~~=~~ 25$$
 \begin{align*}
 \sigma ~~&=~~ \sqrt{np(1-p)}\\
-&=~~ \sqrt{(100)(0.26)(0.74)} \\
-&=~~ 4.3863
+&=~~ \sqrt{(100)(0.25)(0.75)} \\
+&=~~ 4.33
 \end{align*}
 Here is a sketch:
 \begin{center}
 \includegraphics[scale=0.7]{figures/sketch12.pdf}
 \end{center}
 We find the $z$ score of the boundary.
-$$z = \frac{25.5-25}{4.3863} = 0.11 $$
+$$z = \frac{25.5-25}{4.33} = 0.12 $$
 We calculate the probability.
-$$P(X<26) ~=~ P(X<25.5) ~=~ P(Z<0.11) ~=~ \fbox{0.5438} $$
+$$P(X<26) ~=~ P(X<25.5) ~=~ P(Z<0.12) ~=~ \fbox{0.55} $$
 \end{solution}
 \vfill
 \part What is the probability of getting more than 26 successes? 
 \begin{solution}
 The easiest way to do this is by recognizing these three probabilities are mutually exclusive and exhaustive.
-$$1-0.0883-0.5438 ~=~ \fbox{0.3679} $$
+$$1-0.09-0.55 ~=~ \fbox{0.36} $$
 \end{solution}
 \vfill
 \end{parts}
@@ -309,13 +309,13 @@ z^\star ~~&=~~ \Phi^{-1}\left(\frac{0.99+1}{2}\right) \\
 \end{align*}
 We find the standard error.
 $$SE ~=~ \frac{17.54}{\sqrt{144}} ~=~ 1.4617 $$
-We determine the confidence interval. (Old $\bar{x}$ on first print)
-\begin{align*}
-CI ~&=~ \bar{x} \pm z^\star SE \\
-&=~ 254.87 \pm (2.58)(1.4617) \\
-&=~ \fbox{\left(251.1\,,~258.6\right)}
-\end{align*}
-We determine the confidence interval. (Answer to updated problem.)
+%We determine the confidence interval. (Old $\bar{x}$ on first print)
+%\begin{align*}
+%CI ~&=~ \bar{x} \pm z^\star SE \\
+%&=~ 254.87 \pm (2.58)(1.4617) \\
+%&=~ \fbox{\left(251.1\,,~258.6\right)}
+%\end{align*}
+We determine the confidence interval. 
 \begin{align*}
 CI ~&=~ \bar{x} \pm z^\star SE \\
 &=~ 253.92 \pm (2.58)(1.4617) \\
