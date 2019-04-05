@@ -1,0 +1,58 @@
+```{r data generation, echo = FALSE, results = "hide"}
+## DATA GENERATION
+
+CL = sample(c(0.8,0.90,0.95,0.96,0.98,0.99),1)
+mu = runif(1,40,250)
+sig = runif(1,4,mu/4)
+n = sample(4:20,1)
+
+sam = rnorm(n,mu,sig)
+xbar = round(mean(sam), 2)
+s = round(sd(sam), 2)
+se = round(s/sqrt(n),2)
+la = (CL+1)/2
+tstar = round(qt(la,n-1),2)
+LB = round(xbar-tstar*se,2)
+UB = round(xbar+tstar*se,2)
+ME = round((UB-LB)/2,2)
+
+```
+
+Question
+========
+
+A `r CL*100`\% confidence interval for a population mean, $\mu$, is given as (`r LB`, `r UB`). This confidence interval is based on a simple random sample of `r n` observations. Calculate the sample mean and standard deviation. Assume that all conditions necessary for inference are satisfied. Use the $T$ distribution in any calculations.
+
+
+Solution
+========
+
+The sample mean is the average of the bounds of the CI.
+$$\bar{x} = \frac{`r LB` + `r UB`}{2} = `r xbar` $$
+The margin of error is half the difference between the bounds. It is also the distance from $\bar{x}$ to either bound.
+$$ME = \frac{`r UB`-`r LB`}{2} = `r UB`-`r xbar`  = `r ME`$$
+That margin of error is the product of $t^{\star}$ and $SE$. We find the $t^{\star}$ when $P(|T|<t^{\star})=`r CL`$ and $df=n-1=`r n-1`$.
+$$t^{\star} = `r tstar` $$
+We can calculate $SE$.
+$$ME = t^{\star} SE $$
+
+$$`r ME` = (`r tstar`) SE $$
+
+$$SE = \frac{`r ME`}{`r tstar`} = `r se` $$
+
+We can now calculate the sample standard deviation.
+$$SE = \frac{s}{\sqrt{n}} $$
+
+$$`r se` = \frac{s}{\sqrt{`r n`}} $$
+
+$$s = (`r se`)(\sqrt{`r n`}) = `r s` $$
+
+Thus, the sample mean is `r xbar` and the sample standard deviation is `r s`.
+
+
+Meta-information
+============
+extype: num
+exsolution: `r xbar`|`r s`
+exname: CI backwards
+extol: 0.01

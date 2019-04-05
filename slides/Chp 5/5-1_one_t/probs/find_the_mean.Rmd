@@ -1,0 +1,54 @@
+```{r data generation, echo = FALSE, results = "hide"}
+## DATA GENERATION
+options(scipen = 999)
+mu = signif(10^runif(1,1,3),2)
+s = signif(mu*10^runif(1,-2,0),3)
+n = sample(3:20,1)
+pval = sample(c(0.1,0.05,0.025,0.02,0.01,0.005,0.0025,0.002,0.001),1)
+
+if (sample(c(T,F),1)) {
+    sym = '<'
+    wrd = 'less'
+    less = T
+    mmm = -1
+} else {
+    sym = '>'
+    wrd = 'more'
+    less = F
+    mmm = 1
+}
+
+t = mmm*round(qt(1-pval, n-1),2)
+se = signif(s/sqrt(n),3)
+
+x = signif(mu+t*se,3)
+```
+
+Question
+========
+
+You are given the following hypotheses:
+$$H_0:~~ \mu = `r mu`$$
+$$H_A:~~ \mu `r sym` `r mu`$$
+We know that the sample standard deviation is `r s` and the sample size is `r n`. For what sample mean would the $p$-value be equal to `r pval`? Assume that all conditions necessary for inference are satisfied.
+
+
+Solution
+========
+
+Determine the degrees of freedom.
+$$df = `r n-1` $$
+From the $p$-value we find a $t$ score from the $t$ table. In this case, our $p$-value is a one-tail probability.
+$$t = `r t` $$
+We calculate the standard error.
+$$SE = \frac{s}{\sqrt{n}} = \frac{`r s`}{\sqrt{`r n`}} = `r se` $$
+We calculate the sample mean that would give $p\text{-value} = `r pval`$.
+$$\bar{x} = \mu+t\cdot SE = `r mu`+(`r t`)(`r se`) = `r x` $$
+
+
+Meta-information
+============
+extype: num
+exsolution: `r x`
+exname: find_the_mean
+extol: 0.01

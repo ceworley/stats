@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.2.27)  28 MAR 2019 13:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.2.27)  31 MAR 2019 20:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1254,18 +1254,7 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 139.
 
-[2] [3]
-! Misplaced alignment tab character &.
-l.218 ...geometric probability formula: $P(X=n) ~&
-                                                  =~ (1-p)^{n-1}p$.
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-[4]
+[2] [3] [4]
 <figures/sketch12.pdf, id=29, 433.62pt x 144.54pt>
 File: figures/sketch12.pdf Graphic file (type pdf)
 <use figures/sketch12.pdf>
@@ -1365,30 +1354,38 @@ This exam contains 6 questions with 12 parts, 0 subparts, and 0 subsubparts.
 This exam has a total of 60 points.
 This exam has a total of 0 bonus points.
 
+Class exam Warning: Point totals have changed. Rerun to get point totals right.
+
+
+
 AED: lastpage setting LastPage
-(./Exam_2_solutions.aux) ) 
+(./Exam_2_solutions.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
  8812 strings out of 494847
  119412 string characters out of 6179080
- 226123 words of memory out of 5000000
+ 226110 words of memory out of 5000000
  11902 multiletter control sequences out of 15000+600000
  73559 words of font info for 125 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  40i,15n,40p,880b,495s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/
-ntx-ot1-tlf.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/us
-r/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{/usr/share/tex
-mf/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/
-dvips/newtx/ntx-ec-tlf-sc.enc}</usr/share/texmf/fonts/type1/public/tex-gyre/qtm
-b.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmr.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/txfonts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ne
-wtx/txexs.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txmia.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Exam_2_solutions.pdf (8 pages, 411228 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}{/usr/sh
+are/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texlive/texmf-di
+st/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{/usr/share/texmf/fonts/enc/dvips/tex-g
+yre/q-ts1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-s
+c.enc}</usr/share/texmf/fonts/type1/public/tex-gyre/qtmb.pfb></usr/share/texmf/
+fonts/type1/public/tex-gyre/qtmr.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txf
+onts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/t1xtt.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/txfonts/txmia.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/newtx/txsys.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
+w/times/utmri8a.pfb>
+Output written on Exam_2_solutions.pdf (8 pages, 411225 bytes).
 PDF statistics:
  110 PDF objects out of 1000 (max. 8388607)
  82 compressed objects within 1 object stream

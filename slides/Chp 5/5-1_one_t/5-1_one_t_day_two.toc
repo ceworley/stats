@@ -1,0 +1,2 @@
+\babel@toc {english}{}
+\beamer@sectionintoc {1}{T distribution practice}{1}{0}{1}

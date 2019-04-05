@@ -1,0 +1,79 @@
+```{r data generation, echo = FALSE, results = "hide"}
+## DATA GENERATION
+CL = sample(c(0.8,0.90,0.95,0.96,0.98,0.99,0.995),1)
+ME = sample(c(1,2,5),1) * 10^sample(-2:3,1)
+n = rgeom(1,0.005)+60
+
+zstar = round(qnorm((CL+1)/2),2)
+SE = ME/zstar
+options(scipen=999)
+sig = signif(SE*sqrt(n),2)
+
+nraw = (sig/SE)**2
+nans = ceiling(nraw)
+```
+
+Question
+========
+
+A population is known to have a standard deviation $\sigma=`r sig`$. What is the sample size $n$ needed to build a $`r CL*100`\%$ confidence interval with a margin of error $ME=`r ME`$?
+
+
+Solution
+========
+
+Let's remember the formulas for confidence intervals (with known $\sigma$):
+$$SE = \frac{\sigma}{\sqrt{n}} $$
+
+$$CL = P(|Z| < z^{\star})$$ 
+
+$$ME = z^{\star}SE $$
+
+$$CI = \bar{x} \pm ME $$
+
+From the confidence level $CL=`r CL`$, we determine $z^{\star}$.
+$$P(|Z|<z^\star) = `r CL` $$
+\
+```{r CL_sketch, echo = FALSE, results = "hide", fig.height = 3, fig.width = 6, fig.path = "", fig.cap = ""}
+par(mar=c(5,3,1,1))
+zs = seq(-3,3,length=1000)
+ys = dnorm(zs)
+plot(zs, ys, 'l',xlim = c(-3,3), ylim = c(0,0.4),
+     ann=FALSE,xaxt="n",yaxt="n",
+     lwd=1,bty='n')
+axis(side=1, line=0, at=c(-zstar,zstar), labels = FALSE)
+mtext(c("-zstar","zstar"),side=1,line=0.5,at=c(-zstar,zstar))
+mtext(c("z="),line=0.5,side=1,at=-3.5)
+axis(side=1, line=2,at=-3:3, labels = FALSE)
+mtext(-3:3,side=1,line=2.5,at=-3:3)
+mtext(c("z="),line=2.5,side=1,at=-3.5)
+polygon(c(zs[abs(zs)<=zstar], zstar, -zstar),c(ys[abs(zs)<=zstar], 0, 0), col=rgb(1,0,0,0.5))
+lines(c(-3,3),c(0,0),'l')
+text(0,0.2,label= paste(c("area = ",CL), collapse=""))
+```
+
+You can use a $z$ table or the last row of the $t$-table (where $df=\infty$).
+$$z^\star = `r zstar` $$
+We know that $ME=z^{\star}SE$, so
+$$SE = \frac{ME}{z^{\star}} = \frac{`r ME`}{`r zstar`} = `r signif(SE,3)` $$
+
+We know that $SE = \frac{\sigma}{\sqrt{n}}$. Let's solve for $n$.
+$$SE = \frac{\sigma}{\sqrt{n}}$$
+Multiply both sides by $\sqrt{n}$.
+$$SE\sqrt{n}  = \sigma$$
+Divide both sides by $SE$.
+$$\sqrt{n} = \frac{\sigma}{SE}$$
+Square both sides. (Raise both sides to the power of 2.)
+$$n = \left(\frac{\sigma}{SE}\right)^2$$
+
+$$n = \left(\frac{`r sig`}{`r SE`}\right)^2 = `r nraw` $$
+We round $n$ up.
+$$n = `r nans` $$
+
+
+Meta-information
+============
+extype: num
+exsolution: `r nans`
+exname: CI power calculation
+extol: 0.01

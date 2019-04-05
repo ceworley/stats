@@ -1,0 +1,208 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Slide options
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Option 1: Slides with solutions
+
+%\documentclass[slidestop,compress,mathserif]{beamer}
+%\newcommand{\soln}[1]{#1}
+%\newcommand{\solnGr}[1]{#1}
+
+% Option 2: Handouts without solutions
+
+\documentclass[11pt,containsverbatim,handout]{beamer}
+\newcommand{\soln}[1]{ }
+\newcommand{\solnGr}[1]{ }
+
+
+\title[Chp 5.2: Paired data]{Chp 5.2: Paired data}
+
+\begin{document}
+
+\section{Paired Data}
+\begin{frame}
+\frametitle{Paired Data}
+Paired data often arise when measuring the same individuals twice (before and after a period). \pause
+\begin{center}
+\begin{tabular}{|c|c|c|c|} \hline
+Individual & Weight in 2010 & Weight in 2020 & Diff \\ \hline
+Marion & 140 & 135 & -5\\
+Sylvester & 190 & 249 & 59\\
+Florence & 183 & 183 & 0\\
+David & 90  & 134 & 44\\
+Gertrude & 208 & 180 & -28\\
+\vdots&\vdots&\vdots & \vdots \\ \hline
+\end{tabular}
+\end{center}
+What would an implied question be? \pause
+\begin{center}
+\soln{Do individual humans tend to gain weight over time?}
+\vfill
+\end{center} \pause
+Two sets of observations are paired if each observation in one set has a special correspondence or connection with exactly one observation in the other data set.
+\end{frame}
+
+\section{Unpaired Data}
+\begin{frame}
+\frametitle{Unpaired Data}
+Two separate random samples would produce unpaired data.
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|} \cline{1-2} \cline{4-5}
+\multicolumn{2}{|c|}{year=2010} && \multicolumn{2}{|c|}{year=2020} \\ 
+Individual & Weight && Individual& Weight \\ \cline{1-2} \cline{4-5}
+Lonzo   & 140   && Henry & 310\\
+Rosalia & 190   && Harvey & 250\\
+Leora   & 183   && Phoebe & 210\\
+Otis    & 90    && Donna & 150\\
+Edward  & 208   && John & 110\\
+\vdots&\vdots && \vdots & \vdots \\\cline{1-2} \cline{4-5}
+\end{tabular}
+\end{center}
+What would an implied question be? \pause
+\begin{center}
+\soln{Did humans (as a species) tend to gain weight over time?}
+\vfill
+\end{center} \pause
+We will discuss unpaired analysis in Chapter 5.3 (next class).
+
+With paired data, we consider a {\bf mean of differences}.
+
+With unpaired data, we consider a {\bf difference of means}.
+\end{frame}
+
+\newcommand{\Xd}{X_\text{diff}}
+\newcommand{\xd}{x_\text{diff}}
+
+\section{Derivation of formulas}
+\begin{frame}
+\frametitle{Derivation of paired formulas}
+Let random variable $D_i$ represent the (unknown) difference from a (yet to be) randomly selected individual $i$. \pause
+
+We want to predict what happens when we find a mean of differences.
+$$\bar{D} = \frac{D_1+D_2+D_3+...+D_n}{n}$$ \pause
+
+The central limit theorem still applies! \pause
+\vfill
+
+As $n\to \infty$, $\bar{D}$ becomes normally distributed.\pause
+\vfill 
+
+Basically, we can treat these differences just like any other independent and identically distributed random variables. 
+\vfill
+\end{frame}
+
+
+\section{Note about notation}
+\begin{frame}
+\frametitle{Note about notation}
+\begin{itemize}
+\item I used $\bar{D}$ for the random variable representing an unknown mean of differences. \pause
+\item I would use $\bar{d}$ for a specific (observed, critical, etc) mean of difference. \pause
+\item The book uses $\bar{x}_\text{diff}$ for both of these concepts. This is misleading, as it looks like a difference of means, not a mean of differences. \pause
+\item I would at least prefer using $\overline{X_\text{diff}}$ and $\overline{x_\text{diff}}$ to emphasize we are finding a mean of differences. \pause
+\item The book's notation of $\mu_\text{diff}$ (for the population's true difference) is useful. We could also use $E(D)$ or $\mu_{D}$.
+\item In order to match the book as much as possible, I will now use $x_{\text{diff},i}$ and $\overline{X_\text{diff}}$ and $\overline{x_\text{diff}}$ and $\mu_\text{diff}$.
+\end{itemize}
+\end{frame}
+
+\newcommand{\xdi}{x_{\text{diff},i}}
+\newcommand{\bxd}{\overline{x_\text{diff}}}
+\newcommand{\bXd}{\overline{X_\text{diff}}}
+\newcommand{\mud}{\mu_\text{diff}}
+
+\section{Example problem}
+\begin{frame}
+\frametitle{Example problem}
+A teacher wonders if, on average, a random student will perform about the same on two exams. She decides to run a two-tail $t$ test on a random sample of size $n=5$ with a signficance level $\alpha=0.05$.
+
+\pause
+
+Here are the results of her study:
+\begin{center}
+\begin{tabular}{|c|c|c|} \hline
+Student & Exam 1 & Exam 2 \\ \hline
+Norma   & 98     & 96     \\  
+Elliot  & 15     & 10     \\  
+Walton  & 61     & 61     \\  
+Mable   & 80     & 79     \\  
+Loretta & 10     & 8      \\  \hline
+\end{tabular}
+\end{center}
+Perform the $t$ test.
+\end{frame}
+
+\section{Example problem solution}
+\begin{frame}
+\frametitle{Example problem solution}
+Find the differences. \pause
+\begin{center}
+\begin{tabular}{|c|c|c|c|} \hline
+$i$    & $x_{1,i}$ & $x_{2,i}$ & $x_{\text{diff},i}$ \\ \hline
+1   & 98     & 96     & -2\\  
+2   & 15     & 10     & -5\\  
+3   & 61     & 61     &  0\\  
+4   & 80     & 79     & -1\\  
+5   & 10     & 8      & -2\\  \hline
+\end{tabular}
+\end{center} \pause
+Find the (differences') sample mean. \pause
+$$\bxd = \frac{\sum\limits_{i=1}^n \xdi}{n} = \frac{-2-5+0-1-2}{5} = -2 $$ \pause
+Find the (differences') sample standard deviation. \pause
+$$s = \sqrt{\frac{\sum\limits_{i=1}^n (\xdi-\bxd)^2}{n-1}} = \sqrt{\frac{(0)^2+(3)^2+(2)^2+(1)^2+(0)^2}{5-1}} = 1.87 $$
+\end{frame}
+
+
+\begin{frame}
+We are doing a two-tail test with the following:
+\begin{align*}
+n &=5 & \bxd &= -2 & s&= 1.87 & \alpha &= 0.05
+\end{align*} \pause
+State the hypotheses. \pause
+\begin{align*}
+H_0&:~~ \mud = 0 & H_A&:~~ \mud \ne 0
+\end{align*} \pause
+Determine the critical value, $t^\star$, such that $P(|T|>t^\star) = 0.05$. \pause
+$$t^\star = 2.78 $$ \pause
+Find the standard error (the standard deviation of the differences' sampling distribution). \pause
+$$SE = \frac{s}{\sqrt{n}} = \frac{1.87}{\sqrt{5}} = 0.837 $$ \pause
+Calculate an observed $t$ score. \pause
+$$t_\text{obs} = \frac{(-2)-0}{0.837} = -2.39 $$
+\end{frame}
+
+\begin{frame}
+From the previous slides:
+\begin{align*}
+n &=5 & \bxd &= -2 & s&= 1.87 & \alpha &= 0.05 \\
+t^\star &= 2.78 & SE &= 0.837 & t_\text{obs} &= -2.39
+\end{align*} \pause
+We can determine a $p$-value. Remember we are doing a two-tail test, so $p$-value $= P(|T|>2.39)$.\pause
+$$0.05 ~~<~~ p\text{-value} ~~<~~ 0.1  $$\pause
+We can compare $t_\text{obs}$ and $t^\star$. We can also compare $p$-value and $\alpha$.\pause
+$$|t_\text{obs}| < |t^\star| $$\pause
+$$p\text{-value} > \alpha $$\pause
+Thus, we retain the null hypothesis. \pause
+\begin{center}
+We maintain that maybe students do equally well on both tests.
+\end{center}
+\end{frame}
+
+
+\section{Practice}
+\begin{frame}
+\frametitle{Practice}
+The following table has paired data. Test the hypotheses of whether or not the differences have a population average of 0. Use $\alpha=0.1$. 
+\begin{center}
+\begin{tabular}{|c|c|c|} \hline
+$i$    & $x_{1,i}$ & $x_{2,i}$ \\ \hline
+1   & 50     & 54  \\  
+2   & 23     & 25  \\  
+3   & 96     & 97  \\  
+4   & 47     & 49  \\  
+5   & 10     & 16   \\  \hline
+\end{tabular}
+\end{center} \pause
+\end{frame}
+\vfill
+
+
+\end{document}

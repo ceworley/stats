@@ -1,0 +1,9 @@
+\babel@toc {english}{}
+\beamer@sectionintoc {1}{T distribution}{1}{0}{1}
+\beamer@sectionintoc {2}{t table}{6}{0}{2}
+\beamer@sectionintoc {3}{CI}{15}{0}{3}
+\beamer@sectionintoc {4}{Practice CI}{26}{0}{4}
+\beamer@sectionintoc {5}{CI backwards}{33}{0}{5}
+\beamer@sectionintoc {6}{Practice CI backwards}{51}{0}{6}
+\beamer@sectionintoc {7}{Hypothesis testing with single small sample}{58}{0}{7}
+\beamer@sectionintoc {8}{Practice hypothesis testing}{71}{0}{8}

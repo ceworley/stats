@@ -1,0 +1,72 @@
+```{r data generation, echo = FALSE, results = "hide"}
+## DATA GENERATION
+as = c(0.1,0.05,0.025,0.02,0.01,0.005)
+alpha = sample(as, 1)
+n = sample(3:15, 1)
+mult = 2^runif(1,-2,2)
+pval = alpha*mult
+if (pval < alpha)
+{
+    ans = "10"
+    sym = "<"
+    wrd = "reject"
+} else {
+    ans = "01"
+    sym = ">"
+    wrd = "retain"
+}
+tstar = round(qt(alpha, n-1),2)
+t = round(qt(pval, n-1),2)
+mu = round(runif(1,5,500),0)
+s = round(runif(1,mu/100,mu/2),2)
+se = round(s/sqrt(n),3)
+xbar = round(mu + t*se,2)
+
+as = c(0.5,0.1,0.05,0.025,0.02,0.01,0.005,0.0025,0.002,0.001)
+
+lb = max(as[as<pval])
+ub = min(as[as>pval])
+```
+
+Question
+========
+
+You will perform a single-sample $t$ test of the alternative hypothesis claiming $\mu<`r mu`$. Before collecting the sample, you decide to use a significance level $\alpha = `r alpha`$.  The sample has the following attributes:
+$$\begin{aligned}
+n &=& `r n` \\
+\bar{x} &=& `r xbar` \\
+s &=& `r s`
+\end{aligned}$$
+What is your conclusion?
+
+Answerlist
+----------
+* Reject the null hypothesis
+* Retain the null hypothesis
+
+
+Solution
+========
+
+We state the hypotheses:
+$$H_0:~~\mu = `r mu` $$
+$$H_A:~~\mu < `r mu` $$
+We estimate the standard error (same way as with $z$ testing).
+$$SE = \frac{s}{\sqrt{n}} =  \frac{`r s`}{\sqrt{`r n`}} = `r se`$$
+We calculate the $t$ score (same way as with $z$ testing).
+$$t = \frac{`r xbar`-`r mu`}{`r se`} = `r t` $$
+We determine the degrees of freedom.
+$$df = n-1 = `r n-1` $$
+We estimate the $p$-value from the $T$ table.
+$$`r lb` < p\text{-value} < `r ub` $$
+We compare the $p$-value to $\alpha$.
+$$p\text{-value} `r sym` \alpha $$
+We make our conclusion: we `r wrd` the null. 
+
+
+Meta-information
+============
+extype: schoice
+exsolution: `r ans`
+exname: T_test_lefttail
+extol: 0.01
