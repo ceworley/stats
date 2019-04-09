@@ -1,0 +1,109 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{multirow,array}
+\usepackage{newtxtext,newtxmath}
+\usepackage{relsize}
+\usepackage{lastpage}
+\usepackage{cancel}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\setenumerate[1]{label={\bf \theenumi: ~}}
+\setenumerate[2]{label={\bf \theenumii: ~}}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textsc{BHCC Mat-181}}
+\rhead{\textsc{Ch 5.2 and Ch 5.3 and review}}
+\rfoot{Page \thepage ~of \pageref{LastPage}}
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+\newcommand{\N}[2]{\mathcal{N}\big(#1,~#2\big)}
+\newcommand{\Geo}[1]{\texttt{Geo}\big(#1\big)}
+\newcommand{\B}[2]{\mathcal{B}\big(#1,~#2\big)}
+
+\DeclareMathOperator{\E}{E}
+\DeclareMathOperator{\Var}{Var}
+
+\begin{document}
+\begin{enumerate}
+
+\item A set of paired data has 36 differences with mean $\overline{x_\text{diff}} = 2.5$ and standard deviation $s_\text{diff} = 9.3$. Test whether we have significant evidence to claim the population average difference is nonzero using a significance level of $\alpha=0.05$.
+\vfill
+
+
+\item A set of unpaired data has the following statistics.
+\begin{align*}
+n_1 &= 30 & n_2 &= 34 \\
+\bar{x}_1 &= 96.3 & \bar{x}_2 &= 91.1 \\
+s_1 &= 6.3 & s_2 &= 2.4
+\end{align*}
+Test whether the populations' means are significantly different using $\alpha=0.05$.
+\vfill
+
+\newpage
+
+\item A set of paired data has 48 differences with mean $\overline{x_\text{diff}} = 32$ and standard deviation $s_\text{diff} = 101$. Determine a 95\% confidence interval for $\mu_\text{diff}$.
+\vfill
+
+
+\item A set of unpaired data has the following statistics.
+\begin{align*}
+n_1 &= 8 & n_2 &= 11 \\
+\bar{x}_1 &= 55.4 & \bar{x}_2 &= 72.1 \\
+s_1 &= 21.0 & s_2 &= 15.8
+\end{align*}
+Determine a 95\% confidence interval for $\mu_2-\mu_1$.
+\vfill
+
+\newpage
+
+\end{enumerate}
+If we have a population described by random variable $X$, then that population's mean is $\E(X)$ and that population's standard deviation is $\sqrt{\Var(X)}$. We learned that given constants $a$ and $b$ and random variables $X$ and $Y$, then:
+$$\E(aX+bY) = a\E(X)+b\E(Y) $$ 
+$$\Var(aX+bY) = a^2\Var(X)+b^2\Var(Y) $$ 
+
+\begin{enumerate}[resume]
+\item Let $V$ be a normal random variable with mean 100 and standard deviation 8.
+$$V ~\sim~ \N{100}{8} $$
+Let $W$ be determined by $V$.
+$$W ~\sim~ \frac{V}{5}+\frac{V}{5}+\frac{V}{5}+\frac{V}{5}+\frac{V}{5} $$
+What is the mean and standard deviation of $W$?
+\vfill
+
+\item Let $V$ be a normal random variable with mean 55 and standard deviation 19.
+$$V ~\sim~ \N{55}{19} $$
+Let $W$ be determined by $V$.
+$$W ~\sim~ \frac{V}{7}+\frac{V}{7}+\frac{V}{7}+\frac{V}{7}+\frac{V}{7}+\frac{V}{7}+\frac{V}{7} $$
+What is the mean and standard deviation of $W$?
+\vfill
+
+\newpage
+
+\item You have two populations (random variables): $V$ and $W$.
+$$V ~~\sim~~ \mathcal{N}\left(\mu=99\,,~\sigma=31 \right)$$ 
+$$W ~~\sim~~ \mathcal{N}\left(\mu=77\,,~\sigma=11 \right)$$ 
+A (normal) population $X$ is determined by $V$ and $W$.
+$$X ~~\sim~~ \left(\frac{V}{3}+\frac{V}{3}+\frac{V}{3}\right)-\left(\frac{W}{6}+\frac{W}{6}+\frac{W}{6}+\frac{W}{6}+\frac{W}{6}+\frac{W}{6}\right)$$ 
+\begin{enumerate}
+\item Evaluate $\text{E}(X)$.
+\item Evaluate $\text{Var}(X)$.
+\item Evaluate $P(X>25)$.
+\item Determine $x$ such that $P(X<x) = 0.888$.
+\end{enumerate}
+
+
+
+\end{enumerate}
+\end{document}
+
