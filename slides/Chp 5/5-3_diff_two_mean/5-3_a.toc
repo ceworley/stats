@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{Formal definition of paired sampling distribution}{1}{0}{1}
+\beamer@sectionintoc {2}{Formal definition of unpaired sampling distribution}{3}{0}{2}
+\beamer@sectionintoc {3}{Hypotheses under paired and unpaired}{7}{0}{3}
+\beamer@sectionintoc {4}{Example problem}{9}{0}{4}
+\beamer@sectionintoc {5}{Example problem 2}{13}{0}{5}

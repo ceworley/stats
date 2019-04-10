@@ -15,11 +15,310 @@
 \newcommand{\solnGr}[1]{ }
 
 
+\usepackage{longtable}
 \title[Chp 5.3: Difference of two means]{Chp 5.3: Difference of two means}
 
 \begin{document}
 
-\section{}
+\section{Formal definition of paired sampling distribution}
+\begin{frame}
+\frametitle{Formal definition of paired sampling distribution}
+\small
+Let $X_1$ and $X_2$ represent two measurements' distributions,\pause
+
+$X_{1,i}$ represent the $i$th individual's (unknown) first measurement,\pause
+
+and $X_{2,i}$ represent the $i$th individual's second measurement. \pause
+
+Define $X_\text{diff,i} = X_{2,i}-X_{1,i}$\pause
+
+Our statistic is a mean of differences.\pause
+$$\overline{X_\text{diff}} = \frac{\sum\limits_{i=1}^n (X_{2,i}-X_{1,i})}{n}$$\pause
+Usually, $\overline{X_\text{diff}}$ approximately follows a normal distribution.\pause
+
+$$ \overline{X_\text{diff}} \sim \mathcal{N}(\mu_\text{diff}, SE)$$\pause
+
+$$ \frac{\overline{X_\text{diff}} - \mu_\text{diff}}{SE} \sim \mathcal{N}(0,\, 1)$$\pause
+
+$$SE = \frac{\sigma_\text{diff}}{\sqrt{n}} $$
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Inference from paired data}
+\begin{itemize}
+\item Now, imagine $\mu_\text{diff}$ and $\sigma_\text{diff}$ are unknown, but we want to infer about our parameter of interest: \pause \soln{$\mu_\text{diff}$}
+\pause
+\item We obtain a sample of differences, which has mean $\overline{x_{\text{diff}}}$ and standard deviation $s_\text{diff}$. We now have a point estimate: \pause \soln{$\overline{x_{\text{diff}}}$} 
+\pause 
+\item Due to our uncertainty in both $\mu_\text{diff}$ and $\sigma_\text{diff}$, we use a $t$ distribution for inference. 
+\pause
+\end{itemize}
+\vspace{10pt}
+
+\noindent Standard Error: \pause
+$$SE \approx \frac{s_{\text{diff}}}{\sqrt{n}}$$ \pause
+Degrees of freedom:\pause
+$$df = n-1 $$\pause
+Confidence interval:\pause
+$$\mu_\text{diff} ~\approx~ \overline{x_{\text{diff}}} \pm t^\star SE $$ \pause
+Hypothesis testing:\pause
+$$t_0 = \frac{\overline{x_{\text{diff}}}-(\mu_{\text{diff}})_0}{SE} $$
+\end{frame}
+
+
+
+\section{Formal definition of unpaired sampling distribution}
+\begin{frame} 
+\frametitle{Formal definition of unpaired sampling distribution}
+Let $X_1$ and $X_2$ represent two distributions.\pause
+
+Let $X_{1,i}$ represent the $i$th (out of $n_1$) value from the first distribution.\pause
+
+Let $X_{2,j}$ represent the $j$th (out of $n_2$) value from the second distribution.\pause
+
+We are interested in a difference of means. \pause
+$$\overline{X_2}-\overline{X_1} ~~=~~ \frac{\sum\limits_{j=1}^{n_2} X_{2,j}}{n_2} - \frac{\sum\limits_{i=1}^{n_1} X_{1,i}}{n_1}$$\pause
+Usually, $\overline{X_2}-\overline{X_1}$ approximately follows a normal distribution.\pause
+
+$$\overline{X_2}-\overline{X_1} ~~\sim~~ \mathcal{N}(\mu_2-\mu_1, \, SE) $$\pause
+
+$$ SE = \sqrt{\frac{(\sigma_1)^2}{n_1}+\frac{(\sigma_2)^2}{n_2}} $$
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Inference from unpaired data}
+\begin{itemize}
+\item Now, imagine $\mu_1$, $\mu_2$, $\sigma_1$ and $\sigma_2$ are unknown. From each population, we take a random sample, and then we wish to infer a confidence interval for $\mu_2-\mu_1$ or test whether there is evidence to disprove $\mu_2-\mu_1 = 0$. \pause
+\item How best to determine (from 2 samples) a confidence interval for $\mu_2-\mu_1$ and test whether $\mu_2-\mu_1 = 0$ is an open question, called the Behrens-Fisher problem. \pause
+\item Different people use different strategies. Old people will probably be more familiar with Student's approach, which assumes $\sigma_1 = \sigma_2$. \pause
+\item The modern approach (used in our text) is Welch's $t$-test. Along with randomization techniques (like we simulated with shuffling cards), this is the current standard approach. \pause
+\item Welch test's main drawback is the annoyingly complicated formula for determining degrees of freedom.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Inference from unpaired data}
+\small
+Now, imagine $\mu_1$, $\mu_2$, $\sigma_1$ and $\sigma_2$ are unknown. \pause
+
+Let $\overline{x_1}$ represent the (known) mean of first measurements.\pause
+
+Let $\overline{x_2}$ represent the (known) mean of second measurements.\pause
+
+Due to our uncertainty in $\mu_2-\mu_1$ and $\sigma_1$ and $\sigma_2$, we use a $t$ distribution.\pause
+
+\vspace{10pt}
+
+\noindent Standard error:
+$$ SE = \sqrt{\frac{(s_1)^2}{n_1}+\frac{(s_2)^2}{n_2}} $$ \pause
+Confidence interval:
+$$\mu_2-\mu_1 ~~\approx~~ (\overline{x_2} - \overline{x_1}) \pm t^\star SE$$ \pause
+Hypothesis testing:
+$$t_0 = \frac{(\overline{x_2}-\overline{x_1})-(\mu_2-\mu_1)_0}{SE} $$ \pause
+Degrees of freedom:
+$$df = \cfrac{\left(\frac{(s_1)^2}{n_1}+\frac{(s_2)^2}{n_2}\right)^2}{\frac{(s_1)^4}{(n_1)^3-(n_1)^2}+\frac{(s_2)^4}{(n_2)^3-(n_2)^2}} $$
+%That last formula is annoying to type into a calculator. We instead make a conservative (w.r.t.\,Type I error) estimate when doing it by hand.
+%$$df \approx \min(n_1,\,n_2)-1 $$
+\end{frame}
+
+\begin{frame}
+\frametitle{Approximation for calculations by hand}
+Welch's $t$ test has a gnarly formula for $df$.
+$$df = \cfrac{\left(\frac{(s_1)^2}{n_1}+\frac{(s_2)^2}{n_2}\right)^2}{\frac{(s_1)^4}{(n_1)^3-(n_1)^2}+\frac{(s_2)^4}{(n_2)^3-(n_2)^2}} $$
+The formula for degrees of freedom is annoying to evaluate for mere mortals. So, unless otherwise instructed, we will use a conservative estimate (conservative w.r.t.\,type I error).
+$$\fbox{df \approx \min(n_1,\,n_2)-1 }$$ \pause
+Don't be surprised if other texts (or people) tell you to use $df = n_1+n_2-2$. We only use this if we have a strong argument for why we believe $\sigma_1=\sigma_2$. 
+\end{frame}
+
+\section{Hypotheses under paired and unpaired}
+\begin{frame}
+\frametitle{Hypotheses under paired and unpaired}
+\begin{itemize}
+\item With paired data, the statistic is a mean of differences. Usually we are wondering whether the population mean of differences is 0.
+$$H_0:~~ \mu_{diff}=0 $$
+$$H_A:~~ \mu_{diff} \ne 0 $$
+\item With unpaired data, the statistic is a difference of means. Usually we are wondering whether the difference of population means is 0.
+$$H_0:~~ \mu_2-\mu_1=0 $$
+$$H_A:~~ \mu_2-\mu_1 \ne 0 $$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Hypotheses under paired and unpaired (other notation)}
+\begin{itemize}
+\item With paired data, the statistic is a mean of differences. Usually we are wondering whether the population mean of differences is 0.
+\begin{align*}
+H_0:&~~ E(X_2 - X_1)=0 \\
+H_A:&~~ E(X_2 - X_1)\ne 0
+\end{align*}
+\item With unpaired data, the statistic is a difference of means. Usually we are wondering whether the difference of population means is 0.
+$$H_0:~~ E(X_2) - E(X_1)=0 $$
+$$H_A:~~ E(X_2) - E(X_1)\ne 0 $$
+\end{itemize}
+\end{frame}
+
+
+\section{Example problem}
+\begin{frame}
+\frametitle{Example problem} \vspace{-10pt}
+An experiment has \(n_1 = 4\) plants in the treatment group and
+\(n_2 = 6\) plants in the control group. After some time, the plants'
+heights (in cm) are measured, resulting in the following data:
+\begin{tabular}{|ccccccc|} \hline
+& value1 & value2 & value3 & value4 & value5 & value6 \\ \hline
+sample 1: & 16.4 & 14.2 & 19.4 & 17.3 & & \\
+sample 2: & 10.3 & 9.9 & 9.4 & 11 & 10.4 & 10.7 \\ \hline
+\end{tabular}
+
+\begin{enumerate}
+  \item Determine degrees of freedom.
+  \item Determine \(t^\star\) for a \(98\%\) confidence interval.
+  \item Determine \(SE\).
+  \item Determine a lower bound of the \(98\%\) confidence interval of
+\(\mu_2-\mu_1\).
+  \item Determine an upper bound of the \(98\%\) confidence interval of
+\(\mu_2-\mu_1\).
+  \item Determine \(|t_\text{obs}|\) under the null hypothesis
+\(\mu_2-\mu_1=0\).
+  \item Determine a lower bound of the two-tail \(p\)-value.
+  \item Determine an upper bound of two-tail \(p\)-value.
+  \item Do you reject the null hypothesis with a two-tail test using a
+significance level \(\alpha = 0.02\)? (yes or no)
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame} \small
+\frametitle{Solution}
+These data are unpaired. We might as well find the sample means and
+sample standard deviations (use a calculator's built-in function for
+standard deviation). \pause \[\overline{x_1} = 16.8 \]
+\[\overline{x_2} = 10.3 \] \[s_1 = 2.15 \] \[s_2 = 0.571 \] \pause
+
+We make a conservative estimate of the degrees of freedom using the
+appropriate formula. \pause \[df ~=~ \min(n_1,\,n_2)-1 ~=~ \min(4,6)-1 ~=~ 3 \] \pause
+We use the \(t\) table to find \(t^\star\) such that
+\(P(|T|<t^\star) = 0.98\) \[t^\star = 4.54 \] We use the \(SE\) formula
+for unpaired data. \pause
+\[SE = \sqrt{\frac{(s_1)^2}{n_1}+\frac{(s_2)^2}{n_2}} =
+\sqrt{\frac{(2.15)^2}{4}+\frac{(0.571)^2}{6}} = 1.1 \] 
+\end{frame}
+
+\begin{frame} \small
+We find the
+bounds of the confidence interval. \pause
+\[CI ~=~ (\overline{x_2}-\overline{x_1})\pm t^{\star} SE\]
+\[CI ~=~ (-11.494,\, -1.506) \] 
+We find \(t_\text{obs}\). \pause
+\[t_\text{obs} = \frac{(\overline{x_2}-\overline{x_1})-(\mu_2-\mu_1)_0}{SE} = \frac{(10.3-16.8)-0}{1.1} = -5.91\] \pause
+We find \(|t_\text{obs}|\). \pause
+\[|t_\text{obs}| = 5.91 \] \pause
+We use the table to determine bounds on \(p\)-value. Remember, \(df=3\) and \(p\text{-value} = P(|T|>|t_\text{obs}|)\). \pause
+\[0.005 ~<~ p\text{-value} ~<~ 0.01\] \pause
+We should consider both comparisons to make our decision.\pause
+ \[|t_\text{obs}| > t^{\star} \]
+\[p\text{-value} < \alpha \] 
+\pause
+Thus, we reject the null hypothesis. Also
+notice the confidence interval does not contain 0.
+\end{frame}
+
+\begin{frame}
+\frametitle{Answer list}
+\begin{enumerate}
+  \item 3
+  \item 4.54
+  \item 1.1
+  \item -11.494
+  \item -1.506
+  \item 5.909
+  \item 0.005
+  \item 0.01
+  \item yes
+\end{enumerate}
+\end{frame}
+
+
+\section{Example problem 2}
+\begin{frame}
+\frametitle{Example problem 2} \vspace{-10pt}
+An experiment has \(n_1 = 6\) plants in the treatment group and
+\(n_2 = 8\) plants in the control group. After some time, the plants'
+heights (in cm) are measured, resulting in the following data:
+{\footnotesize \hspace{-20pt}\begin{tabular}{|ccccccccc|} \hline 
+& value1 & value2 & value3 & value4 & value5 & value6 & value7 & value8 \\ \hline
+sample 1: & 0.81 & 0.98 & 1.39 & 1.34 & 0.78 & 1.11 & & \\
+sample 2: & 1.31 & 1.3 & 1.45 & 1.42 & 1.22 & 1.37 & 1.34 &
+1.31\\ \hline
+\end{tabular} }
+\begin{enumerate}
+  \item Determine degrees of freedom.
+  \item Determine \(t^\star\) for a \(98\%\) confidence interval.
+  \item Determine \(SE\).
+  \item Determine a lower bound of the \(98\%\) confidence interval of
+\(\mu_2-\mu_1\).
+  \item Determine an upper bound of the \(98\%\) confidence interval of
+\(\mu_2-\mu_1\).
+  \item Determine \(|t_\text{obs}|\) under the null hypothesis
+\(\mu_2-\mu_1=0\).
+  \item Determine a lower bound of the two-tail \(p\)-value.
+  \item Determine an upper bound of two-tail \(p\)-value.
+  \item Do you reject the null hypothesis with a two-tail test using a
+significance level \(\alpha = 0.02\)? (yes or no)
+\end{enumerate}
+\end{frame}
+
+
+
+\begin{frame} \small
+\frametitle{Solution 2}
+These data are unpaired. We might as well find the sample means and
+sample standard deviations (use a calculator's built-in function for
+standard deviation). \[\overline{x_1} = 1.07 \]
+\[\overline{x_2} = 1.34 \] \[s_1 = 0.259 \] \[s_2 = 0.0729 \]
+
+We make a conservative estimate of the degrees of freedom using the
+appropriate formula. \[df ~=~ \min(n_1,\,n_2)-1 ~=~ \min(6,8)-1 ~=~ 5 \]
+We use the \(t\) table to find \(t^\star\) such that
+\(P(|T|<t^\star) = 0.98\) \[t^\star = 3.36 \] We use the \(SE\) formula
+for unpaired data.
+\[SE = \sqrt{\frac{(s_1)^2}{n_1}+\frac{(s_2)^2}{n_2}} =
+\sqrt{\frac{(0.259)^2}{6}+\frac{(0.0729)^2}{8}} = 0.109 \] 
+\end{frame}
+
+\begin{frame} \small
+We find the
+bounds of the confidence interval.
+\[CI ~=~ (\overline{x_2}-\overline{x_1})\pm t^{\star} SE\]
+\[CI ~=~ (-0.096,\, 0.636) \] We find \(t_\text{obs}\).
+\[t_\text{obs} = \frac{(\overline{x_2}-\overline{x_1})-(\mu_2-\mu_1)_0}{SE} = \frac{(1.34-1.07)-0}{0.109} = 2.48\]
+We find \(|t_\text{obs}|\). \[|t_\text{obs}| = 2.48 \] We use the table
+to determine bounds on \(p\)-value. Remember, \(df=5\) and
+\(p\text{-value} = P(|T|>|t_\text{obs}|)\).
+\[0.05 ~<~ p\text{-value} ~<~ 0.1\] We should consider both comparisons
+to make our decision. \[|t_\text{obs}| < t^{\star} \]
+\[p\text{-value} > \alpha \] Thus, we retain the null hypothesis. Also
+notice the confidence interval does contain 0.
+\end{frame}
+
+\begin{frame}
+\frametitle{Answer list}
+\begin{enumerate}
+  \item 5
+  \item 3.36
+  \item 0.109
+  \item -0.096
+  \item 0.636
+  \item 2.481
+  \item 0.05
+  \item 0.1
+  \item no
+\end{enumerate}
+\end{frame}
+
 
 
 \end{document}

@@ -1,0 +1,57 @@
+---
+title: "Notes_Apr_2019"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Study 1 
+Each person tried to guess 65% of the average of all guesses. 
+
+```{r study1}
+names = c("Juan Pablo", "Albina", "Garima", "Judith", 
+          "Grabiel", "Jose", "Kilsy", "Jostel", "Aelen", 
+          "Polyanne", "Wenjian")
+guesses = c(40,50,43,60,20,15,30,45,30,20,40)
+xbar1 = mean(guesses)
+s1 = sd(guesses)
+n1 = length(guesses)
+hist(guesses)
+summary(guesses)
+mean(guesses)
+sd(guesses)
+```
+
+Determine a confidence interval of the population mean. We can simulate resampling by pulling 11 draws (with replacement) from the guesses, and resampling thousands of times.
+
+```{r resampling}
+resamples = c()
+for(i in 1:3000){
+  resamples = c(resamples, mean(sample(guesses,n1,replace=T)))
+}
+hist(resamples)
+summary(resamples)
+mean(resamples)
+sd(resamples) #This is approx SE
+```
+Also, calculate the standard error using the formula.
+$$SE_1 = \frac{s_1}{\sqrt{n_1}} $$
+```{r standard error} 
+SE1=sd(guesses)/sqrt(n1)
+SE1
+```
+We evaluate $t^\star$ using $\alpha=0.05$.
+```{r tstar} 
+tstar = qt(1-0.05/2, n1-1)
+tstar
+```
+we calculate the confidence interval.
+```{r CI1}
+LB1 = xbar1-SE1*tstar
+UB1 = xbar1+SE1*tstar
+print(c(LB1,UB1))
+```

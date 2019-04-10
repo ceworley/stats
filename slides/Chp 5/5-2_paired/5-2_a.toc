@@ -1,7 +1,7 @@
 \beamer@sectionintoc {1}{Paired Data}{1}{0}{1}
-\beamer@sectionintoc {2}{Unpaired Data}{2}{0}{2}
-\beamer@sectionintoc {3}{Derivation of formulas}{3}{0}{3}
-\beamer@sectionintoc {4}{Note about notation}{4}{0}{4}
-\beamer@sectionintoc {5}{Example problem}{5}{0}{5}
-\beamer@sectionintoc {6}{Example problem solution}{6}{0}{6}
-\beamer@sectionintoc {7}{Practice}{9}{0}{7}
+\beamer@sectionintoc {2}{Unpaired Data}{5}{0}{2}
+\beamer@sectionintoc {3}{Derivation of formulas}{8}{0}{3}
+\beamer@sectionintoc {4}{Note about notation}{13}{0}{4}
+\beamer@sectionintoc {5}{Example problem}{18}{0}{5}
+\beamer@sectionintoc {6}{Example problem solution}{20}{0}{6}
+\beamer@sectionintoc {7}{Practice}{43}{0}{7}

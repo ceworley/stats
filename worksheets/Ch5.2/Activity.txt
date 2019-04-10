@@ -1,0 +1,89 @@
+
+Person who guesses closest to 2/3 of class average wins.
+Build 95% confidence interval.
+
+Play again. Does the class guess a lower value the second time?
+Write all guesses on the board. (in a consistent manner)
+(paired data)
+Ask, was this observational or experimental?
+
+Juan Pablo
+Giulia
+Azadi
+Albina
+Garima
+Monifa L.
+Said O.
+Judith Y.
+Stephen
+Grabiel J.
+Jose D.
+Kilsy N.
+Jostel F.
+Aelen S.
+Polyanne
+Wenjian
+
+Jose M.
+Brennan
+Nicolas I.
+Emilly K.
+Marciana H.
+Samuel A.
+Jada
+Fredy
+Mehmet I.
+Jennifer E.
+Scott A.
+Diamond
+Moulay
+Jihane
+Bhavnek
+Mason D.
+Linsey
+Orina
+Matt
+Tanvir
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Circumference of earth: 24,900 miles
+Diameter of earth: 7918 miles
+Distance to moon: 238,900 miles
+Distance to sun: 92,960,000 miles
+

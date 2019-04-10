@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="8.5in"
+   height="11in"
+   viewBox="0 0 215.9 279.4"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="guess_distance_to_moon.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="501.0739"
+     inkscape:cy="716.68723"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="in"
+     inkscape:snap-bbox="true"
+     inkscape:snap-page="true"
+     showguides="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="719"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-17.6)">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 0,17.6 V 297"
+       id="path815"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 71.966667,17.6 V 297"
+       id="path817"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 143.93333,17.6 V 297"
+       id="path817-3"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 215.9,17.6 V 297"
+       id="path817-6"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 0,17.6 H 215.9"
+       id="path840"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 0,87.449993 H 215.9"
+       id="path840-7"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 0,157.3 H 215.9"
+       id="path840-5"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 0,227.15 H 215.9"
+       id="path840-3"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 0,297 H 215.9"
+       id="path840-56"
+       inkscape:connector-curvature="0" />
+    <g
+       id="g936"
+       transform="translate(0,1.1888809)">
+      <text
+         id="text877"
+         y="31.066816"
+         x="36.03344"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'TeX Gyre Termes';-inkscape-font-specification:'TeX Gyre Termes, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="31.066816"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1497">Guess the distance</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="36.358482"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1501">in miles to the moon.</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="41.65015"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1503"></tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="46.941814"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1505">Hint:</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="52.233482"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1507">The diameter of Earth is</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="57.525146"
+           x="36.562607"
+           sodipodi:role="line"
+           id="tspan1509">7918 miles  </tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="path895"
+         d="M 12.864521,74.364483 H 59.102147"
+         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <g
+       id="g929"
+       transform="translate(58.309036,-2.3288148)">
+      <text
+         id="text877-2"
+         y="34.584511"
+         x="121.65774"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'TeX Gyre Termes';-inkscape-font-specification:'TeX Gyre Termes, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="34.584511"
+           x="121.65774"
+           sodipodi:role="line"
+           id="tspan1557">Guess the distance</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="39.876179"
+           x="121.65774"
+           sodipodi:role="line"
+           id="tspan1825">in miles to the moon.</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="45.167843"
+           x="121.65774"
+           sodipodi:role="line"
+           id="tspan1827"></tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="50.459511"
+           x="121.65774"
+           sodipodi:role="line"
+           id="tspan1829">Hint:</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="55.751175"
+           x="121.65774"
+           sodipodi:role="line"
+           id="tspan1831">The diameter of Earth is</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="61.042843"
+           x="122.1869"
+           sodipodi:role="line"
+           id="tspan1833">7918 miles  </tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="path895-7"
+         d="M 98.488823,77.88218 H 144.72645"
+         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <g
+       id="g929-0"
+       transform="translate(58.309036,207.22119)">
+      <text
+         id="text877-2-9"
+         y="34.584511"
+         x="121.65774"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'TeX Gyre Termes';-inkscape-font-specification:'TeX Gyre Termes, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="34.584511"
+           x="121.65774"
+           sodipodi:role="line"
+           id="tspan1773">Guess the distance</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="39.876179"
+           x="121.65774"
+           sodipodi:role="line"
+           id="tspan2099">in miles to the moon.</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="45.167843"
+           x="121.65774"
+           sodipodi:role="line"
+           id="tspan2101"></tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="50.459511"
+           x="121.65774"
+           sodipodi:role="line"
+           id="tspan2103">Hint:</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="55.751175"
+           x="121.65774"
+           sodipodi:role="line"
+           id="tspan2105">The distance to the Sun is</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="61.042843"
+           x="122.1869"
+           sodipodi:role="line"
+           id="tspan2107">92,960,000 miles  </tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="path895-7-6"
+         d="M 98.488823,77.88218 H 144.72645"
+         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <g
+       id="g936-2"
+       transform="translate(71.966669,1.1888809)">
+      <text
+         id="text877-6"
+         y="31.066816"
+         x="36.03344"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'TeX Gyre Termes';-inkscape-font-specification:'TeX Gyre Termes, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="31.066816"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1533">Guess the distance</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="36.358482"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1795">in miles to the moon.</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="41.65015"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1797"></tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="46.941814"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1799">Hint:</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="52.233482"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1801">The diameter of Earth is</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="57.525146"
+           x="36.562607"
+           sodipodi:role="line"
+           id="tspan1803">7918 miles  </tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="path895-9"
+         d="M 12.864521,74.364483 H 59.102147"
+         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <g
+       id="g936-20"
+       transform="translate(0,210.73889)">
+      <text
+         id="text877-23"
+         y="31.066816"
+         x="36.03344"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'TeX Gyre Termes';-inkscape-font-specification:'TeX Gyre Termes, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="31.066816"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1725">Guess the distance</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="36.358482"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan2039">in miles to the moon.</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="41.65015"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan2041"></tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="46.941814"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan2043">Hint:</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="52.233482"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan2045">The distance to the Sun is</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="57.525146"
+           x="36.562607"
+           sodipodi:role="line"
+           id="tspan2047">92,960,000 miles  </tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="path895-2"
+         d="M 12.864521,74.364483 H 59.102147"
+         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <g
+       id="g936-28"
+       transform="translate(71.966669,210.73889)">
+      <text
+         id="text877-9"
+         y="31.066816"
+         x="36.03344"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'TeX Gyre Termes';-inkscape-font-specification:'TeX Gyre Termes, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="31.066816"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1749">Guess the distance</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="36.358482"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan2069">in miles to the moon.</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="41.65015"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan2071"></tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="46.941814"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan2073">Hint:</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="52.233482"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan2075">The distance to the Sun is</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="57.525146"
+           x="36.562607"
+           sodipodi:role="line"
+           id="tspan2077">92,960,000 miles  </tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="path895-29"
+         d="M 12.864521,74.364483 H 59.102147"
+         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <g
+       id="g936-3"
+       transform="translate(0,140.88889)">
+      <text
+         id="text877-1"
+         y="31.066816"
+         x="36.03344"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'TeX Gyre Termes';-inkscape-font-specification:'TeX Gyre Termes, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="31.066816"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1581">Guess the distance</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="36.358482"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1855">in miles to the moon.</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="41.65015"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1857"></tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="46.941814"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1859">Hint:</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="52.233482"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1861">The diameter of Earth is</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="57.525146"
+           x="36.562607"
+           sodipodi:role="line"
+           id="tspan1863">7918 miles  </tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="path895-4"
+         d="M 12.864521,74.364483 H 59.102147"
+         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <g
+       id="g936-5"
+       transform="translate(0,71.038882)">
+      <text
+         id="text877-0"
+         y="31.066816"
+         x="36.03344"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'TeX Gyre Termes';-inkscape-font-specification:'TeX Gyre Termes, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="31.066816"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1653">Guess the distance</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="36.358482"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1945">in miles to the moon.</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="41.65015"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1947" /><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="46.941814"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1949">Hint:</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="52.233482"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1953">The distance to the Sun is</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="57.525146"
+           x="36.562607"
+           sodipodi:role="line"
+           id="tspan1957">92,960,000 miles  </tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="path895-6"
+         d="M 12.864521,74.364483 H 59.102147"
+         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <g
+       id="g936-32"
+       transform="translate(71.966669,71.038884)">
+      <text
+         id="text877-06"
+         y="31.066816"
+         x="36.03344"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'TeX Gyre Termes';-inkscape-font-specification:'TeX Gyre Termes, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="31.066816"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1677">Guess the distance</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="36.358482"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1979">in miles to the moon.</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="41.65015"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1981"></tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="46.941814"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1983">Hint:</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="52.233482"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1985">The distance to the Sun is</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="57.525146"
+           x="36.562607"
+           sodipodi:role="line"
+           id="tspan1987">92,960,000 miles  </tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="path895-5"
+         d="M 12.864521,74.364483 H 59.102147"
+         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <g
+       id="g936-6"
+       transform="translate(143.93333,71.038883)">
+      <text
+         id="text877-93"
+         y="31.066816"
+         x="36.03344"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'TeX Gyre Termes';-inkscape-font-specification:'TeX Gyre Termes, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="31.066816"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1701">Guess the distance</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="36.358482"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan2009">in miles to the moon.</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="41.65015"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan2011"></tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="46.941814"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan2013">Hint:</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="52.233482"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan2015">The distance to the Sun is</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="57.525146"
+           x="36.562607"
+           sodipodi:role="line"
+           id="tspan2017">92,960,000 miles  </tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="path895-47"
+         d="M 12.864521,74.364483 H 59.102147"
+         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <g
+       id="g936-4"
+       transform="translate(143.93333,140.88889)">
+      <text
+         id="text877-4"
+         y="31.066816"
+         x="36.03344"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'TeX Gyre Termes';-inkscape-font-specification:'TeX Gyre Termes, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="31.066816"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1629">Guess the distance</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="36.358482"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1915">in miles to the moon.</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="41.65015"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1917"></tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="46.941814"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1919">Hint:</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="52.233482"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1921">The diameter of Earth is</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="57.525146"
+           x="36.562607"
+           sodipodi:role="line"
+           id="tspan1923">7918 miles  </tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="path895-8"
+         d="M 12.864521,74.364483 H 59.102147"
+         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <g
+       id="g936-8"
+       transform="translate(71.966669,140.88889)">
+      <text
+         id="text877-43"
+         y="31.066816"
+         x="36.03344"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'TeX Gyre Termes';-inkscape-font-specification:'TeX Gyre Termes, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="31.066816"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1605">Guess the distance</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="36.358482"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1885">in miles to the moon.</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="41.65015"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1887"></tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="46.941814"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1889">Hint:</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="52.233482"
+           x="36.03344"
+           sodipodi:role="line"
+           id="tspan1891">The diameter of Earth is</tspan><tspan
+           style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="57.525146"
+           x="36.562607"
+           sodipodi:role="line"
+           id="tspan1893">7918 miles  </tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="path895-68"
+         d="M 12.864521,74.364483 H 59.102147"
+         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+  </g>
+</svg>
