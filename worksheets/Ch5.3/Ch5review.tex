@@ -1,0 +1,86 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{multirow,array}
+\usepackage{newtxtext,newtxmath}
+\usepackage{relsize}
+\usepackage{lastpage}
+\usepackage{cancel}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\setenumerate[1]{label={\bf \theenumi: ~}}
+\setenumerate[2]{label={\bf \theenumii: ~}}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textsc{BHCC Mat-181}}
+\rhead{\textsc{Chapter 5 Review}}
+\rfoot{Page \thepage ~of \pageref{LastPage}}
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+\newcommand{\N}[2]{\mathcal{N}\big(#1,~#2\big)}
+\newcommand{\Geo}[1]{\texttt{Geo}\big(#1\big)}
+\newcommand{\B}[2]{\mathcal{B}\big(#1,~#2\big)}
+
+\begin{document}
+\begin{enumerate}
+\item If you know a population's standard deviation is 4.5, how large of a sample size is needed for the margin of error to be 0.5 when making a 95\% confidence interval?
+\vfill
+\item The following ten numbers were drawn from a normal distribution:
+\begin{center}
+\begin{tabular}{cccccccccc}
+6.61 & 7.78 & 7.73 & 7.5 & 7.5 & 8.42 & 7.73 & 8.19 & 7.54 & 7.08
+\end{tabular}
+\end{center}
+Those ten numbers have a mean of 7.608 and a sample standard deviation of 0.512. Find a 90\% confidence interval for the population mean.
+\vfill
+
+\newpage
+
+\item With a signficance level of 0.02, test whether these two samples came from populations with equal means.
+\begin{center}
+Sample 1\\
+\begin{tabular}{cccccccccc}
+0.086 & 0.103 & 0.101 & 0.13 & 0.121 & 0.108
+\end{tabular}
+\end{center}
+\begin{center}
+Sample 2\\
+\begin{tabular}{cccccccccc}
+0.187 & 0.172 & 0.122 & 0.168
+\end{tabular}
+\end{center}
+
+\newpage
+
+\item Ten students' scores on two exams are shown below. Determine a 95\% confidence interval of the mean difference.
+\begin{center}
+\begin{tabular}{|c|c c c c c c c c c c|} \hline
+student & 01 & 02 & 03 & 04 & 05 & 06 & 07 & 08 & 09 & 10 \\ \hline
+exam 1 & 84.4 & 68 & 76.2 & 84.4 & 84.6 & 88.4 & 78.6 & 93.8 & 53.6 & 76.3 \\
+exam 2 & 87.1 & 71 & 84.3 & 95.9 & 91.9 & 96.5 & 88.8 & 91.4 & 65.3 & 79.7 \\ \hline
+\end{tabular}
+\end{center}
+
+\newpage
+
+\item Let $X$ and $Y$ represent two populations.
+$$X \sim \N{45}{7} $$
+$$Y \sim \N{50}{9} $$
+Let $W$ represent a sampling distribution when drawing 5 from each population and finding the difference of means.
+$$W = \frac{Y+Y+Y+Y+Y}{5} - \frac{X+X+X+X+X}{5} $$
+The central limit theorem tells us $W$ is normally distributed. Determine the mean and standard deviation of $W$.
+
+\end{enumerate}
+\end{document}
+
