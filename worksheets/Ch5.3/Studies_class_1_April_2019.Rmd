@@ -7,22 +7,79 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+## Study 1
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+Each person will guess a number between 0 and 100. The person closest to 65% of the average of everyone else wins.
 
-```{r cars}
-summary(cars)
+```{r guesses}
+names = c("Albina","Kilsy","Wen Jian","Garima","Judith","Andres","Pablo","Aelen","Jose","Chad","Grabiel")
+guesses = c(65,50.5,70,33,55,37,40.05,28.5,33.333,30,70)
+xbar1 = mean(guesses)
+n1 = length(guesses)
+s1 = sd(guesses)
+hist(guesses,breaks=10)
+xbar1
+0.65*xbar1
+s1
+```
+We now make a confidence interval based on our sample. We are inferring about the true population average. $$\mu \approx \bar{x}\pm t^{\star} SE $$
+We need $t^\star$. We assume $CL = 95\%$.
+
+```{r tstar}
+tstar1 = round(qt(0.975,n1-1),2)
+tstar1
+```
+We need standard error. $$SE_1 = \frac{s_1}{\sqrt{n}} $$
+```{r standard error}
+SE1 = s1/sqrt(n1)
+SE1
+```
+```{r CI}
+LB1 = xbar1-tstar1*SE1
+UB1 = xbar1+tstar1*SE1
+print(c(LB1,UB1)) 
+print(c(LB1,UB1)*0.65) #best future guess...
 ```
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+Now, we repeat the game.
+```{r repeat game}
+guesses2 = c(53, 29, 28.3, 36, 47, 41, 34, 29.8, 100, 20, 25)
+xbar2 = mean(guesses2)
+s2 = sd(guesses2)
+n2 = length(guesses2)
+xbar2
+0.65*xbar2
+s2
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r differences}
+ diffs = guesses2-guesses
+diffs
+xdiff = mean(diffs)
+xdiff
+sdiff = sd(diffs)
+sdiff
+```
+
+We are going to test for whether the difference is significant.
+$$H_0:~~ \mu_\text{diff} = 0 $$
+$$H_A:~~ \mu_\text{diff} \ne 0 $$
+We will use $\alpha = 0.05$. We find $t^\star = 2.23$.
+$$SE_\text{diff} = \frac{s_\text{diff}}{\sqrt{n}} $$
+```{r SEdiff}
+SEdiff = sdiff/sqrt(n1)
+SEdiff
+```
+We find $t_\text{obs}$.
+
+$$t_\text{obs} = \frac{\overline{x_\text{diff}}-(\mu_\text{diff})_0}{SE_\text{diff}} $$
+
+```{r tobs}
+tobs = (xdiff/SEdiff)
+tobs
+```
+
+
+

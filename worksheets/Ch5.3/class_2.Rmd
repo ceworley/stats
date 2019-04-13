@@ -1,0 +1,110 @@
+---
+title: "Class_2"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+We all guessed a number between 0 and 100. The winner will be the person who guessed closest to 65% of the average of the guesses.
+
+```{r guesses}
+names = c("Linsey","Diamond","Moulay","Jose","Marciana","Scott R","Fredy","Mehmet","Samuel","Matt","Jose R","Chad","Orina")
+guesses = c(37,54,45,35,58,94,75,35,42,30,33.333,30.1,75)
+xbar1 = mean(guesses)
+xbar1
+0.65*xbar1
+```
+We want to determine a 95% confidence interval for $\mu_1$.
+$$\mu_1 \approx \overline{x_1} \pm t^\star SE $$
+Determine $t^\star$.
+```{r tstar}
+n1 = length(guesses)
+df = n1 - 1
+tstar = round(qt(0.975,df),2)
+tstar
+```
+
+````{r}
+s1 = sd(guesses)
+s1
+```
+We find standard error.
+$$SE_1 = \frac{s_1}{\sqrt{n}} $$
+```{r}
+SE1 = s1/sqrt(n1)
+SE1
+```
+```{r}
+LB = xbar1-tstar*SE1
+UB = xbar1+tstar*SE1
+print(c(LB,UB))
+print(c(LB,UB)*0.65)
+```
+
+```{r}
+guesses2 = c(35, 34,30,37.21,25,26.63,32,67,31,40,44,20,32.5)
+xbar2 = mean(guesses2)
+xbar2
+0.65*xbar2
+diffs = guesses2-guesses
+dataframe = data.frame(names,guesses,guesses2,diffs)
+dataframe
+```
+
+We want to run a hypothesis test on the mean of differences.
+$$H_0:~~\mu_\text{diff} = 0 $$
+$$H_A:~~\mu_\text{diff} \ne 0 $$
+```{r}
+xdiff = mean(diffs)
+sdiff = sd(diffs)
+n = n1
+xdiff
+sdiff
+SEdiff = sdiff/sqrt(n)
+SEdiff
+```
+We find $t_\text{obs}$
+```{r}
+tobs = xdiff/SEdiff
+tobs
+-14.5/7.44
+```
+
+
+## Moon experiment
+
+```{r}
+g1 = c(120000,600000,13.2e6,400e6,20.5e6)
+g2 = c(75000,30000,8197,15836,8100,75000,39590)
+x1 = mean(g1)
+x2 = mean(g2)
+s1 = sd(g1)
+s2 = sd(g2)
+n1 = length(g1)
+n2 = length(g2)
+tstar = qt(0.975, 4)
+x1
+x2
+s1
+s2
+tstar
+```
+
+We get standard error.
+```{r}
+SE = sqrt(s1^2/n1+s2^2/n2)
+SE
+```
+Get $t_\text{obs}$
+```{r}
+tobs = (x1-x2)/SE
+tobs
+t.test(g1,g2)
+```
+
+
+
