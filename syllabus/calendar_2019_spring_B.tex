@@ -1,0 +1,145 @@
+\documentclass{article}
+\usepackage{termcal}
+\usepackage[left=1.5cm,right=1.5cm,top=1.8cm,bottom=1cm]{geometry}
+\usepackage{newtxtext,newtxmath}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+
+
+\newcommand{\bs}{\bf\sffamily}
+
+
+\lhead{\textsc{BHCC Mat-181 Spring 2019}}
+\chead{\textsc{Calendar}}
+\rhead{\sc Exercises are due the following class}
+\usepackage{lastpage}
+\rfoot{}
+
+% Few useful commands (our classes always meet either on Monday and Wednesday 
+% or on Tuesday and Thursday)
+
+%\newcommand{\calprintdate}{\ifnewmonth\framebox{\monthname\ \ordinaldate}\else \ordinaldate\fi}
+\renewcommand{\calprintdate}{\it \monthname\ \ordinaldate}
+
+%\newcommand{\calprintclass}{\textbf{\small\theclassnum}}
+\renewcommand{\calprintclass}{\textbf{\small \#\theclassnum}}
+
+\newcommand{\MWClass}{%
+\calday[Monday]{\classday} % Monday
+\skipday % Tuesday (no class)
+\calday[Wednesday]{\classday} % Wednesday
+\skipday % Thursday (no class)
+\skipday % Friday 
+\skipday\skipday % weekend (no class)
+}
+
+\newcommand{\TRClass}{%
+\skipday % Monday (no class)
+\calday[Tuesday]{\classday} % Tuesday
+\skipday % Wednesday (no class)
+\calday[Thursday]{\classday} % Thursday
+\skipday % Friday 
+\skipday\skipday % weekend (no class)
+}
+
+\newcommand{\MTWRClass}{%
+\calday[Monday]{\classday} % Monday (no class)
+\calday[Tuesday]{\classday} % Tuesday
+\calday[Wednesday]{\classday}
+\calday[Thursday]{\classday} % Thursday
+\skipday % Friday 
+\skipday\skipday % weekend (no class)
+}
+
+\newcommand{\Holiday}[2]{%
+\options{#1}{\noclassday}
+\caltext{#1}{#2}
+}
+
+\begin{document}
+\sffamily %\large
+%Most days state the chapter we are covering and the exercises I expect you to do that night. Unless otherwise indicated, homeworks are due the next class. If you have spent an hour on homework and are frustrated, please stop and hand in what you've done.
+\begin{center}
+\begin{calendar}{1/21/2019}{16}
+\setlength{\calboxdepth}{.3in}
+\setlength{\calwidth}{\textwidth}
+\MTWRClass
+\caltexton{1}{Ch 1.1\\  Ex 1.1-1.2}
+\caltextnext{Ch 1.2\\ Ex 1.3-1.8}
+\caltextnext{Ch 1.3\\ Ex 1.9-1.16}
+\caltextnext{ Ch 1.4\\ Ex 1.17-1.29}
+\caltextnext{ Ch 1.5\\ Ex 1.30-1.37}
+\caltextnext{ Ch 1.6\\ Ex 1.38-1.47}
+\caltextnext{ Ch 1.6\\ Ex 1.48-1.64}
+\caltextnext{ Ch 1.7\\ Ex 1.65-1.68}
+\caltextnext{ Ch 1.8\\ Ex 1.69-1.70}
+\caltextnext{ Ch 2.1\\ Ex 2.1-2.8}
+\caltextnext{ Ch 2.1\\ Ex 2.9-2.14}
+\caltextnext{ Ch 2.2\\ Ex 2.15-2.21}
+\caltextnext{ Ch 2.2\\ Ex 2.22-2.26}
+\caltextnext{ Ch 2.3-2.4\\ Ex 2.27-2.35}
+\caltextnext{ Ch 2.5\\ Ex 2.36-2.44}
+\caltextnext{ Review \\  Review}
+\caltextnext{ Review \\  Review}
+\caltextnext{{\bf \sffamily TEST}}
+\caltextnext{ Ch 3.1\\ Ex 3.1-3.8}
+\caltextnext{ Ch 3.1\\ Ex 3.9-3.16}
+\caltextnext{ Ch 3.2\\ Ex 3.17-3.18}
+\caltextnext{ Ch 3.3\\ Ex 3.19-3.24}
+\caltextnext{ Ch 3.4\\ Ex 3.25-3.30}
+\caltextnext{ Ch 3.4\\ Ex 3.31-3.36}
+\caltextnext{ Ch 4.1\\ Ex 4.1-4.6}
+\caltextnext{ Ch 4.2\\ Ex 4.7-4.16}
+\caltextnext{ Ch 4.3\\ Ex 4.17-4.23}
+\caltextnext{ Ch 4.3\\ Ex 4.24-4.32}
+\caltextnext{ Ch 4.4\\ Ex 4.33-4.42}
+\caltextnext{ Ch 4.5\\ Ex 4.43-4.48}
+\caltextnext{ Review \\  Review}
+\caltextnext{ Review \\  Review}
+\caltextnext{{\bf \sffamily TEST}}
+
+\caltextnext{ Review day\\ Test 2 Redo (due Apr 8)}
+\caltextnext{ Ch 5.1\\ Ex 5.1-5.7}
+\caltextnext{ Ch 5.1\\ Ex 5.8-5.14}
+\caltextnext{ Ch 5.2\\ Ex 5.15-5.24}
+\caltextnext{ Ch 5.3\\ Ex 5.25-5.31}
+\caltextnext{ Ch 5.3\\ Ex 5.32-5.38}
+\caltextnext{ Ch 5.3\\ TBD}
+\caltextnext{ Review 5.1, 5.2, 5.3}
+\caltextnext{ Ch 6.1\\ Ex 6.1-6.11}
+\caltextnext{ Ch 6.1\\ Ex 6.12-6.22}
+\caltextnext{ Ch 6.2\\ Ex 6.23-6.30}
+\caltextnext{ Ch 6.2\\ Ex 6.31-6.38}
+\caltextnext{ Review \\  Review}
+\caltextnext{{\bf \sffamily TEST}}
+\caltextnext{ Review}
+\caltextnext{ Review}
+\caltextnext{ Review}
+\caltextnext{Final exam handed out}
+\caltextnext{Work day}
+\caltextnext{Work day}
+\caltextnext{\bs Final Exam Due \\
+                 Presentations}
+\caltextnext{\bs Presentations}
+
+
+
+% Holidays
+\Holiday{1/21/2019}{\bs Martin Luther King Jr. Day}
+\Holiday{2/18/2019}{\bs Presidents Day}
+\Holiday{3/18/2019}{\bs Spring Break}
+\Holiday{3/19/2019}{\bs Spring Break}
+\Holiday{3/20/2019}{\bs Spring Break}
+\Holiday{3/21/2019}{\bs Spring Break}
+\Holiday{4/15/2019}{\bs Patriots Day}
+\Holiday{4/16/2019}{\bs Sick Day}
+\Holiday{3/4/2019}{\bs Snow Day}
+
+
+\caltext{3/14/2019}{\textbf{Proposal Due}}
+\caltext{5/9/2019}{\textbf{Paper Due}}
+\end{calendar}
+\end{center}
+\end{document}
