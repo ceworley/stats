@@ -1,9 +1,7 @@
 ---
-title: Estimations of Moon's Distance are Anchored Toward Earth's Radius or Sun's
-  Distance
+title: "Estimation of Moon's Distance Anchored Differently by Earth's Radius and Sun's Distance"
 output:
-  html_document:
-    df_print: paged
+  html_document: default
   html_notebook: default
   pdf_document: default
 ---
@@ -104,10 +102,10 @@ xbar2 = mean(sun)
 s2 = sd(sun)
 ```
 
-| Group  | Mean | Standard deviation |
-|:------:|:----:|:------------------:|
-| Earth  | $`r signif(xbar1,3)`$ | $`r signif(s1,3)`$ |
-| Sun  | $`r signif(xbar2,3)`$ | $`r signif(s2,3)`$ |
+| Group  | Mean | Standard deviation | Size |
+|:------:|:----:|:------------------:|:----:|
+| Earth  | $`r xbar1`$ | $`r s1`$ | $`r n1`$|
+| Sun  | $`r xbar2`$ | $`r s2`$ | $`r n2`$|
 
 We state the hypotheses.
 $$H_0:~~~\mu_2-\mu_1=0 $$
