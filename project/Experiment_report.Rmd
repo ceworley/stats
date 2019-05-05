@@ -1,51 +1,42 @@
 ---
-title: "Estimations of Distance to Moon Anchored by Radius of Earth and Distance to Sun"
+title: Estimations of Moon's Distance are Anchored Toward Earth's Radius or Sun's
+  Distance
 output:
+  html_document:
+    df_print: paged
+  html_notebook: default
   pdf_document: default
-  html_document: default
 ---
 
 ```{r setup, include=FALSE, echo=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Abstract
+# Abstract
 
-Anchoring is demonstrated in a Bunker Hill class of 24 students. Each student was asked to estimate the distance to the moon; group 1 was anchored on the distance to the sun (9e7 miles) while group 2 anchored with radius of Earth (3e3 miles). Due to heavy skew in group 1, the normality-based pvalue was 0.1 while permutation-based methods allowed us to conclude that anchoring caused an effect ($p\text{-value} = 0.03$). 
+Anchoring is demonstrated in a Bunker Hill Community College class of 21 students. Each student was asked to estimate the distance to the moon; group 1 was anchored with radius of Earth (3e3 miles) while group 2 was anchored on the distance to the sun (9e7 miles). Due to heavy skew of estimates, Welch's $t$-test failed to show significance while the more appropriate permutation-based methods allowed us to conclude that anchoring caused an effect ($p\text{-value} \approx 1\times10^{-6}$). 
 
-## Background
+# Background
 
-Say some things about anchoring.
+Anchoring is a well-documented effect, where the presentation of a number effects a person's later numerical evaluations.
 
-Statistical tests often assume sampling distributions are normal. This condition is easily met with moderate sample sizes from nearly any population (even with a population as unnormal as bimodal or exponential distributions). However, with small sample sizes, the normal approximation to sampling distributions easily fails. 
+Statistical tests often assume sampling distributions are normal. This condition is easily met with moderate sample sizes from nearly any population (even with a population as unnormal as bimodal or exponential distributions). However, with small sample sizes, the normal approximation to sampling distributions easily fails. Luckily, permutation tests are more rubust and, with a modern version of R, intuitive to code.
 
-Luckily, permutation tests are more rubust. With a modern version of R, permutation tests are intuitive to code. The 24 students were tasked with determining the results of a permutation test on their own original data; 10 were able to implement the permutation test compared to 15 who were able to implement a two-proportion $t$-test.
-
-```{r sigtest}
-prop.test(x=c(10,15),n=c(24,24))
-```
-
-It seems (from the $p$-value) more data is necessary to determine a preference. It should be mentioned that the class these students were in focused on normal-based techniques (like standard introductory classes usually do). However, the concept of permutation (randomization) tests was introduced in the first chapter with a card-shuffling description/embodiment of the procedure. (make reference to OpenIntro)
-
-## Experimental Methods
+# Experimental Methods
 
 Every participant was asked to estimate the distance to the moon. By having the instructions on cards, and asking the responses to be written on the cards, all participants could participate simultaneously. The participants were given approximately 30 seconds to write an answer. All participants responded.
 
-The two types of cards gave different hints. The groups (Earth and Sun) were randomly assigned by shuffling the cards. By using cards, it was easy to guarantee equal sample sizes. Half of the participants were told the radius of Earth ($3,000$ miles) while the other half were told the distance to the Sun ($90,000,000$ miles). The cards were made with the printout that can be generated (or modified) with the R script below.
+Two types of card gave different hints. The groups (Earth and Sun) were randomly assigned by shuffling the cards. By using cards, it was easy to guarantee approximately equal sample sizes. Half of the participants were told the radius of Earth ($3,000$ miles) while the other half were told the distance to the Sun ($90,000,000$ miles). The cards were made with the printout that can be generated (or modified) with the R script below.
 
 ```{r card, results='hide'}
 #This code will create a page that can be printed (saved in the current working directory). 
-#The resulting pdf/printout is in the supplemental materials.
+#The resulting pdf/printout is included at the end of this article.
 pdf("Moon_cards.pdf",width=8.5,height=11,paper="letter",title = "Moon cards printout") 
 par(mar = c(0,0,0,0))
 plot.new()
 fig.align="center"
-for(xpos in seq(0,1,1/3)){
-  abline(v = xpos)
-}
-for(ypos in seq(0,1,1/4)){
-  abline(h = ypos)
-}
+for(xpos in seq(0,1,1/3)){ abline(v = xpos) }
+for(ypos in seq(0,1,1/4)){ abline(h = ypos) }
 for(x in seq(0,2/3,1/3)){
   for(y in seq(0,3/4,1/4)){
     text(x+0.16,y+0.20,"Please estimate the distance\nto the moon \nin miles.", cex=0.8)
@@ -60,6 +51,7 @@ for(x in seq(0,2/3,1/3)){
 dev.off()
 ```
 
+\newpage
 ```{r card2, echo=FALSE, fig.width=8.5, fig.height=11}
 #This is the code that actually runs when Knitting, but the above code creates a pdf document.
 par(mar = c(0,0,0,0))
@@ -83,35 +75,92 @@ for(x in seq(0,2/3,1/3)){
   }
 }
 ```
+\ 
 
-The statistical analysis took two forms: Welch's $t$ test and an approximate permutation method. 
+\newpage
 
-## Results
 
-The sample data are shown here.
-```{r sample_data}
-earth = c(20000,500000,30000,10000,122500,100000,2e6,7800,6500,15000,120000,400000)
-sun = c(4e7,2e6,5e5,6e7,4e6,5e3,3e5,1e5,6e6,3e6,1e7,1e4)
-hist(earth)
-hist(sun)
+# Results
+
+The data showed a strong right skew in both groups.
+```{r sample_data, fig.width=6, fig.height=3.5}
+earth = c(7.5e4,2e4,299,39590,3900,75000,30000,8197,15836,8100)
+sun = c(1.23e7,1.85e5,2.2e5,45730003,1.2e5,6e5,4e8,2.05e7,48372213,3e5)
+hist(earth,breaks=20, xlab = "estimated distance to moon (miles)",
+     main = "Guesses anchored by radius of Earth")
+hist(sun,breaks=20, xlab = "estimated distance to moon (miles)", 
+     main = "Guesses anchored by distance to Sun")
 ```
-Notice both of these groups appear to have a heavy skew, so we should be wary of using an approach that assumes (repeated) small samples would be normally distributed. We continue with the Welch's $t$ test as an exercise.
+
+The heavy skew along with small sample size should make us wary of using an approach that assumes (repeated) small samples would be normally distributed. We continue with the Welch's $t$ test as an exercise, even though we recognize it is not appropriate.
 
 We find the means and sample standard deviations.
 ```{r sample stats}
+n1 = length(earth)
 xbar1 = mean(earth)
 s1 = sd(earth)
+n2 = length(sun)
 xbar2 = mean(sun)
 s2 = sd(sun)
 ```
 
 | Group  | Mean | Standard deviation |
 |:------:|:----:|:------------------:|
-| Earth  | `r xbar1` | `r s1` |
+| Earth  | $`r signif(xbar1,3)`$ | $`r signif(s1,3)`$ |
+| Sun  | $`r signif(xbar2,3)`$ | $`r signif(s2,3)`$ |
+
+We state the hypotheses.
+$$H_0:~~~\mu_2-\mu_1=0 $$
+$$H_\text{A}:~~~\mu_2-\mu_1\ne 0 $$
+We find the degrees of freedom using the Welch-Satterthwaite equation.
+```{r degrees of freedom}
+df = floor((s1^2/n1+s2^2/n2)^2/(s1^4/n1^2/(n1-1)+s2^4/n2^2/(n2-1)))
+```
+$$df = \frac{\left(\frac{(s_1)^2}{n_1}+\frac{(s_2)^2}{n_2} \right)^2}{\frac{(s_1)^4}{(n_1)^2(n_1-1)}+\frac{(s_2)^4}{(n_2)^2(n_2-1)}} = `r df`$$
+We find the standard error.
+```{r standard error}
+SE = sqrt(s1^2/n1+s2^2/n2)
+```
+$$SE = \sqrt{\frac{(s_1)^2}{n_1}+\frac{(s_2)^2}{n_2}} =`r signif(SE,3)` $$
+We determine the observed test statistic.
+```{r tobs}
+tobs = (xbar2-xbar1)/SE
+```
+$$t_\text{obs} = \frac{(\bar{x}_2-\bar{x}_1)-(\mu_2-\mu_1)_0}{SE} = `r signif(tobs,3)` $$
+We can determine the two-tail $p$-value.
+```{r pvalue}
+pvalue = 2*pt(-abs(tobs),df)
+```
+$$p\text{-value} = `r signif(pvalue,2)` $$
+Notice, we can also check our work with R's built-in function.
+```{r ttest}
+t.test(earth,sun)
+```
+
+The other test of significance is based on an exploration of the possible reshufflings of the given data.
+
+```{r resampling, fig.width=6, fig.height=3.5}
+num_resamples = 100000
+original_difference = xbar2-xbar1
+resampling_differences = vector("numeric",num_resamples)
+for(i in 1:num_resamples)
+{
+  tot1 = sum(sample(c(earth,sun),n1))
+  tot2 = sum(c(earth,sun))-tot1
+  mean1 = tot1/n1
+  mean2 = tot2/n2
+  resampling_differences[i] = mean2-mean1
+}
+signif(original_difference,2)
+hist(resampling_differences)
+pvalue2 = sum(abs(resampling_differences)>=abs(original_difference))/num_resamples
+```
+$$p\text{-value} = `r pvalue2` $$
 
 
-## Discussion
+# Discussion
 
+This experiment showed a causal link between the hint and the response. The exact mechanism is unclear, but behavior is often labelled anchoring. 
 
 
 
