@@ -2,7 +2,6 @@
 title: "Estimation of Moon's Distance Anchored Differently by Earth's Radius and Sun's Distance"
 output:
   html_document: default
-  html_notebook: default
   pdf_document: default
 ---
 
@@ -16,15 +15,19 @@ Anchoring is demonstrated in a Bunker Hill Community College class of 21 student
 
 # Background
 
-Anchoring is a well-documented effect, where the presentation of a number effects a person's later numerical evaluations.
+Anchoring is a well-documented cognitive bias, where the presentation of a number (the anchor) effects a person's estimations. The effect is most compelling when there is no logical connection between the anchor and the estimate, as when Dan Ariely subjects' last two social security digits serve as anchors for bidding (CITATION NEEDED). Typically, the anchoring is done by first asking a subject to decide whether the anchor is above or below the value they will estimate, and then asking for the estimate. For example, a subject could be asked whether Euclid's Elements were written before or after year 150 BCE and then asked for an estimate for when Euclid's Elements were written. If anchoring occurs, the anchor (150 BCE) will pull estimates toward itself compared to when another anchor is used. 
 
-Statistical tests often assume sampling distributions are normal. This condition is easily met with moderate sample sizes from nearly any population (even with a population as unnormal as bimodal or exponential distributions). However, with small sample sizes, the normal approximation to sampling distributions easily fails. Luckily, permutation tests are more rubust and, with a modern version of R, intuitive to code.
+<!-- The psychological mechanism behind anchoring is uncertain. Some theorists suggest anchoring is rational given limits of time, energy, memory, and mental arithmetic (CITATION NEEDED). However, many sales tactics seem to abuse this cognitive bias to perpetuate unnecessary consumption, which, at the moment, it completely reliant on the burning of fossil fuels. Thus, some people are interested in determining how to counteract the bias. -->
+
+As a teacher, I wanted a robust controlled experiment I could run in a small class. I originally tried the experiment from Amos Tversky and Daniel Kahneman of asking for estimates of either $1\times 2\times 3\times 4\times 5\times 6\times 7\times 8$ or the equivalent product $8\times 7\times 6\times 5\times 4\times 3\times 2\times 1$. However, in my classes, the estimates had large variation and detecting a significant difference was not possible with such a small sample (data omitted). In my experience, people tend to have poor knowledge of the vast differences of magnitudes in nature. I figured that anchors with very different magnitudes would create a more rubust effect. I also wanted the anchors and estimations to be of something most people were conceptually familiar with. Thus I used the radius of Earth and distance to Sun as anchors and the distance to the moon for the estimated value. 
+
+To interpret the results, hypothesis testing is used to determine a $p$-value. Statistical inference often assumes sampling distributions are normal. This condition is easily met with moderate sample sizes from nearly any population (even with a population as unnormal as bimodal or exponential distributions). However, with small sample sizes, the normal approximation to sampling distributions easily fails. Luckily, permutation tests are more rubust and, with a modern version of R, intuitive to code.
 
 # Experimental Methods
 
-Every participant was asked to estimate the distance to the moon. By having the instructions on cards, and asking the responses to be written on the cards, all participants could participate simultaneously. The participants were given approximately 30 seconds to write an answer. All participants responded.
+Every participant was asked to estimate the distance to the moon. By having the instructions on cards, and asking the responses to be written on the cards, all participants could participate simultaneously without effecting each other. The participants were given approximately 30 seconds to write an answer. All participants responded.
 
-Two types of card gave different hints. The groups (Earth and Sun) were randomly assigned by shuffling the cards. By using cards, it was easy to guarantee approximately equal sample sizes. Half of the participants were told the radius of Earth ($3,000$ miles) while the other half were told the distance to the Sun ($90,000,000$ miles). The cards were made with the printout that can be generated (or modified) with the R script below.
+Two types of card gave different hints. The groups (Earth and Sun) were randomly assigned by shuffling the cards. By using cards, it was easy to guarantee approximately equal sample sizes. Half of the participants were told the radius of Earth while the other half were told the distance to the Sun. The cards were made with the printout that can be generated (or modified) with the R script below.
 
 ```{r card, results='hide'}
 #This code will create a page that can be printed (saved in the current working directory). 
@@ -77,12 +80,13 @@ for(x in seq(0,2/3,1/3)){
 
 \newpage
 
+Because the cards were shuffled, I was blind to the treatments. The students did not know what the other cards said, so they were also blind to their treatment. Thus, this experiment was effectively double-blind.
 
 # Results
 
 The data showed a strong right skew in both groups.
 ```{r sample_data, fig.width=6, fig.height=3.5}
-earth = c(7.5e4,2e4,299,39590,3900,75000,30000,8197,15836,8100)
+earth = c(7.5e4,2e4,39590,299,3900,75000,30000,8197,15836,8100,35000)
 sun = c(1.23e7,1.85e5,2.2e5,45730003,1.2e5,6e5,4e8,2.05e7,48372213,3e5)
 hist(earth,breaks=20, xlab = "estimated distance to moon (miles)",
      main = "Guesses anchored by radius of Earth")
@@ -104,8 +108,8 @@ s2 = sd(sun)
 
 | Group  | Mean | Standard deviation | Size |
 |:------:|:----:|:------------------:|:----:|
-| Earth  | $`r xbar1`$ | $`r s1`$ | $`r n1`$|
-| Sun  | $`r xbar2`$ | $`r s2`$ | $`r n2`$|
+| Earth  | $`r signif(xbar1,3)`$ | $`r signif(s1,3)`$ | $`r n1`$|
+| Sun  | $`r signif(xbar2,3)`$ | $`r signif(s2,3)`$ | $`r n2`$|
 
 We state the hypotheses.
 $$H_0:~~~\mu_2-\mu_1=0 $$
@@ -129,13 +133,13 @@ We can determine the two-tail $p$-value.
 ```{r pvalue}
 pvalue = 2*pt(-abs(tobs),df)
 ```
-$$p\text{-value} = `r signif(pvalue,2)` $$
+$$p\text{-value} = `r signif(pvalue,3)` $$
 Notice, we can also check our work with R's built-in function.
 ```{r ttest}
 t.test(earth,sun)
 ```
 
-The other test of significance is based on an exploration of the possible reshufflings of the given data.
+The other test of significance is based on an exploration of the possible reshufflings of the given data. This type of significance test can be called an estimated permutation test, a randomization test, or a random permutation test.
 
 ```{r resampling, fig.width=6, fig.height=3.5}
 num_resamples = 100000
@@ -151,6 +155,8 @@ for(i in 1:num_resamples)
 }
 signif(original_difference,2)
 hist(resampling_differences)
+abline(v = original_difference, col = "black", lwd = 4)
+abline(v = -original_difference, col = "black", lwd = 4)
 pvalue2 = sum(abs(resampling_differences)>=abs(original_difference))/num_resamples
 ```
 $$p\text{-value} = `r pvalue2` $$
@@ -158,7 +164,13 @@ $$p\text{-value} = `r pvalue2` $$
 
 # Discussion
 
-This experiment showed a causal link between the hint and the response. The exact mechanism is unclear, but behavior is often labelled anchoring. 
+This experiment showed a causal link between the anchor and the estimation. The mechanism is unclear, but this behavior is at least similar to the cognitive bias shown in other anchoring experiments. I would suggest that for considering this experiment's results, it might be useful to consider influency with orders of magnitudes. I know I spend a considerable amount of time trying to remember various orders of magnitudes, but I have a feeling this is not a hobby of many of my students.
+
+It was not intentional to run an experiment that anchored in a nonstandard way. In the future, I plan to run the experiment by first asking participants whether they think the distance to the moon is more or less than an anchor and then asking for the estimate. 
+
+While thinking about this experiment, some new research questions arose. I wonder whether an anchor with more significant digits will have a stronger pull than an anchor with fewer significant digits. I also wonder whether a diagram (cartoon sun/earth/moon) would effect the results.
+
+However, I might not run this experiment in the future. I was not expecting the estimates to be so skewed. Honestly, I was hoping to use Welch's $t$ test to show significance. While random permutation tests are incredibly useful, they still have not become part of the standard introductory curriculum. 
 
 
 
